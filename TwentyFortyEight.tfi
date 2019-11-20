@@ -1,0 +1,10 @@
+
+
+
+// Instantiate the module
+TwentyFortyEight instance_name (
+    .clk(clk), 
+    .rst(rst)
+    );
+
+

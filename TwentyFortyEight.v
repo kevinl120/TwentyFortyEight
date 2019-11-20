@@ -18,7 +18,9 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module TwentyFortyEight(input clk, input rst);
+module TwentyFortyEight(clk, rst);
+  input reg clk;
+  input reg rst;
 
   reg [20:0] board [0:3] [0:3];
   
@@ -26,9 +28,15 @@ module TwentyFortyEight(input clk, input rst);
   reg needMore = 1;
   reg fillCount = 0;
   
+  /*
+  procedure Increment(signal Counter : inout integer) is
+  begin
+    Counter <= Counter + 1;
+  end procedure;
+  */
+  
+  
   always @(posedge clk) begin
-    //getFillCount
-    // fillCount <= getFillCount();
     
     if (needMore && fillCount == 16) begin
       // game over
@@ -47,8 +55,5 @@ module TwentyFortyEight(input clk, input rst);
 
   // uart
   // joystick integration (+ debouncer)
-  
-  // game logic
-  // ai
 
 endmodule
