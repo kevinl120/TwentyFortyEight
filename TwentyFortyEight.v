@@ -18,32 +18,37 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module TwentyFortyEight(input clk, input rst);
+module TwentyFortyEight(clk, rst, dir);
+
+  input clk, rst;
+  input [3:0] dir;
 
   reg [20:0] board [0:3] [0:3];
+  reg [20:0] score = 0;
   
-  reg [3:0] rc = 0;
-  reg needMore = 1;
-  reg fillCount = 0;
+  gameController gameController_(.dir(dir), .rst(rst), .board(board), .score(score));
   
-  always @(posedge clk) begin
-    //getFillCount
-    // fillCount <= getFillCount();
+  // reg [3:0] rc = 0;
+  // reg needMore = 1;
+  // reg fillCount = 0;
+  // always @(posedge clk) begin
+  //   //getFillCount
+  //   // fillCount <= getFillCount();
     
-    if (needMore && fillCount == 16) begin
-      // game over
-    end
-    else begin
-        while (needMore) begin
-          rc <= $urandom % 15;
-          if (board[rc/4][rc%4] == 0) begin
-            if ($urandom % 10 == 0) board[rc/4][rc%4] <= 4;
-            else board[rc/4][rc%4] <= 2;
-            needMore <= 0;
-          end
-        end
-    end
-  end
+  //   if (needMore && fillCount == 16) begin
+  //     // game over
+  //   end
+  //   else begin
+  //       while (needMore) begin
+  //         rc <= $urandom % 15;
+  //         if (board[rc/4][rc%4] == 0) begin
+  //           if ($urandom % 10 == 0) board[rc/4][rc%4] <= 4;
+  //           else board[rc/4][rc%4] <= 2;
+  //           needMore <= 0;
+  //         end
+  //       end
+  //   end
+  // end
 
   // uart
   // joystick integration (+ debouncer)
