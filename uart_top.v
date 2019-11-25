@@ -2,7 +2,7 @@ module uart_top (/*AUTOARG*/
    // Outputs
    o_tx, o_tx_busy, o_rx_data, o_rx_valid,
    // Inputs
-   i_rx, i_tx_data, i_tx_stb, clk, rst
+   i_rx, i_tx_data, clk, rst
    );
 
    output                   o_tx; // asynchronous UART TX
@@ -12,15 +12,14 @@ module uart_top (/*AUTOARG*/
    output [7:0]             o_rx_data;
    output                   o_rx_valid;
    
-   input [8000-1:0] i_tx_data;
-   input                    i_tx_stb;
+   input [32-1:0] i_tx_data;
    
    input                    clk;
    input                    rst;
 
    parameter stIdle = 0;
    parameter stNib1 = 1;
-   parameter stCR   = 100+1;
+   parameter stCR   = 5;
    
    /*AUTOWIRE*/
    // Beginning of automatic wires (for undeclared instantiated-module outputs)
@@ -33,7 +32,7 @@ module uart_top (/*AUTOARG*/
    wire                 tx_active;
    wire                 tfifo_rd;
    reg                  tfifo_rd_z;
-   reg [8000-1:0]  tx_data;
+   reg [32-1:0]  tx_data;
    reg [2:0]               state;
 
    assign o_tx_busy = (state!=stIdle);
@@ -44,13 +43,14 @@ module uart_top (/*AUTOARG*/
      else
        case (state)
          stIdle:
-           if (i_tx_stb)
              begin
                 state   <= stNib1;
                 tx_data <= i_tx_data;
              end
          stCR:
-           if (~tfifo_full) state <= stIdle;
+           if (~tfifo_full) begin
+             state <= stIdle;
+           end
          default:
            if (~tfifo_full)
              begin
@@ -62,7 +62,7 @@ module uart_top (/*AUTOARG*/
    always @*
      case (state)
        stCR:    tfifo_in = "\r";
-       default: tfifo_in = tx_data[7999:7992];
+       default: tfifo_in = tx_data[32-1:32-8];
      endcase // case (state)
    
    assign tfifo_rd = ~tfifo_empty & ~tx_active & ~tfifo_rd_z;

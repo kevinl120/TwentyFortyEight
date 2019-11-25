@@ -18,16 +18,21 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module TwentyFortyEight(clk, rst);
-  input reg clk;
-  input reg rst;
+module TwentyFortyEight(RsRx, clk, rst, RsTx);
+  input wire clk;
+  input wire rst;
+  input        RsRx;
+  output       RsTx;
 
   reg [20:0] board [0:3] [0:3];
   
   reg [3:0] rc = 0;
   reg needMore = 1;
   reg fillCount = 0;
-  
+  wire [7:0]           uart_rx_data;           // From uart_top_ of uart_top.v
+  wire                 uart_rx_valid;          // From uart_top_ of uart_top.v
+  wire                 uart_tx_busy;           // From uart_top_ of uart_top.v
+  wire                 seq_tx_valid;
   /*
   procedure Increment(signal Counter : inout integer) is
   begin
@@ -35,7 +40,7 @@ module TwentyFortyEight(clk, rst);
   end procedure;
   */
   
-  
+  /*
   always @(posedge clk) begin
     
     if (needMore && fillCount == 16) begin
@@ -52,8 +57,22 @@ module TwentyFortyEight(clk, rst);
         end
     end
   end
+  */
+  wire [32-1:0]tx_data;
+  assign tx_data = "2048";
 
-  // uart
-  // joystick integration (+ debouncer)
+  uart_top uart_top_ (// Outputs
+                       .o_tx            (RsTx),
+                       .o_tx_busy       (uart_tx_busy),
+                       .o_rx_data       (uart_rx_data[7:0]),
+                       .o_rx_valid      (uart_rx_valid),
+                       // Inputs
+                       .i_rx            (RsRx),
+                       .i_tx_data       (tx_data),
+                       /*AUTOINST*/
+                       // Inputs
+                       .clk             (clk),
+                       .rst             (rst)
+                       );
 
 endmodule

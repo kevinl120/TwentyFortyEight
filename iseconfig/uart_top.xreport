@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-11-25T11:28:50</DateModified>
-  <ModuleName>TwentyFortyEight</ModuleName>
-  <SummaryTimeStamp>2019-11-25T11:27:33</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/152/TwentyFortyEight/iseconfig/TwentyFortyEight.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/152/TwentyFortyEight\</ImplementationReportsDirectory>
-  <DateInitialized>2019-11-20T10:39:29</DateInitialized>
+  <DateModified>2019-11-25T09:50:46</DateModified>
+  <ModuleName>uart_top</ModuleName>
+  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/152/TwentyFortyEight/iseconfig/uart_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/152/TwentyFortyEight</ImplementationReportsDirectory>
+  <DateInitialized>2019-11-25T09:50:46</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

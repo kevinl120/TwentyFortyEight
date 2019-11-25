@@ -1,1 +1,0 @@
-vhdtdtfi -lang verilog -prj lab4 -o C:/Users/152/TwentyFortyEight/TwentyFortyEight.tfi -lib work C:/Users/152/TwentyFortyEight//TwentyFortyEight.v -module TwentyFortyEight -template C:/Xilinx/14.6/ISE_DS/ISE//data/tfi.tft -deleteonerror 
