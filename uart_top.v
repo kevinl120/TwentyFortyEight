@@ -2,24 +2,24 @@ module uart_top (/*AUTOARG*/
    // Outputs
    o_tx, o_tx_busy, o_rx_data, o_rx_valid,
    // Inputs
-   i_rx, i_tx_data, clk, rst
+   i_rx, i_tx_data, clk, rst, i_tx_stb
    );
 
    output                   o_tx; // asynchronous UART TX
    input                    i_rx; // asynchronous UART RX
+   input                    i_tx_stb;
    
    output                   o_tx_busy;
    output [7:0]             o_rx_data;
    output                   o_rx_valid;
    
-   input [32-1:0] i_tx_data;
+   input [8000-1:0] i_tx_data;
    
    input                    clk;
    input                    rst;
 
    parameter stIdle = 0;
-   parameter stNib1 = 1;
-   parameter stCR   = 5;
+   parameter stCR   = 1000;
    
    /*AUTOWIRE*/
    // Beginning of automatic wires (for undeclared instantiated-module outputs)
@@ -32,39 +32,37 @@ module uart_top (/*AUTOARG*/
    wire                 tx_active;
    wire                 tfifo_rd;
    reg                  tfifo_rd_z;
-   reg [32-1:0]  tx_data;
-   reg [2:0]               state;
+   reg [8000-1:0]  tx_data =0;
+   reg [12-1:0]               state=0;
 
    assign o_tx_busy = (state!=stIdle);
-   
-   always @ (posedge clk)
-     if (rst)
-       state <= stIdle;
-     else
-       case (state)
-         stIdle:
-             begin
-                state   <= stNib1;
-                tx_data <= i_tx_data;
-             end
-         stCR:
-           if (~tfifo_full) begin
-             state <= stIdle;
-           end
-         default:
-           if (~tfifo_full)
-             begin
-                state   <= state + 1;
-                tx_data <= {8'b00000000,tx_data};
-             end
-       endcase // case (state)
 
-   always @*
-     case (state)
-       stCR:    tfifo_in = "\r";
-       default: tfifo_in = tx_data[32-1:32-8];
-     endcase // case (state)
-   
+   always @(posedge clk) begin
+     if (rst) state <= stIdle;
+     else begin
+       if (state == stIdle) begin
+         if(i_tx_stb) begin
+          state   <= state + 1;
+          tx_data <= i_tx_data;
+          tfifo_in <= tx_data[8000-1:8000-8];
+         end
+       end
+       else if (state < stCR) begin
+         if (~tfifo_full) begin
+           state   <= state + 1;
+           tx_data <= tx_data << 8;
+           tfifo_in <= tx_data[8000-1:8000-8];  
+         end
+       end
+       else begin
+         if (~tfifo_full) begin
+           state <= stIdle;
+         end
+       end
+         
+     end
+   end
+     
    assign tfifo_rd = ~tfifo_empty & ~tx_active & ~tfifo_rd_z;
 
    assign tfifo_wr = ~tfifo_full & (state!=stIdle);

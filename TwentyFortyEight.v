@@ -18,11 +18,12 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module TwentyFortyEight(RsRx, clk, rst, RsTx);
+module TwentyFortyEight(RsRx, clk, rst, RsTx, btns);
   input wire clk;
   input wire rst;
   input        RsRx;
   output       RsTx;
+  input btns;
 
   reg [20:0] board [0:3] [0:3];
   
@@ -58,9 +59,9 @@ module TwentyFortyEight(RsRx, clk, rst, RsTx);
     end
   end
   */
-  wire [32-1:0]tx_data;
-  assign tx_data = "2048";
-
+  wire [8000-1:0]tx_data;
+  assign tx_data = "-----------------------------\n\r|      |      |      |      |\n\r| 2048 | 2048 | 2048 | 2048 |\n\r|      |      |      |      |\n\r-----------------------------\n\r|      |      |      |      |\n\r| 2048 | 2048 | 2048 | 2048 |\n\r|      |      |      |      |\n\r-----------------------------\n\r|      |      |      |      |\n\r| 2048 | 2048 | 2048 | 2048 |\n\r|      |      |      |      |\n\r-----------------------------\n\r|      |      |      |      |\n\r|    2 | 2048 | 2048 | 2048 |\n\r|      |      |      |      |\n\r-----------------------------\n\r\n\rScore: 1422734\n\r\n\r\n\r\n\r\n\r";
+  
   uart_top uart_top_ (// Outputs
                        .o_tx            (RsTx),
                        .o_tx_busy       (uart_tx_busy),
@@ -72,7 +73,8 @@ module TwentyFortyEight(RsRx, clk, rst, RsTx);
                        /*AUTOINST*/
                        // Inputs
                        .clk             (clk),
-                       .rst             (rst)
+                       .rst             (rst),
+                       .i_tx_stb (btns)
                        );
 
 endmodule
