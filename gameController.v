@@ -22,7 +22,7 @@ module gameController(dir, rst, board, score);
 
   input [1:0] dir
   input rst;
-  output reg [20:0] board [3:0] [3:0];
+  output reg [20:0] board [0:15];
   output reg [20:0] score = 0;
 
   /*
@@ -33,7 +33,7 @@ module gameController(dir, rst, board, score);
   */
 
   function emptyCellExists;
-    input [20:0] board [3:0] [3:0];
+    input [20:0] board [0:15];
     begin
       emptyCellExists = 0;
       for (i = 1; i <= 16; i = i+1) begin
@@ -56,38 +56,50 @@ module gameController(dir, rst, board, score);
 
   // fill board with zeroes to begin
   for (i = 1; i <= 16; i = i+1) begin
-    assign board[i/4][i%4] = 0;
+    assign board[i] = 0;
   end
-  // fill two random cells
-  rand <= $urandom % 15;
-  if (board[rand/4][rand%4] == 0) begin
-    if ($urandom % 10 == 0) board[rand/4][rand%4] <= 4;
-    else board[rc/4][rc%4] <= 2;
-  end
-  rand <= $urandom % 15;
-  if (board[rand/4][rand%4] == 0) begin
-    if ($urandom % 10 == 0) board[rand/4][rand%4] <= 4;
-    else board[rc/4][rc%4] <= 2;
-  end
+  // // fill two random cells
+  // rand <= $urandom % 15;
+  // if (board[rand/4][rand%4] == 0) begin
+  //   if ($urandom % 10 == 0) board[rand/4][rand%4] <= 4;
+  //   else board[rc/4][rc%4] <= 2;
+  // end
+  // rand <= $urandom % 15;
+  // if (board[rand/4][rand%4] == 0) begin
+  //   if ($urandom % 10 == 0) board[rand/4][rand%4] <= 4;
+  //   else board[rc/4][rc%4] <= 2;
+  // end
 
   always @(dir, rst) begin
+    // BEGIN: RESET LOGIC -----------------------------------------------------
     if (rst) begin
-      // fill board with zeroes to begin
-      for (i = 1; i <= 16; i = i+1) begin
-        assign board[i/4][i%4] = 0;
-      end
-      // fill two random cells
-      rand <= $urandom % 15;
-      if (board[rand/4][rand%4] == 0) begin
-        if ($urandom % 10 == 0) board[rand/4][rand%4] <= 4;
-        else board[rc/4][rc%4] <= 2;
-      end
-      rand <= $urandom % 15;
-      if (board[rand/4][rand%4] == 0) begin
-        if ($urandom % 10 == 0) board[rand/4][rand%4] <= 4;
-        else board[rc/4][rc%4] <= 2;
-      end
+      // // fill board with zeroes to begin
+      // for (i = 1; i <= 16; i = i+1) begin
+      //   assign board[i/4][i%4] = 0;
+      // end
+      // // fill two random cells
+      // rand <= $urandom % 15;
+      // if (board[rand/4][rand%4] == 0) begin
+      //   if ($urandom % 10 == 0) board[rand/4][rand%4] <= 4;
+      //   else board[rc/4][rc%4] <= 2;
+      // end
+      // rand <= $urandom % 15;
+      // if (board[rand/4][rand%4] == 0) begin
+      //   if ($urandom % 10 == 0) board[rand/4][rand%4] <= 4;
+      //   else board[rc/4][rc%4] <= 2;
+      // end
     end
+    // END: RESET LOGIC -------------------------------------------------------
+
+    // BEGIN: MOVE CELLS ------------------------------------------------------
+    // END: MOVE CELLS --------------------------------------------------------
+
+    // BEGIN: ADD CELLS -------------------------------------------------------
+    // END: ADD CELLS ---------------------------------------------------------
+
+    // BEGIN: END/CONTINUE GAME -----------------------------------------------
+    // END: END/CONTINUE GAME -------------------------------------------------
+
     // move cells, combine if necessary and add score
     // add new cell
     // check if game is over
