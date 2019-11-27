@@ -59,8 +59,9 @@ module TwentyFortyEight(RsRx, clk, rst, RsTx, btns);
     end
   end
   */
-  wire [8000-1:0]tx_data;
-  assign tx_data = "-----------------------------\n\r|      |      |      |      |\n\r| 2048 | 2048 | 2048 | 2048 |\n\r|      |      |      |      |\n\r-----------------------------\n\r|      |      |      |      |\n\r| 2048 | 2048 | 2048 | 2048 |\n\r|      |      |      |      |\n\r-----------------------------\n\r|      |      |      |      |\n\r| 2048 | 2048 | 2048 | 2048 |\n\r|      |      |      |      |\n\r-----------------------------\n\r|      |      |      |      |\n\r|    2 | 2048 | 2048 | 2048 |\n\r|      |      |      |      |\n\r-----------------------------\n\r\n\rScore: 1422734\n\r\n\r\n\r\n\r\n\r";
+  wire [5000-1:0]tx_string;
+  reg [320-1:0] board;
+  board_to_string board_to_string_(.board(board), .display_string(tx_string), .clk(clk));
   
   uart_top uart_top_ (// Outputs
                        .o_tx            (RsTx),
@@ -69,7 +70,7 @@ module TwentyFortyEight(RsRx, clk, rst, RsTx, btns);
                        .o_rx_valid      (uart_rx_valid),
                        // Inputs
                        .i_rx            (RsRx),
-                       .i_tx_data       (tx_data),
+                       .i_tx_data       (tx_string),
                        /*AUTOINST*/
                        // Inputs
                        .clk             (clk),
