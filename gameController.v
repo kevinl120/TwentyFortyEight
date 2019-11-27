@@ -22,7 +22,7 @@ module gameController(dir, rst, board, score);
 
   input [1:0] dir
   input rst;
-  output reg [20:0] board [0:15];
+  output reg [319:0] board = 0;
   output reg [20:0] score = 0;
 
   /*
@@ -32,17 +32,43 @@ module gameController(dir, rst, board, score);
   end procedure;
   */
 
+  reg [3:0] rand = 0 
+
+  // Find index in board given board index
+  function [10:0] getSplice;
+    input [5:0] index;
+    begin
+      getSpliceBegin = index * 20;
+    end
+  endfunction
+
+  // Reset board and score
+  task resetBoard;
+    inout [319:0] board;
+    inout [20:0] score;
+    begin
+      board <= 0;
+      // set two cells in the middle to 2
+      board[getSplice(5) +: 20] = 2
+      board[getSplice(10) +: 20] = 2
+      score <= 0;
+    end
+  endtask
+
   function emptyCellExists;
-    input [20:0] board [0:15];
+    input [319:0] board;
     begin
       emptyCellExists = 0;
-      for (i = 1; i <= 16; i = i+1) begin
-        if (board[i/4][i%4] == 0) begin
+      integer i;
+      for (i = 0; i < 16; i = i+1) begin
+        if (board[getSplice(i) +: 20] == 0) begin
           emptyCellExists = 1;
         end
       end
     end
   endfunction
+
+  // task addNewCell
 
   // TODO
   function canCombine;
@@ -52,12 +78,8 @@ module gameController(dir, rst, board, score);
     end
   endfunction
 
-  reg [3:0] rand = 0 
 
   // fill board with zeroes to begin
-  for (i = 1; i <= 16; i = i+1) begin
-    assign board[i] = 0;
-  end
   // // fill two random cells
   // rand <= $urandom % 15;
   // if (board[rand/4][rand%4] == 0) begin
@@ -70,24 +92,14 @@ module gameController(dir, rst, board, score);
   //   else board[rc/4][rc%4] <= 2;
   // end
 
+  initial begin
+    resetBoard(board, score);
+  end
+
   always @(dir, rst) begin
     // BEGIN: RESET LOGIC -----------------------------------------------------
     if (rst) begin
-      // // fill board with zeroes to begin
-      // for (i = 1; i <= 16; i = i+1) begin
-      //   assign board[i/4][i%4] = 0;
-      // end
-      // // fill two random cells
-      // rand <= $urandom % 15;
-      // if (board[rand/4][rand%4] == 0) begin
-      //   if ($urandom % 10 == 0) board[rand/4][rand%4] <= 4;
-      //   else board[rc/4][rc%4] <= 2;
-      // end
-      // rand <= $urandom % 15;
-      // if (board[rand/4][rand%4] == 0) begin
-      //   if ($urandom % 10 == 0) board[rand/4][rand%4] <= 4;
-      //   else board[rc/4][rc%4] <= 2;
-      // end
+      resetBoard(board, score)
     end
     // END: RESET LOGIC -------------------------------------------------------
 
