@@ -21,12 +21,12 @@
 module TwentyFortyEight(clk, rst, dir);
 
   input clk, rst;
-  input [3:0] dir;
+  input [1:0] dir;
 
-  reg [20:0] board [0:15];
-  reg [20:0] score = 0;
+  wire [319:0] board;
+  wire [20:0] score = 0;
   
-  gameController gameController_(.dir(dir), .rst(rst), .board(board), .score(score));
+  gameController gameController_(.clk(clk), .dir(dir), .rst(rst), .board(board), .score(score));
   
   // reg [3:0] rc = 0;
   // reg needMore = 1;

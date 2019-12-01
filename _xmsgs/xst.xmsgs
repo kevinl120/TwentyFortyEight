@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" Line 29: Port <arg fmt="%s" index="1">debug</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="81" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 64: <arg fmt="%s" index="1">rand</arg> may be used uninitialized in static subprogram <arg fmt="%s" index="2">addNewCell</arg> and create unintended latch behavior
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 202: Signal &lt;<arg fmt="%s" index="1">counter</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 202: Result of <arg fmt="%d" index="1">18</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">17</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 191: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">20</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 206: Assignment to <arg fmt="%s" index="1">lastMoveValid</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" Line 29: Assignment to <arg fmt="%s" index="1">board</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v</arg>&quot; line <arg fmt="%d" index="2">29</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">gameController_</arg>&gt; of block &lt;<arg fmt="%s" index="4">gameController</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">TwentyFortyEight</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v</arg>&quot; line <arg fmt="%s" index="2">29</arg>: Output port &lt;<arg fmt="%s" index="3">board</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gameController_</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v</arg>&quot; line <arg fmt="%s" index="2">29</arg>: Output port &lt;<arg fmt="%s" index="3">score</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gameController_</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v</arg>&quot; line <arg fmt="%s" index="2">29</arg>: Output port &lt;<arg fmt="%s" index="3">debug</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gameController_</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+</messages>
+
