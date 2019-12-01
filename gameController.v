@@ -65,7 +65,7 @@ module gameController(clk, dir, rst, board, score, debug);
     reg added;
     begin
       added = 0;
-      for (i = 0; i < 1000; i = i+1) begin // TODO: MAKE MORE EFFICIENT ADDCELL. INCREASE LOOP COUNT TO INCREASE ACCURACY
+      for (i = 0; i < 1; i = i+1) begin // TODO: MAKE MORE EFFICIENT ADDCELL. INCREASE LOOP COUNT TO INCREASE ACCURACY
         if (added == 0) begin
           rand <= counter % 16;
           if (board[getSplice(rand) +: 20] == 0) begin
@@ -85,7 +85,7 @@ module gameController(clk, dir, rst, board, score, debug);
         2'b00: startX = 0;
         2'b01: startX = 0;
         2'b10: startX = 3;
-        2'b11: startX = 3;
+        2'b11: startX = 0;
       endcase
     end
   endfunction
@@ -109,7 +109,7 @@ module gameController(clk, dir, rst, board, score, debug);
         2'b00: moveX = 0;
         2'b01: moveX = 1;
         2'b10: moveX = 0;
-        2'b11: moveX = -1;
+        2'b11: moveX = 1;
       endcase
     end
   endfunction
@@ -161,8 +161,8 @@ module gameController(clk, dir, rst, board, score, debug);
 
   task move;
     output validMove;
-    reg [3:0] posX;
-    reg [3:0] posY;
+    reg [2:0] posX;
+    reg [2:0] posY;
     begin
       validMove = 0;
       for (i = 0; i < 4; i = i+1) begin

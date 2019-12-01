@@ -35,6 +35,7 @@ module tb;
   wire [16:0] debug;
 
   integer i;
+  integer j;
 
   function displayBoard;
     input [319:0] board;
@@ -74,41 +75,52 @@ module tb;
   
   initial begin
     @(negedge rst); // wait for reset
-	 repeat(500) @(posedge clk);
+    repeat(500) @(posedge clk);
     $display("starting board");
     displayBoard(board);
-    dir = 1;
-    $display("move 1");
-    displayBoard(board);
-    repeat(233) @(posedge clk);
-    dir = 2;
-    $display("move 2");
-    displayBoard(board);
-    repeat(212) @(posedge clk);
-    dir = 3;
-    $display("move 3");
-    displayBoard(board);
-    repeat(255) @(posedge clk);
-    dir = 0;
-    $display("move 0");
-    displayBoard(board);
-    repeat(256) @(posedge clk);
-    dir = 1;
-    $display("move 1");
-    displayBoard(board);
-    repeat(523) @(posedge clk);
-    dir = 2;
-    $display("move 2");
-    displayBoard(board);
-    repeat(257) @(posedge clk);
-    dir = 3;
-    $display("move 3");
-    displayBoard(board);
-    repeat(355) @(posedge clk);
-    dir = 0;
-    $display("move 0");
-    displayBoard(board);
+
+    for (j = 0; j <= 8; j = j+1) begin
+      dir = j%4;
+    	$display("move %d", j%4);
+      repeat(50) @(posedge clk);
+      displayBoard(board);
+      repeat(200+j*7) @(posedge clk);
+    end
+
     $finish;
+
+    // $display("move 1");
+    // dir = 1;
+    // displayBoard(board);
+    // repeat(233) @(posedge clk);
+    // $display("move 2");
+    // dir = 2;
+    // displayBoard(board);
+    // repeat(212) @(posedge clk);
+    // $display("move 3");
+    // dir = 3;
+    // displayBoard(board);
+    // repeat(255) @(posedge clk);
+    // $display("move 0");
+    // dir = 0;
+    // displayBoard(board);
+    // repeat(256) @(posedge clk);
+    // $display("move 1");
+    // dir = 1;
+    // displayBoard(board);
+    // repeat(523) @(posedge clk);
+    // $display("move 2");
+    // dir = 2;
+    // displayBoard(board);
+    // repeat(257) @(posedge clk);
+    // $display("move 3");
+    // dir = 3;
+    // displayBoard(board);
+    // repeat(355) @(posedge clk);
+    // $display("move 0");
+    // dir = 0;
+    // displayBoard(board);
+    // $finish;
   end
   
   
