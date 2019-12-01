@@ -89,42 +89,7 @@ module tb;
 
     $finish;
 
-    // $display("move 1");
-    // dir = 1;
-    // displayBoard(board);
-    // repeat(233) @(posedge clk);
-    // $display("move 2");
-    // dir = 2;
-    // displayBoard(board);
-    // repeat(212) @(posedge clk);
-    // $display("move 3");
-    // dir = 3;
-    // displayBoard(board);
-    // repeat(255) @(posedge clk);
-    // $display("move 0");
-    // dir = 0;
-    // displayBoard(board);
-    // repeat(256) @(posedge clk);
-    // $display("move 1");
-    // dir = 1;
-    // displayBoard(board);
-    // repeat(523) @(posedge clk);
-    // $display("move 2");
-    // dir = 2;
-    // displayBoard(board);
-    // repeat(257) @(posedge clk);
-    // $display("move 3");
-    // dir = 3;
-    // displayBoard(board);
-    // repeat(355) @(posedge clk);
-    // $display("move 0");
-    // dir = 0;
-    // displayBoard(board);
-    // $finish;
   end
-  
-  
-  
-      
+
 endmodule
 

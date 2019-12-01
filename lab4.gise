@@ -56,7 +56,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1574847094" xil_pn:in_ck="3311550285151519408" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1574847094">
+    <transform xil_pn:end_ts="1574847428" xil_pn:in_ck="3311550285151519408" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1574847428">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="TwentyFortyEight.v"/>
@@ -75,14 +75,14 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1574847094" xil_pn:in_ck="3311550285151519408" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1574847094">
+    <transform xil_pn:end_ts="1574847428" xil_pn:in_ck="3311550285151519408" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1574847428">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="TwentyFortyEight.v"/>
       <outfile xil_pn:name="gameController.v"/>
       <outfile xil_pn:name="tb.v"/>
     </transform>
-    <transform xil_pn:end_ts="1574847097" xil_pn:in_ck="3311550285151519408" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6159587342810039271" xil_pn:start_ts="1574847094">
+    <transform xil_pn:end_ts="1574847431" xil_pn:in_ck="3311550285151519408" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6159587342810039271" xil_pn:start_ts="1574847428">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -94,7 +94,7 @@
       <outfile xil_pn:name="tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1574847097" xil_pn:in_ck="5000143986776051602" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1853537267270789276" xil_pn:start_ts="1574847097">
+    <transform xil_pn:end_ts="1574847431" xil_pn:in_ck="5000143986776051602" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1853537267270789276" xil_pn:start_ts="1574847431">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="isim.cmd"/>
@@ -133,6 +133,8 @@
       <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="TwentyFortyEight.lso"/>
       <outfile xil_pn:name="TwentyFortyEight.ngc"/>
       <outfile xil_pn:name="TwentyFortyEight.ngr"/>

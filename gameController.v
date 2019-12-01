@@ -163,6 +163,8 @@ module gameController(clk, dir, rst, board, score, debug);
     output validMove;
     reg [2:0] posX;
     reg [2:0] posY;
+    reg [2:0] newPosX;
+    reg [2:0] newPosY;
     begin
       validMove = 0;
       for (i = 0; i < 4; i = i+1) begin
@@ -170,16 +172,18 @@ module gameController(clk, dir, rst, board, score, debug);
           for (j = 0; j < 3; j = j+1) begin
             posX = startX(dir) + i*moveX(dir) + j*mergeX(dir);
             posY = startY(dir) + i*moveY(dir) + j*mergeY(dir);
-            if (board[getSplice(posX*4+posY) +: 20] == 0 && board[getSplice((posX+mergeX(dir))*4 + posY+mergeY(dir)) +: 20] != 0) begin
+            newPosX = posX+mergeX(dir);
+            newPosY = posY+mergeY(dir);
+            if (board[getSplice(posX*4+posY) +: 20] == 0 && board[getSplice(newPosX*4+newPosY) +: 20] != 0) begin
               // Move nonzero cell onto zero
-              board[getSplice(posX*4+posY) +: 20] = board[getSplice((posX+mergeX(dir))*4 + posY+mergeY(dir)) +: 20];
-              board[getSplice((posX+mergeX(dir))*4 + posY+mergeY(dir)) +: 20] = 0;
+              board[getSplice(posX*4+posY) +: 20] = board[getSplice(newPosX*4+newPosY) +: 20];
+              board[getSplice(newPosX*4+newPosY) +: 20] = 0;
               validMove = 1;
             end
-            else if (board[getSplice(posX*4+posY) +: 20] == board[getSplice((posX+mergeX(dir))*4 + posY+mergeY(dir)) +: 20] && board[getSplice(posX*4+posY) +: 20] != 0) begin
+            else if (board[getSplice(posX*4+posY) +: 20] == board[getSplice((newPosX)*4 + newPosY) +: 20] && board[getSplice(posX*4+posY) +: 20] != 0) begin
               board[getSplice(posX*4+posY) +: 20] = board[getSplice(posX*4+posY) +: 20] * 2;
               board[getSplice(posX*4+posY) +: 20] = board[getSplice(posX*4+posY) +: 20] + max(posX, posY); // hack to avoid double merging
-              board[getSplice((posX+mergeX(dir))*4 + posY+mergeY(dir)) +: 20] = 0;
+              board[getSplice((newPosX)*4 + newPosY) +: 20] = 0;
               validMove = 1;
             end
           end
