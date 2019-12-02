@@ -44,7 +44,6 @@ module tb;
       for (i = 0; i < 16; i = i+4) begin
         $display("%d %d %d %d", board[i*20 +: 20], board[i*20+20 +: 20], board[i*20+40 +: 20], board[i*20+60 +: 20]);
       end
-      $display("------------------------------");
     end
   endfunction
 
@@ -84,6 +83,8 @@ module tb;
     	$display("move %d", j%4);
       repeat(50) @(posedge clk);
       displayBoard(board);
+		$display("score: %d", score);
+      $display("------------------------------");
       repeat(200+j*7) @(posedge clk);
     end
 

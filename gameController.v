@@ -22,12 +22,12 @@ module gameController(clk, dir, rst, board, score, debug);
   input clk;
   input [1:0] dir;
   input rst;
-  output reg [319:0] board = 0;
+  output reg [319:0] board = 2;
   output reg [20:0] score = 0;
   output reg [16:0] debug = 0;
 
   reg [16:0] counter = 0;
-  reg lastMoveValid = 0;
+  reg lastMoveValid = 1;
   integer i, j, k;
 
    // Find index in board given board index
@@ -160,13 +160,13 @@ module gameController(clk, dir, rst, board, score, debug);
   endfunction
 
   task move;
-    output validMove;
+    output lastMoveValid;
     reg [2:0] posX;
     reg [2:0] posY;
     reg [2:0] newPosX;
     reg [2:0] newPosY;
     begin
-      validMove = 0;
+      lastMoveValid = 0;
       for (i = 0; i < 4; i = i+1) begin
         for (k = 0; k < 3; k = k+1) begin
           for (j = 0; j < 3; j = j+1) begin
@@ -174,17 +174,19 @@ module gameController(clk, dir, rst, board, score, debug);
             posY = startY(dir) + i*moveY(dir) + j*mergeY(dir);
             newPosX = posX+mergeX(dir);
             newPosY = posY+mergeY(dir);
+            // Move nonzero cell onto zero
             if (board[getSplice(posX*4+posY) +: 20] == 0 && board[getSplice(newPosX*4+newPosY) +: 20] != 0) begin
-              // Move nonzero cell onto zero
               board[getSplice(posX*4+posY) +: 20] = board[getSplice(newPosX*4+newPosY) +: 20];
               board[getSplice(newPosX*4+newPosY) +: 20] = 0;
-              validMove = 1;
+              lastMoveValid = 1;
             end
+            // Merge two like cells
             else if (board[getSplice(posX*4+posY) +: 20] == board[getSplice((newPosX)*4 + newPosY) +: 20] && board[getSplice(posX*4+posY) +: 20] != 0) begin
               board[getSplice(posX*4+posY) +: 20] = board[getSplice(posX*4+posY) +: 20] * 2;
+              score = score + board[getSplice(posX*4+posY) +: 20];
               board[getSplice(posX*4+posY) +: 20] = board[getSplice(posX*4+posY) +: 20] + max(posX, posY); // hack to avoid double merging
               board[getSplice((newPosX)*4 + newPosY) +: 20] = 0;
-              validMove = 1;
+              lastMoveValid = 1;
             end
           end
         end
@@ -208,26 +210,12 @@ module gameController(clk, dir, rst, board, score, debug);
   end
 
   always @(dir, rst) begin
-    // BEGIN: RESET LOGIC -----------------------------------------------------
     if (rst) begin
       resetBoard();
     end
-    // END: RESET LOGIC -------------------------------------------------------
 
-    // BEGIN: MOVE CELLS ------------------------------------------------------
     move(lastMoveValid);
-    // END: MOVE CELLS --------------------------------------------------------
-
-    // BEGIN: ADD CELLS -------------------------------------------------------
-    addNewCell();
-    // END: ADD CELLS ---------------------------------------------------------
-
-    // BEGIN: END/CONTINUE GAME -----------------------------------------------
-    // END: END/CONTINUE GAME -------------------------------------------------
-
-    // move cells, combine if necessary and add score
-    // add new cell
-    // check if game is over
+    if (lastMoveValid) addNewCell();
   end
 
 endmodule
