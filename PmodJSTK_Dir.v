@@ -22,6 +22,10 @@ module PmodJSTK_Dir(
     wire mosi;          // Data transfer from master to slave
     wire sclk;          // Serial clock that controls communication
 
+    parameter  cntEndVal = 16'hC350;
+    wire [15:0] clkCount = 16'h0000;
+    wire dclk;          // Required?
+
     // Holds data to be sent to PmodJSTK
     wire [7:0] sndData;
 
@@ -76,7 +80,7 @@ module PmodJSTK_Dir(
     Binary_To_BCD genDecimalPos(
         .CLK(clk),
         .RST(rst),
-        .START(), // DCLK -> need?
+        .START(dclk), // DCLK -> need?
         .BIN(posXDataRaw),
         .BCDOUT(posXData)
     );
@@ -87,7 +91,7 @@ module PmodJSTK_Dir(
     Binary_To_BCD genDecimalPos(
         .CLK(clk),
         .RST(rst),
-        .START(), // DCLK -> need?
+        .START(dclk), // DCLK -> need?
         .BIN(posYDataRaw),
         .BCDOUT(posYData)
     );
@@ -143,6 +147,20 @@ module PmodJSTK_Dir(
       end
     end
 
+    // ---------------------------------------
+    //        1kHz Clock Divider
+    // ---------------------------------------
+
+    always @(posedge clk) begin
+      if (clkCount == cntEndVal) begin
+        dclk <= 1'b1;
+        clkCount <= 16'h0000;
+      end
+      else begin
+        dclk <= 1'b0;
+        clkCount <= clkCount + 1'b1;
+      end
+    end
 
 
 
