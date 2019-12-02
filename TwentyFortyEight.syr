@@ -122,11 +122,11 @@ Elaborating module <TwentyFortyEight>.
 
 Elaborating module <gameController>.
 WARNING:HDLCompiler:872 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 34: Using initial value of precompute since it is never assigned
-WARNING:HDLCompiler:81 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 72: rand may be used uninitialized in static subprogram addNewCell and create unintended latch behavior
-WARNING:HDLCompiler:91 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 139: Signal <counter> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 139: Result of 18-bit expression is truncated to fit in 17-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 118: Result of 21-bit expression is truncated to fit in 20-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 128: Result of 32-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:81 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 67: rand may be used uninitialized in static subprogram addNewCell and create unintended latch behavior
+WARNING:HDLCompiler:91 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 137: Signal <counter> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 137: Result of 18-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 114: Result of 21-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 126: Result of 32-bit expression is truncated to fit in 20-bit target.
 WARNING:HDLCompiler:1127 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" Line 29: Assignment to board ignored, since the identifier is never used
 WARNING:Xst:2972 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" line 29. All outputs of instance <gameController_> of block <gameController> are unconnected in block <TwentyFortyEight>. Underlying logic will be removed.
 
@@ -148,6 +148,18 @@ Synthesizing Unit <mod_5u_4u>.
     Summary:
 	no macro.
 Unit <mod_5u_4u> synthesized.
+
+Synthesizing Unit <div_9u_7u>.
+    Related source file is "".
+    Summary:
+	no macro.
+Unit <div_9u_7u> synthesized.
+
+Synthesizing Unit <div_9u_5u>.
+    Related source file is "".
+    Summary:
+	no macro.
+Unit <div_9u_5u> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -270,13 +282,13 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 142.00 secs
-Total CPU time to Xst completion: 139.46 secs
+Total REAL time to Xst completion: 52.00 secs
+Total CPU time to Xst completion: 50.65 secs
  
 --> 
 
 
-Total memory usage is 1704368 kilobytes
+Total memory usage is 1179064 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    9 (   0 filtered)

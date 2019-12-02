@@ -30,13 +30,8 @@ module gameController(clk, dir, rst, board, score, debug);
   reg lastMoveValid = 1;
   integer i, j, k;
 
-  // There are 4 directions. Each direction has 24 possible movements. Each movement is 2 cells, and each cell takes 4 bits to store (1-15). 4*24*2*4 = 768
+  // There are 4 directions. Each direction has 24 possible movements. Each movement involves 2 cells, and each cell takes 4 bits to store (1-15). 4*24*2*4 = 768
   reg [767:0] precompute = 768'b110111001110110111011100111111101110110111011100100110001010100110011000101110101010100110011000010101000110010101010100011101100110010101010100000100000010000100010000001100100010000100010000100011000100100010001100000001000100100010001100100111010101100110011101000101010101100110011101101011100110101010101110001001100110101010101110101111110111101110111111001101110111101110111111111011111101111011101111110011011101111011101111101010111001101010101011100010011001101010101011011001110101011001100111010001010101011001100111001000110001001000100011000000010001001000100011011100111011011101110011111110111011011101110011011000101010011001100010111010101010011001100010010100011001010101010001110110011001010101010001010000001000010001000000110010001000010001000000;
-
-  // reg [191:0] pre_up = 192'b000001000100100010001100000001000100100000000100000101010101100110011101000101010101100100010101001001100110101010101110001001100110101000100110001101110111101110111111001101110111101100110111;
-  // reg [191:0] pre_right = 192'b111110111011011101110011111110111011011111111011111010101010011001100010111010101010011011101010110110011001010101010001110110011001010111011001110010001000010001000000110010001000010011001000;
-  // reg [191:0] pre_down = 192'b000000010001001000100011000000010001001000000001010001010101011001100111010001010101011001000101100010011001101010101011100010011001101010001001110011011101111011101111110011011101111011001101;
-  // reg [191:0] pre_left = 192'b001100100010000100010000001100100010000100110010011101100110010101010100011101100110010101110110101110101010100110011000101110101010100110111010111111101110110111011100111111101110110111111110;
 
   // Find index in board register given board index
   function [10:0] getSplice;
@@ -102,26 +97,30 @@ module gameController(clk, dir, rst, board, score, debug);
     begin
       lastMoveValid = 0;
       precompute_dir = dir*192;
-      for (i = 0; i < 192; i = i + 8) begin
+      for (i = 0; i < 192; i = i+8) begin
         // try to move board[newIndex] onto board[index]
         index = getSplice(precompute[(precompute_dir+i) +: 4]);
         newIndex = getSplice(precompute[(precompute_dir+i+4) +: 4]);
-        // Move nonzero cell onto zero
-        if (board[index +: 20] == 0 && board[newIndex +: 20] != 0) begin
-          board[index +: 20] = board[newIndex +: 20];
-          board[newIndex +: 20] = 0;
-          lastMoveValid = 1;
-        end
-        // Merge two like cells
-        else if (board[index +: 20] == board[newIndex +: 20] && board[index +: 20] != 0) begin
-          board[index +: 20] = board[index +: 20] * 2;
-          score = score + board[index +: 20];
-          board[index +: 20] = board[index +: 20] + max(index/80, (index/20)%4); // hack to avoid double merging
-          board[newIndex +: 20] = 0;
-          lastMoveValid = 1;
+
+        if (board[newIndex +: 20] != 0) begin
+          // Move nonzero cell onto zero
+          if (board[index +: 20] == 0) begin
+            board[index +: 20] = board[newIndex +: 20];
+            board[newIndex +: 20] = 0;
+            lastMoveValid = 1;
+          end
+          // Merge two like cells
+          else if (board[index +: 20] == board[newIndex +: 20]) begin
+            board[index +: 20] = board[index +: 20] * 2;
+            score = score + board[index +: 20];
+            board[index +: 20] = board[index +: 20] + max(index/80, (index/20)%4); // hack to avoid double merging
+            board[newIndex +: 20] = 0;
+            lastMoveValid = 1;
+          end
         end
       end
 
+      // compensate for double merging hack
       for (i = 0; i < 16; i = i+1) begin
         if (board[getSplice(i) +: 20] > 2) begin
           board[getSplice(i) +: 20] = board[getSplice(i) +: 20] - (board[getSplice(i) +: 20] % 4);

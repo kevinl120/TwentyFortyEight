@@ -8,14 +8,14 @@ Analyzing Verilog file "/home/ise/VirtualBox_Shared/TwentyFortyEight/tb.v" into 
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 94972 KB
-Fuse CPU Usage: 940 ms
+Fuse Memory Usage: 94968 KB
+Fuse CPU Usage: 950 ms
 Compiling module gameController
 Compiling module tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Compiled 3 Verilog Units
 Built simulation executable /home/ise/VirtualBox_Shared/TwentyFortyEight/tb_isim_beh.exe
-Fuse Memory Usage: 98216 KB
+Fuse Memory Usage: 98212 KB
 Fuse CPU Usage: 980 ms
-GCC CPU Usage: 330 ms
+GCC CPU Usage: 320 ms
