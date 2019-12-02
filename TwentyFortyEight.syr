@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.01 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.01 secs
+Total CPU time to Xst completion: 0.02 secs
  
 --> 
 Reading design: TwentyFortyEight.prj
@@ -116,17 +116,19 @@ Parsing module <TwentyFortyEight>.
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" Line 29: Port debug is not connected to this instance
 
 Elaborating module <TwentyFortyEight>.
 
 Elaborating module <gameController>.
-WARNING:HDLCompiler:872 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 34: Using initial value of precompute since it is never assigned
-WARNING:HDLCompiler:81 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 67: rand may be used uninitialized in static subprogram addNewCell and create unintended latch behavior
-WARNING:HDLCompiler:91 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 136: Signal <counter> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 136: Result of 18-bit expression is truncated to fit in 17-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 112: Result of 21-bit expression is truncated to fit in 20-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 125: Result of 32-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:872 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 35: Using initial value of precompute since it is never assigned
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 132: Result of 18-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 138: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 108: Result of 22-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 109: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 115: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 120: Result of 32-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 122: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 125: Result of 7-bit expression is truncated to fit in 6-bit target.
 WARNING:HDLCompiler:1127 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" Line 29: Assignment to board ignored, since the identifier is never used
 WARNING:Xst:2972 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" line 29. All outputs of instance <gameController_> of block <gameController> are unconnected in block <TwentyFortyEight>. Underlying logic will be removed.
 
@@ -138,16 +140,9 @@ Synthesizing Unit <TwentyFortyEight>.
     Related source file is "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v".
 INFO:Xst:3210 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" line 29: Output port <board> of the instance <gameController_> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" line 29: Output port <score> of the instance <gameController_> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" line 29: Output port <debug> of the instance <gameController_> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <TwentyFortyEight> synthesized.
-
-Synthesizing Unit <mod_5u_4u>.
-    Related source file is "".
-    Summary:
-	no macro.
-Unit <mod_5u_4u> synthesized.
 
 Synthesizing Unit <div_9u_7u>.
     Related source file is "".
@@ -160,6 +155,12 @@ Synthesizing Unit <div_9u_5u>.
     Summary:
 	no macro.
 Unit <div_9u_5u> synthesized.
+
+Synthesizing Unit <mod_5u_4u>.
+    Related source file is "".
+    Summary:
+	no macro.
+Unit <mod_5u_4u> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -232,7 +233,7 @@ Slice Logic Distribution:
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                           4
+ Number of IOs:                           5
  Number of bonded IOBs:                   0  out of    232     0%  
 
 Specific Feature Utilization:
@@ -282,15 +283,15 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 794.00 secs
-Total CPU time to Xst completion: 772.76 secs
+Total REAL time to Xst completion: 41.00 secs
+Total CPU time to Xst completion: 34.37 secs
  
 --> 
 
 
-Total memory usage is 3110340 kilobytes
+Total memory usage is 1050980 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    9 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 

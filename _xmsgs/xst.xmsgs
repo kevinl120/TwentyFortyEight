@@ -5,25 +5,31 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" Line 29: Port <arg fmt="%s" index="1">debug</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 35: Using initial value of <arg fmt="%s" index="1">precompute</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 34: Using initial value of <arg fmt="%s" index="1">precompute</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 132: Result of <arg fmt="%d" index="1">18</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">17</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="81" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 67: <arg fmt="%s" index="1">rand</arg> may be used uninitialized in static subprogram <arg fmt="%s" index="2">addNewCell</arg> and create unintended latch behavior
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 138: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 136: Signal &lt;<arg fmt="%s" index="1">counter</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 108: Result of <arg fmt="%d" index="1">22</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">20</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 136: Result of <arg fmt="%d" index="1">18</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">17</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 109: Result of <arg fmt="%d" index="1">22</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">21</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 112: Result of <arg fmt="%d" index="1">21</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">20</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 115: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 125: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">20</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 120: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">20</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 122: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 125: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" Line 29: Assignment to <arg fmt="%s" index="1">board</arg> ignored, since the identifier is never used
@@ -36,9 +42,6 @@
 </msg>
 
 <msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v</arg>&quot; line <arg fmt="%s" index="2">29</arg>: Output port &lt;<arg fmt="%s" index="3">score</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gameController_</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v</arg>&quot; line <arg fmt="%s" index="2">29</arg>: Output port &lt;<arg fmt="%s" index="3">debug</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">gameController_</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 </messages>

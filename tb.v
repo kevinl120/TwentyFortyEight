@@ -26,13 +26,12 @@ module tb;
 
   // Inputs
   reg clk;
-  reg [1:0] dir;
+  reg [2:0] dir;
   reg rst;
 
   // Outputs
   wire [319:0] board;
   wire [20:0] score;
-  wire [16:0] debug;
 
   integer i;
   integer j;
@@ -53,40 +52,50 @@ module tb;
     .dir(dir), 
     .rst(rst), 
     .board(board), 
-    .score(score), 
-    .debug(debug)
+    .score(score)
   );
 
   initial begin
     // Initialize Inputs
     clk = 0;
-    dir = 0;
+    dir = 4;
     rst = 1;
 
     // Wait 100 ns for global reset to finish
     #100;
       
     // Add stimulus here
-      repeat(4) #10 clk = ~clk;
-      rst = 0;
+    repeat(4) #10 clk = ~clk;
+    rst = 0;
     forever #10 clk = ~clk;
   end
   
   initial begin
     @(negedge rst); // wait for reset
     repeat(500) @(posedge clk);
+
     $display("starting board");
     displayBoard(board);
 
     for (j = 0; j <= 8; j = j+1) begin
       dir = j%4;
+      @(posedge clk);
       $display("move %d", j%4);
+      dir = 4;
       repeat(50) @(posedge clk);
       displayBoard(board);
       $display("score: %d", score);
       $display("------------------------------");
       repeat(200+j*7) @(posedge clk);
     end
+	 
+    rst = 1;
+    @(posedge clk);
+    rst = 0;
+    repeat(50) @(posedge clk);
+    $display("reset");
+    displayBoard(board);
+    $display("score: %d", score);
 
     $finish;
 
