@@ -30,7 +30,15 @@ module gameController(clk, dir, rst, board, score, debug);
   reg lastMoveValid = 1;
   integer i, j, k;
 
-   // Find index in board given board index
+  // There are 4 directions. Each direction has 24 possible movements. Each movement is 2 cells, and each cell takes 4 bits to store (1-15). 4*24*2*4 = 768
+  reg [767:0] precompute = 768'b110111001110110111011100111111101110110111011100100110001010100110011000101110101010100110011000010101000110010101010100011101100110010101010100000100000010000100010000001100100010000100010000100011000100100010001100000001000100100010001100100111010101100110011101000101010101100110011101101011100110101010101110001001100110101010101110101111110111101110111111001101110111101110111111111011111101111011101111110011011101111011101111101010111001101010101011100010011001101010101011011001110101011001100111010001010101011001100111001000110001001000100011000000010001001000100011011100111011011101110011111110111011011101110011011000101010011001100010111010101010011001100010010100011001010101010001110110011001010101010001010000001000010001000000110010001000010001000000;
+
+  // reg [191:0] pre_up = 192'b000001000100100010001100000001000100100000000100000101010101100110011101000101010101100100010101001001100110101010101110001001100110101000100110001101110111101110111111001101110111101100110111;
+  // reg [191:0] pre_right = 192'b111110111011011101110011111110111011011111111011111010101010011001100010111010101010011011101010110110011001010101010001110110011001010111011001110010001000010001000000110010001000010011001000;
+  // reg [191:0] pre_down = 192'b000000010001001000100011000000010001001000000001010001010101011001100111010001010101011001000101100010011001101010101011100010011001101010001001110011011101111011101111110011011101111011001101;
+  // reg [191:0] pre_left = 192'b001100100010000100010000001100100010000100110010011101100110010101010100011101100110010101110110101110101010100110011000101110101010100110111010111111101110110111011100111111101110110111111110;
+
+  // Find index in board register given board index
   function [10:0] getSplice;
     input [5:0] index;
     begin
@@ -44,7 +52,7 @@ module gameController(clk, dir, rst, board, score, debug);
       //board <= 0;
       addNewCell();
       addNewCell();
-      score <= 0;
+      score = 0;
     end
   endtask
 
@@ -78,78 +86,6 @@ module gameController(clk, dir, rst, board, score, debug);
     end
   endtask
 
-  function [2:0] startX;
-    input [1:0] dir;
-    begin
-      case (dir)
-        2'b00: startX = 0;
-        2'b01: startX = 0;
-        2'b10: startX = 3;
-        2'b11: startX = 0;
-      endcase
-    end
-  endfunction
-
-  function [2:0] startY;
-    input [1:0] dir;
-    begin
-      case (dir)
-        2'b00: startY = 0;
-        2'b01: startY = 3;
-        2'b10: startY = 3;
-        2'b11: startY = 0;
-      endcase
-    end
-  endfunction
-
-  function [2:0] moveX;
-    input [1:0] dir;
-    begin
-      case (dir)
-        2'b00: moveX = 0;
-        2'b01: moveX = 1;
-        2'b10: moveX = 0;
-        2'b11: moveX = 1;
-      endcase
-    end
-  endfunction
-
-  function [2:0] moveY;
-    input [1:0] dir;
-    begin
-      case (dir)
-        2'b00: moveY = 1;
-        2'b01: moveY = 0;
-        2'b10: moveY = -1;
-        2'b11: moveY = 0;
-      endcase
-    end
-  endfunction
-
-  function [2:0] mergeX;
-    input [1:0] dir;
-    begin
-      case (dir)
-        2'b00: mergeX = 1;
-        2'b01: mergeX = 0;
-        2'b10: mergeX = -1;
-        2'b11: mergeX = 0;
-      endcase
-    end
-  endfunction
-
-  function [2:0] mergeY;
-    input [1:0] dir;
-    begin
-      case (dir)
-        2'b00: mergeY = 0;
-        2'b01: mergeY = -1;
-        2'b10: mergeY = 0;
-        2'b11: mergeY = 1;
-      endcase
-    end
-  endfunction
-
   function [2:0] max;
     input [2:0] a;
     input [2:0] b;
@@ -161,34 +97,28 @@ module gameController(clk, dir, rst, board, score, debug);
 
   task move;
     output lastMoveValid;
-    reg [2:0] posX;
-    reg [2:0] posY;
-    reg [2:0] newPosX;
-    reg [2:0] newPosY;
+    reg [10:0] precompute_dir;
+    reg [10:0] index, newIndex;
     begin
       lastMoveValid = 0;
-      for (i = 0; i < 4; i = i+1) begin
-        for (k = 0; k < 3; k = k+1) begin
-          for (j = 0; j < 3; j = j+1) begin
-            posX = startX(dir) + i*moveX(dir) + j*mergeX(dir);
-            posY = startY(dir) + i*moveY(dir) + j*mergeY(dir);
-            newPosX = posX+mergeX(dir);
-            newPosY = posY+mergeY(dir);
-            // Move nonzero cell onto zero
-            if (board[getSplice(posX*4+posY) +: 20] == 0 && board[getSplice(newPosX*4+newPosY) +: 20] != 0) begin
-              board[getSplice(posX*4+posY) +: 20] = board[getSplice(newPosX*4+newPosY) +: 20];
-              board[getSplice(newPosX*4+newPosY) +: 20] = 0;
-              lastMoveValid = 1;
-            end
-            // Merge two like cells
-            else if (board[getSplice(posX*4+posY) +: 20] == board[getSplice((newPosX)*4 + newPosY) +: 20] && board[getSplice(posX*4+posY) +: 20] != 0) begin
-              board[getSplice(posX*4+posY) +: 20] = board[getSplice(posX*4+posY) +: 20] * 2;
-              score = score + board[getSplice(posX*4+posY) +: 20];
-              board[getSplice(posX*4+posY) +: 20] = board[getSplice(posX*4+posY) +: 20] + max(posX, posY); // hack to avoid double merging
-              board[getSplice((newPosX)*4 + newPosY) +: 20] = 0;
-              lastMoveValid = 1;
-            end
-          end
+      precompute_dir = dir*192;
+      for (i = 0; i < 192; i = i + 8) begin
+        // try to move board[newIndex] onto board[index]
+        index = getSplice(precompute[(precompute_dir+i) +: 4]);
+        newIndex = getSplice(precompute[(precompute_dir+i+4) +: 4]);
+        // Move nonzero cell onto zero
+        if (board[index +: 20] == 0 && board[newIndex +: 20] != 0) begin
+          board[index +: 20] = board[newIndex +: 20];
+          board[newIndex +: 20] = 0;
+          lastMoveValid = 1;
+        end
+        // Merge two like cells
+        else if (board[index +: 20] == board[newIndex +: 20] && board[index +: 20] != 0) begin
+          board[index +: 20] = board[index +: 20] * 2;
+          score = score + board[index +: 20];
+          board[index +: 20] = board[index +: 20] + max(index/80, (index/20)%4); // hack to avoid double merging
+          board[newIndex +: 20] = 0;
+          lastMoveValid = 1;
         end
       end
 

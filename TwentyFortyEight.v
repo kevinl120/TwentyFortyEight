@@ -27,28 +27,6 @@ module TwentyFortyEight(clk, rst, dir);
   wire [20:0] score = 0;
   
   gameController gameController_(.clk(clk), .dir(dir), .rst(rst), .board(board), .score(score));
-  
-  // reg [3:0] rc = 0;
-  // reg needMore = 1;
-  // reg fillCount = 0;
-  // always @(posedge clk) begin
-  //   //getFillCount
-  //   // fillCount <= getFillCount();
-    
-  //   if (needMore && fillCount == 16) begin
-  //     // game over
-  //   end
-  //   else begin
-  //       while (needMore) begin
-  //         rc <= $urandom % 15;
-  //         if (board[rc/4][rc%4] == 0) begin
-  //           if ($urandom % 10 == 0) board[rc/4][rc%4] <= 4;
-  //           else board[rc/4][rc%4] <= 2;
-  //           needMore <= 0;
-  //         end
-  //       end
-  //   end
-  // end
 
   // uart
   // joystick integration (+ debouncer)

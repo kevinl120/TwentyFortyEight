@@ -56,18 +56,18 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1574848204" xil_pn:in_ck="3311550285151519408" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1574848204">
+    <transform xil_pn:end_ts="1574856137" xil_pn:in_ck="3311550285151519408" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1574856137">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="TwentyFortyEight.v"/>
       <outfile xil_pn:name="gameController.v"/>
       <outfile xil_pn:name="tb.v"/>
     </transform>
-    <transform xil_pn:end_ts="1574848038" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7128511773193751507" xil_pn:start_ts="1574848038">
+    <transform xil_pn:end_ts="1574856016" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7128511773193751507" xil_pn:start_ts="1574856016">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1574848038" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2964187670512171541" xil_pn:start_ts="1574848038">
+    <transform xil_pn:end_ts="1574856016" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2964187670512171541" xil_pn:start_ts="1574856016">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -75,14 +75,14 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1574848204" xil_pn:in_ck="3311550285151519408" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1574848204">
+    <transform xil_pn:end_ts="1574856137" xil_pn:in_ck="3311550285151519408" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1574856137">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="TwentyFortyEight.v"/>
       <outfile xil_pn:name="gameController.v"/>
       <outfile xil_pn:name="tb.v"/>
     </transform>
-    <transform xil_pn:end_ts="1574848207" xil_pn:in_ck="3311550285151519408" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6159587342810039271" xil_pn:start_ts="1574848204">
+    <transform xil_pn:end_ts="1574856140" xil_pn:in_ck="3311550285151519408" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6159587342810039271" xil_pn:start_ts="1574856137">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -94,7 +94,7 @@
       <outfile xil_pn:name="tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1574848207" xil_pn:in_ck="5000143986776051602" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1853537267270789276" xil_pn:start_ts="1574848207">
+    <transform xil_pn:end_ts="1574856140" xil_pn:in_ck="5000143986776051602" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1853537267270789276" xil_pn:start_ts="1574856140">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="isim.cmd"/>
@@ -129,8 +129,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1574846732" xil_pn:in_ck="-4991402705366141834" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-7950483805142112157" xil_pn:start_ts="1574846723">
-      <status xil_pn:value="AbortedRun"/>
+    <transform xil_pn:end_ts="1574855256" xil_pn:in_ck="-4991402705366141834" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-7950483805142112157" xil_pn:start_ts="1574855111">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -139,9 +139,11 @@
       <outfile xil_pn:name="TwentyFortyEight.ngc"/>
       <outfile xil_pn:name="TwentyFortyEight.ngr"/>
       <outfile xil_pn:name="TwentyFortyEight.prj"/>
+      <outfile xil_pn:name="TwentyFortyEight.stx"/>
       <outfile xil_pn:name="TwentyFortyEight.syr"/>
       <outfile xil_pn:name="TwentyFortyEight.xst"/>
       <outfile xil_pn:name="TwentyFortyEight_beh.prj"/>
+      <outfile xil_pn:name="TwentyFortyEight_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>

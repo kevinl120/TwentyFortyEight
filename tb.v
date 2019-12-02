@@ -80,10 +80,10 @@ module tb;
 
     for (j = 0; j <= 8; j = j+1) begin
       dir = j%4;
-    	$display("move %d", j%4);
+      $display("move %d", j%4);
       repeat(50) @(posedge clk);
       displayBoard(board);
-		$display("score: %d", score);
+      $display("score: %d", score);
       $display("------------------------------");
       repeat(200+j*7) @(posedge clk);
     end
