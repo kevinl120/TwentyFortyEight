@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 61: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 49: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 50: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 51: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 52: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 109: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 113: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 29: Net &lt;<arg fmt="%s" index="1">numToChar[8]_0147</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/uart_top.v" Line 45: Result of <arg fmt="%d" index="1">13</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/uart_top.v" Line 52: Result of <arg fmt="%d" index="1">13</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/uart_fifo.v" Line 55: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/uart_fifo.v" Line 61: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/uart.v" Line 90: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">11</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/uart.v" Line 93: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/uart.v" Line 95: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">11</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/uart.v" Line 98: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/uart.v" Line 138: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/uart.v" Line 139: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/uart.v" Line 147: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/uart.v" Line 153: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/uart.v" Line 192: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/xilinx/TwentyFortyEight/uart.v" Line 209: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.v" Line 66: Assignment to <arg fmt="%s" index="1">uart_tx_busy</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.v" Line 67: Assignment to <arg fmt="%s" index="1">uart_rx_data</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.v" Line 68: Assignment to <arg fmt="%s" index="1">uart_rx_valid</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.v" Line 61: Net &lt;<arg fmt="%s" index="1">board[319]</arg>&gt; does not have a driver.
+</msg>
+
+</messages>

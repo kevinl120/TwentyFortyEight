@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.xst" -ofn "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.syr" 
+xst -intstyle ise -ifn "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.xst" -ofn "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.syr" 
+xst -intstyle ise -ifn "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.xst" -ofn "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.syr" 
+xst -intstyle ise -ifn "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.xst" -ofn "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.syr" 
+xst -intstyle ise -ifn "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.xst" -ofn "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.syr" 
+xst -intstyle ise -ifn "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.xst" -ofn "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.syr" 

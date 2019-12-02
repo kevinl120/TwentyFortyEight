@@ -24,8 +24,6 @@ module TwentyFortyEight(RsRx, clk, rst, RsTx, btns);
   input        RsRx;
   output       RsTx;
   input btns;
-
-  reg [20:0] board [0:3] [0:3];
   
   reg [3:0] rc = 0;
   reg needMore = 1;
