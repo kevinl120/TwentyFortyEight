@@ -103,17 +103,16 @@ module gameController(clk, dir, rst, board, score, debug);
         newIndex = getSplice(precompute[(precompute_dir+i+4) +: 4]);
 
         if (board[newIndex +: 20] != 0) begin
-          // Move nonzero cell onto zero
-          if (board[index +: 20] == 0) begin
-            board[index +: 20] = board[newIndex +: 20];
-            board[newIndex +: 20] = 0;
-            lastMoveValid = 1;
-          end
-          // Merge two like cells
-          else if (board[index +: 20] == board[newIndex +: 20]) begin
-            board[index +: 20] = board[index +: 20] * 2;
-            score = score + board[index +: 20];
-            board[index +: 20] = board[index +: 20] + max(index/80, (index/20)%4); // hack to avoid double merging
+          if (board[index +: 20] == 0 || board[index +: 20] == board[newIndex +: 20]) begin
+            if (board[index +: 20] == 0) begin
+              // Move nonzero cell onto zero
+              board[index +: 20] = board[newIndex +: 20];
+            end else begin
+              // Merge two like cells
+              board[index +: 20] = board[index +: 20] * 2;
+              score = score + board[index +: 20];
+              board[index +: 20] = board[index +: 20] + max(index/80, (index/20)%4); // hack to avoid double merging
+            end
             board[newIndex +: 20] = 0;
             lastMoveValid = 1;
           end

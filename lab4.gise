@@ -153,7 +153,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1575260582" xil_pn:in_ck="-4991402705366141834" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-7950483805142112157" xil_pn:start_ts="1575260527">
+    <transform xil_pn:end_ts="1575261902" xil_pn:in_ck="-4991402705366141834" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-7950483805142112157" xil_pn:start_ts="1575261105">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -178,6 +178,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="TwentyFortyEight.bld"/>
       <outfile xil_pn:name="TwentyFortyEight.ngd"/>
       <outfile xil_pn:name="TwentyFortyEight_ngdbuild.xrpt"/>
@@ -187,6 +189,7 @@
     <transform xil_pn:end_ts="1575260590" xil_pn:in_ck="4553673641502997495" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1575260587">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="TwentyFortyEight_map.map"/>
       <outfile xil_pn:name="TwentyFortyEight_map.mrp"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
