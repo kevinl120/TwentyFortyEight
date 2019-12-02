@@ -1,6 +1,9 @@
-set -tmpdir "C:/Users/152/TwentyFortyEight/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/152/TwentyFortyEight/xst"
-run -compileonly yes
+set -tmpdir "xst/projnav.tmp"
+set -xsthdpdir "xst"
+run
+-ifn uart_top.prj
+-ofn uart_top
+-ofmt NGC
 -p xc6slx16-3-csg324
 -top uart_top
 -opt_mode Speed
@@ -47,4 +50,3 @@ run -compileonly yes
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
--ifn uart_top.prj

@@ -1,0 +1,144 @@
+//! **************************************************************************
+// Written by: Map P.68d on Mon Dec 02 11:28:47 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "led<0>" LOCATE = SITE "U16" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "V16" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "U15" LEVEL 1;
+COMP "led<3>" LOCATE = SITE "V15" LEVEL 1;
+COMP "led<4>" LOCATE = SITE "M11" LEVEL 1;
+COMP "led<5>" LOCATE = SITE "N11" LEVEL 1;
+COMP "led<6>" LOCATE = SITE "R11" LEVEL 1;
+COMP "led<7>" LOCATE = SITE "T11" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "led_5" BEL
+        "givedir/PmodJSTK_Int/SerialClock/clkCount_9" BEL
+        "givedir/PmodJSTK_Int/SerialClock/clkCount_8" BEL
+        "givedir/PmodJSTK_Int/SerialClock/clkCount_7" BEL
+        "givedir/PmodJSTK_Int/SerialClock/clkCount_6" BEL
+        "givedir/PmodJSTK_Int/SerialClock/clkCount_5" BEL
+        "givedir/PmodJSTK_Int/SerialClock/clkCount_4" BEL
+        "givedir/PmodJSTK_Int/SerialClock/clkCount_3" BEL
+        "givedir/PmodJSTK_Int/SerialClock/clkCount_2" BEL
+        "givedir/PmodJSTK_Int/SerialClock/clkCount_1" BEL
+        "givedir/PmodJSTK_Int/SerialClock/clkCount_0" BEL "givedir/dclk" BEL
+        "givedir/genDecimalPosY/shiftCount_4" BEL
+        "givedir/genDecimalPosY/shiftCount_3" BEL
+        "givedir/genDecimalPosY/shiftCount_2" BEL
+        "givedir/genDecimalPosY/shiftCount_1" BEL
+        "givedir/genDecimalPosY/shiftCount_0" BEL
+        "givedir/genDecimalPosY/STATE_FSM_FFd3" BEL
+        "givedir/genDecimalPosY/STATE_FSM_FFd2" BEL
+        "givedir/genDecimalPosY/BCDOUT_15" BEL
+        "givedir/genDecimalPosY/BCDOUT_14" BEL
+        "givedir/genDecimalPosY/BCDOUT_13" BEL
+        "givedir/genDecimalPosY/BCDOUT_12" BEL
+        "givedir/genDecimalPosY/BCDOUT_11" BEL
+        "givedir/genDecimalPosY/BCDOUT_10" BEL
+        "givedir/genDecimalPosY/BCDOUT_9" BEL
+        "givedir/genDecimalPosY/BCDOUT_8" BEL
+        "givedir/genDecimalPosY/BCDOUT_7" BEL
+        "givedir/genDecimalPosY/BCDOUT_6" BEL
+        "givedir/genDecimalPosY/BCDOUT_5" BEL
+        "givedir/genDecimalPosY/BCDOUT_4" BEL
+        "givedir/genDecimalPosY/BCDOUT_3" BEL
+        "givedir/genDecimalPosY/BCDOUT_2" BEL
+        "givedir/genDecimalPosY/BCDOUT_1" BEL
+        "givedir/genDecimalPosY/BCDOUT_0" BEL
+        "givedir/genDecimalPosY/tmpSR_27" BEL
+        "givedir/genDecimalPosY/tmpSR_26" BEL
+        "givedir/genDecimalPosY/tmpSR_25" BEL
+        "givedir/genDecimalPosY/tmpSR_24" BEL
+        "givedir/genDecimalPosY/tmpSR_23" BEL
+        "givedir/genDecimalPosY/tmpSR_22" BEL
+        "givedir/genDecimalPosY/tmpSR_21" BEL
+        "givedir/genDecimalPosY/tmpSR_20" BEL
+        "givedir/genDecimalPosY/tmpSR_19" BEL
+        "givedir/genDecimalPosY/tmpSR_18" BEL
+        "givedir/genDecimalPosY/tmpSR_17" BEL
+        "givedir/genDecimalPosY/tmpSR_16" BEL
+        "givedir/genDecimalPosY/tmpSR_15" BEL
+        "givedir/genDecimalPosY/tmpSR_14" BEL
+        "givedir/genDecimalPosY/tmpSR_13" BEL
+        "givedir/genDecimalPosY/tmpSR_12" BEL
+        "givedir/genDecimalPosY/tmpSR_11" BEL
+        "givedir/genDecimalPosY/tmpSR_10" BEL "givedir/genDecimalPosY/tmpSR_9"
+        BEL "givedir/genDecimalPosY/tmpSR_8" BEL
+        "givedir/genDecimalPosY/tmpSR_7" BEL "givedir/genDecimalPosY/tmpSR_6"
+        BEL "givedir/genDecimalPosY/tmpSR_5" BEL
+        "givedir/genDecimalPosY/tmpSR_4" BEL "givedir/genDecimalPosY/tmpSR_3"
+        BEL "givedir/genDecimalPosY/tmpSR_2" BEL
+        "givedir/genDecimalPosY/tmpSR_1" BEL "givedir/genDecimalPosY/tmpSR_0"
+        BEL "givedir/genDecimalPosX/BCDOUT_15" BEL
+        "givedir/genDecimalPosX/BCDOUT_14" BEL
+        "givedir/genDecimalPosX/BCDOUT_13" BEL
+        "givedir/genDecimalPosX/BCDOUT_12" BEL
+        "givedir/genDecimalPosX/BCDOUT_11" BEL
+        "givedir/genDecimalPosX/BCDOUT_10" BEL
+        "givedir/genDecimalPosX/BCDOUT_9" BEL
+        "givedir/genDecimalPosX/BCDOUT_8" BEL
+        "givedir/genDecimalPosX/BCDOUT_7" BEL
+        "givedir/genDecimalPosX/BCDOUT_6" BEL
+        "givedir/genDecimalPosX/BCDOUT_5" BEL
+        "givedir/genDecimalPosX/BCDOUT_4" BEL
+        "givedir/genDecimalPosX/BCDOUT_3" BEL
+        "givedir/genDecimalPosX/BCDOUT_2" BEL
+        "givedir/genDecimalPosX/BCDOUT_1" BEL
+        "givedir/genDecimalPosX/BCDOUT_0" BEL
+        "givedir/genDecimalPosX/tmpSR_27" BEL
+        "givedir/genDecimalPosX/tmpSR_26" BEL
+        "givedir/genDecimalPosX/tmpSR_25" BEL
+        "givedir/genDecimalPosX/tmpSR_24" BEL
+        "givedir/genDecimalPosX/tmpSR_23" BEL
+        "givedir/genDecimalPosX/tmpSR_22" BEL
+        "givedir/genDecimalPosX/tmpSR_21" BEL
+        "givedir/genDecimalPosX/tmpSR_20" BEL
+        "givedir/genDecimalPosX/tmpSR_19" BEL
+        "givedir/genDecimalPosX/tmpSR_18" BEL
+        "givedir/genDecimalPosX/tmpSR_17" BEL
+        "givedir/genDecimalPosX/tmpSR_16" BEL
+        "givedir/genDecimalPosX/tmpSR_15" BEL
+        "givedir/genDecimalPosX/tmpSR_14" BEL
+        "givedir/genDecimalPosX/tmpSR_13" BEL
+        "givedir/genDecimalPosX/tmpSR_12" BEL
+        "givedir/genDecimalPosX/tmpSR_11" BEL
+        "givedir/genDecimalPosX/tmpSR_10" BEL "givedir/genDecimalPosX/tmpSR_9"
+        BEL "givedir/genDecimalPosX/tmpSR_8" BEL
+        "givedir/genDecimalPosX/tmpSR_7" BEL "givedir/genDecimalPosX/tmpSR_6"
+        BEL "givedir/genDecimalPosX/tmpSR_5" BEL
+        "givedir/genDecimalPosX/tmpSR_4" BEL "givedir/genDecimalPosX/tmpSR_3"
+        BEL "givedir/genDecimalPosX/tmpSR_2" BEL
+        "givedir/genDecimalPosX/tmpSR_1" BEL "givedir/genDecimalPosX/tmpSR_0"
+        BEL "givedir/PmodJSTK_Int/SerialClock/CLKOUT" BEL
+        "givedir/genSndRec/CLKOUT" BEL "givedir/genDecimalPosY/STATE_FSM_FFd1"
+        BEL "givedir/genDecimalPosY/STATE_FSM_FFd3_1" BEL
+        "givedir/genDecimalPosY/STATE_FSM_FFd2_1" BEL
+        "givedir/genDecimalPosY/STATE_FSM_FFd1_1" BEL
+        "givedir/genDecimalPosY/STATE_FSM_FFd3_2" BEL
+        "givedir/genSndRec/clkCount_23" BEL "givedir/genSndRec/clkCount_22"
+        BEL "givedir/genSndRec/clkCount_21" BEL
+        "givedir/genSndRec/clkCount_20" BEL "givedir/genSndRec/clkCount_19"
+        BEL "givedir/genSndRec/clkCount_18" BEL
+        "givedir/genSndRec/clkCount_17" BEL "givedir/genSndRec/clkCount_16"
+        BEL "givedir/genSndRec/clkCount_15" BEL
+        "givedir/genSndRec/clkCount_14" BEL "givedir/genSndRec/clkCount_13"
+        BEL "givedir/genSndRec/clkCount_12" BEL
+        "givedir/genSndRec/clkCount_11" BEL "givedir/genSndRec/clkCount_10"
+        BEL "givedir/genSndRec/clkCount_9" BEL "givedir/genSndRec/clkCount_8"
+        BEL "givedir/genSndRec/clkCount_7" BEL "givedir/genSndRec/clkCount_6"
+        BEL "givedir/genSndRec/clkCount_5" BEL "givedir/genSndRec/clkCount_4"
+        BEL "givedir/genSndRec/clkCount_3" BEL "givedir/genSndRec/clkCount_2"
+        BEL "givedir/genSndRec/clkCount_1" BEL "givedir/genSndRec/clkCount_0"
+        BEL "givedir/genDecimalPosY/STATE_FSM_FFd2_2" BEL
+        "givedir/clkCount_15" BEL "givedir/clkCount_14" BEL
+        "givedir/clkCount_13" BEL "givedir/clkCount_12" BEL
+        "givedir/clkCount_11" BEL "givedir/clkCount_10" BEL
+        "givedir/clkCount_9" BEL "givedir/clkCount_8" BEL "givedir/clkCount_7"
+        BEL "givedir/clkCount_6" BEL "givedir/clkCount_5" BEL
+        "givedir/clkCount_4" BEL "givedir/clkCount_3" BEL "givedir/clkCount_2"
+        BEL "givedir/clkCount_1" BEL "givedir/clkCount_0" BEL
+        "givedir/genDecimalPosY/STATE_FSM_FFd1_2" BEL "clk_BUFGP/BUFG";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

@@ -18,42 +18,46 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module TwentyFortyEight(clk, rst);
-  input reg clk;
-  input reg rst;
+module TwentyFortyEight(clk, rst, MISO, SS, MOSI, SCLK, led);
+  input clk;
+  input rst;
+  input MISO;
+  
+  output wire SS;
+  output wire MOSI;
+  output wire SCLK;
+  
+  output reg [7:0] led = 1;
 
-  reg [20:0] board [0:3] [0:3];
-  
-  reg [3:0] rc = 0;
-  reg needMore = 1;
-  reg fillCount = 0;
-  
-  /*
-  procedure Increment(signal Counter : inout integer) is
-  begin
-    Counter <= Counter + 1;
-  end procedure;
-  */
-  
+  wire [2:0] dir;
+    
+  PmodJSTK_Dir givedir(
+    .clk(clk),
+    .rst(rst),
+    .miso(MISO),
+    .ss(SS),
+    .mosi(MOSI),
+    .sclk(SCLK),
+    .dir(dir)
+  );
   
   always @(posedge clk) begin
-    
-    if (needMore && fillCount == 16) begin
-      // game over
-    end
-    else begin
-        while (needMore) begin
-          rc <= $urandom % 15;
-          if (board[rc/4][rc%4] == 0) begin
-            if ($urandom % 10 == 0) board[rc/4][rc%4] <= 4;
-            else board[rc/4][rc%4] <= 2;
-            needMore <= 0;
-          end
-        end
-    end
+    //led[0] = dir[0];
+    //led[1] = dir[1];
+    led[5] = 1;
+    // led[2] = dir[2];
   end
 
-  // uart
-  // joystick integration (+ debouncer)
+  always @(dir) begin
+    led[0] = dir[0];
+    led[1] = dir[1];
+    //led[5] = 1;
+    // led[2] = dir[2];
+  end
+  /*
+  always @(posedge SS) begin
+    led[3] = 1;
+  end
+  */
 
 endmodule

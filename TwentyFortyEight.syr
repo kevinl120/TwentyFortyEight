@@ -1,0 +1,916 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: TwentyFortyEight.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TwentyFortyEight.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TwentyFortyEight"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : TwentyFortyEight
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\152\Desktop\TwentyFortyEight\SPImode0.v" into library work
+Parsing module <spiMode0>.
+Analyzing Verilog file "C:\Users\152\Desktop\TwentyFortyEight\spiCtrl.v" into library work
+Parsing module <spiCtrl>.
+Analyzing Verilog file "C:\Users\152\Desktop\TwentyFortyEight\ClkDiv_66_67kHz.v" into library work
+Parsing module <ClkDiv_66_67kHz>.
+Analyzing Verilog file "C:\Users\152\Desktop\TwentyFortyEight\PmodJSTK.v" into library work
+Parsing module <PmodJSTK>.
+Analyzing Verilog file "C:\Users\152\Desktop\TwentyFortyEight\ClkDiv_5Hz.v" into library work
+Parsing module <ClkDiv_5Hz>.
+Analyzing Verilog file "C:\Users\152\Desktop\TwentyFortyEight\Binary_To_BCD.v" into library work
+Parsing module <Binary_To_BCD>.
+Analyzing Verilog file "C:\Users\152\Desktop\TwentyFortyEight\PmodJSTK_Dir.v" into library work
+Parsing module <PmodJSTK_Dir>.
+WARNING:HDLCompiler:751 - "C:\Users\152\Desktop\TwentyFortyEight\PmodJSTK_Dir.v" Line 22: Redeclaration of ansi port ss is not allowed
+WARNING:HDLCompiler:751 - "C:\Users\152\Desktop\TwentyFortyEight\PmodJSTK_Dir.v" Line 23: Redeclaration of ansi port mosi is not allowed
+WARNING:HDLCompiler:751 - "C:\Users\152\Desktop\TwentyFortyEight\PmodJSTK_Dir.v" Line 24: Redeclaration of ansi port sclk is not allowed
+Analyzing Verilog file "C:\Users\152\Desktop\TwentyFortyEight\TwentyFortyEight.v" into library work
+Parsing module <TwentyFortyEight>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <TwentyFortyEight>.
+
+Elaborating module <PmodJSTK_Dir>.
+
+Elaborating module <PmodJSTK>.
+
+Elaborating module <spiCtrl>.
+
+Elaborating module <spiMode0>.
+
+Elaborating module <ClkDiv_66_67kHz>.
+
+Elaborating module <ClkDiv_5Hz>.
+
+Elaborating module <Binary_To_BCD>.
+WARNING:HDLCompiler:91 - "C:\Users\152\Desktop\TwentyFortyEight\PmodJSTK_Dir.v" Line 112: Signal <posXData> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\152\Desktop\TwentyFortyEight\PmodJSTK_Dir.v" Line 115: Signal <posXData> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\152\Desktop\TwentyFortyEight\PmodJSTK_Dir.v" Line 122: Signal <posYData> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\152\Desktop\TwentyFortyEight\PmodJSTK_Dir.v" Line 125: Signal <posYData> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:634 - "C:\Users\152\Desktop\TwentyFortyEight\PmodJSTK_Dir.v" Line 31: Net <sndData[7]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TwentyFortyEight>.
+    Related source file is "C:\Users\152\Desktop\TwentyFortyEight\TwentyFortyEight.v".
+WARNING:Xst:2935 - Signal 'led<7:6>', unconnected in block 'TwentyFortyEight', is tied to its initial value (00).
+WARNING:Xst:2935 - Signal 'led<4>', unconnected in block 'TwentyFortyEight', is tied to its initial value (0).
+WARNING:Xst:2935 - Signal 'led<2>', unconnected in block 'TwentyFortyEight', is tied to its initial value (0).
+    Found 1-bit register for signal <led<3>>.
+    Found 1-bit register for signal <led<5>>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <TwentyFortyEight> synthesized.
+
+Synthesizing Unit <PmodJSTK_Dir>.
+    Related source file is "C:\Users\152\Desktop\TwentyFortyEight\PmodJSTK_Dir.v".
+        cntEndVal = 16'b1100001101010000
+WARNING:Xst:653 - Signal <sndData> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <dclk>.
+    Found 16-bit register for signal <clkCount>.
+    Found 16-bit adder for signal <clkCount[15]_GND_2_o_add_35_OUT> created at line 164.
+WARNING:Xst:737 - Found 1-bit latch for signal <dir<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <dir<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <dir<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 16-bit comparator lessequal for signal <n0003> created at line 112
+    Found 16-bit comparator greater for signal <n0005> created at line 112
+    Found 16-bit comparator lessequal for signal <n0011> created at line 122
+    Found 16-bit comparator greater for signal <n0013> created at line 122
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   3 Latch(s).
+	inferred   4 Comparator(s).
+	inferred   7 Multiplexer(s).
+Unit <PmodJSTK_Dir> synthesized.
+
+Synthesizing Unit <PmodJSTK>.
+    Related source file is "C:\Users\152\Desktop\TwentyFortyEight\PmodJSTK.v".
+    Summary:
+	no macro.
+Unit <PmodJSTK> synthesized.
+
+Synthesizing Unit <spiCtrl>.
+    Related source file is "C:\Users\152\Desktop\TwentyFortyEight\spiCtrl.v".
+        Idle = 3'b000
+        Init = 3'b001
+        Wait = 3'b010
+        Check = 3'b011
+        Done = 3'b100
+        byteEndVal = 3'b101
+    Found 1-bit register for signal <getByte>.
+    Found 8-bit register for signal <sndData>.
+    Found 40-bit register for signal <tmpSR>.
+    Found 40-bit register for signal <DOUT>.
+    Found 3-bit register for signal <byteCnt>.
+    Found 3-bit register for signal <pState>.
+    Found 1-bit register for signal <SS>.
+    Found finite state machine <FSM_0> for signal <pState>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 5                                              |
+    | Clock              | CLK (falling_edge)                             |
+    | Reset              | RST (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit adder for signal <byteCnt[2]_GND_4_o_add_5_OUT> created at line 130.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  85 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <spiCtrl> synthesized.
+
+Synthesizing Unit <spiMode0>.
+    Related source file is "C:\Users\152\Desktop\TwentyFortyEight\SPImode0.v".
+        Idle = 2'b00
+        Init = 2'b01
+        RxTx = 2'b10
+        Done = 2'b11
+    Found 8-bit register for signal <rSR>.
+    Found 1-bit register for signal <CE>.
+    Found 1-bit register for signal <BUSY>.
+    Found 5-bit register for signal <bitCount>.
+    Found 2-bit register for signal <pState>.
+    Found 8-bit register for signal <wSR>.
+    Found finite state machine <FSM_1> for signal <pState>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | CLK (falling_edge)                             |
+    | Reset              | RST (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 5-bit adder for signal <bitCount[4]_GND_5_o_add_20_OUT> created at line 219.
+    Found 5-bit comparator greater for signal <GND_5_o_INV_6_o> created at line 222
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   3 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <spiMode0> synthesized.
+
+Synthesizing Unit <ClkDiv_66_67kHz>.
+    Related source file is "C:\Users\152\Desktop\TwentyFortyEight\ClkDiv_66_67kHz.v".
+        cntEndVal = 10'b1011101110
+    Found 10-bit register for signal <clkCount>.
+    Found 1-bit register for signal <CLKOUT>.
+    Found 10-bit adder for signal <clkCount[9]_GND_6_o_add_3_OUT> created at line 67.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <ClkDiv_66_67kHz> synthesized.
+
+Synthesizing Unit <ClkDiv_5Hz>.
+    Related source file is "C:\Users\152\Desktop\TwentyFortyEight\ClkDiv_5Hz.v".
+        cntEndVal = 24'b100110001001011010000000
+    Found 24-bit register for signal <clkCount>.
+    Found 1-bit register for signal <CLKOUT>.
+    Found 24-bit adder for signal <clkCount[23]_GND_7_o_add_3_OUT> created at line 67.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <ClkDiv_5Hz> synthesized.
+
+Synthesizing Unit <Binary_To_BCD>.
+    Related source file is "C:\Users\152\Desktop\TwentyFortyEight\Binary_To_BCD.v".
+        Idle = 3'b000
+        Init = 3'b001
+        Shift = 3'b011
+        Check = 3'b010
+        Done = 3'b110
+    Found 1-bit register for signal <tmpSR<27>>.
+    Found 1-bit register for signal <tmpSR<26>>.
+    Found 1-bit register for signal <tmpSR<25>>.
+    Found 1-bit register for signal <tmpSR<24>>.
+    Found 1-bit register for signal <tmpSR<23>>.
+    Found 1-bit register for signal <tmpSR<22>>.
+    Found 1-bit register for signal <tmpSR<21>>.
+    Found 1-bit register for signal <tmpSR<20>>.
+    Found 1-bit register for signal <tmpSR<19>>.
+    Found 1-bit register for signal <tmpSR<18>>.
+    Found 1-bit register for signal <tmpSR<17>>.
+    Found 1-bit register for signal <tmpSR<16>>.
+    Found 1-bit register for signal <tmpSR<15>>.
+    Found 1-bit register for signal <tmpSR<14>>.
+    Found 1-bit register for signal <tmpSR<13>>.
+    Found 1-bit register for signal <tmpSR<12>>.
+    Found 1-bit register for signal <tmpSR<11>>.
+    Found 1-bit register for signal <tmpSR<10>>.
+    Found 1-bit register for signal <tmpSR<9>>.
+    Found 1-bit register for signal <tmpSR<8>>.
+    Found 1-bit register for signal <tmpSR<7>>.
+    Found 1-bit register for signal <tmpSR<6>>.
+    Found 1-bit register for signal <tmpSR<5>>.
+    Found 1-bit register for signal <tmpSR<4>>.
+    Found 1-bit register for signal <tmpSR<3>>.
+    Found 1-bit register for signal <tmpSR<2>>.
+    Found 1-bit register for signal <tmpSR<1>>.
+    Found 1-bit register for signal <tmpSR<0>>.
+    Found 3-bit register for signal <STATE>.
+    Found 5-bit register for signal <shiftCount>.
+    Found 16-bit register for signal <BCDOUT>.
+    Found finite state machine <FSM_2> for signal <STATE>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RST (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 5-bit adder for signal <shiftCount[4]_GND_8_o_add_4_OUT> created at line 112.
+    Found 4-bit adder for signal <tmpSR[27]_GND_8_o_add_7_OUT> created at line 127.
+    Found 4-bit adder for signal <tmpSR[23]_GND_8_o_add_9_OUT> created at line 132.
+    Found 4-bit adder for signal <tmpSR[19]_GND_8_o_add_11_OUT> created at line 137.
+    Found 4-bit adder for signal <tmpSR[15]_GND_8_o_add_13_OUT> created at line 142.
+    Found 4-bit comparator greater for signal <n0006> created at line 126
+    Found 4-bit comparator greater for signal <n0013> created at line 131
+    Found 4-bit comparator greater for signal <n0020> created at line 136
+    Found 4-bit comparator greater for signal <n0027> created at line 141
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  49 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  83 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <Binary_To_BCD> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 15
+ 10-bit adder                                          : 1
+ 16-bit adder                                          : 1
+ 24-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 8
+ 5-bit adder                                           : 3
+# Registers                                            : 78
+ 1-bit register                                        : 65
+ 10-bit register                                       : 1
+ 16-bit register                                       : 3
+ 24-bit register                                       : 1
+ 3-bit register                                        : 1
+ 40-bit register                                       : 2
+ 5-bit register                                        : 3
+ 8-bit register                                        : 2
+# Latches                                              : 3
+ 1-bit latch                                           : 3
+# Comparators                                          : 13
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 2
+ 4-bit comparator greater                              : 8
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 180
+ 1-bit 2-to-1 multiplexer                              : 170
+ 10-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 2
+ 24-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 1
+ 40-bit 2-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1426 - The value init of the FF/Latch led_5 hinder the constant cleaning in the block TwentyFortyEight.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch led_3 hinder the constant cleaning in the block TwentyFortyEight.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:2677 - Node <DOUT_0> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_1> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_2> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_3> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_4> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_5> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_6> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_7> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_10> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_11> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_12> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_13> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_14> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_15> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_26> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_27> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_28> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_29> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_30> of sequential type is unconnected in block <SPI_Ctrl>.
+WARNING:Xst:2677 - Node <DOUT_31> of sequential type is unconnected in block <SPI_Ctrl>.
+
+Synthesizing (advanced) Unit <Binary_To_BCD>.
+The following registers are absorbed into counter <shiftCount>: 1 register on signal <shiftCount>.
+Unit <Binary_To_BCD> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ClkDiv_5Hz>.
+The following registers are absorbed into counter <clkCount>: 1 register on signal <clkCount>.
+Unit <ClkDiv_5Hz> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ClkDiv_66_67kHz>.
+The following registers are absorbed into counter <clkCount>: 1 register on signal <clkCount>.
+Unit <ClkDiv_66_67kHz> synthesized (advanced).
+
+Synthesizing (advanced) Unit <PmodJSTK_Dir>.
+The following registers are absorbed into counter <clkCount>: 1 register on signal <clkCount>.
+Unit <PmodJSTK_Dir> synthesized (advanced).
+
+Synthesizing (advanced) Unit <spiCtrl>.
+The following registers are absorbed into counter <byteCnt>: 1 register on signal <byteCnt>.
+Unit <spiCtrl> synthesized (advanced).
+
+Synthesizing (advanced) Unit <spiMode0>.
+The following registers are absorbed into counter <bitCount>: 1 register on signal <bitCount>.
+Unit <spiMode0> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 8
+ 4-bit adder                                           : 8
+# Counters                                             : 7
+ 10-bit up counter                                     : 1
+ 16-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 5-bit up counter                                      : 3
+# Registers                                            : 193
+ Flip-Flops                                            : 193
+# Comparators                                          : 13
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 2
+ 4-bit comparator greater                              : 8
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 174
+ 1-bit 2-to-1 multiplexer                              : 170
+ 2-bit 2-to-1 multiplexer                              : 2
+ 40-bit 2-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch led_5 hinder the constant cleaning in the block TwentyFortyEight.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch led_3 hinder the constant cleaning in the block TwentyFortyEight.
+   You should achieve better results by setting this init to 1.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <givedir/PmodJSTK_Int/SPI_Ctrl/FSM_0> on signal <pState[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <givedir/PmodJSTK_Int/SPI_Int/FSM_1> on signal <pState[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+ 11    | 11
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <givedir/genDecimalPosX/FSM_2> on signal <STATE[1:3]> with gray encoding.
+Optimizing FSM <givedir/genDecimalPosY/FSM_2> on signal <STATE[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 011   | 011
+ 110   | 010
+ 010   | 110
+-------------------
+
+Optimizing unit <TwentyFortyEight> ...
+
+Optimizing unit <PmodJSTK_Dir> ...
+
+Optimizing unit <spiCtrl> ...
+
+Optimizing unit <spiMode0> ...
+
+Optimizing unit <Binary_To_BCD> ...
+WARNING:Xst:1293 - FF/Latch <givedir/PmodJSTK_Int/SPI_Int/wSR_7> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <givedir/PmodJSTK_Int/SPI_Int/wSR_6> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <givedir/PmodJSTK_Int/SPI_Int/wSR_5> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <givedir/PmodJSTK_Int/SPI_Int/wSR_4> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <givedir/PmodJSTK_Int/SPI_Int/wSR_3> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <givedir/PmodJSTK_Int/SPI_Int/wSR_2> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <givedir/PmodJSTK_Int/SPI_Int/wSR_1> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <givedir/PmodJSTK_Int/SPI_Int/wSR_0> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <givedir/dir_2> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_31> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_30> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_29> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_28> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_27> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_26> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_15> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_14> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_13> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_12> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_11> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_10> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_7> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_6> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_5> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_4> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_3> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_2> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_1> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_0> of sequential type is unconnected in block <TwentyFortyEight>.
+INFO:Xst:2261 - The FF/Latch <givedir/genDecimalPosY/STATE_FSM_FFd1> in Unit <TwentyFortyEight> is equivalent to the following FF/Latch, which will be removed : <givedir/genDecimalPosX/STATE_FSM_FFd1> 
+INFO:Xst:2261 - The FF/Latch <givedir/genDecimalPosY/STATE_FSM_FFd2> in Unit <TwentyFortyEight> is equivalent to the following FF/Latch, which will be removed : <givedir/genDecimalPosX/STATE_FSM_FFd2> 
+INFO:Xst:2261 - The FF/Latch <givedir/genDecimalPosY/STATE_FSM_FFd3> in Unit <TwentyFortyEight> is equivalent to the following FF/Latch, which will be removed : <givedir/genDecimalPosX/STATE_FSM_FFd3> 
+INFO:Xst:2261 - The FF/Latch <givedir/genDecimalPosY/shiftCount_0> in Unit <TwentyFortyEight> is equivalent to the following FF/Latch, which will be removed : <givedir/genDecimalPosX/shiftCount_0> 
+INFO:Xst:2261 - The FF/Latch <givedir/genDecimalPosY/shiftCount_1> in Unit <TwentyFortyEight> is equivalent to the following FF/Latch, which will be removed : <givedir/genDecimalPosX/shiftCount_1> 
+INFO:Xst:2261 - The FF/Latch <givedir/genDecimalPosY/shiftCount_2> in Unit <TwentyFortyEight> is equivalent to the following FF/Latch, which will be removed : <givedir/genDecimalPosX/shiftCount_2> 
+INFO:Xst:2261 - The FF/Latch <givedir/genDecimalPosY/shiftCount_3> in Unit <TwentyFortyEight> is equivalent to the following FF/Latch, which will be removed : <givedir/genDecimalPosX/shiftCount_3> 
+INFO:Xst:2261 - The FF/Latch <givedir/genDecimalPosY/shiftCount_4> in Unit <TwentyFortyEight> is equivalent to the following FF/Latch, which will be removed : <givedir/genDecimalPosX/shiftCount_4> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TwentyFortyEight, actual ratio is 3.
+FlipFlop givedir/genDecimalPosY/STATE_FSM_FFd1 has been replicated 2 time(s)
+FlipFlop givedir/genDecimalPosY/STATE_FSM_FFd2 has been replicated 2 time(s)
+FlipFlop givedir/genDecimalPosY/STATE_FSM_FFd3 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 242
+ Flip-Flops                                            : 242
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TwentyFortyEight.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 395
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 38
+#      LUT2                        : 34
+#      LUT3                        : 14
+#      LUT4                        : 72
+#      LUT5                        : 51
+#      LUT6                        : 82
+#      MUXCY                       : 47
+#      VCC                         : 1
+#      XORCY                       : 50
+# FlipFlops/Latches                : 244
+#      FD                          : 47
+#      FD_1                        : 2
+#      FDE                         : 5
+#      FDR                         : 30
+#      FDR_1                       : 5
+#      FDRE                        : 91
+#      FDRE_1                      : 61
+#      FDSE_1                      : 1
+#      LDE_1                       : 2
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 13
+#      IBUF                        : 2
+#      OBUF                        : 11
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             240  out of  18224     1%  
+ Number of Slice LUTs:                  296  out of   9112     3%  
+    Number used as Logic:               296  out of   9112     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    320
+   Number with an unused Flip Flop:      80  out of    320    25%  
+   Number with an unused LUT:            24  out of    320     7%  
+   Number of fully used LUT-FF pairs:   216  out of    320    67%  
+   Number of unique control sets:        22
+
+IO Utilization: 
+ Number of IOs:                          14
+ Number of bonded IOBs:                  14  out of    232     6%  
+    IOB Flip Flops/Latches:               4
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------+------------------------+-------+
+Clock Signal                           | Clock buffer(FF name)  | Load  |
+---------------------------------------+------------------------+-------+
+clk                                    | BUFGP                  | 156   |
+givedir/PmodJSTK_Int/SPI_Ctrl/SS       | NONE(led_3)            | 1     |
+rst                                    | IBUF+BUFG              | 2     |
+givedir/PmodJSTK_Int/SerialClock/CLKOUT| BUFG                   | 85    |
+---------------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.853ns (Maximum Frequency: 259.545MHz)
+   Minimum input arrival time before clock: 4.766ns
+   Maximum output required time after clock: 4.734ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.853ns (frequency: 259.545MHz)
+  Total number of paths / destination ports: 2949 / 248
+-------------------------------------------------------------------------
+Delay:               3.853ns (Levels of Logic = 3)
+  Source:            givedir/clkCount_6 (FF)
+  Destination:       givedir/clkCount_15 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: givedir/clkCount_6 to givedir/clkCount_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.981  givedir/clkCount_6 (givedir/clkCount_6)
+     LUT6:I0->O            1   0.203   0.684  givedir/clkCount[15]_PWR_2_o_equal_35_o<15>1 (givedir/clkCount[15]_PWR_2_o_equal_35_o<15>)
+     LUT6:I4->O           17   0.203   1.028  givedir/clkCount[15]_PWR_2_o_equal_35_o<15>3 (givedir/clkCount[15]_PWR_2_o_equal_35_o)
+     LUT2:I1->O            1   0.205   0.000  givedir/clkCount_15_rstpot (givedir/clkCount_15_rstpot)
+     FD:D                      0.102          givedir/clkCount_15
+    ----------------------------------------
+    Total                      3.853ns (1.160ns logic, 2.693ns route)
+                                       (30.1% logic, 69.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'givedir/PmodJSTK_Int/SerialClock/CLKOUT'
+  Clock period: 3.768ns (frequency: 265.421MHz)
+  Total number of paths / destination ports: 430 / 150
+-------------------------------------------------------------------------
+Delay:               1.884ns (Levels of Logic = 1)
+  Source:            givedir/PmodJSTK_Int/SPI_Int/pState_FSM_FFd1 (FF)
+  Destination:       givedir/PmodJSTK_Int/SPI_Int/rSR_7 (FF)
+  Source Clock:      givedir/PmodJSTK_Int/SerialClock/CLKOUT falling
+  Destination Clock: givedir/PmodJSTK_Int/SerialClock/CLKOUT rising
+
+  Data Path: givedir/PmodJSTK_Int/SPI_Int/pState_FSM_FFd1 to givedir/PmodJSTK_Int/SPI_Int/rSR_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR_1:C->Q           17   0.447   1.132  givedir/PmodJSTK_Int/SPI_Int/pState_FSM_FFd1 (givedir/PmodJSTK_Int/SPI_Int/pState_FSM_FFd1)
+     LUT5:I3->O            1   0.203   0.000  givedir/PmodJSTK_Int/SPI_Int/rSR_7_rstpot (givedir/PmodJSTK_Int/SPI_Int/rSR_7_rstpot)
+     FDR:D                     0.102          givedir/PmodJSTK_Int/SPI_Int/rSR_7
+    ----------------------------------------
+    Total                      1.884ns (0.752ns logic, 1.132ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 138 / 138
+-------------------------------------------------------------------------
+Offset:              4.766ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       givedir/genDecimalPosY/shiftCount_4 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to givedir/genDecimalPosY/shiftCount_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           217   1.222   2.305  rst_IBUF (rst_IBUF)
+     LUT4:I0->O            5   0.203   0.714  givedir/genDecimalPosY/_n0213_inv1 (givedir/genDecimalPosY/_n0213_inv)
+     FDE:CE                    0.322          givedir/genDecimalPosY/shiftCount_0
+    ----------------------------------------
+    Total                      4.766ns (1.747ns logic, 3.019ns route)
+                                       (36.7% logic, 63.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'givedir/PmodJSTK_Int/SerialClock/CLKOUT'
+  Total number of paths / destination ports: 86 / 86
+-------------------------------------------------------------------------
+Offset:              3.929ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       givedir/PmodJSTK_Int/SPI_Int/pState_FSM_FFd2 (FF)
+  Destination Clock: givedir/PmodJSTK_Int/SerialClock/CLKOUT falling
+
+  Data Path: rst to givedir/PmodJSTK_Int/SPI_Int/pState_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           217   1.222   2.402  rst_IBUF (rst_IBUF)
+     LUT6:I1->O            1   0.203   0.000  givedir/PmodJSTK_Int/SPI_Int/pState_FSM_FFd2_rstpot (givedir/PmodJSTK_Int/SPI_Int/pState_FSM_FFd2_rstpot)
+     FD_1:D                    0.102          givedir/PmodJSTK_Int/SPI_Int/pState_FSM_FFd2
+    ----------------------------------------
+    Total                      3.929ns (1.527ns logic, 2.402ns route)
+                                       (38.9% logic, 61.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.419ns (Levels of Logic = 2)
+  Source:            givedir/PmodJSTK_Int/SerialClock/CLKOUT (FF)
+  Destination:       SCLK (PAD)
+  Source Clock:      clk rising
+
+  Data Path: givedir/PmodJSTK_Int/SerialClock/CLKOUT to SCLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.617  givedir/PmodJSTK_Int/SerialClock/CLKOUT (givedir/PmodJSTK_Int/SerialClock/CLKOUT)
+     LUT2:I1->O            1   0.205   0.579  givedir/PmodJSTK_Int/SPI_Int/Mmux_SCLK11 (SCLK_OBUF)
+     OBUF:I->O                 2.571          SCLK_OBUF (SCLK)
+    ----------------------------------------
+    Total                      4.419ns (3.223ns logic, 1.196ns route)
+                                       (72.9% logic, 27.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'givedir/PmodJSTK_Int/SPI_Ctrl/SS'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            led_3 (FF)
+  Destination:       led<3> (PAD)
+  Source Clock:      givedir/PmodJSTK_Int/SPI_Ctrl/SS rising
+
+  Data Path: led_3 to led<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  led_3 (led_3)
+     OBUF:I->O                 2.571          led_3_OBUF (led<3>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'rst'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            givedir/dir_1 (LATCH)
+  Destination:       led<1> (PAD)
+  Source Clock:      rst rising
+
+  Data Path: givedir/dir_1 to led<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q            1   0.498   0.579  givedir/dir_1 (givedir/dir_1)
+     OBUF:I->O                 2.571          led_1_OBUF (led<1>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'givedir/PmodJSTK_Int/SerialClock/CLKOUT'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              4.734ns (Levels of Logic = 2)
+  Source:            givedir/PmodJSTK_Int/SPI_Int/CE (FF)
+  Destination:       SCLK (PAD)
+  Source Clock:      givedir/PmodJSTK_Int/SerialClock/CLKOUT falling
+
+  Data Path: givedir/PmodJSTK_Int/SPI_Int/CE to SCLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             9   0.447   0.934  givedir/PmodJSTK_Int/SPI_Int/CE (givedir/PmodJSTK_Int/SPI_Int/CE)
+     LUT2:I0->O            1   0.203   0.579  givedir/PmodJSTK_Int/SPI_Int/Mmux_SCLK11 (SCLK_OBUF)
+     OBUF:I->O                 2.571          SCLK_OBUF (SCLK)
+    ----------------------------------------
+    Total                      4.734ns (3.221ns logic, 1.513ns route)
+                                       (68.0% logic, 32.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------------------------------+---------+---------+---------+---------+
+                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------+---------+---------+---------+---------+
+clk                                    |    3.853|         |         |         |
+givedir/PmodJSTK_Int/SerialClock/CLKOUT|         |    1.599|         |         |
+---------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock givedir/PmodJSTK_Int/SerialClock/CLKOUT
+---------------------------------------+---------+---------+---------+---------+
+                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------+---------+---------+---------+---------+
+clk                                    |         |         |    1.767|         |
+givedir/PmodJSTK_Int/SerialClock/CLKOUT|    1.747|    1.884|    3.621|         |
+---------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rst
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.496|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.11 secs
+ 
+--> 
+
+Total memory usage is 259488 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   68 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+

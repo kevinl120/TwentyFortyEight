@@ -11,7 +11,8 @@ module PmodJSTK_Dir(
     output ss,          // Slave Select, Pin 1, Port JA
     output mosi,        // Master Out Slave In, Pin 2, Port JA
     output sclk,        // Serial Clock, Pin 4, Port JA
-    output [2:0] dir    // Direction, 3-bits, main output of module
+    output reg [2:0] dir   // Direction, 3-bits, main output of module
+    //output reg [7:0] led
     );
 
 // =============================================================
@@ -23,11 +24,11 @@ module PmodJSTK_Dir(
     wire sclk;          // Serial clock that controls communication
 
     parameter  cntEndVal = 16'hC350;
-    wire [15:0] clkCount = 16'h0000;
-    wire dclk;          // Required?
+    reg [15:0] clkCount = 16'h0000;
+    reg dclk;          // Required?
 
     // Holds data to be sent to PmodJSTK
-    wire [7:0] sndData;
+    reg [7:0] sndData;
 
     // Signal to send/receive data to/from PmodJSTK
     wire sndRec;
@@ -42,8 +43,8 @@ module PmodJSTK_Dir(
     wire [15:0] posXData;
     wire [15:0] posYData;
 
-    wire [1:0] posX;
-    wire [1:0] posY;
+    reg [1:0] posX;
+    reg [1:0] posY;
 
 // =============================================================
 //        IMPLEMENTATION
@@ -77,7 +78,7 @@ module PmodJSTK_Dir(
     // ---------------------------------------
     //        Get X Position - Decimal
     // ---------------------------------------
-    Binary_To_BCD genDecimalPos(
+    Binary_To_BCD genDecimalPosX(
         .CLK(clk),
         .RST(rst),
         .START(dclk), // DCLK -> need?
@@ -88,7 +89,7 @@ module PmodJSTK_Dir(
     // ---------------------------------------
     //        Get Y Position - Decimal
     // ---------------------------------------
-    Binary_To_BCD genDecimalPos(
+    Binary_To_BCD genDecimalPosY(
         .CLK(clk),
         .RST(rst),
         .START(dclk), // DCLK -> need?
@@ -104,20 +105,21 @@ module PmodJSTK_Dir(
     // ---------------------------------------
 
     always @(sndRec or jstkData or rst) begin
+      //led[6] = 1;
       if (rst == 1'b1) begin
       end
       else begin
-          if (posXData >= 384 and posXData <= 640) begin
-              posX = 0;
+          if (posXData >= 384 && posXData <= 640) begin
+              posX = 2'b0;
           end
           else if (posXData > 640) begin
-              posX = 1;
+              posX = 2'b1;
           end
           else begin
-              posX = 2;
+              posX = 2'b10;
           end
 
-          if (posYData >= 384 and posYData <= 640) begin
+          if (posYData >= 384 && posYData <= 640) begin
               posY = 0;
           end
           else if (posYData > 640) begin
@@ -127,22 +129,22 @@ module PmodJSTK_Dir(
               posY = 2;
           end
 
-          if (((posX == 1 or posX == 2) and posY == 0) or ((posY == 1 or posY == 2) and posX == 0)) begin
-              if (posX == 0 and posY == 1) begin
-                  dir = 0;
+          if (((posX == 1 || posX == 2) && posY == 0) || ((posY == 1 || posY == 2) && posX == 0)) begin
+              if (posX == 0 && posY == 1) begin
+                  dir = 3'b000;
               end
-              else if (posX == 0 and posY == 2) begin
-                  dir = 1;
+              else if (posX == 0 && posY == 2) begin
+                  dir = 3'b001;
               end
-              else if (posX == 1 and posY == 0) begin
-                  dir = 2;
+              else if (posX == 1 && posY == 0) begin
+                  dir = 3'b010;
               end
-              else if (posX == 2 and posY == 0) begin
-                  dir = 3;
+              else if (posX == 2 && posY == 0) begin
+                  dir = 3'b011;
               end
           end
           else begin
-              dir = 4;
+              dir = 3'b100;
           end
       end
     end
@@ -152,19 +154,20 @@ module PmodJSTK_Dir(
     // ---------------------------------------
 
     always @(posedge clk) begin
+      //led[3] = 1;
       if (clkCount == cntEndVal) begin
-        dclk <= 1'b1;
-        clkCount <= 16'h0000;
+        dclk = 1'b1;
+        clkCount = 16'h0000;
       end
       else begin
-        dclk <= 1'b0;
-        clkCount <= clkCount + 1'b1;
+        dclk = 1'b0;
+        clkCount = clkCount + 1'b1;
       end
     end
 
 
 
-
+endmodule
 
 
 
