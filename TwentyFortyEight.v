@@ -26,42 +26,18 @@ module TwentyFortyEight(RsRx, clk, rst, RsTx, btns);
   input btns;
   
   reg [3:0] rc = 0;
-  reg needMore = 1;
-  reg fillCount = 0;
+
   wire [7:0]           uart_rx_data;           // From uart_top_ of uart_top.v
   wire                 uart_rx_valid;          // From uart_top_ of uart_top.v
   wire                 uart_tx_busy;           // From uart_top_ of uart_top.v
   wire                 seq_tx_valid;
-  /*
-  procedure Increment(signal Counter : inout integer) is
-  begin
-    Counter <= Counter + 1;
-  end procedure;
-  */
-  
-  /*
-  always @(posedge clk) begin
-    
-    if (needMore && fillCount == 16) begin
-      // game over
-    end
-    else begin
-        while (needMore) begin
-          rc <= $urandom % 15;
-          if (board[rc/4][rc%4] == 0) begin
-            if ($urandom % 10 == 0) board[rc/4][rc%4] <= 4;
-            else board[rc/4][rc%4] <= 2;
-            needMore <= 0;
-          end
-        end
-    end
-  end
-  */
-  wire [5000-1:0]tx_string;
+
+  wire [7:0]tx_string;
   reg [320-1:0] board;
   wire board_updated;
+
   board_to_string board_to_string_(
-    .board(board), .processing(btns), .clk(clk), .done(board_updated), .display_string(tx_string)
+    .board, .processing(btns), .clk(clk), .print_nxt(~uart_tx_busy), .char_out(tx_string)
   );
   
   uart_top uart_top_ (// Outputs
@@ -76,7 +52,7 @@ module TwentyFortyEight(RsRx, clk, rst, RsTx, btns);
                        // Inputs
                        .clk             (clk),
                        .rst             (rst),
-                       .i_tx_stb (board_updated)
+                       .i_tx_stb (btns)
                        );
 
 endmodule

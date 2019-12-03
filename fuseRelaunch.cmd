@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/ise/xilinx/TwentyFortyEight/board_to_string_test_isim_beh.exe" -prj "/home/ise/xilinx/TwentyFortyEight/board_to_string_test_beh.prj" "board_to_string_test" "work.glbl" 

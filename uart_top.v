@@ -13,13 +13,13 @@ module uart_top (/*AUTOARG*/
    output [7:0]             o_rx_data;
    output                   o_rx_valid;
    
-   input [5000-1:0] i_tx_data;
+   input [7:0] i_tx_data;
    
    input                    clk;
    input                    rst;
 
    parameter stIdle = 0;
-   parameter stCR   = 625;
+   parameter stCR   = 1;
    
    /*AUTOWIRE*/
    // Beginning of automatic wires (for undeclared instantiated-module outputs)
@@ -32,7 +32,7 @@ module uart_top (/*AUTOARG*/
    wire                 tx_active;
    wire                 tfifo_rd;
    reg                  tfifo_rd_z;
-   reg [5000-1:0]  tx_data =0;
+   reg [7:0]  tx_data =0;
    reg [12-1:0]               state=0;
 
    assign o_tx_busy = (state!=stIdle);
@@ -44,14 +44,14 @@ module uart_top (/*AUTOARG*/
          if(i_tx_stb) begin
           state   <= state + 1;
           tx_data <= i_tx_data;
-          tfifo_in <= tx_data[5000-1:5000-8];
+          tfifo_in <= tx_data[7:0];
          end
        end
        else if (state < stCR) begin
          if (~tfifo_full) begin
            state   <= state + 1;
            tx_data <= tx_data << 8;
-           tfifo_in <= tx_data[5000-1:5000-8];  
+           tfifo_in <= tx_data[7:0];  
          end
        end
        else begin

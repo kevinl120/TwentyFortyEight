@@ -18,15 +18,22 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module board_to_string(board, processing, clk, done, display_string);
+module board_to_string(board, processing, clk, print_nxt, char_out);
   input [319:0] board;
   input processing;
   input clk;
-  output reg [5000-1:0] display_string;
-  output reg done;
+  input print_nxt;
+  output reg [7:0] char_out;
   
-  reg [5000-1:0] str_builder;
-  reg [5:0] clkcounter;
+  reg [40:0] cntr = 0;
+  reg [2:0] rw = 0;
+  reg [2:0] cl = 0;
+  reg [15:0] idxp = 0;
+
+  reg [5:0] ln = 0;
+  reg [6:0] colloc = 0;
+  reg [20:0] curnum = 0;
+  
   
   function [8:0] numToChar;
       input [4:0] din;
@@ -45,80 +52,62 @@ module board_to_string(board, processing, clk, done, display_string);
          endcase // case (char)
       end
   endfunction // numToChar
-  function [31:0] numToString;
-      input [19:0] din;
-      begin
-			  numToString[32-1:8*3] = numToChar(din/1000);
-			  numToString[32-1-8:8*2] = numToChar(din/100 % 10);
-			  numToString[32-1-8*2:8*1] = numToChar(din/10 % 10);
-			  numToString[32-1-8*3:0] = numToChar(din % 10);
-      end
-   endfunction
-  reg [2:0] rw;
-  reg [2:0] cl;
-  reg [15:0] idxp;
-  reg [32:0] numstr;
+  
   
   always @(posedge clk) begin
     if (processing == 0) begin
-		  clkcounter <= 0;
-		  rw<=0;
-		  cl<=0;
-		  done <= 0;
+			  rw<=0;
+			  cl<=0;
+			  cntr <= 0;
 	 end
 	 else begin
-		
-	   if (rw == 0 && cl == 0)
-        str_builder <= "-----------------------------\n\r|      |      |      |      |\n\r|      |      |      |      |\n\r|      |      |      |      |\n\r-----------------------------\n\r|      |      |      |      |\n\r|      |      |      |      |\n\r|      |      |      |      |\n\r-----------------------------\n\r|      |      |      |      |\n\r|      |      |      |      |\n\r|      |      |      |      |\n\r-----------------------------\n\r|      |      |      |      |\n\r|      |      |      |      |\n\r|      |      |      |      |\n\r-----------------------------\n\r";
-      idxp <= 62*8 + 124*8*rw + 2*8 + cl*8*8;
-		numstr <= numToString( board[(rw*4+cl)*20+:20]);
-		str_builder [5000-1-idxp] <= numstr[31];
-		str_builder [5000-1-idxp-1] <= numstr[31-1];
-		str_builder [5000-1-idxp-2] <= numstr[31-2];
-		str_builder [5000-1-idxp-3] <= numstr[31-3];
-		str_builder [5000-1-idxp-4] <= numstr[31-4];
-		str_builder [5000-1-idxp-5] <= numstr[31-5];
-		str_builder [5000-1-idxp-6] <= numstr[31-6];
-		str_builder [5000-1-idxp-7] <= numstr[31-7];
-		str_builder [5000-1-idxp-8] <= numstr[31-8];
-		str_builder [5000-1-idxp-9] <= numstr[31-9];
-		str_builder [5000-1-idxp-10] <= numstr[31-10];
-		str_builder [5000-1-idxp-11] <= numstr[31-11];
-		str_builder [5000-1-idxp-12] <= numstr[31-12];
-		str_builder [5000-1-idxp-13] <= numstr[31-13];
-		str_builder [5000-1-idxp-14] <= numstr[31-14];
-		str_builder [5000-1-idxp-15] <= numstr[31-15];
-		str_builder [5000-1-idxp-16] <= numstr[31-16];
-		str_builder [5000-1-idxp-17] <= numstr[31-17];
-		str_builder [5000-1-idxp-18] <= numstr[31-18];
-		str_builder [5000-1-idxp-19] <= numstr[31-19];
-		str_builder [5000-1-idxp-20] <= numstr[31-20];
-		str_builder [5000-1-idxp-21] <= numstr[31-21];
-		str_builder [5000-1-idxp-22] <= numstr[31-22];
-		str_builder [5000-1-idxp-23] <= numstr[31-23];
-		str_builder [5000-1-idxp-24] <= numstr[31-24];
-		str_builder [5000-1-idxp-25] <= numstr[31-25];
-		str_builder [5000-1-idxp-26] <= numstr[31-26];
-		str_builder [5000-1-idxp-27] <= numstr[31-27];
-		str_builder [5000-1-idxp-28] <= numstr[31-28];
-		str_builder [5000-1-idxp-29] <= numstr[31-29];
-		str_builder [5000-1-idxp-30] <= numstr[31-30];
-		str_builder [5000-1-idxp-31] <= numstr[31-31];
-
-		if (rw == 3 && cl ==3) begin
-		  display_string = str_builder;
-		  clkcounter <= 0;
-		  rw<=0;
-		  cl<=0;
-		  done <= 1;
-		end
-		else if (cl == 3) begin
-		  rw <= rw+1;
-		  cl <=0;
-		end
-		else begin
-		  cl <= cl + 1;
-		end
+      if (print_nxt == 1) begin
+			ln <= cntr / 31;
+			colloc <= cntr % 31;
+			idxp <= 62*8 + 124*8*rw + 2*8 + cl*7*8;
+			if (colloc == 29) char_out <= "\n";
+			else if (colloc == 30) char_out <= "\r";
+			else begin
+				if (ln < 17) begin
+					if (ln % 4 == 0) char_out <= "-";
+					else if (ln % 4 == 1 || ln % 4 == 3) begin
+					  if (colloc % 7 == 0) char_out <= "|";
+					  else char_out <= " ";
+					end
+					else begin
+					  if (colloc % 7 == 0) char_out <= "|";
+					  else if (colloc >= idxp && colloc <= idxp + 3) begin
+					    curnum <= board[(rw*4+cl)*20+:20];
+					    if (colloc == idxp) char_out <= numToChar(curnum / 1000 % 10);
+						 if (colloc == idxp+1) char_out <= numToChar(curnum / 100 % 10);
+						 if (colloc == idxp+2) char_out <= numToChar(curnum / 10 % 10);
+						 if (colloc == idxp+3) begin
+						   char_out <= numToChar(curnum / 1 % 10);
+							if (rw== 3 && cl==3) begin
+							  rw <=0;
+							  cl <=0;
+							end
+							else if (cl == 3) begin
+							  rw <= rw+1;
+							  cl <= 0;
+							end
+							else begin 
+							  cl <= cl + 1;
+							end
+					    end
+					  end
+					  else char_out <= " ";
+					end
+				end
+				else if (ln == 18) begin
+				  if (colloc == 0) char_out <= "\n";
+				  if (colloc == 1) char_out <= "\r";
+				  if (colloc == 2) char_out <= "\n";
+				  if (colloc == 3) char_out <= "\r";
+				end
+			end
+			cntr <= cntr + 1;
+		 end
     end
   end
 endmodule
