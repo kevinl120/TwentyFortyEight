@@ -112,11 +112,15 @@
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="TwentyFortyEight.lso"/>
       <outfile xil_pn:name="TwentyFortyEight.prj"/>
       <outfile xil_pn:name="TwentyFortyEight.syr"/>
       <outfile xil_pn:name="TwentyFortyEight.xst"/>
-      <outfile xil_pn:name="TwentyFortyEight_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>

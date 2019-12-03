@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.01 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.01 secs
  
 --> 
 Reading design: TwentyFortyEight.prj
@@ -126,14 +126,14 @@ Parsing module <TwentyFortyEight>.
 Elaborating module <TwentyFortyEight>.
 
 Elaborating module <board_to_string>.
-WARNING:HDLCompiler:413 - "/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 61: Result of 7-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 49: Result of 9-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 50: Result of 9-bit expression is truncated to fit in 8-bit target.
 WARNING:HDLCompiler:413 - "/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 51: Result of 9-bit expression is truncated to fit in 8-bit target.
 WARNING:HDLCompiler:413 - "/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 52: Result of 9-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 109: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 113: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:634 - "/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 29: Net <numToChar[8]_0147> does not have a driver.
+WARNING:HDLCompiler:413 - "/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 53: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 54: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 116: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 120: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:1127 - "/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 62: Assignment to clkcounter ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "/home/ise/xilinx/TwentyFortyEight/board_to_string.v" Line 31: Net <numToChar[8]_0146> does not have a driver.
 
 Elaborating module <uart_top>.
 WARNING:HDLCompiler:413 - "/home/ise/xilinx/TwentyFortyEight/uart_top.v" Line 45: Result of 13-bit expression is truncated to fit in 12-bit target.
@@ -154,7 +154,21 @@ WARNING:HDLCompiler:413 - "/home/ise/xilinx/TwentyFortyEight/uart.v" Line 147: R
 WARNING:HDLCompiler:413 - "/home/ise/xilinx/TwentyFortyEight/uart.v" Line 153: Result of 32-bit expression is truncated to fit in 3-bit target.
 WARNING:HDLCompiler:413 - "/home/ise/xilinx/TwentyFortyEight/uart.v" Line 192: Result of 32-bit expression is truncated to fit in 4-bit target.
 WARNING:HDLCompiler:413 - "/home/ise/xilinx/TwentyFortyEight/uart.v" Line 209: Result of 32-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:1127 - "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.v" Line 66: Assignment to uart_tx_busy ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.v" Line 67: Assignment to uart_rx_data ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.v" Line 68: Assignment to uart_rx_valid ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.v" Line 69: Assignment to uart_tx_busy ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.v" Line 70: Assignment to uart_rx_data ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.v" Line 71: Assignment to uart_rx_valid ignored, since the identifier is never used
 WARNING:HDLCompiler:634 - "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.v" Line 61: Net <board[319]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TwentyFortyEight>.
+    Related source file is "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.v".
+INFO:Xst:3210 - "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.v" line 67: Output port <o_rx_data> of the instance <uart_top_> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.v" line 67: Output port <o_tx_busy> of the instance <uart_top_> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.v" line 67: Output port <o_rx_valid> of the instance <uart_top_> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <board> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <TwentyFortyEight> synthesized.

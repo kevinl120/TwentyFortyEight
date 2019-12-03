@@ -59,7 +59,10 @@ module TwentyFortyEight(RsRx, clk, rst, RsTx, btns);
   */
   wire [5000-1:0]tx_string;
   reg [320-1:0] board;
-  board_to_string board_to_string_(.board(board), .display_string(tx_string), .clk(clk));
+  wire board_updated;
+  board_to_string board_to_string_(
+    .board(board), .processing(btns), .clk(clk), .done(board_updated), .display_string(tx_string)
+  );
   
   uart_top uart_top_ (// Outputs
                        .o_tx            (RsTx),
@@ -73,7 +76,7 @@ module TwentyFortyEight(RsRx, clk, rst, RsTx, btns);
                        // Inputs
                        .clk             (clk),
                        .rst             (rst),
-                       .i_tx_stb (btns)
+                       .i_tx_stb (board_updated)
                        );
 
 endmodule

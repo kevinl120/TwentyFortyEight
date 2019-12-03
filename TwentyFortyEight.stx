@@ -15,7 +15,7 @@ Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.02 secs
  
 --> 
-Reading design: board_to_string.prj
+Reading design: TwentyFortyEight.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -42,17 +42,25 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Analyzing Verilog file "/home/ise/xilinx/TwentyFortyEight/uart_fifo.v" into library work
+Parsing module <uart_fifo>.
+Analyzing Verilog file "/home/ise/xilinx/TwentyFortyEight/uart.v" into library work
+Parsing module <uart>.
+Analyzing Verilog file "/home/ise/xilinx/TwentyFortyEight/uart_top.v" into library work
+Parsing module <uart_top>.
 Analyzing Verilog file "/home/ise/xilinx/TwentyFortyEight/board_to_string.v" into library work
 Parsing module <board_to_string>.
+Analyzing Verilog file "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.v" into library work
+Parsing module <TwentyFortyEight>.
 
 
 Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 2.80 secs
+Total CPU time to Xst completion: 2.84 secs
  
 --> 
 
 
-Total memory usage is 394336 kilobytes
+Total memory usage is 394620 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

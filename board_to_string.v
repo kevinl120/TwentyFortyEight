@@ -18,13 +18,15 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module board_to_string(board, display_string, clk);
+module board_to_string(board, processing, clk, done, display_string);
   input [319:0] board;
-  output reg [5000-1:0] display_string;
-  reg [5000-1:0] str_builder;
+  input processing;
   input clk;
-  reg [5:0] clkcounter;
+  output reg [5000-1:0] display_string;
+  output reg done;
   
+  reg [5000-1:0] str_builder;
+  reg [5:0] clkcounter;
   
   function [8:0] numToChar;
       input [4:0] din;
@@ -58,8 +60,14 @@ module board_to_string(board, display_string, clk);
   reg [32:0] numstr;
   
   always @(posedge clk) begin
-    clkcounter <= clkcounter + 1;
-    if (clkcounter == 40) begin
+    if (processing == 0) begin
+		  clkcounter <= 0;
+		  rw<=0;
+		  cl<=0;
+		  done <= 0;
+	 end
+	 else begin
+		
 	   if (rw == 0 && cl == 0)
         str_builder <= "-----------------------------\n\r|      |      |      |      |\n\r|      |      |      |      |\n\r|      |      |      |      |\n\r-----------------------------\n\r|      |      |      |      |\n\r|      |      |      |      |\n\r|      |      |      |      |\n\r-----------------------------\n\r|      |      |      |      |\n\r|      |      |      |      |\n\r|      |      |      |      |\n\r-----------------------------\n\r|      |      |      |      |\n\r|      |      |      |      |\n\r|      |      |      |      |\n\r-----------------------------\n\r";
       idxp <= 62*8 + 124*8*rw + 2*8 + cl*8*8;
@@ -97,13 +105,12 @@ module board_to_string(board, display_string, clk);
 		str_builder [5000-1-idxp-30] <= numstr[31-30];
 		str_builder [5000-1-idxp-31] <= numstr[31-31];
 
-
-
 		if (rw == 3 && cl ==3) begin
 		  display_string = str_builder;
 		  clkcounter <= 0;
 		  rw<=0;
 		  cl<=0;
+		  done <= 1;
 		end
 		else if (cl == 3) begin
 		  rw <= rw+1;
