@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.68d on Tue Dec 03 19:22:29 2019
+// Written by: Map P.68d on Tue Dec 03 19:46:28 2019
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -11,11 +11,14 @@ COMP "btnl" LOCATE = SITE "C4" LEVEL 1;
 COMP "btnr" LOCATE = SITE "D9" LEVEL 1;
 COMP "btns" LOCATE = SITE "B8" LEVEL 1;
 COMP "btnu" LOCATE = SITE "A8" LEVEL 1;
+PIN gameController_/Maddsub_lastDir[1]_PWR_3_o_MuLt_9_OUT_pins<92> = BEL
+        "gameController_/Maddsub_lastDir[1]_PWR_3_o_MuLt_9_OUT" PINNAME CLK;
 PIN uart_top_/tfifo_/Mram_mem_pins<20> = BEL "uart_top_/tfifo_/Mram_mem"
         PINNAME CLKAWRCLK;
 PIN uart_top_/tfifo_/Mram_mem_pins<21> = BEL "uart_top_/tfifo_/Mram_mem"
         PINNAME CLKBRDCLK;
-TIMEGRP sys_clk_pin = BEL "debouncer5_/pressed" BEL "debouncer4_/pressed" BEL
+TIMEGRP sys_clk_pin = BEL "dir_store_0" BEL "dir_store_1" BEL
+        "debouncer5_/pressed" BEL "debouncer4_/pressed" BEL
         "debouncer3_/pressed" BEL "debouncer2_/pressed" BEL
         "debouncer1_/pressed" BEL "debouncer4_/counter_0" BEL
         "debouncer4_/counter_1" BEL "debouncer4_/counter_2" BEL
@@ -126,57 +129,210 @@ TIMEGRP sys_clk_pin = BEL "debouncer5_/pressed" BEL "debouncer4_/pressed" BEL
         "gameController_/counter_2" BEL "gameController_/counter_1" BEL
         "gameController_/counter_0" BEL "gameController_/editMode_5" BEL
         "gameController_/editMode_4" BEL "gameController_/editMode_3" BEL
-        "gameController_/editMode_2" BEL "gameController_/editMode_1" BEL
-        "gameController_/board_302" BEL "gameController_/board_301" BEL
-        "gameController_/board_282" BEL "gameController_/board_281" BEL
-        "gameController_/board_262" BEL "gameController_/board_261" BEL
-        "gameController_/board_242" BEL "gameController_/board_241" BEL
-        "gameController_/board_222" BEL "gameController_/board_221" BEL
-        "gameController_/board_202" BEL "gameController_/board_201" BEL
-        "gameController_/board_182" BEL "gameController_/board_181" BEL
-        "gameController_/board_162" BEL "gameController_/board_161" BEL
-        "gameController_/board_142" BEL "gameController_/board_141" BEL
-        "gameController_/board_125" BEL "gameController_/board_122" BEL
-        "gameController_/board_121" BEL "gameController_/board_102" BEL
-        "gameController_/board_101" BEL "gameController_/board_82" BEL
-        "gameController_/board_81" BEL "gameController_/board_62" BEL
-        "gameController_/board_61" BEL "gameController_/board_42" BEL
-        "gameController_/board_41" BEL "gameController_/board_22" BEL
-        "gameController_/board_21" BEL "gameController_/board_2" BEL
-        "gameController_/board_1" BEL "board_to_string_/cntr_15" BEL
-        "board_to_string_/cntr_14" BEL "board_to_string_/cntr_13" BEL
-        "board_to_string_/cntr_12" BEL "board_to_string_/cntr_11" BEL
-        "board_to_string_/cntr_10" BEL "board_to_string_/cntr_9" BEL
-        "board_to_string_/cntr_8" BEL "board_to_string_/cntr_7" BEL
-        "board_to_string_/cntr_6" BEL "board_to_string_/cntr_5" BEL
-        "board_to_string_/cntr_4" BEL "board_to_string_/cntr_3" BEL
-        "board_to_string_/cntr_2" BEL "board_to_string_/cntr_1" BEL
-        "board_to_string_/cntr_0" BEL "board_to_string_/rw_1" BEL
-        "board_to_string_/rw_0" BEL "board_to_string_/char_out_6" BEL
-        "board_to_string_/char_out_5" BEL "board_to_string_/char_out_4" BEL
-        "board_to_string_/char_out_3" BEL "board_to_string_/char_out_2" BEL
-        "board_to_string_/char_out_1" BEL "board_to_string_/char_out_0" BEL
+        "gameController_/editMode_2" BEL "gameController_/editMode_1" PIN
+        "gameController_/Maddsub_lastDir[1]_PWR_3_o_MuLt_9_OUT_pins<92>" BEL
+        "gameController_/board_319" BEL "gameController_/board_318" BEL
+        "gameController_/board_317" BEL "gameController_/board_316" BEL
+        "gameController_/board_315" BEL "gameController_/board_314" BEL
+        "gameController_/board_313" BEL "gameController_/board_312" BEL
+        "gameController_/board_311" BEL "gameController_/board_310" BEL
+        "gameController_/board_309" BEL "gameController_/board_308" BEL
+        "gameController_/board_307" BEL "gameController_/board_306" BEL
+        "gameController_/board_305" BEL "gameController_/board_304" BEL
+        "gameController_/board_303" BEL "gameController_/board_302" BEL
+        "gameController_/board_301" BEL "gameController_/board_300" BEL
+        "gameController_/board_299" BEL "gameController_/board_298" BEL
+        "gameController_/board_297" BEL "gameController_/board_296" BEL
+        "gameController_/board_295" BEL "gameController_/board_294" BEL
+        "gameController_/board_293" BEL "gameController_/board_292" BEL
+        "gameController_/board_291" BEL "gameController_/board_290" BEL
+        "gameController_/board_289" BEL "gameController_/board_288" BEL
+        "gameController_/board_287" BEL "gameController_/board_286" BEL
+        "gameController_/board_285" BEL "gameController_/board_284" BEL
+        "gameController_/board_283" BEL "gameController_/board_282" BEL
+        "gameController_/board_281" BEL "gameController_/board_280" BEL
+        "gameController_/board_279" BEL "gameController_/board_278" BEL
+        "gameController_/board_277" BEL "gameController_/board_276" BEL
+        "gameController_/board_275" BEL "gameController_/board_274" BEL
+        "gameController_/board_273" BEL "gameController_/board_272" BEL
+        "gameController_/board_271" BEL "gameController_/board_270" BEL
+        "gameController_/board_269" BEL "gameController_/board_268" BEL
+        "gameController_/board_267" BEL "gameController_/board_266" BEL
+        "gameController_/board_265" BEL "gameController_/board_264" BEL
+        "gameController_/board_263" BEL "gameController_/board_262" BEL
+        "gameController_/board_261" BEL "gameController_/board_260" BEL
+        "gameController_/board_259" BEL "gameController_/board_258" BEL
+        "gameController_/board_257" BEL "gameController_/board_256" BEL
+        "gameController_/board_255" BEL "gameController_/board_254" BEL
+        "gameController_/board_253" BEL "gameController_/board_252" BEL
+        "gameController_/board_251" BEL "gameController_/board_250" BEL
+        "gameController_/board_249" BEL "gameController_/board_248" BEL
+        "gameController_/board_247" BEL "gameController_/board_246" BEL
+        "gameController_/board_245" BEL "gameController_/board_244" BEL
+        "gameController_/board_243" BEL "gameController_/board_242" BEL
+        "gameController_/board_241" BEL "gameController_/board_240" BEL
+        "gameController_/board_239" BEL "gameController_/board_238" BEL
+        "gameController_/board_237" BEL "gameController_/board_236" BEL
+        "gameController_/board_235" BEL "gameController_/board_234" BEL
+        "gameController_/board_233" BEL "gameController_/board_232" BEL
+        "gameController_/board_231" BEL "gameController_/board_230" BEL
+        "gameController_/board_229" BEL "gameController_/board_228" BEL
+        "gameController_/board_227" BEL "gameController_/board_226" BEL
+        "gameController_/board_225" BEL "gameController_/board_224" BEL
+        "gameController_/board_223" BEL "gameController_/board_222" BEL
+        "gameController_/board_221" BEL "gameController_/board_220" BEL
+        "gameController_/board_219" BEL "gameController_/board_218" BEL
+        "gameController_/board_217" BEL "gameController_/board_216" BEL
+        "gameController_/board_215" BEL "gameController_/board_214" BEL
+        "gameController_/board_213" BEL "gameController_/board_212" BEL
+        "gameController_/board_211" BEL "gameController_/board_210" BEL
+        "gameController_/board_209" BEL "gameController_/board_208" BEL
+        "gameController_/board_207" BEL "gameController_/board_206" BEL
+        "gameController_/board_205" BEL "gameController_/board_204" BEL
+        "gameController_/board_203" BEL "gameController_/board_202" BEL
+        "gameController_/board_201" BEL "gameController_/board_200" BEL
+        "gameController_/board_199" BEL "gameController_/board_198" BEL
+        "gameController_/board_197" BEL "gameController_/board_196" BEL
+        "gameController_/board_195" BEL "gameController_/board_194" BEL
+        "gameController_/board_193" BEL "gameController_/board_192" BEL
+        "gameController_/board_191" BEL "gameController_/board_190" BEL
+        "gameController_/board_189" BEL "gameController_/board_188" BEL
+        "gameController_/board_187" BEL "gameController_/board_186" BEL
+        "gameController_/board_185" BEL "gameController_/board_184" BEL
+        "gameController_/board_183" BEL "gameController_/board_182" BEL
+        "gameController_/board_181" BEL "gameController_/board_180" BEL
+        "gameController_/board_179" BEL "gameController_/board_178" BEL
+        "gameController_/board_177" BEL "gameController_/board_176" BEL
+        "gameController_/board_175" BEL "gameController_/board_174" BEL
+        "gameController_/board_173" BEL "gameController_/board_172" BEL
+        "gameController_/board_171" BEL "gameController_/board_170" BEL
+        "gameController_/board_169" BEL "gameController_/board_168" BEL
+        "gameController_/board_167" BEL "gameController_/board_166" BEL
+        "gameController_/board_165" BEL "gameController_/board_164" BEL
+        "gameController_/board_163" BEL "gameController_/board_162" BEL
+        "gameController_/board_161" BEL "gameController_/board_160" BEL
+        "gameController_/board_159" BEL "gameController_/board_158" BEL
+        "gameController_/board_157" BEL "gameController_/board_156" BEL
+        "gameController_/board_155" BEL "gameController_/board_154" BEL
+        "gameController_/board_153" BEL "gameController_/board_152" BEL
+        "gameController_/board_151" BEL "gameController_/board_150" BEL
+        "gameController_/board_149" BEL "gameController_/board_148" BEL
+        "gameController_/board_147" BEL "gameController_/board_146" BEL
+        "gameController_/board_145" BEL "gameController_/board_144" BEL
+        "gameController_/board_143" BEL "gameController_/board_142" BEL
+        "gameController_/board_141" BEL "gameController_/board_140" BEL
+        "gameController_/board_139" BEL "gameController_/board_138" BEL
+        "gameController_/board_137" BEL "gameController_/board_136" BEL
+        "gameController_/board_135" BEL "gameController_/board_134" BEL
+        "gameController_/board_133" BEL "gameController_/board_132" BEL
+        "gameController_/board_131" BEL "gameController_/board_130" BEL
+        "gameController_/board_129" BEL "gameController_/board_128" BEL
+        "gameController_/board_127" BEL "gameController_/board_126" BEL
+        "gameController_/board_125" BEL "gameController_/board_124" BEL
+        "gameController_/board_123" BEL "gameController_/board_122" BEL
+        "gameController_/board_121" BEL "gameController_/board_120" BEL
+        "gameController_/board_119" BEL "gameController_/board_118" BEL
+        "gameController_/board_117" BEL "gameController_/board_116" BEL
+        "gameController_/board_115" BEL "gameController_/board_114" BEL
+        "gameController_/board_113" BEL "gameController_/board_112" BEL
+        "gameController_/board_111" BEL "gameController_/board_110" BEL
+        "gameController_/board_109" BEL "gameController_/board_108" BEL
+        "gameController_/board_107" BEL "gameController_/board_106" BEL
+        "gameController_/board_105" BEL "gameController_/board_104" BEL
+        "gameController_/board_103" BEL "gameController_/board_102" BEL
+        "gameController_/board_101" BEL "gameController_/board_100" BEL
+        "gameController_/board_99" BEL "gameController_/board_98" BEL
+        "gameController_/board_97" BEL "gameController_/board_96" BEL
+        "gameController_/board_95" BEL "gameController_/board_94" BEL
+        "gameController_/board_93" BEL "gameController_/board_92" BEL
+        "gameController_/board_91" BEL "gameController_/board_90" BEL
+        "gameController_/board_89" BEL "gameController_/board_88" BEL
+        "gameController_/board_87" BEL "gameController_/board_86" BEL
+        "gameController_/board_85" BEL "gameController_/board_84" BEL
+        "gameController_/board_83" BEL "gameController_/board_82" BEL
+        "gameController_/board_81" BEL "gameController_/board_80" BEL
+        "gameController_/board_79" BEL "gameController_/board_78" BEL
+        "gameController_/board_77" BEL "gameController_/board_76" BEL
+        "gameController_/board_75" BEL "gameController_/board_74" BEL
+        "gameController_/board_73" BEL "gameController_/board_72" BEL
+        "gameController_/board_71" BEL "gameController_/board_70" BEL
+        "gameController_/board_69" BEL "gameController_/board_68" BEL
+        "gameController_/board_67" BEL "gameController_/board_66" BEL
+        "gameController_/board_65" BEL "gameController_/board_64" BEL
+        "gameController_/board_63" BEL "gameController_/board_62" BEL
+        "gameController_/board_61" BEL "gameController_/board_60" BEL
+        "gameController_/board_59" BEL "gameController_/board_58" BEL
+        "gameController_/board_57" BEL "gameController_/board_56" BEL
+        "gameController_/board_55" BEL "gameController_/board_54" BEL
+        "gameController_/board_53" BEL "gameController_/board_52" BEL
+        "gameController_/board_51" BEL "gameController_/board_50" BEL
+        "gameController_/board_49" BEL "gameController_/board_48" BEL
+        "gameController_/board_47" BEL "gameController_/board_46" BEL
+        "gameController_/board_45" BEL "gameController_/board_44" BEL
+        "gameController_/board_43" BEL "gameController_/board_42" BEL
+        "gameController_/board_41" BEL "gameController_/board_40" BEL
+        "gameController_/board_39" BEL "gameController_/board_38" BEL
+        "gameController_/board_37" BEL "gameController_/board_36" BEL
+        "gameController_/board_35" BEL "gameController_/board_34" BEL
+        "gameController_/board_33" BEL "gameController_/board_32" BEL
+        "gameController_/board_31" BEL "gameController_/board_30" BEL
+        "gameController_/board_29" BEL "gameController_/board_28" BEL
+        "gameController_/board_27" BEL "gameController_/board_26" BEL
+        "gameController_/board_25" BEL "gameController_/board_24" BEL
+        "gameController_/board_23" BEL "gameController_/board_22" BEL
+        "gameController_/board_21" BEL "gameController_/board_20" BEL
+        "gameController_/board_19" BEL "gameController_/board_18" BEL
+        "gameController_/board_17" BEL "gameController_/board_16" BEL
+        "gameController_/board_15" BEL "gameController_/board_14" BEL
+        "gameController_/board_13" BEL "gameController_/board_12" BEL
+        "gameController_/board_11" BEL "gameController_/board_10" BEL
+        "gameController_/board_9" BEL "gameController_/board_8" BEL
+        "gameController_/board_7" BEL "gameController_/board_6" BEL
+        "gameController_/board_5" BEL "gameController_/board_4" BEL
+        "gameController_/board_3" BEL "gameController_/board_2" BEL
+        "gameController_/board_1" BEL "gameController_/board_0" BEL
+        "board_to_string_/cntr_15" BEL "board_to_string_/cntr_14" BEL
+        "board_to_string_/cntr_13" BEL "board_to_string_/cntr_12" BEL
+        "board_to_string_/cntr_11" BEL "board_to_string_/cntr_10" BEL
+        "board_to_string_/cntr_9" BEL "board_to_string_/cntr_8" BEL
+        "board_to_string_/cntr_7" BEL "board_to_string_/cntr_6" BEL
+        "board_to_string_/cntr_5" BEL "board_to_string_/cntr_4" BEL
+        "board_to_string_/cntr_3" BEL "board_to_string_/cntr_2" BEL
+        "board_to_string_/cntr_1" BEL "board_to_string_/cntr_0" BEL
+        "board_to_string_/rw_1" BEL "board_to_string_/rw_0" BEL
+        "board_to_string_/char_out_6" BEL "board_to_string_/char_out_5" BEL
+        "board_to_string_/char_out_4" BEL "board_to_string_/char_out_3" BEL
+        "board_to_string_/char_out_2" BEL "board_to_string_/char_out_1" BEL
+        "board_to_string_/char_out_0" BEL "board_to_string_/curnum_19" BEL
+        "board_to_string_/curnum_18" BEL "board_to_string_/curnum_17" BEL
+        "board_to_string_/curnum_16" BEL "board_to_string_/curnum_15" BEL
+        "board_to_string_/curnum_14" BEL "board_to_string_/curnum_13" BEL
+        "board_to_string_/curnum_12" BEL "board_to_string_/curnum_11" BEL
+        "board_to_string_/curnum_10" BEL "board_to_string_/curnum_9" BEL
+        "board_to_string_/curnum_8" BEL "board_to_string_/curnum_7" BEL
+        "board_to_string_/curnum_6" BEL "board_to_string_/curnum_5" BEL
+        "board_to_string_/curnum_4" BEL "board_to_string_/curnum_3" BEL
         "board_to_string_/curnum_2" BEL "board_to_string_/curnum_1" BEL
-        "board_to_string_/idxp_8" BEL "board_to_string_/idxp_7" BEL
-        "board_to_string_/idxp_6" BEL "board_to_string_/idxp_5" BEL
-        "board_to_string_/idxp_4" BEL "board_to_string_/idxp_3" BEL
-        "board_to_string_/idxp_2" BEL "board_to_string_/idxp_1" BEL
-        "board_to_string_/idxp_0" BEL "board_to_string_/cl_1" BEL
-        "board_to_string_/cl_0" BEL "board_to_string_/ln_5" BEL
-        "board_to_string_/ln_4" BEL "board_to_string_/ln_3" BEL
-        "board_to_string_/ln_2" BEL "board_to_string_/ln_1" BEL
-        "board_to_string_/ln_0" BEL "board_to_string_/colloc_4" BEL
-        "board_to_string_/colloc_3" BEL "board_to_string_/colloc_2" BEL
-        "board_to_string_/colloc_1" BEL "board_to_string_/colloc_0" BEL
-        "uart_top_/state_0" BEL "uart_top_/tfifo_in_6" BEL
-        "uart_top_/tfifo_in_5" BEL "uart_top_/tfifo_in_4" BEL
-        "uart_top_/tfifo_in_3" BEL "uart_top_/tfifo_in_2" BEL
-        "uart_top_/tfifo_in_1" BEL "uart_top_/tfifo_in_0" BEL
-        "uart_top_/tx_data_6" BEL "uart_top_/tx_data_5" BEL
-        "uart_top_/tx_data_4" BEL "uart_top_/tx_data_3" BEL
-        "uart_top_/tx_data_2" BEL "uart_top_/tx_data_1" BEL
-        "uart_top_/tx_data_0" BEL "uart_top_/tfifo_rd_z" BEL
-        "uart_top_/uart_/tx_bits_remaining_3" BEL
+        "board_to_string_/curnum_0" BEL "board_to_string_/idxp_8" BEL
+        "board_to_string_/idxp_7" BEL "board_to_string_/idxp_6" BEL
+        "board_to_string_/idxp_5" BEL "board_to_string_/idxp_4" BEL
+        "board_to_string_/idxp_3" BEL "board_to_string_/idxp_2" BEL
+        "board_to_string_/idxp_1" BEL "board_to_string_/idxp_0" BEL
+        "board_to_string_/cl_1" BEL "board_to_string_/cl_0" BEL
+        "board_to_string_/ln_5" BEL "board_to_string_/ln_4" BEL
+        "board_to_string_/ln_3" BEL "board_to_string_/ln_2" BEL
+        "board_to_string_/ln_1" BEL "board_to_string_/ln_0" BEL
+        "board_to_string_/colloc_4" BEL "board_to_string_/colloc_3" BEL
+        "board_to_string_/colloc_2" BEL "board_to_string_/colloc_1" BEL
+        "board_to_string_/colloc_0" BEL "uart_top_/state_0" BEL
+        "uart_top_/tfifo_in_6" BEL "uart_top_/tfifo_in_5" BEL
+        "uart_top_/tfifo_in_4" BEL "uart_top_/tfifo_in_3" BEL
+        "uart_top_/tfifo_in_2" BEL "uart_top_/tfifo_in_1" BEL
+        "uart_top_/tfifo_in_0" BEL "uart_top_/tx_data_6" BEL
+        "uart_top_/tx_data_5" BEL "uart_top_/tx_data_4" BEL
+        "uart_top_/tx_data_3" BEL "uart_top_/tx_data_2" BEL
+        "uart_top_/tx_data_1" BEL "uart_top_/tx_data_0" BEL
+        "uart_top_/tfifo_rd_z" BEL "uart_top_/uart_/tx_bits_remaining_3" BEL
         "uart_top_/uart_/tx_bits_remaining_2" BEL
         "uart_top_/uart_/tx_bits_remaining_1" BEL
         "uart_top_/uart_/tx_bits_remaining_0" BEL "uart_top_/uart_/tx_out" BEL
@@ -211,14 +367,23 @@ TIMEGRP sys_clk_pin = BEL "debouncer5_/pressed" BEL "debouncer4_/pressed" BEL
         "uart_top_/tfifo_/fifo_cnt_2" BEL "uart_top_/tfifo_/fifo_cnt_1" BEL
         "uart_top_/tfifo_/fifo_cnt_0" BEL "dir_store_2" BEL
         "gameController_/editMode_0" BEL "gameController_/lastMoveValid" BEL
-        "board_to_string_/done" BEL "board_to_string_/cntr_9_1" BEL
-        "board_to_string_/cntr_11_1" BEL "board_to_string_/cntr_12_1" BEL
-        "board_to_string_/cntr_13_1" BEL "board_to_string_/cntr_15_1" BEL
-        "board_to_string_/cntr_10_1" BEL "board_to_string_/cntr_11_2" BEL
-        "board_to_string_/cntr_12_2" BEL "board_to_string_/cntr_13_2" BEL
-        "board_to_string_/cntr_15_2" BEL "board_to_string_/cntr_9_2" BEL
-        "board_to_string_/cntr_11_3" BEL "clk_BUFGP/BUFG" PIN
-        "uart_top_/tfifo_/Mram_mem_pins<20>" PIN
+        "board_to_string_/done" BEL "board_to_string_/curnum_12_1" BEL
+        "board_to_string_/curnum_13_1" BEL "board_to_string_/curnum_12_2" BEL
+        "board_to_string_/curnum_14_1" BEL "board_to_string_/curnum_19_1" BEL
+        "board_to_string_/curnum_18_1" BEL "board_to_string_/curnum_15_1" BEL
+        "board_to_string_/curnum_17_1" BEL "board_to_string_/curnum_16_1" BEL
+        "board_to_string_/curnum_13_2" BEL "board_to_string_/curnum_19_2" BEL
+        "board_to_string_/curnum_13_3" BEL "board_to_string_/curnum_18_2" BEL
+        "board_to_string_/curnum_17_2" BEL "board_to_string_/curnum_15_2" BEL
+        "board_to_string_/curnum_14_2" BEL "board_to_string_/curnum_16_2" BEL
+        "board_to_string_/curnum_12_3" BEL "board_to_string_/curnum_13_4" BEL
+        "board_to_string_/curnum_14_3" BEL "board_to_string_/curnum_15_3" BEL
+        "board_to_string_/curnum_16_3" BEL "board_to_string_/curnum_17_3" BEL
+        "board_to_string_/curnum_14_4" BEL "board_to_string_/curnum_15_4" BEL
+        "board_to_string_/curnum_16_4" BEL "board_to_string_/curnum_17_4" BEL
+        "board_to_string_/curnum_19_3" BEL "board_to_string_/curnum_18_3" BEL
+        "board_to_string_/curnum_14_5" BEL "board_to_string_/curnum_15_5" BEL
+        "clk_BUFGP/BUFG" PIN "uart_top_/tfifo_/Mram_mem_pins<20>" PIN
         "uart_top_/tfifo_/Mram_mem_pins<21>";
 TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
 SCHEMATIC END;

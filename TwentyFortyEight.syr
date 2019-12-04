@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: TwentyFortyEight.prj
@@ -137,7 +137,7 @@ WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\gameController.v" Line 116: 
 WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\gameController.v" Line 121: Result of 32-bit expression is truncated to fit in 20-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\gameController.v" Line 123: Result of 7-bit expression is truncated to fit in 6-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\gameController.v" Line 126: Result of 7-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:1127 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" Line 81: Assignment to score_out ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" Line 82: Assignment to score_out ignored, since the identifier is never used
 
 Elaborating module <board_to_string>.
 WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 73: Result of 16-bit expression is truncated to fit in 6-bit target.
@@ -156,7 +156,7 @@ WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 127:
 WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 128: Result of 9-bit expression is truncated to fit in 8-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 137: Result of 17-bit expression is truncated to fit in 16-bit target.
 WARNING:HDLCompiler:634 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 40: Net <numToChar[8]_0041> does not have a driver.
-WARNING:HDLCompiler:189 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" Line 94: Size mismatch in connection of port <score>. Formal port size is 21-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" Line 95: Size mismatch in connection of port <score>. Formal port size is 21-bit while actual signal size is 32-bit.
 
 Elaborating module <uart_top>.
 WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart_top.v" Line 45: Result of 13-bit expression is truncated to fit in 12-bit target.
@@ -177,8 +177,8 @@ WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart.v" Line 147: Result of 
 WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart.v" Line 153: Result of 32-bit expression is truncated to fit in 3-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart.v" Line 192: Result of 32-bit expression is truncated to fit in 4-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart.v" Line 209: Result of 32-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:1127 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" Line 101: Assignment to uart_rx_data ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" Line 102: Assignment to uart_rx_valid ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" Line 102: Assignment to uart_rx_data ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" Line 103: Assignment to uart_rx_valid ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -187,9 +187,9 @@ WARNING:HDLCompiler:1127 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" Line 10
 Synthesizing Unit <TwentyFortyEight>.
     Related source file is "C:\Users\152\Desktop\TFE\TwentyFortyEight.v".
 WARNING:Xst:647 - Input <dir> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" line 77: Output port <score> of the instance <gameController_> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" line 98: Output port <o_rx_data> of the instance <uart_top_> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" line 98: Output port <o_rx_valid> of the instance <uart_top_> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" line 78: Output port <score> of the instance <gameController_> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" line 99: Output port <o_rx_data> of the instance <uart_top_> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" line 99: Output port <o_rx_valid> of the instance <uart_top_> is unconnected or connected to loadless signal.
     Found 3-bit register for signal <dir_store>.
     Summary:
 	inferred   3 D-type flip-flop(s).
@@ -208,7 +208,6 @@ Unit <debouncer> synthesized.
 
 Synthesizing Unit <gameController>.
     Related source file is "C:\Users\152\Desktop\TFE\gameController.v".
-        precompute = 0
     Found 320-bit register for signal <board>.
     Found 21-bit register for signal <score>.
     Found 1-bit register for signal <lastMoveValid>.
@@ -218,28 +217,28 @@ Synthesizing Unit <gameController>.
     Found 7-bit subtractor for signal <GND_3_o_GND_3_o_sub_11_OUT> created at line 97.
     Found 21-bit subtractor for signal <GND_3_o_GND_3_o_sub_1015_OUT> created at line 121.
     Found 17-bit adder for signal <counter[16]_GND_3_o_add_1_OUT> created at line 133.
-    Found 32-bit adder for signal <n2009[31:0]> created at line 97.
-    Found 32-bit adder for signal <n2012> created at line 98.
-    Found 22-bit adder for signal <n4313> created at line 109.
+    Found 32-bit adder for signal <n2010[31:0]> created at line 97.
+    Found 32-bit adder for signal <n2013> created at line 98.
+    Found 22-bit adder for signal <n4316> created at line 109.
     Found 21-bit adder for signal <score[20]_board[319]_add_677_OUT> created at line 110.
     Found 6-bit adder for signal <editMode[5]_GND_3_o_add_1988_OUT> created at line 126.
     Found 6-bit subtractor for signal <GND_3_o_GND_3_o_sub_1009_OUT<5:0>> created at line 119.
     Found 2x8-bit multiplier for signal <lastDir[1]_PWR_3_o_MuLt_9_OUT> created at line 97.
-    Found 60-bit shifter logical right for signal <n2010> created at line 97
-    Found 4x5-bit multiplier for signal <GND_3_o_PWR_3_o_MuLt_13_OUT> created at line 42.
-    Found 60-bit shifter logical right for signal <n2013> created at line 98
-    Found 4x5-bit multiplier for signal <GND_3_o_PWR_3_o_MuLt_19_OUT> created at line 42.
-    Found 620-bit shifter logical right for signal <n2015> created at line 105
-    Found 620-bit shifter logical right for signal <n2335> created at line 109
-    Found 6x5-bit multiplier for signal <n2988> created at line 42.
-    Found 620-bit shifter logical right for signal <n2989> created at line 121
-    Found 620-bit shifter logical right for signal <n3312> created at line 74
+    Found 1532-bit shifter logical right for signal <n2011> created at line 97
+    Found 4x5-bit multiplier for signal <precompute[767]_PWR_3_o_MuLt_13_OUT> created at line 42.
+    Found 1532-bit shifter logical right for signal <n2014> created at line 98
+    Found 4x5-bit multiplier for signal <precompute[767]_PWR_3_o_MuLt_19_OUT> created at line 42.
+    Found 620-bit shifter logical right for signal <n2016> created at line 105
+    Found 620-bit shifter logical right for signal <n2336> created at line 109
+    Found 6x5-bit multiplier for signal <n2989> created at line 42.
+    Found 620-bit shifter logical right for signal <n2990> created at line 121
+    Found 620-bit shifter logical right for signal <n3313> created at line 74
     Found 4x5-bit multiplier for signal <counter[3]_PWR_3_o_MuLt_1665_OUT> created at line 42.
     Found 3-bit comparator greater for signal <dir[2]_PWR_3_o_LessThan_5_o> created at line 137
     Found 6-bit comparator greater for signal <GND_3_o_editMode[5]_LessThan_8_o> created at line 96
     Found 6-bit comparator greater for signal <editMode[5]_GND_3_o_LessThan_9_o> created at line 96
     Found 20-bit comparator equal for signal <board[319]_board[319]_equal_27_o> created at line 102
-    Found 3-bit comparator greater for signal <GND_3_o_GND_3_o_LessThan_354_o> created at line 88
+    Found 3-bit comparator greater for signal <GND_3_o_precompute[767]_LessThan_354_o> created at line 88
     Found 6-bit comparator greater for signal <GND_3_o_editMode[5]_LessThan_1006_o> created at line 117
     Found 6-bit comparator greater for signal <editMode[5]_PWR_3_o_LessThan_1007_o> created at line 117
     Found 20-bit comparator greater for signal <GND_3_o_board[319]_LessThan_1012_o> created at line 120
@@ -353,9 +352,9 @@ WARNING:Xst:653 - Signal <numToChar> is used but never assigned. This sourceless
     Found 13-bit adder for signal <n0400[12:0]> created at line 75.
     Found 14-bit adder for signal <n0402[13:0]> created at line 75.
     Found 6-bit adder for signal <n0358> created at line 88.
-    Found 17-bit adder for signal <_n0465> created at line 90.
-    Found 17-bit adder for signal <_n0477> created at line 91.
-    Found 17-bit adder for signal <_n0486> created at line 92.
+    Found 17-bit adder for signal <_n0441> created at line 90.
+    Found 17-bit adder for signal <_n0444> created at line 91.
+    Found 17-bit adder for signal <_n0447> created at line 92.
     Found 3-bit adder for signal <rw[2]_GND_10_o_add_53_OUT> created at line 99.
     Found 3-bit adder for signal <cl[2]_GND_10_o_add_54_OUT> created at line 103.
     Found 16-bit adder for signal <cntr[15]_GND_10_o_add_156_OUT> created at line 137.
@@ -1160,7 +1159,7 @@ Macro Statistics
  8-bit 2-to-1 multiplexer                              : 31
  9-bit 2-to-1 multiplexer                              : 12
 # Logic shifters                                       : 7
- 60-bit shifter logical right                          : 2
+ 1532-bit shifter logical right                        : 2
  620-bit shifter logical right                         : 5
 
 =========================================================================
@@ -1309,7 +1308,7 @@ Unit <debouncer> synthesized (advanced).
 Synthesizing (advanced) Unit <gameController>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
 The following registers are absorbed into counter <editMode>: 1 register on signal <editMode>.
-	Multiplier <Mmult_lastDir[1]_PWR_3_o_MuLt_9_OUT> in block <gameController> and adder/subtractor <Madd_n2009[31:0]_Madd> in block <gameController> are combined into a MAC<Maddsub_lastDir[1]_PWR_3_o_MuLt_9_OUT>.
+	Multiplier <Mmult_lastDir[1]_PWR_3_o_MuLt_9_OUT> in block <gameController> and adder/subtractor <Madd_n2010[31:0]_Madd> in block <gameController> are combined into a MAC<Maddsub_lastDir[1]_PWR_3_o_MuLt_9_OUT>.
 Unit <gameController> synthesized (advanced).
 
 Synthesizing (advanced) Unit <uart>.
@@ -1359,17 +1358,16 @@ Macro Statistics
  3x3-to-14-bit MAC                                     : 1
  5x6-to-11-bit Mult with pre-adder                     : 1
  7x3-to-12-bit MAC                                     : 1
- 8x2-to-5-bit MAC                                      : 1
+ 8x2-to-10-bit MAC                                     : 1
 # Multipliers                                          : 4
  5x4-bit multiplier                                    : 3
  6x5-bit multiplier                                    : 1
 # Adders/Subtractors                                   : 507
- 10-bit adder                                          : 1
+ 10-bit adder                                          : 2
  10-bit subtractor                                     : 1
  11-bit subtractor                                     : 2
  16-bit adder                                          : 32
  17-bit adder                                          : 3
- 2-bit subtractor                                      : 1
  21-bit adder                                          : 58
  21-bit adder carry in                                 : 357
  21-bit subtractor                                     : 1
@@ -1378,9 +1376,10 @@ Macro Statistics
  4-bit adder                                           : 1
  4-bit adder carry in                                  : 11
  4-bit subtractor                                      : 1
- 5-bit adder                                           : 7
+ 5-bit adder                                           : 6
  6-bit subtractor                                      : 3
  7-bit adder                                           : 7
+ 7-bit subtractor                                      : 1
  9-bit adder                                           : 18
 # Counters                                             : 11
  12-bit up counter                                     : 1
@@ -1467,7 +1466,7 @@ Macro Statistics
  8-bit 2-to-1 multiplexer                              : 30
  9-bit 2-to-1 multiplexer                              : 12
 # Logic shifters                                       : 7
- 60-bit shifter logical right                          : 2
+ 1532-bit shifter logical right                        : 2
  620-bit shifter logical right                         : 5
 
 =========================================================================
@@ -1480,9 +1479,6 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <colloc_6> has a con
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <idxp_14> has a constant value of 0 in block <board_to_string>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <idxp_15> has a constant value of 0 in block <board_to_string>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <curnum_20> has a constant value of 0 in block <board_to_string>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <lastDir_1> is unconnected in block <gameController>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <lastDir_0> is unconnected in block <gameController>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Maddsub_lastDir[1]_PWR_3_o_MuLt_9_OUT> is unconnected in block <gameController>.
 WARNING:Xst:1293 - FF/Latch <score_0> has a constant value of 0 in block <gameController>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <counter_9> of sequential type is unconnected in block <gameController>.
 WARNING:Xst:2677 - Node <counter_10> of sequential type is unconnected in block <gameController>.
@@ -1499,7 +1495,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <char_out_7> (withou
 Optimizing unit <TwentyFortyEight> ...
 
 Optimizing unit <gameController> ...
-WARNING:Xst:1293 - FF/Latch <board_0> has a constant value of 0 in block <gameController>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <board_to_string> ...
 WARNING:Xst:1293 - FF/Latch <cl_2> has a constant value of 0 in block <board_to_string>. This FF/Latch will be trimmed during the optimization process.
@@ -1514,8 +1509,6 @@ Optimizing unit <uart> ...
 Optimizing unit <uart_fifo> ...
 WARNING:Xst:1293 - FF/Latch <uart_top_/tx_data_7> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_top_/tfifo_in_7> (without init value) has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <dir_store_0> of sequential type is unconnected in block <TwentyFortyEight>.
-WARNING:Xst:2677 - Node <dir_store_1> of sequential type is unconnected in block <TwentyFortyEight>.
 WARNING:Xst:2677 - Node <gameController_/score_20> of sequential type is unconnected in block <TwentyFortyEight>.
 WARNING:Xst:2677 - Node <gameController_/score_19> of sequential type is unconnected in block <TwentyFortyEight>.
 WARNING:Xst:2677 - Node <gameController_/score_18> of sequential type is unconnected in block <TwentyFortyEight>.
@@ -1568,108 +1561,7 @@ WARNING:Xst:2677 - Node <uart_top_/uart_/rx_data_3> of sequential type is unconn
 WARNING:Xst:2677 - Node <uart_top_/uart_/rx_data_2> of sequential type is unconnected in block <TwentyFortyEight>.
 WARNING:Xst:2677 - Node <uart_top_/uart_/rx_data_1> of sequential type is unconnected in block <TwentyFortyEight>.
 WARNING:Xst:2677 - Node <uart_top_/uart_/rx_data_0> of sequential type is unconnected in block <TwentyFortyEight>.
-WARNING:Xst:1293 - FF/Latch <gameController_/board_71> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_72> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_73> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_74> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_75> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_76> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_77> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_78> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_79> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_80> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_83> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_84> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_85> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_86> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_87> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_88> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_89> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_90> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_91> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_92> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_49> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_50> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_51> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_52> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_53> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_54> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_55> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_56> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_57> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_58> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_59> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_60> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_63> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_64> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_65> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_66> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_67> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_68> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_69> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_70> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_116> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_117> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_118> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_119> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_120> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_123> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_124> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_126> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_127> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_128> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_129> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_130> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_131> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_132> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_133> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_134> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_135> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_136> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_137> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_138> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_93> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_94> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_95> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_96> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_97> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_98> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_99> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_100> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_103> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_104> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_105> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_106> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_107> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_108> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_109> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_110> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_111> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_112> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_113> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_114> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_115> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_0> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_3> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_4> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_5> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_6> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_7> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_8> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_9> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_10> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_11> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_12> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_13> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_14> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_15> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_16> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_17> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_18> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_19> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/rw_2> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_3> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/uart_/tx_clk_divider_5> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <uart_top_/uart_/tx_clk_divider_5> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/uart_/tx_clk_divider_6> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/uart_/tx_clk_divider_7> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/uart_/tx_clk_divider_8> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
@@ -1689,220 +1581,21 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/state_10>
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/idxp_9> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/idxp_10> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/idxp_11> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_27> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_28> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_29> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_30> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_31> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_32> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_33> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_34> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_35> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_36> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_37> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_38> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_39> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_40> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_43> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_44> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_45> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_46> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_47> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_48> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_4> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_5> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_6> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_7> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_8> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_9> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_10> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_11> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_12> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_13> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_14> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_15> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_16> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_17> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_18> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_19> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_20> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_23> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_24> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_25> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_26> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_253> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_254> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_255> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_256> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_257> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_258> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_259> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_260> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_263> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_264> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_265> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_266> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_267> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_268> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_269> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_270> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_271> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_272> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_273> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_274> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_231> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_232> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_233> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_234> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_235> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_236> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_237> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_238> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_239> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_240> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_243> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_244> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_245> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_246> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_247> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_248> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_249> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_250> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_251> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_252> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_298> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_299> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_300> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_303> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_304> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_305> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_306> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_307> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_308> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_309> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_310> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_311> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_312> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_313> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_314> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_315> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_316> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_317> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_318> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_319> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_275> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_276> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_277> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_278> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_279> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_280> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_283> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_284> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_285> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_286> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_287> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_288> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_289> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_290> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_291> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_292> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_293> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_294> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_295> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_296> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_297> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_164> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_165> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_166> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_167> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_168> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_169> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_170> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_171> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_172> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_173> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_174> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_175> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_176> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_177> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_178> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_179> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_180> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_183> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_184> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_185> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_139> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_140> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_143> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_144> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_145> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_146> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_147> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_148> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_149> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_150> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_151> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_152> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_153> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_154> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_155> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_156> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_157> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_158> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_159> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_160> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_163> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_209> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_210> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_211> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_212> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_213> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_214> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_215> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_216> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_217> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_218> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_219> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_220> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_223> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_224> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_225> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_226> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_227> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_228> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_229> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_230> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_186> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_187> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_188> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_189> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_190> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_191> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_192> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_193> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_194> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_195> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_196> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_197> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_198> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_199> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_200> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_203> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_204> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_205> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_206> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_207> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_208> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/rw_2> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block TwentyFortyEight, actual ratio is 18.
-FlipFlop board_to_string_/cntr_10 has been replicated 1 time(s)
-FlipFlop board_to_string_/cntr_11 has been replicated 3 time(s)
-FlipFlop board_to_string_/cntr_12 has been replicated 2 time(s)
-FlipFlop board_to_string_/cntr_13 has been replicated 2 time(s)
-FlipFlop board_to_string_/cntr_15 has been replicated 2 time(s)
-FlipFlop board_to_string_/cntr_9 has been replicated 2 time(s)
+Found area constraint ratio of 100 (+ 5) on block TwentyFortyEight, actual ratio is 112.
+Optimizing block <TwentyFortyEight> to meet ratio 100 (+ 5) of 2278 slices :
+WARNING:Xst:2254 - Area constraint could not be met for block <TwentyFortyEight>, final ratio is 123.
+FlipFlop board_to_string_/curnum_12 has been replicated 3 time(s)
+FlipFlop board_to_string_/curnum_13 has been replicated 4 time(s)
+FlipFlop board_to_string_/curnum_14 has been replicated 5 time(s)
+FlipFlop board_to_string_/curnum_15 has been replicated 5 time(s)
+FlipFlop board_to_string_/curnum_16 has been replicated 4 time(s)
+FlipFlop board_to_string_/curnum_17 has been replicated 4 time(s)
+FlipFlop board_to_string_/curnum_18 has been replicated 3 time(s)
+FlipFlop board_to_string_/curnum_19 has been replicated 3 time(s)
 
 Final Macro Processing ...
 
@@ -1910,8 +1603,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 396
- Flip-Flops                                            : 396
+# Registers                                            : 722
+ Flip-Flops                                            : 722
 
 =========================================================================
 
@@ -1934,24 +1627,24 @@ Top Level Output File Name         : TwentyFortyEight.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2553
+# BELS                             : 12343
 #      GND                         : 1
-#      INV                         : 32
-#      LUT1                        : 251
-#      LUT2                        : 74
-#      LUT3                        : 83
-#      LUT4                        : 160
-#      LUT5                        : 217
-#      LUT6                        : 854
-#      MUXCY                       : 442
-#      MUXF7                       : 38
+#      INV                         : 35
+#      LUT1                        : 280
+#      LUT2                        : 320
+#      LUT3                        : 908
+#      LUT4                        : 625
+#      LUT5                        : 1804
+#      LUT6                        : 5603
+#      MUXCY                       : 1215
+#      MUXF7                       : 323
 #      VCC                         : 1
-#      XORCY                       : 400
-# FlipFlops/Latches                : 396
-#      FD                          : 59
-#      FDE                         : 42
-#      FDR                         : 242
-#      FDRE                        : 50
+#      XORCY                       : 1228
+# FlipFlops/Latches                : 722
+#      FD                          : 346
+#      FDE                         : 91
+#      FDR                         : 244
+#      FDRE                        : 38
 #      FDS                         : 1
 #      FDSE                        : 2
 # RAMS                             : 1
@@ -1961,6 +1654,8 @@ Primitive and Black Box Usage:
 # IO Buffers                       : 7
 #      IBUF                        : 6
 #      OBUF                        : 1
+# DSPs                             : 2
+#      DSP48A1                     : 2
 
 Device utilization summary:
 ---------------------------
@@ -1969,16 +1664,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             396  out of  18224     2%  
- Number of Slice LUTs:                 1671  out of   9112    18%  
-    Number used as Logic:              1671  out of   9112    18%  
+ Number of Slice Registers:             722  out of  18224     3%  
+ Number of Slice LUTs:                 9575  out of   9112   105% (*) 
+    Number used as Logic:              9575  out of   9112   105% (*) 
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1719
-   Number with an unused Flip Flop:    1323  out of   1719    76%  
-   Number with an unused LUT:            48  out of   1719     2%  
-   Number of fully used LUT-FF pairs:   348  out of   1719    20%  
-   Number of unique control sets:        19
+ Number of LUT Flip Flop pairs used:   9653
+   Number with an unused Flip Flop:    8931  out of   9653    92%  
+   Number with an unused LUT:            78  out of   9653     0%  
+   Number of fully used LUT-FF pairs:   644  out of   9653     6%  
+   Number of unique control sets:        21
 
 IO Utilization: 
  Number of IOs:                          12
@@ -1988,6 +1683,9 @@ Specific Feature Utilization:
  Number of Block RAM/FIFO:                1  out of     32     3%  
     Number using Block RAM only:          1
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      2  out of     32     6%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
 
 ---------------------------
 Partition Resource Summary:
@@ -2007,11 +1705,13 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 397   |
------------------------------------+------------------------+-------+
+-----------------------------------+---------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                 | Load  |
+-----------------------------------+---------------------------------------+-------+
+clk                                | BUFGP                                 | 724   |
+N3899                              | NONE(gameController_/Madd_n2013_Madd1)| 1     |
+-----------------------------------+---------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -2021,8 +1721,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 23.117ns (Maximum Frequency: 43.257MHz)
-   Minimum input arrival time before clock: 6.593ns
+   Minimum period: 31.185ns (Maximum Frequency: 32.067MHz)
+   Minimum input arrival time before clock: 9.779ns
    Maximum output required time after clock: 3.597ns
    Maximum combinational path delay: No path found
 
@@ -2032,68 +1732,80 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 23.117ns (frequency: 43.257MHz)
-  Total number of paths / destination ports: 414349703875 / 564
+  Clock period: 31.185ns (frequency: 32.067MHz)
+  Total number of paths / destination ports: 11671499818179352 / 920
 -------------------------------------------------------------------------
-Delay:               23.117ns (Levels of Logic = 21)
-  Source:            board_to_string_/cntr_14 (FF)
-  Destination:       board_to_string_/colloc_4 (FF)
+Delay:               31.185ns (Levels of Logic = 30)
+  Source:            board_to_string_/curnum_14_1 (FF)
+  Destination:       board_to_string_/char_out_5 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: board_to_string_/cntr_14 to board_to_string_/colloc_4
+  Data Path: board_to_string_/curnum_14_1 to board_to_string_/char_out_5
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            20   0.447   1.093  board_to_string_/cntr_14 (board_to_string_/cntr_14)
-     LUT5:I4->O            6   0.205   0.745  board_to_string_/cntr[15]_PWR_10_o_div_4/o<11>1 (board_to_string_/cntr[15]_PWR_10_o_div_4/o<11>)
-     LUT5:I4->O            2   0.205   0.617  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0008_INV_770_o_SW2 (N140)
-     LUT6:I5->O            7   0.205   0.774  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0008_INV_770_o (board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0008_INV_770_o1)
-     LUT6:I5->O            3   0.205   0.879  board_to_string_/cntr[15]_PWR_10_o_div_4/Madd_a[15]_GND_11_o_add_17_OUT_lut<12>1_1 (board_to_string_/cntr[15]_PWR_10_o_div_4/Madd_a[15]_GND_11_o_add_17_OUT_lut<12>1)
-     LUT4:I1->O            7   0.205   0.774  board_to_string_/cntr[15]_PWR_10_o_div_4/o<8>1 (board_to_string_/cntr[15]_PWR_10_o_div_4/o<8>)
-     LUT6:I5->O           12   0.205   0.909  board_to_string_/cntr[15]_PWR_10_o_div_4/Madd_a[15]_GND_11_o_add_19_OUT_cy<12>1 (board_to_string_/cntr[15]_PWR_10_o_div_4/Madd_a[15]_GND_11_o_add_19_OUT_cy<12>)
-     LUT6:I5->O           14   0.205   0.958  board_to_string_/cntr[15]_PWR_10_o_div_4/a[14]_a[15]_MUX_7186_o1 (board_to_string_/cntr[15]_PWR_10_o_div_4/a[14]_a[15]_MUX_7186_o)
-     LUT6:I5->O            2   0.205   0.617  board_to_string_/cntr[15]_PWR_10_o_div_4/o<6>1_SW3 (N189)
-     LUT6:I5->O           19   0.205   1.072  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0012_INV_838_o111 (board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0012_INV_838_o11)
-     LUT6:I5->O           16   0.205   1.005  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0012_INV_838_o1_SW0 (N83)
-     LUT6:I5->O            1   0.205   0.827  board_to_string_/cntr[15]_PWR_10_o_mod_5/Mmux_a[9]_a[15]_MUX_7510_o1_1 (board_to_string_/cntr[15]_PWR_10_o_mod_5/Mmux_a[9]_a[15]_MUX_7510_o1)
-     LUT5:I1->O           11   0.203   0.883  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0014_INV_872_o21_SW0 (N385)
-     LUT6:I5->O           16   0.205   1.109  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0014_INV_872_o24 (board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0014_INV_872_o23)
-     LUT5:I3->O           11   0.203   0.883  board_to_string_/cntr[15]_PWR_10_o_mod_5/Mmux_a[7]_a[15]_MUX_7544_o11_SW2 (N578)
-     LUT6:I5->O           10   0.205   0.857  board_to_string_/cntr[15]_PWR_10_o_mod_5/Mmux_a[0]_a[15]_MUX_7551_o141 (board_to_string_/cntr[15]_PWR_10_o_mod_5/a[4]_a[15]_MUX_7547_o)
-     LUT6:I5->O            4   0.205   0.684  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0015_INV_889_o22_1 (board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0015_INV_889_o22)
-     LUT6:I5->O           14   0.205   0.958  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0015_INV_889_o23 (board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0015_INV_889_o)
-     LUT6:I5->O           10   0.205   0.961  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0016_INV_906_o22 (board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0016_INV_906_o21)
-     LUT6:I4->O           10   0.203   0.857  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0016_INV_906_o23 (board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0016_INV_906_o)
-     LUT6:I5->O            1   0.205   0.808  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0017_INV_923_o27_SW1 (N370)
-     LUT6:I3->O            1   0.205   0.000  board_to_string_/cntr[15]_PWR_10_o_mod_5/Mmux_o41 (board_to_string_/cntr[15]_PWR_10_o_mod_5_OUT<3>)
-     FDE:D                     0.102          board_to_string_/colloc_3
+     FDE:C->Q              9   0.447   1.174  board_to_string_/curnum_14_1 (board_to_string_/curnum_14_1)
+     LUT6:I1->O            2   0.203   0.961  board_to_string_/curnum[20]_PWR_10_o_div_36_OUT<12>1_1 (board_to_string_/curnum[20]_PWR_10_o_div_36_OUT<12>11)
+     LUT6:I1->O            5   0.203   0.715  board_to_string_/curnum[20]_PWR_10_o_div_36_OUT<11>13_1 (board_to_string_/curnum[20]_PWR_10_o_div_36_OUT<11>13)
+     LUT5:I4->O            6   0.205   0.973  board_to_string_/curnum[20]_PWR_10_o_div_36/Mmux_a[0]_a[20]_MUX_24209_o191 (board_to_string_/curnum[20]_PWR_10_o_div_36/a[18]_a[20]_MUX_24191_o)
+     LUT5:I2->O            5   0.205   0.715  board_to_string_/curnum[20]_PWR_10_o_div_36/Madd_a[20]_GND_18_o_add_25_OUT_Madd_cy<13>11_SW0_1 (board_to_string_/curnum[20]_PWR_10_o_div_36/Madd_a[20]_GND_18_o_add_25_OUT_Madd_cy<13>11_SW0)
+     LUT6:I5->O           12   0.205   1.137  board_to_string_/curnum[20]_PWR_10_o_div_36/Madd_a[20]_GND_18_o_add_25_OUT_Madd_cy<13>11 (board_to_string_/curnum[20]_PWR_10_o_div_36/Madd_a[20]_GND_18_o_add_25_OUT_Madd_cy<13>)
+     LUT6:I3->O            1   0.205   0.684  board_to_string_/curnum[20]_PWR_10_o_div_36/Madd_a[20]_GND_18_o_add_25_OUT_Madd_cy<18>11 (board_to_string_/curnum[20]_PWR_10_o_div_36/Madd_a[20]_GND_18_o_add_25_OUT_Madd_cy<18>)
+     LUT5:I3->O           17   0.203   1.275  board_to_string_/curnum[20]_PWR_10_o_div_36/Mmux_a[0]_a[20]_MUX_24251_o11211 (board_to_string_/curnum[20]_PWR_10_o_div_36/a[20]_a[20]_MUX_24231_o)
+     LUT5:I1->O            3   0.203   0.651  board_to_string_/curnum[20]_PWR_10_o_div_36/Mmux_a[0]_a[20]_MUX_24272_o171_SW0 (N2264)
+     LUT6:I5->O           12   0.205   1.156  board_to_string_/curnum[20]_PWR_10_o_div_36/Mmux_a[0]_a[20]_MUX_24272_o161 (board_to_string_/curnum[20]_PWR_10_o_div_36/a[15]_a[20]_MUX_24257_o)
+     LUT6:I2->O           12   0.203   0.909  board_to_string_/curnum[20]_PWR_10_o_div_36_OUT<7>14_5 (board_to_string_/curnum[20]_PWR_10_o_div_36_OUT<7>145)
+     LUT6:I5->O            2   0.205   0.721  board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0016_INV_1890_o24_SW27 (N4168)
+     LUT6:I4->O            4   0.203   1.028  board_to_string_/curnum[20]_PWR_10_o_mod_37/Mmux_a[11]_a[20]_MUX_23798_o11 (board_to_string_/curnum[20]_PWR_10_o_mod_37/a[11]_a[20]_MUX_23798_o)
+     LUT6:I1->O           17   0.203   1.028  board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0017_INV_1912_o21 (board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0017_INV_1912_o2)
+     LUT5:I4->O            2   0.205   0.617  board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0017_INV_1912_o23_1 (board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0017_INV_1912_o23)
+     LUT6:I5->O            4   0.205   1.028  board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0018_INV_1934_o22 (board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0018_INV_1934_o21)
+     LUT6:I1->O           12   0.203   0.909  board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0018_INV_1934_o24_1 (board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0018_INV_1934_o24)
+     LUT5:I4->O            8   0.205   1.147  board_to_string_/curnum[20]_PWR_10_o_mod_37/Mmux_a[15]_a[20]_MUX_23836_o11 (board_to_string_/curnum[20]_PWR_10_o_mod_37/a[15]_a[20]_MUX_23836_o)
+     LUT6:I1->O            5   0.203   0.819  board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0019_INV_1956_o21_1 (board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0019_INV_1956_o211)
+     LUT5:I3->O            3   0.203   0.995  board_to_string_/curnum[20]_PWR_10_o_mod_37/Mmux_a[18]_a[20]_MUX_23854_o11 (board_to_string_/curnum[20]_PWR_10_o_mod_37/a[18]_a[20]_MUX_23854_o)
+     LUT6:I1->O            1   0.203   0.580  board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0020_INV_1978_o22_SW0_1 (board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0020_INV_1978_o22_SW0)
+     LUT6:I5->O            5   0.205   0.715  board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0020_INV_1978_o24 (board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0020_INV_1978_o)
+     LUT6:I5->O            3   0.205   0.651  board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0021_INV_2000_o33 (board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0021_INV_2000_o32)
+     LUT6:I5->O            3   0.205   0.755  board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0021_INV_2000_o32_SW0 (N1319)
+     LUT6:I4->O            6   0.203   0.745  board_to_string_/curnum[20]_PWR_10_o_mod_37/Mmux_a[0]_a[20]_MUX_23914_o131 (board_to_string_/curnum[20]_PWR_10_o_mod_37/Madd_a[20]_GND_17_o_add_43_OUT_Madd_Madd_lut<3>)
+     LUT6:I5->O            2   0.205   0.617  board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0022_INV_2022_o34 (board_to_string_/curnum[20]_PWR_10_o_mod_37/BUS_0022_INV_2022_o33)
+     LUT5:I4->O            4   0.205   0.684  board_to_string_/curnum[20]_PWR_10_o_mod_37/Mmux_o41 (board_to_string_/curnum[20]_PWR_10_o_mod_37_OUT<3>)
+     LUT6:I5->O            1   0.205   0.580  board_to_string_/Mmux_char_out[7]_GND_10_o_mux_148_OUT23_SW0 (N375)
+     LUT6:I5->O            1   0.205   0.000  board_to_string_/Mmux_char_out[7]_GND_10_o_mux_148_OUT23_F (N6333)
+     MUXF7:I0->O           2   0.131   0.617  board_to_string_/Mmux_char_out[7]_GND_10_o_mux_148_OUT23 (board_to_string_/Mmux_char_out[7]_GND_10_o_mux_148_OUT18)
+     LUT5:I4->O            1   0.205   0.000  board_to_string_/Mmux_char_out[7]_GND_10_o_mux_148_OUT30 (board_to_string_/char_out[7]_GND_10_o_mux_148_OUT<5>)
+     FDRE:D                    0.102          board_to_string_/char_out_5
     ----------------------------------------
-    Total                     23.117ns (4.848ns logic, 18.269ns route)
-                                       (21.0% logic, 79.0% route)
+    Total                     31.185ns (6.601ns logic, 24.584ns route)
+                                       (21.2% logic, 78.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 362 / 330
+  Total number of paths / destination ports: 2270 / 617
 -------------------------------------------------------------------------
-Offset:              6.593ns (Levels of Logic = 5)
+Offset:              9.779ns (Levels of Logic = 8)
   Source:            rst (PAD)
-  Destination:       gameController_/board_242 (FF)
+  Destination:       gameController_/board_173 (FF)
   Destination Clock: clk rising
 
-  Data Path: rst to gameController_/board_242
+  Data Path: rst to gameController_/board_173
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           122   1.222   2.039  rst_IBUF (rst_IBUF)
-     LUT6:I4->O            1   0.203   0.684  gameController_/board[319]_board[319]_mux_1993_OUT<82>1 (gameController_/board[319]_board[319]_mux_1993_OUT<82>1)
-     LUT5:I3->O            1   0.203   0.924  gameController_/board[319]_board[319]_mux_1993_OUT<82>2 (gameController_/board[319]_board[319]_mux_1993_OUT<82>2)
-     LUT6:I1->O            1   0.203   0.808  gameController_/board[319]_board[319]_mux_1993_OUT<82>3 (gameController_/board[319]_board[319]_mux_1993_OUT<82>3)
-     LUT6:I3->O            1   0.205   0.000  gameController_/board[319]_board[319]_mux_1993_OUT<82>4 (gameController_/board[319]_board[319]_mux_1993_OUT<82>)
-     FD:D                      0.102          gameController_/board_82
+     IBUF:I->O          1495   1.222   2.430  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            3   0.203   0.879  gameController_/board[319]_GND_3_o_mux_2_OUT<173>1 (gameController_/board[319]_GND_3_o_mux_2_OUT<173>)
+     LUT6:I3->O            1   0.205   0.684  gameController_/board[319]_board[319]_mux_1993_OUT<173>1 (gameController_/board[319]_board[319]_mux_1993_OUT<173>1)
+     LUT5:I3->O            1   0.203   0.944  gameController_/board[319]_board[319]_mux_1993_OUT<173>2 (gameController_/board[319]_board[319]_mux_1993_OUT<173>2)
+     LUT6:I0->O            4   0.203   0.684  gameController_/board[319]_board[319]_mux_1993_OUT<173>6_SW0 (N523)
+     LUT2:I1->O            1   0.205   0.827  gameController_/board[319]_board[319]_mux_1993_OUT<173>9_SW0_SW0 (N2377)
+     LUT6:I2->O            1   0.203   0.580  gameController_/board[319]_board[319]_mux_1993_OUT<173>9_SW2 (N4995)
+     LUT6:I5->O            1   0.205   0.000  gameController_/board[319]_board[319]_mux_1993_OUT<173>9 (gameController_/board[319]_board[319]_mux_1993_OUT<173>)
+     FD:D                      0.102          gameController_/board_173
     ----------------------------------------
-    Total                      6.593ns (2.138ns logic, 4.455ns route)
-                                       (32.4% logic, 67.6% route)
+    Total                      9.779ns (2.751ns logic, 7.028ns route)
+                                       (28.1% logic, 71.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -2119,25 +1831,33 @@ Offset:              3.597ns (Levels of Logic = 1)
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock N3899
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    8.641|         |         |         |
+---------------+---------+---------+---------+---------+
+
 Clock to Setup on destination clock clk
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   23.117|         |         |         |
+clk            |   31.185|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 199.00 secs
-Total CPU time to Xst completion: 198.64 secs
+Total REAL time to Xst completion: 513.00 secs
+Total CPU time to Xst completion: 512.24 secs
  
 --> 
 
-Total memory usage is 439240 kilobytes
+Total memory usage is 505032 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  460 (   0 filtered)
-Number of infos    :   19 (   0 filtered)
+Number of warnings :  152 (   0 filtered)
+Number of infos    :   20 (   0 filtered)
 

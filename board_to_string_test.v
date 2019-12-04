@@ -55,6 +55,10 @@ module board_to_string_test;
 		// Wait 100 ns for global reset to finish
 		#1000;
         
+		board[80 +: 20] = 4;
+		board[200 +: 20] = 256;
+		board[0 +: 20] = 2;
+		
 		// Add stimulus here
 
 	end

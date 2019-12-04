@@ -133,7 +133,7 @@ module board_to_string(board, start, clk, print_nxt, score, char_out, done);
 					  else done <= 1;
 					end
 				end
-				// $write("%c", char_out);
+				$write("%c", char_out);
 				cntr <= cntr + 1;
 			 end
 		 end

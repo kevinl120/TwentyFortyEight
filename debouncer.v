@@ -56,7 +56,7 @@ module debouncer(clk, btn, pressed);
       counter <= 0;
       pressed <= 0;
     end else begin
-      if (counter == (1 << 2)) begin
+      if (counter == (1 << 20)) begin
         pressed <= 1;
         counter <= counter + 1;
       end else begin
