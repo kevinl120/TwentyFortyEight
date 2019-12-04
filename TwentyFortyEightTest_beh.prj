@@ -1,7 +1,0 @@
-verilog work "uart_fifo.v"
-verilog work "uart.v"
-verilog work "uart_top.v"
-verilog work "board_to_string.v"
-verilog work "TwentyFortyEight.v"
-verilog work "TwentyFortyEightTest.v"
-verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

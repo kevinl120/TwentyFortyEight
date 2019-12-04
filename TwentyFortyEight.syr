@@ -1,21 +1,18 @@
-Release 14.7 - xst P.20160913 (lin64)
+Release 14.6 - xst P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> 
-Parameter TMPDIR set to xst/projnav.tmp
+--> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.01 secs
+Total CPU time to Xst completion: 0.13 secs
  
---> 
-Parameter xsthdpdir set to xst
+--> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.01 secs
+Total CPU time to Xst completion: 0.13 secs
  
---> 
-Reading design: TwentyFortyEight.prj
+--> Reading design: TwentyFortyEight.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -108,27 +105,2039 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/ise/xilinx/TwentyFortyEight/uart_fifo.v" into library work
+Analyzing Verilog file "C:\Users\152\Desktop\TFE\uart_fifo.v" into library work
 Parsing module <uart_fifo>.
-Analyzing Verilog file "/home/ise/xilinx/TwentyFortyEight/uart.v" into library work
+Analyzing Verilog file "C:\Users\152\Desktop\TFE\uart.v" into library work
 Parsing module <uart>.
-Analyzing Verilog file "/home/ise/xilinx/TwentyFortyEight/uart_top.v" into library work
+Analyzing Verilog file "C:\Users\152\Desktop\TFE\uart_top.v" into library work
 Parsing module <uart_top>.
-Analyzing Verilog file "/home/ise/xilinx/TwentyFortyEight/board_to_string.v" into library work
+Analyzing Verilog file "C:\Users\152\Desktop\TFE\gameController.v" into library work
+Parsing module <gameController>.
+Analyzing Verilog file "C:\Users\152\Desktop\TFE\debouncer.v" into library work
+Parsing module <debouncer>.
+Analyzing Verilog file "C:\Users\152\Desktop\TFE\board_to_string.v" into library work
 Parsing module <board_to_string>.
-Analyzing Verilog file "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.v" into library work
+Analyzing Verilog file "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" into library work
 Parsing module <TwentyFortyEight>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-ERROR:HDLCompiler:329 - "/home/ise/xilinx/TwentyFortyEight/TwentyFortyEight.v" Line 42: Target <done> of concurrent assignment or output port connection should be a net type.
+
+Elaborating module <TwentyFortyEight>.
+
+Elaborating module <debouncer>.
+
+Elaborating module <gameController>.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\gameController.v" Line 133: Result of 18-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\gameController.v" Line 139: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\gameController.v" Line 109: Result of 22-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\gameController.v" Line 110: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\gameController.v" Line 116: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\gameController.v" Line 121: Result of 32-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\gameController.v" Line 123: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\gameController.v" Line 126: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" Line 81: Assignment to score_out ignored, since the identifier is never used
+
+Elaborating module <board_to_string>.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 73: Result of 16-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 89: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 90: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 91: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 93: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 99: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 103: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 122: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 123: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 124: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 125: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 126: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 127: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 128: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 137: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:634 - "C:\Users\152\Desktop\TFE\board_to_string.v" Line 40: Net <numToChar[8]_0041> does not have a driver.
+WARNING:HDLCompiler:189 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" Line 94: Size mismatch in connection of port <score>. Formal port size is 21-bit while actual signal size is 32-bit.
+
+Elaborating module <uart_top>.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart_top.v" Line 45: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart_top.v" Line 52: Result of 13-bit expression is truncated to fit in 12-bit target.
+
+Elaborating module <uart_fifo>.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart_fifo.v" Line 55: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart_fifo.v" Line 61: Result of 32-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <uart>.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart.v" Line 90: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart.v" Line 93: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart.v" Line 95: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart.v" Line 98: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart.v" Line 138: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart.v" Line 139: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart.v" Line 147: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart.v" Line 153: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart.v" Line 192: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Desktop\TFE\uart.v" Line 209: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" Line 101: Assignment to uart_rx_data ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" Line 102: Assignment to uart_rx_valid ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TwentyFortyEight>.
+    Related source file is "C:\Users\152\Desktop\TFE\TwentyFortyEight.v".
+WARNING:Xst:647 - Input <dir> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" line 77: Output port <score> of the instance <gameController_> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" line 98: Output port <o_rx_data> of the instance <uart_top_> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\152\Desktop\TFE\TwentyFortyEight.v" line 98: Output port <o_rx_valid> of the instance <uart_top_> is unconnected or connected to loadless signal.
+    Found 3-bit register for signal <dir_store>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <TwentyFortyEight> synthesized.
+
+Synthesizing Unit <debouncer>.
+    Related source file is "C:\Users\152\Desktop\TFE\debouncer.v".
+    Found 1-bit register for signal <pressed>.
+    Found 41-bit register for signal <counter>.
+    Found 41-bit adder for signal <counter[40]_GND_2_o_add_4_OUT> created at line 63.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  42 D-type flip-flop(s).
+Unit <debouncer> synthesized.
+
+Synthesizing Unit <gameController>.
+    Related source file is "C:\Users\152\Desktop\TFE\gameController.v".
+        precompute = 0
+    Found 320-bit register for signal <board>.
+    Found 21-bit register for signal <score>.
+    Found 1-bit register for signal <lastMoveValid>.
+    Found 2-bit register for signal <lastDir>.
+    Found 6-bit register for signal <editMode>.
+    Found 17-bit register for signal <counter>.
+    Found 7-bit subtractor for signal <GND_3_o_GND_3_o_sub_11_OUT> created at line 97.
+    Found 21-bit subtractor for signal <GND_3_o_GND_3_o_sub_1015_OUT> created at line 121.
+    Found 17-bit adder for signal <counter[16]_GND_3_o_add_1_OUT> created at line 133.
+    Found 32-bit adder for signal <n2009[31:0]> created at line 97.
+    Found 32-bit adder for signal <n2012> created at line 98.
+    Found 22-bit adder for signal <n4313> created at line 109.
+    Found 21-bit adder for signal <score[20]_board[319]_add_677_OUT> created at line 110.
+    Found 6-bit adder for signal <editMode[5]_GND_3_o_add_1988_OUT> created at line 126.
+    Found 6-bit subtractor for signal <GND_3_o_GND_3_o_sub_1009_OUT<5:0>> created at line 119.
+    Found 2x8-bit multiplier for signal <lastDir[1]_PWR_3_o_MuLt_9_OUT> created at line 97.
+    Found 60-bit shifter logical right for signal <n2010> created at line 97
+    Found 4x5-bit multiplier for signal <GND_3_o_PWR_3_o_MuLt_13_OUT> created at line 42.
+    Found 60-bit shifter logical right for signal <n2013> created at line 98
+    Found 4x5-bit multiplier for signal <GND_3_o_PWR_3_o_MuLt_19_OUT> created at line 42.
+    Found 620-bit shifter logical right for signal <n2015> created at line 105
+    Found 620-bit shifter logical right for signal <n2335> created at line 109
+    Found 6x5-bit multiplier for signal <n2988> created at line 42.
+    Found 620-bit shifter logical right for signal <n2989> created at line 121
+    Found 620-bit shifter logical right for signal <n3312> created at line 74
+    Found 4x5-bit multiplier for signal <counter[3]_PWR_3_o_MuLt_1665_OUT> created at line 42.
+    Found 3-bit comparator greater for signal <dir[2]_PWR_3_o_LessThan_5_o> created at line 137
+    Found 6-bit comparator greater for signal <GND_3_o_editMode[5]_LessThan_8_o> created at line 96
+    Found 6-bit comparator greater for signal <editMode[5]_GND_3_o_LessThan_9_o> created at line 96
+    Found 20-bit comparator equal for signal <board[319]_board[319]_equal_27_o> created at line 102
+    Found 3-bit comparator greater for signal <GND_3_o_GND_3_o_LessThan_354_o> created at line 88
+    Found 6-bit comparator greater for signal <GND_3_o_editMode[5]_LessThan_1006_o> created at line 117
+    Found 6-bit comparator greater for signal <editMode[5]_PWR_3_o_LessThan_1007_o> created at line 117
+    Found 20-bit comparator greater for signal <GND_3_o_board[319]_LessThan_1012_o> created at line 120
+    Summary:
+	inferred   5 Multiplier(s).
+	inferred   9 Adder/Subtractor(s).
+	inferred 367 D-type flip-flop(s).
+	inferred   8 Comparator(s).
+	inferred 1924 Multiplexer(s).
+	inferred   6 Combinational logic shifter(s).
+Unit <gameController> synthesized.
+
+Synthesizing Unit <div_9u_7u>.
+    Related source file is "".
+    Found 16-bit adder for signal <GND_6_o_b[6]_add_1_OUT> created at line 0.
+    Found 15-bit adder for signal <GND_6_o_b[6]_add_3_OUT> created at line 0.
+    Found 14-bit adder for signal <GND_6_o_b[6]_add_5_OUT> created at line 0.
+    Found 13-bit adder for signal <GND_6_o_b[6]_add_7_OUT> created at line 0.
+    Found 12-bit adder for signal <GND_6_o_b[6]_add_9_OUT> created at line 0.
+    Found 11-bit adder for signal <GND_6_o_b[6]_add_11_OUT> created at line 0.
+    Found 10-bit adder for signal <GND_6_o_b[6]_add_13_OUT> created at line 0.
+    Found 9-bit adder for signal <a[8]_b[6]_add_15_OUT[8:0]> created at line 0.
+    Found 9-bit adder for signal <a[8]_GND_6_o_add_17_OUT[8:0]> created at line 0.
+    Found 16-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+	inferred  10 Comparator(s).
+	inferred  57 Multiplexer(s).
+Unit <div_9u_7u> synthesized.
+
+Synthesizing Unit <div_9u_5u>.
+    Related source file is "".
+    Found 14-bit adder for signal <GND_7_o_b[4]_add_1_OUT> created at line 0.
+    Found 13-bit adder for signal <GND_7_o_b[4]_add_3_OUT> created at line 0.
+    Found 12-bit adder for signal <GND_7_o_b[4]_add_5_OUT> created at line 0.
+    Found 11-bit adder for signal <GND_7_o_b[4]_add_7_OUT> created at line 0.
+    Found 10-bit adder for signal <GND_7_o_b[4]_add_9_OUT> created at line 0.
+    Found 9-bit adder for signal <a[8]_b[4]_add_11_OUT> created at line 0.
+    Found 9-bit adder for signal <a[8]_GND_7_o_add_13_OUT[8:0]> created at line 0.
+    Found 9-bit adder for signal <a[8]_GND_7_o_add_15_OUT[8:0]> created at line 0.
+    Found 9-bit adder for signal <a[8]_GND_7_o_add_17_OUT[8:0]> created at line 0.
+    Found 14-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+	inferred  10 Comparator(s).
+	inferred  57 Multiplexer(s).
+Unit <div_9u_5u> synthesized.
+
+Synthesizing Unit <mod_5u_4u>.
+    Related source file is "".
+    Found 9-bit adder for signal <GND_9_o_b[3]_add_1_OUT> created at line 0.
+    Found 8-bit adder for signal <GND_9_o_b[3]_add_3_OUT> created at line 0.
+    Found 7-bit adder for signal <GND_9_o_b[3]_add_5_OUT> created at line 0.
+    Found 6-bit adder for signal <GND_9_o_b[3]_add_7_OUT> created at line 0.
+    Found 5-bit adder for signal <a[4]_b[3]_add_9_OUT> created at line 0.
+    Found 5-bit adder for signal <a[4]_GND_9_o_add_11_OUT> created at line 0.
+    Found 9-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 6-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 5-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 5-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+	inferred  26 Multiplexer(s).
+Unit <mod_5u_4u> synthesized.
+
+Synthesizing Unit <board_to_string>.
+    Related source file is "C:\Users\152\Desktop\TFE\board_to_string.v".
+WARNING:Xst:653 - Signal <_v40> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <_v73> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <_v106> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <_v140> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <_v172> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <_v204> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <_v236> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <_v268> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <_v300> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <_v332> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <numToChar> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 3-bit register for signal <rw>.
+    Found 3-bit register for signal <cl>.
+    Found 16-bit register for signal <cntr>.
+    Found 6-bit register for signal <ln>.
+    Found 7-bit register for signal <colloc>.
+    Found 16-bit register for signal <idxp>.
+    Found 8-bit register for signal <char_out>.
+    Found 21-bit register for signal <curnum>.
+    Found 1-bit register for signal <done>.
+    Found 11-bit adder for signal <n0395[10:0]> created at line 75.
+    Found 12-bit adder for signal <n0397[11:0]> created at line 75.
+    Found 13-bit adder for signal <n0400[12:0]> created at line 75.
+    Found 14-bit adder for signal <n0402[13:0]> created at line 75.
+    Found 6-bit adder for signal <n0358> created at line 88.
+    Found 17-bit adder for signal <_n0465> created at line 90.
+    Found 17-bit adder for signal <_n0477> created at line 91.
+    Found 17-bit adder for signal <_n0486> created at line 92.
+    Found 3-bit adder for signal <rw[2]_GND_10_o_add_53_OUT> created at line 99.
+    Found 3-bit adder for signal <cl[2]_GND_10_o_add_54_OUT> created at line 103.
+    Found 16-bit adder for signal <cntr[15]_GND_10_o_add_156_OUT> created at line 137.
+    Found 7x3-bit multiplier for signal <PWR_10_o_rw[2]_MuLt_6_OUT> created at line 75.
+    Found 3x3-bit multiplier for signal <cl[2]_PWR_10_o_MuLt_9_OUT> created at line 75.
+    Found 6x5-bit multiplier for signal <n0217> created at line 88.
+    Found 620-bit shifter logical right for signal <n0218> created at line 88
+    Found 16x9-bit Read Only RAM for signal <n0221>
+    Found 16x9-bit Read Only RAM for signal <n0226>
+    Found 16x9-bit Read Only RAM for signal <n0231>
+    Found 16x9-bit Read Only RAM for signal <n0235>
+    Found 16x9-bit Read Only RAM for signal <n0263>
+    Found 16x9-bit Read Only RAM for signal <n0266>
+    Found 16x9-bit Read Only RAM for signal <n0269>
+    Found 16x9-bit Read Only RAM for signal <n0272>
+    Found 16x9-bit Read Only RAM for signal <n0275>
+    Found 16x9-bit Read Only RAM for signal <n0278>
+    Found 16x9-bit Read Only RAM for signal <n0280>
+    Found 6-bit comparator greater for signal <ln[5]_GND_10_o_LessThan_15_o> created at line 79
+    Found 16-bit comparator lessequal for signal <n0018> created at line 87
+    Found 17-bit comparator lessequal for signal <n0020> created at line 87
+    Found 16-bit comparator not equal for signal <cntr[15]_idxp[15]_equal_30_o> created at line 89
+    Found 17-bit comparator equal for signal <GND_10_o_GND_10_o_equal_36_o> created at line 90
+    Found 17-bit comparator equal for signal <GND_10_o_GND_10_o_equal_42_o> created at line 91
+    Found 17-bit comparator equal for signal <GND_10_o_GND_10_o_equal_48_o> created at line 92
+    Summary:
+	inferred  11 RAM(s).
+	inferred   3 Multiplier(s).
+	inferred  11 Adder/Subtractor(s).
+	inferred  81 D-type flip-flop(s).
+	inferred   7 Comparator(s).
+	inferred  26 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <board_to_string> synthesized.
+
+Synthesizing Unit <div_16u_5u>.
+    Related source file is "".
+    Found 21-bit adder for signal <GND_11_o_b[4]_add_1_OUT> created at line 0.
+    Found 20-bit adder for signal <GND_11_o_b[4]_add_3_OUT> created at line 0.
+    Found 19-bit adder for signal <GND_11_o_b[4]_add_5_OUT> created at line 0.
+    Found 18-bit adder for signal <GND_11_o_b[4]_add_7_OUT> created at line 0.
+    Found 17-bit adder for signal <GND_11_o_b[4]_add_9_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_b[4]_add_11_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_11_o_add_13_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_11_o_add_15_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_11_o_add_17_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_11_o_add_19_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_11_o_add_21_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_11_o_add_23_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_11_o_add_25_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_11_o_add_27_OUT[15:0]> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_11_o_add_29_OUT[15:0]> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_11_o_add_31_OUT[15:0]> created at line 0.
+    Found 21-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 20-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 19-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 18-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Summary:
+	inferred  16 Adder/Subtractor(s).
+	inferred  17 Comparator(s).
+	inferred 211 Multiplexer(s).
+Unit <div_16u_5u> synthesized.
+
+Synthesizing Unit <mod_16u_5u>.
+    Related source file is "".
+    Found 21-bit adder for signal <GND_12_o_b[4]_add_1_OUT> created at line 0.
+    Found 20-bit adder for signal <GND_12_o_b[4]_add_3_OUT> created at line 0.
+    Found 19-bit adder for signal <GND_12_o_b[4]_add_5_OUT> created at line 0.
+    Found 18-bit adder for signal <GND_12_o_b[4]_add_7_OUT> created at line 0.
+    Found 17-bit adder for signal <GND_12_o_b[4]_add_9_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_b[4]_add_11_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_12_o_add_13_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_12_o_add_15_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_12_o_add_17_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_12_o_add_19_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_12_o_add_21_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_12_o_add_23_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_12_o_add_25_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_12_o_add_27_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_12_o_add_29_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_12_o_add_31_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_12_o_add_33_OUT> created at line 0.
+    Found 21-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 20-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 19-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 18-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Summary:
+	inferred  17 Adder/Subtractor(s).
+	inferred  17 Comparator(s).
+	inferred 257 Multiplexer(s).
+Unit <mod_16u_5u> synthesized.
+
+Synthesizing Unit <mod_7u_3u>.
+    Related source file is "".
+    Found 10-bit adder for signal <GND_15_o_b[2]_add_1_OUT> created at line 0.
+    Found 9-bit adder for signal <GND_15_o_b[2]_add_3_OUT> created at line 0.
+    Found 8-bit adder for signal <GND_15_o_b[2]_add_5_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_b[2]_add_7_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_15_o_add_9_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_15_o_add_11_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_15_o_add_13_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_15_o_add_15_OUT> created at line 0.
+    Found 10-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Summary:
+	inferred   8 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+	inferred  50 Multiplexer(s).
+Unit <mod_7u_3u> synthesized.
+
+Synthesizing Unit <div_21u_10u>.
+    Related source file is "".
+    Found 31-bit adder for signal <n1215> created at line 0.
+    Found 31-bit adder for signal <GND_16_o_b[9]_add_1_OUT> created at line 0.
+    Found 30-bit adder for signal <n1219> created at line 0.
+    Found 30-bit adder for signal <GND_16_o_b[9]_add_3_OUT> created at line 0.
+    Found 29-bit adder for signal <n1223> created at line 0.
+    Found 29-bit adder for signal <GND_16_o_b[9]_add_5_OUT> created at line 0.
+    Found 28-bit adder for signal <n1227> created at line 0.
+    Found 28-bit adder for signal <GND_16_o_b[9]_add_7_OUT> created at line 0.
+    Found 27-bit adder for signal <n1231> created at line 0.
+    Found 27-bit adder for signal <GND_16_o_b[9]_add_9_OUT> created at line 0.
+    Found 26-bit adder for signal <n1235> created at line 0.
+    Found 26-bit adder for signal <GND_16_o_b[9]_add_11_OUT> created at line 0.
+    Found 25-bit adder for signal <n1239> created at line 0.
+    Found 25-bit adder for signal <GND_16_o_b[9]_add_13_OUT> created at line 0.
+    Found 24-bit adder for signal <n1243> created at line 0.
+    Found 24-bit adder for signal <GND_16_o_b[9]_add_15_OUT> created at line 0.
+    Found 23-bit adder for signal <n1247> created at line 0.
+    Found 23-bit adder for signal <GND_16_o_b[9]_add_17_OUT> created at line 0.
+    Found 22-bit adder for signal <n1251> created at line 0.
+    Found 22-bit adder for signal <GND_16_o_b[9]_add_19_OUT> created at line 0.
+    Found 21-bit adder for signal <n1255> created at line 0.
+    Found 21-bit adder for signal <a[20]_b[9]_add_21_OUT> created at line 0.
+    Found 21-bit adder for signal <n1259> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_16_o_add_23_OUT> created at line 0.
+    Found 21-bit adder for signal <n1263> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_16_o_add_25_OUT> created at line 0.
+    Found 21-bit adder for signal <n1267> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_16_o_add_27_OUT> created at line 0.
+    Found 21-bit adder for signal <n1271> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_16_o_add_29_OUT> created at line 0.
+    Found 21-bit adder for signal <n1275> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_16_o_add_31_OUT> created at line 0.
+    Found 21-bit adder for signal <n1279> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_16_o_add_33_OUT> created at line 0.
+    Found 21-bit adder for signal <n1283> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_16_o_add_35_OUT> created at line 0.
+    Found 21-bit adder for signal <n1287> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_16_o_add_37_OUT[20:0]> created at line 0.
+    Found 21-bit adder for signal <n1291> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_16_o_add_39_OUT[20:0]> created at line 0.
+    Found 21-bit adder for signal <n1295> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_16_o_add_41_OUT[20:0]> created at line 0.
+    Found 31-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 30-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 29-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 28-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 27-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 26-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 25-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 23-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 22-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Summary:
+	inferred  42 Adder/Subtractor(s).
+	inferred  22 Comparator(s).
+	inferred 381 Multiplexer(s).
+Unit <div_21u_10u> synthesized.
+
+Synthesizing Unit <mod_21u_4u>.
+    Related source file is "".
+    Found 25-bit adder for signal <n1125> created at line 0.
+    Found 25-bit adder for signal <GND_17_o_b[3]_add_1_OUT> created at line 0.
+    Found 24-bit adder for signal <n1129> created at line 0.
+    Found 24-bit adder for signal <GND_17_o_b[3]_add_3_OUT> created at line 0.
+    Found 23-bit adder for signal <n1133> created at line 0.
+    Found 23-bit adder for signal <GND_17_o_b[3]_add_5_OUT> created at line 0.
+    Found 22-bit adder for signal <n1137> created at line 0.
+    Found 22-bit adder for signal <GND_17_o_b[3]_add_7_OUT> created at line 0.
+    Found 21-bit adder for signal <n1141> created at line 0.
+    Found 21-bit adder for signal <a[20]_b[3]_add_9_OUT> created at line 0.
+    Found 21-bit adder for signal <n1145> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_17_o_add_11_OUT> created at line 0.
+    Found 21-bit adder for signal <n1149> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_17_o_add_13_OUT> created at line 0.
+    Found 21-bit adder for signal <n1153> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_17_o_add_15_OUT> created at line 0.
+    Found 21-bit adder for signal <n1157> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_17_o_add_17_OUT> created at line 0.
+    Found 21-bit adder for signal <n1161> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_17_o_add_19_OUT> created at line 0.
+    Found 21-bit adder for signal <n1165> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_17_o_add_21_OUT> created at line 0.
+    Found 21-bit adder for signal <n1169> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_17_o_add_23_OUT> created at line 0.
+    Found 21-bit adder for signal <n1173> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_17_o_add_25_OUT> created at line 0.
+    Found 21-bit adder for signal <n1177> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_17_o_add_27_OUT> created at line 0.
+    Found 21-bit adder for signal <n1181> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_17_o_add_29_OUT> created at line 0.
+    Found 21-bit adder for signal <n1185> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_17_o_add_31_OUT> created at line 0.
+    Found 21-bit adder for signal <n1189> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_17_o_add_33_OUT> created at line 0.
+    Found 21-bit adder for signal <n1193> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_17_o_add_35_OUT> created at line 0.
+    Found 21-bit adder for signal <n1197> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_17_o_add_37_OUT> created at line 0.
+    Found 21-bit adder for signal <n1201> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_17_o_add_39_OUT> created at line 0.
+    Found 21-bit adder for signal <n1205> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_17_o_add_41_OUT> created at line 0.
+    Found 21-bit adder for signal <n1209> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_17_o_add_43_OUT> created at line 0.
+    Found 25-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 23-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 22-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Summary:
+	inferred  44 Adder/Subtractor(s).
+	inferred  22 Comparator(s).
+	inferred 442 Multiplexer(s).
+Unit <mod_21u_4u> synthesized.
+
+Synthesizing Unit <div_21u_7u>.
+    Related source file is "".
+    Found 28-bit adder for signal <n1161> created at line 0.
+    Found 28-bit adder for signal <GND_18_o_b[6]_add_1_OUT> created at line 0.
+    Found 27-bit adder for signal <n1165> created at line 0.
+    Found 27-bit adder for signal <GND_18_o_b[6]_add_3_OUT> created at line 0.
+    Found 26-bit adder for signal <n1169> created at line 0.
+    Found 26-bit adder for signal <GND_18_o_b[6]_add_5_OUT> created at line 0.
+    Found 25-bit adder for signal <n1173> created at line 0.
+    Found 25-bit adder for signal <GND_18_o_b[6]_add_7_OUT> created at line 0.
+    Found 24-bit adder for signal <n1177> created at line 0.
+    Found 24-bit adder for signal <GND_18_o_b[6]_add_9_OUT> created at line 0.
+    Found 23-bit adder for signal <n1181> created at line 0.
+    Found 23-bit adder for signal <GND_18_o_b[6]_add_11_OUT> created at line 0.
+    Found 22-bit adder for signal <n1185> created at line 0.
+    Found 22-bit adder for signal <GND_18_o_b[6]_add_13_OUT> created at line 0.
+    Found 21-bit adder for signal <n1189> created at line 0.
+    Found 21-bit adder for signal <a[20]_b[6]_add_15_OUT> created at line 0.
+    Found 21-bit adder for signal <n1193> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_18_o_add_17_OUT> created at line 0.
+    Found 21-bit adder for signal <n1197> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_18_o_add_19_OUT> created at line 0.
+    Found 21-bit adder for signal <n1201> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_18_o_add_21_OUT> created at line 0.
+    Found 21-bit adder for signal <n1205> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_18_o_add_23_OUT> created at line 0.
+    Found 21-bit adder for signal <n1209> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_18_o_add_25_OUT> created at line 0.
+    Found 21-bit adder for signal <n1213> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_18_o_add_27_OUT> created at line 0.
+    Found 21-bit adder for signal <n1217> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_18_o_add_29_OUT> created at line 0.
+    Found 21-bit adder for signal <n1221> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_18_o_add_31_OUT> created at line 0.
+    Found 21-bit adder for signal <n1225> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_18_o_add_33_OUT> created at line 0.
+    Found 21-bit adder for signal <n1229> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_18_o_add_35_OUT> created at line 0.
+    Found 21-bit adder for signal <n1233> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_18_o_add_37_OUT[20:0]> created at line 0.
+    Found 21-bit adder for signal <n1237> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_18_o_add_39_OUT[20:0]> created at line 0.
+    Found 21-bit adder for signal <n1241> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_18_o_add_41_OUT[20:0]> created at line 0.
+    Found 28-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 27-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 26-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 25-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 23-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 22-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Summary:
+	inferred  42 Adder/Subtractor(s).
+	inferred  22 Comparator(s).
+	inferred 381 Multiplexer(s).
+Unit <div_21u_7u> synthesized.
+
+Synthesizing Unit <div_21u_4u>.
+    Related source file is "".
+    Found 25-bit adder for signal <n1125> created at line 0.
+    Found 25-bit adder for signal <GND_19_o_b[3]_add_1_OUT> created at line 0.
+    Found 24-bit adder for signal <n1129> created at line 0.
+    Found 24-bit adder for signal <GND_19_o_b[3]_add_3_OUT> created at line 0.
+    Found 23-bit adder for signal <n1133> created at line 0.
+    Found 23-bit adder for signal <GND_19_o_b[3]_add_5_OUT> created at line 0.
+    Found 22-bit adder for signal <n1137> created at line 0.
+    Found 22-bit adder for signal <GND_19_o_b[3]_add_7_OUT> created at line 0.
+    Found 21-bit adder for signal <n1141> created at line 0.
+    Found 21-bit adder for signal <a[20]_b[3]_add_9_OUT> created at line 0.
+    Found 21-bit adder for signal <n1145> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_19_o_add_11_OUT> created at line 0.
+    Found 21-bit adder for signal <n1149> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_19_o_add_13_OUT> created at line 0.
+    Found 21-bit adder for signal <n1153> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_19_o_add_15_OUT> created at line 0.
+    Found 21-bit adder for signal <n1157> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_19_o_add_17_OUT> created at line 0.
+    Found 21-bit adder for signal <n1161> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_19_o_add_19_OUT> created at line 0.
+    Found 21-bit adder for signal <n1165> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_19_o_add_21_OUT> created at line 0.
+    Found 21-bit adder for signal <n1169> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_19_o_add_23_OUT> created at line 0.
+    Found 21-bit adder for signal <n1173> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_19_o_add_25_OUT> created at line 0.
+    Found 21-bit adder for signal <n1177> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_19_o_add_27_OUT> created at line 0.
+    Found 21-bit adder for signal <n1181> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_19_o_add_29_OUT> created at line 0.
+    Found 21-bit adder for signal <n1185> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_19_o_add_31_OUT> created at line 0.
+    Found 21-bit adder for signal <n1189> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_19_o_add_33_OUT> created at line 0.
+    Found 21-bit adder for signal <n1193> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_19_o_add_35_OUT> created at line 0.
+    Found 21-bit adder for signal <n1197> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_19_o_add_37_OUT[20:0]> created at line 0.
+    Found 21-bit adder for signal <n1201> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_19_o_add_39_OUT[20:0]> created at line 0.
+    Found 21-bit adder for signal <n1205> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_19_o_add_41_OUT[20:0]> created at line 0.
+    Found 25-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 23-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 22-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Summary:
+	inferred  42 Adder/Subtractor(s).
+	inferred  22 Comparator(s).
+	inferred 381 Multiplexer(s).
+Unit <div_21u_4u> synthesized.
+
+Synthesizing Unit <div_21u_20u>.
+    Related source file is "".
+    Found 39-bit adder for signal <GND_20_o_b[19]_add_5_OUT> created at line 0.
+    Found 38-bit adder for signal <GND_20_o_b[19]_add_7_OUT> created at line 0.
+    Found 37-bit adder for signal <GND_20_o_b[19]_add_9_OUT> created at line 0.
+    Found 36-bit adder for signal <GND_20_o_b[19]_add_11_OUT> created at line 0.
+    Found 35-bit adder for signal <GND_20_o_b[19]_add_13_OUT> created at line 0.
+    Found 34-bit adder for signal <GND_20_o_b[19]_add_15_OUT> created at line 0.
+    Found 33-bit adder for signal <GND_20_o_b[19]_add_17_OUT> created at line 0.
+    Found 32-bit adder for signal <GND_20_o_b[19]_add_19_OUT> created at line 0.
+    Found 31-bit adder for signal <GND_20_o_b[19]_add_21_OUT> created at line 0.
+    Found 30-bit adder for signal <GND_20_o_b[19]_add_23_OUT> created at line 0.
+    Found 29-bit adder for signal <GND_20_o_b[19]_add_25_OUT> created at line 0.
+    Found 28-bit adder for signal <GND_20_o_b[19]_add_27_OUT> created at line 0.
+    Found 27-bit adder for signal <GND_20_o_b[19]_add_29_OUT> created at line 0.
+    Found 26-bit adder for signal <GND_20_o_b[19]_add_31_OUT> created at line 0.
+    Found 25-bit adder for signal <GND_20_o_b[19]_add_33_OUT> created at line 0.
+    Found 24-bit adder for signal <GND_20_o_b[19]_add_35_OUT> created at line 0.
+    Found 23-bit adder for signal <GND_20_o_b[19]_add_37_OUT> created at line 0.
+    Found 22-bit adder for signal <GND_20_o_b[19]_add_39_OUT> created at line 0.
+    Found 21-bit adder for signal <a[20]_b[19]_add_41_OUT[20:0]> created at line 0.
+    Found 40-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 39-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 38-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 37-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 30-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 29-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 28-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 27-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 26-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 25-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 23-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 22-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Summary:
+	inferred  19 Adder/Subtractor(s).
+	inferred  21 Comparator(s).
+	inferred 359 Multiplexer(s).
+Unit <div_21u_20u> synthesized.
+
+Synthesizing Unit <div_21u_17u>.
+    Related source file is "".
+    Found 36-bit adder for signal <GND_21_o_b[16]_add_5_OUT> created at line 0.
+    Found 35-bit adder for signal <GND_21_o_b[16]_add_7_OUT> created at line 0.
+    Found 34-bit adder for signal <GND_21_o_b[16]_add_9_OUT> created at line 0.
+    Found 33-bit adder for signal <GND_21_o_b[16]_add_11_OUT> created at line 0.
+    Found 32-bit adder for signal <GND_21_o_b[16]_add_13_OUT> created at line 0.
+    Found 31-bit adder for signal <GND_21_o_b[16]_add_15_OUT> created at line 0.
+    Found 30-bit adder for signal <GND_21_o_b[16]_add_17_OUT> created at line 0.
+    Found 29-bit adder for signal <GND_21_o_b[16]_add_19_OUT> created at line 0.
+    Found 28-bit adder for signal <GND_21_o_b[16]_add_21_OUT> created at line 0.
+    Found 27-bit adder for signal <GND_21_o_b[16]_add_23_OUT> created at line 0.
+    Found 26-bit adder for signal <GND_21_o_b[16]_add_25_OUT> created at line 0.
+    Found 25-bit adder for signal <GND_21_o_b[16]_add_27_OUT> created at line 0.
+    Found 24-bit adder for signal <GND_21_o_b[16]_add_29_OUT> created at line 0.
+    Found 23-bit adder for signal <GND_21_o_b[16]_add_31_OUT> created at line 0.
+    Found 22-bit adder for signal <GND_21_o_b[16]_add_33_OUT> created at line 0.
+    Found 21-bit adder for signal <a[20]_b[16]_add_35_OUT> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_21_o_add_37_OUT[20:0]> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_21_o_add_39_OUT[20:0]> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_21_o_add_41_OUT[20:0]> created at line 0.
+    Found 37-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 30-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 29-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 28-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 27-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 26-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 25-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 23-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 22-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Summary:
+	inferred  19 Adder/Subtractor(s).
+	inferred  21 Comparator(s).
+	inferred 339 Multiplexer(s).
+Unit <div_21u_17u> synthesized.
+
+Synthesizing Unit <div_21u_14u>.
+    Related source file is "".
+    Found 33-bit adder for signal <GND_22_o_b[13]_add_5_OUT> created at line 0.
+    Found 32-bit adder for signal <GND_22_o_b[13]_add_7_OUT> created at line 0.
+    Found 31-bit adder for signal <GND_22_o_b[13]_add_9_OUT> created at line 0.
+    Found 30-bit adder for signal <GND_22_o_b[13]_add_11_OUT> created at line 0.
+    Found 29-bit adder for signal <GND_22_o_b[13]_add_13_OUT> created at line 0.
+    Found 28-bit adder for signal <GND_22_o_b[13]_add_15_OUT> created at line 0.
+    Found 27-bit adder for signal <GND_22_o_b[13]_add_17_OUT> created at line 0.
+    Found 26-bit adder for signal <GND_22_o_b[13]_add_19_OUT> created at line 0.
+    Found 25-bit adder for signal <GND_22_o_b[13]_add_21_OUT> created at line 0.
+    Found 24-bit adder for signal <GND_22_o_b[13]_add_23_OUT> created at line 0.
+    Found 23-bit adder for signal <GND_22_o_b[13]_add_25_OUT> created at line 0.
+    Found 22-bit adder for signal <GND_22_o_b[13]_add_27_OUT> created at line 0.
+    Found 21-bit adder for signal <a[20]_b[13]_add_29_OUT> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_22_o_add_31_OUT> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_22_o_add_33_OUT> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_22_o_add_35_OUT> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_22_o_add_37_OUT[20:0]> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_22_o_add_39_OUT[20:0]> created at line 0.
+    Found 21-bit adder for signal <a[20]_GND_22_o_add_41_OUT[20:0]> created at line 0.
+    Found 34-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 31-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 30-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 29-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 28-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 27-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 26-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 25-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 24-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 23-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 22-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 21-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Summary:
+	inferred  19 Adder/Subtractor(s).
+	inferred  21 Comparator(s).
+	inferred 339 Multiplexer(s).
+Unit <div_21u_14u> synthesized.
+
+Synthesizing Unit <uart_top>.
+    Related source file is "C:\Users\152\Desktop\TFE\uart_top.v".
+        stIdle = 0
+        stCR = 1
+INFO:Xst:3210 - "C:\Users\152\Desktop\TFE\uart_top.v" line 70: Output port <fifo_cnt> of the instance <tfifo_> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\152\Desktop\TFE\uart_top.v" line 90: Output port <is_receiving> of the instance <uart_> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\152\Desktop\TFE\uart_top.v" line 90: Output port <recv_error> of the instance <uart_> is unconnected or connected to loadless signal.
+    Found 8-bit register for signal <tx_data>.
+    Found 8-bit register for signal <tfifo_in>.
+    Found 1-bit register for signal <tfifo_rd_z>.
+    Found 12-bit register for signal <state>.
+    Found 12-bit adder for signal <state[11]_GND_23_o_add_8_OUT> created at line 52.
+    Found 12-bit comparator greater for signal <state[11]_GND_23_o_LessThan_8_o> created at line 50
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  29 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <uart_top> synthesized.
+
+Synthesizing Unit <uart_fifo>.
+    Related source file is "C:\Users\152\Desktop\TFE\uart_fifo.v".
+        size = 1024
+        sizew = 10
+    Set property "ram_style = block" for signal <mem>.
+    Found 1024x8-bit dual-port RAM <Mram_mem> for signal <mem>.
+    Found 10-bit register for signal <rp>.
+    Found 10-bit register for signal <fifo_cnt>.
+    Found 1-bit register for signal <fifo_full>.
+    Found 1-bit register for signal <fifo_empty>.
+    Found 8-bit register for signal <fifo_out>.
+    Found 10-bit register for signal <wp>.
+    Found 10-bit adder for signal <wp[9]_GND_24_o_add_1_OUT> created at line 50.
+    Found 10-bit adder for signal <rp[9]_GND_24_o_add_2_OUT> created at line 51.
+    Found 10-bit adder for signal <fifo_cnt[9]_GND_24_o_add_3_OUT> created at line 55.
+    Found 10-bit subtractor for signal <GND_24_o_GND_24_o_sub_6_OUT<9:0>> created at line 61.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  40 D-type flip-flop(s).
+Unit <uart_fifo> synthesized.
+
+Synthesizing Unit <uart>.
+    Related source file is "C:\Users\152\Desktop\TFE\uart.v".
+        CLOCK_DIVIDE = 25
+        RX_IDLE = 0
+        RX_CHECK_START = 1
+        RX_READ_BITS = 2
+        RX_CHECK_STOP = 3
+        RX_DELAY_RESTART = 4
+        RX_ERROR = 5
+        RX_RECEIVED = 6
+        TX_IDLE = 0
+        TX_SENDING = 1
+        TX_DELAY_RESTART = 2
+    Found 2-bit register for signal <tx_state>.
+    Found 11-bit register for signal <rx_clk_divider>.
+    Found 6-bit register for signal <rx_countdown>.
+    Found 11-bit register for signal <tx_clk_divider>.
+    Found 6-bit register for signal <tx_countdown>.
+    Found 8-bit register for signal <rx_data>.
+    Found 4-bit register for signal <rx_bits_remaining>.
+    Found 4-bit register for signal <tx_bits_remaining>.
+    Found 1-bit register for signal <tx_out>.
+    Found 8-bit register for signal <tx_data>.
+    Found 3-bit register for signal <recv_state>.
+    Found 11-bit subtractor for signal <GND_25_o_GND_25_o_sub_9_OUT<10:0>> created at line 90.
+    Found 6-bit subtractor for signal <GND_25_o_GND_25_o_sub_11_OUT<5:0>> created at line 93.
+    Found 11-bit subtractor for signal <GND_25_o_GND_25_o_sub_14_OUT<10:0>> created at line 95.
+    Found 6-bit subtractor for signal <GND_25_o_GND_25_o_sub_16_OUT<5:0>> created at line 98.
+    Found 4-bit subtractor for signal <GND_25_o_GND_25_o_sub_30_OUT<3:0>> created at line 138.
+    Found 4-bit subtractor for signal <GND_25_o_GND_25_o_sub_54_OUT<3:0>> created at line 192.
+    Found 3-bit 8-to-1 multiplexer for signal <recv_state[2]_recv_state[2]_wide_mux_41_OUT> created at line 102.
+    Found 6-bit 7-to-1 multiplexer for signal <recv_state[2]_rx_countdown[5]_wide_mux_42_OUT> created at line 102.
+    Found 2-bit 4-to-1 multiplexer for signal <tx_state[1]_tx_state[1]_wide_mux_64_OUT> created at line 173.
+    Found 6-bit 3-to-1 multiplexer for signal <tx_state[1]_tx_countdown[5]_wide_mux_68_OUT> created at line 173.
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred  64 D-type flip-flop(s).
+	inferred  31 Multiplexer(s).
+Unit <uart> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 12
+ 1024x8-bit dual-port RAM                              : 1
+ 16x9-bit single-port Read Only RAM                    : 11
+# Multipliers                                          : 8
+ 3x3-bit multiplier                                    : 1
+ 5x4-bit multiplier                                    : 3
+ 6x5-bit multiplier                                    : 2
+ 7x3-bit multiplier                                    : 1
+ 8x2-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 894
+ 10-bit adder                                          : 6
+ 10-bit subtractor                                     : 1
+ 11-bit adder                                          : 3
+ 11-bit subtractor                                     : 2
+ 12-bit adder                                          : 4
+ 13-bit adder                                          : 3
+ 14-bit adder                                          : 3
+ 15-bit adder                                          : 1
+ 16-bit adder                                          : 25
+ 17-bit adder                                          : 6
+ 18-bit adder                                          : 2
+ 19-bit adder                                          : 2
+ 20-bit adder                                          : 2
+ 21-bit adder                                          : 579
+ 21-bit subtractor                                     : 1
+ 22-bit adder                                          : 38
+ 23-bit adder                                          : 37
+ 24-bit adder                                          : 37
+ 25-bit adder                                          : 37
+ 26-bit adder                                          : 11
+ 27-bit adder                                          : 11
+ 28-bit adder                                          : 11
+ 29-bit adder                                          : 7
+ 3-bit adder                                           : 2
+ 30-bit adder                                          : 7
+ 31-bit adder                                          : 7
+ 32-bit adder                                          : 5
+ 33-bit adder                                          : 3
+ 34-bit adder                                          : 2
+ 35-bit adder                                          : 2
+ 36-bit adder                                          : 2
+ 37-bit adder                                          : 1
+ 38-bit adder                                          : 1
+ 39-bit adder                                          : 1
+ 4-bit subtractor                                      : 2
+ 41-bit adder                                          : 5
+ 5-bit adder                                           : 2
+ 6-bit adder                                           : 3
+ 6-bit subtractor                                      : 3
+ 7-bit adder                                           : 6
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 2
+ 9-bit adder                                           : 8
+# Registers                                            : 47
+ 1-bit register                                        : 11
+ 10-bit register                                       : 3
+ 11-bit register                                       : 2
+ 12-bit register                                       : 1
+ 16-bit register                                       : 2
+ 17-bit register                                       : 1
+ 2-bit register                                        : 2
+ 21-bit register                                       : 2
+ 3-bit register                                        : 4
+ 320-bit register                                      : 1
+ 4-bit register                                        : 2
+ 41-bit register                                       : 5
+ 6-bit register                                        : 4
+ 7-bit register                                        : 1
+ 8-bit register                                        : 6
+# Comparators                                          : 521
+ 10-bit comparator lessequal                           : 3
+ 11-bit comparator lessequal                           : 2
+ 12-bit comparator greater                             : 1
+ 12-bit comparator lessequal                           : 2
+ 13-bit comparator lessequal                           : 2
+ 14-bit comparator lessequal                           : 2
+ 15-bit comparator lessequal                           : 1
+ 16-bit comparator lessequal                           : 26
+ 16-bit comparator not equal                           : 1
+ 17-bit comparator equal                               : 3
+ 17-bit comparator lessequal                           : 3
+ 18-bit comparator lessequal                           : 2
+ 19-bit comparator lessequal                           : 2
+ 20-bit comparator equal                               : 1
+ 20-bit comparator greater                             : 1
+ 20-bit comparator lessequal                           : 2
+ 21-bit comparator lessequal                           : 305
+ 22-bit comparator lessequal                           : 20
+ 23-bit comparator lessequal                           : 20
+ 24-bit comparator lessequal                           : 20
+ 25-bit comparator lessequal                           : 20
+ 26-bit comparator lessequal                           : 7
+ 27-bit comparator lessequal                           : 7
+ 28-bit comparator lessequal                           : 7
+ 29-bit comparator lessequal                           : 5
+ 3-bit comparator greater                              : 2
+ 30-bit comparator lessequal                           : 5
+ 31-bit comparator lessequal                           : 5
+ 32-bit comparator lessequal                           : 3
+ 33-bit comparator lessequal                           : 3
+ 34-bit comparator lessequal                           : 3
+ 35-bit comparator lessequal                           : 2
+ 36-bit comparator lessequal                           : 2
+ 37-bit comparator lessequal                           : 2
+ 38-bit comparator lessequal                           : 1
+ 39-bit comparator lessequal                           : 1
+ 40-bit comparator lessequal                           : 1
+ 5-bit comparator lessequal                            : 2
+ 6-bit comparator greater                              : 5
+ 6-bit comparator lessequal                            : 1
+ 7-bit comparator lessequal                            : 6
+ 8-bit comparator lessequal                            : 2
+ 9-bit comparator lessequal                            : 10
+# Multiplexers                                         : 10826
+ 1-bit 2-to-1 multiplexer                              : 8801
+ 10-bit 2-to-1 multiplexer                             : 6
+ 11-bit 2-to-1 multiplexer                             : 12
+ 12-bit 2-to-1 multiplexer                             : 6
+ 13-bit 2-to-1 multiplexer                             : 6
+ 14-bit 2-to-1 multiplexer                             : 6
+ 15-bit 2-to-1 multiplexer                             : 6
+ 16-bit 2-to-1 multiplexer                             : 9
+ 17-bit 2-to-1 multiplexer                             : 6
+ 18-bit 2-to-1 multiplexer                             : 6
+ 19-bit 2-to-1 multiplexer                             : 6
+ 2-bit 2-to-1 multiplexer                              : 9
+ 2-bit 4-to-1 multiplexer                              : 1
+ 20-bit 2-to-1 multiplexer                             : 301
+ 21-bit 2-to-1 multiplexer                             : 30
+ 22-bit 2-to-1 multiplexer                             : 301
+ 3-bit 2-to-1 multiplexer                              : 17
+ 3-bit 8-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 1204
+ 4-bit 2-to-1 multiplexer                              : 20
+ 5-bit 2-to-1 multiplexer                              : 7
+ 6-bit 2-to-1 multiplexer                              : 14
+ 6-bit 3-to-1 multiplexer                              : 1
+ 6-bit 7-to-1 multiplexer                              : 1
+ 7-bit 2-to-1 multiplexer                              : 6
+ 8-bit 2-to-1 multiplexer                              : 31
+ 9-bit 2-to-1 multiplexer                              : 12
+# Logic shifters                                       : 7
+ 60-bit shifter logical right                          : 2
+ 620-bit shifter logical right                         : 5
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <colloc_5> in Unit <board_to_string_> is equivalent to the following 3 FFs/Latches, which will be removed : <colloc_6> <idxp_14> <idxp_15> 
+WARNING:Xst:1293 - FF/Latch <colloc_5> has a constant value of 0 in block <board_to_string_>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <curnum_20> has a constant value of 0 in block <board_to_string_>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <board_to_string>.
+The following registers are absorbed into counter <rw>: 1 register on signal <rw>.
+The following registers are absorbed into counter <cntr>: 1 register on signal <cntr>.
+	Multiplier <Mmult_cl[2]_PWR_10_o_MuLt_9_OUT> in block <board_to_string> and adder/subtractor <Madd_n0402[13:0]_Madd> in block <board_to_string> are combined into a MAC<Maddsub_cl[2]_PWR_10_o_MuLt_9_OUT>.
+	Multiplier <Mmult_PWR_10_o_rw[2]_MuLt_6_OUT> in block <board_to_string> and adder/subtractor <Madd_n0397[11:0]1> in block <board_to_string> are combined into a MAC<Maddsub_PWR_10_o_rw[2]_MuLt_6_OUT>.
+	Adder/Subtractor <Madd_n0358> in block <board_to_string> and  <Mmult_n0217> in block <board_to_string> are combined into a MULT with pre-adder <Mmult_n02171>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_n0235> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 9-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <curnum[20]_PWR_10_o_mod_48_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_n0221> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 9-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <curnum[20]_PWR_10_o_mod_31_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_n0226> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 9-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <curnum[20]_PWR_10_o_mod_37_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_n0231> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 9-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <curnum[20]_PWR_10_o_mod_43_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_n0263> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 9-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <score[20]_PWR_10_o_mod_92_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_n0266> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 9-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <score[20]_PWR_10_o_mod_96_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_n0269> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 9-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <score[20]_PWR_10_o_mod_100_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_n0272> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 9-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <score[20]_PWR_10_o_mod_104_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_n0275> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 9-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <score[20]_PWR_10_o_mod_108_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_n0278> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 9-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <score[20]_PWR_10_o_mod_112_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_n0280> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 9-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <score[20]_PWR_10_o_mod_115_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <board_to_string> synthesized (advanced).
+
+Synthesizing (advanced) Unit <debouncer>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <debouncer> synthesized (advanced).
+
+Synthesizing (advanced) Unit <gameController>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <editMode>: 1 register on signal <editMode>.
+	Multiplier <Mmult_lastDir[1]_PWR_3_o_MuLt_9_OUT> in block <gameController> and adder/subtractor <Madd_n2009[31:0]_Madd> in block <gameController> are combined into a MAC<Maddsub_lastDir[1]_PWR_3_o_MuLt_9_OUT>.
+Unit <gameController> synthesized (advanced).
+
+Synthesizing (advanced) Unit <uart>.
+The following registers are absorbed into counter <tx_bits_remaining>: 1 register on signal <tx_bits_remaining>.
+Unit <uart> synthesized (advanced).
+
+Synthesizing (advanced) Unit <uart_fifo>.
+The following registers are absorbed into accumulator <rp>: 1 register on signal <rp>.
+The following registers are absorbed into accumulator <wp>: 1 register on signal <wp>.
+INFO:Xst:3226 - The RAM <Mram_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <fifo_out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wr>            | high     |
+    |     addrA          | connected to signal <wp>            |          |
+    |     diA            | connected to signal <fifo_in>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <rp>            |          |
+    |     doB            | connected to signal <fifo_out>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <uart_fifo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <uart_top>.
+The following registers are absorbed into counter <state>: 1 register on signal <state>.
+Unit <uart_top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 12
+ 1024x8-bit dual-port block RAM                        : 1
+ 16x9-bit single-port distributed Read Only RAM        : 11
+# MACs                                                 : 4
+ 3x3-to-14-bit MAC                                     : 1
+ 5x6-to-11-bit Mult with pre-adder                     : 1
+ 7x3-to-12-bit MAC                                     : 1
+ 8x2-to-5-bit MAC                                      : 1
+# Multipliers                                          : 4
+ 5x4-bit multiplier                                    : 3
+ 6x5-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 507
+ 10-bit adder                                          : 1
+ 10-bit subtractor                                     : 1
+ 11-bit subtractor                                     : 2
+ 16-bit adder                                          : 32
+ 17-bit adder                                          : 3
+ 2-bit subtractor                                      : 1
+ 21-bit adder                                          : 58
+ 21-bit adder carry in                                 : 357
+ 21-bit subtractor                                     : 1
+ 22-bit adder                                          : 1
+ 3-bit adder                                           : 2
+ 4-bit adder                                           : 1
+ 4-bit adder carry in                                  : 11
+ 4-bit subtractor                                      : 1
+ 5-bit adder                                           : 7
+ 6-bit subtractor                                      : 3
+ 7-bit adder                                           : 7
+ 9-bit adder                                           : 18
+# Counters                                             : 11
+ 12-bit up counter                                     : 1
+ 16-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 4-bit down counter                                    : 1
+ 41-bit up counter                                     : 5
+ 6-bit up counter                                      : 1
+# Accumulators                                         : 2
+ 10-bit up accumulator                                 : 2
+# Registers                                            : 503
+ Flip-Flops                                            : 503
+# Comparators                                          : 521
+ 10-bit comparator lessequal                           : 3
+ 11-bit comparator lessequal                           : 2
+ 12-bit comparator greater                             : 1
+ 12-bit comparator lessequal                           : 2
+ 13-bit comparator lessequal                           : 2
+ 14-bit comparator lessequal                           : 2
+ 15-bit comparator lessequal                           : 1
+ 16-bit comparator lessequal                           : 26
+ 16-bit comparator not equal                           : 1
+ 17-bit comparator equal                               : 3
+ 17-bit comparator lessequal                           : 3
+ 18-bit comparator lessequal                           : 2
+ 19-bit comparator lessequal                           : 2
+ 20-bit comparator equal                               : 1
+ 20-bit comparator greater                             : 1
+ 20-bit comparator lessequal                           : 2
+ 21-bit comparator lessequal                           : 305
+ 22-bit comparator lessequal                           : 20
+ 23-bit comparator lessequal                           : 20
+ 24-bit comparator lessequal                           : 20
+ 25-bit comparator lessequal                           : 20
+ 26-bit comparator lessequal                           : 7
+ 27-bit comparator lessequal                           : 7
+ 28-bit comparator lessequal                           : 7
+ 29-bit comparator lessequal                           : 5
+ 3-bit comparator greater                              : 2
+ 30-bit comparator lessequal                           : 5
+ 31-bit comparator lessequal                           : 5
+ 32-bit comparator lessequal                           : 3
+ 33-bit comparator lessequal                           : 3
+ 34-bit comparator lessequal                           : 3
+ 35-bit comparator lessequal                           : 2
+ 36-bit comparator lessequal                           : 2
+ 37-bit comparator lessequal                           : 2
+ 38-bit comparator lessequal                           : 1
+ 39-bit comparator lessequal                           : 1
+ 40-bit comparator lessequal                           : 1
+ 5-bit comparator lessequal                            : 2
+ 6-bit comparator greater                              : 5
+ 6-bit comparator lessequal                            : 1
+ 7-bit comparator lessequal                            : 6
+ 8-bit comparator lessequal                            : 2
+ 9-bit comparator lessequal                            : 10
+# Multiplexers                                         : 10840
+ 1-bit 2-to-1 multiplexer                              : 8821
+ 10-bit 2-to-1 multiplexer                             : 6
+ 11-bit 2-to-1 multiplexer                             : 12
+ 12-bit 2-to-1 multiplexer                             : 6
+ 13-bit 2-to-1 multiplexer                             : 6
+ 14-bit 2-to-1 multiplexer                             : 6
+ 15-bit 2-to-1 multiplexer                             : 6
+ 16-bit 2-to-1 multiplexer                             : 9
+ 17-bit 2-to-1 multiplexer                             : 6
+ 18-bit 2-to-1 multiplexer                             : 6
+ 19-bit 2-to-1 multiplexer                             : 6
+ 2-bit 2-to-1 multiplexer                              : 9
+ 2-bit 4-to-1 multiplexer                              : 1
+ 20-bit 2-to-1 multiplexer                             : 301
+ 21-bit 2-to-1 multiplexer                             : 30
+ 22-bit 2-to-1 multiplexer                             : 301
+ 3-bit 2-to-1 multiplexer                              : 15
+ 3-bit 8-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 1204
+ 4-bit 2-to-1 multiplexer                              : 19
+ 5-bit 2-to-1 multiplexer                              : 7
+ 6-bit 2-to-1 multiplexer                              : 12
+ 6-bit 3-to-1 multiplexer                              : 1
+ 6-bit 7-to-1 multiplexer                              : 1
+ 7-bit 2-to-1 multiplexer                              : 6
+ 8-bit 2-to-1 multiplexer                              : 30
+ 9-bit 2-to-1 multiplexer                              : 12
+# Logic shifters                                       : 7
+ 60-bit shifter logical right                          : 2
+ 620-bit shifter logical right                         : 5
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <colloc_5> has a constant value of 0 in block <board_to_string>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <colloc_6> has a constant value of 0 in block <board_to_string>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <idxp_14> has a constant value of 0 in block <board_to_string>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <idxp_15> has a constant value of 0 in block <board_to_string>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <curnum_20> has a constant value of 0 in block <board_to_string>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <lastDir_1> is unconnected in block <gameController>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <lastDir_0> is unconnected in block <gameController>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Maddsub_lastDir[1]_PWR_3_o_MuLt_9_OUT> is unconnected in block <gameController>.
+WARNING:Xst:1293 - FF/Latch <score_0> has a constant value of 0 in block <gameController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <counter_9> of sequential type is unconnected in block <gameController>.
+WARNING:Xst:2677 - Node <counter_10> of sequential type is unconnected in block <gameController>.
+WARNING:Xst:2677 - Node <counter_11> of sequential type is unconnected in block <gameController>.
+WARNING:Xst:2677 - Node <counter_12> of sequential type is unconnected in block <gameController>.
+WARNING:Xst:2677 - Node <counter_13> of sequential type is unconnected in block <gameController>.
+WARNING:Xst:2677 - Node <counter_14> of sequential type is unconnected in block <gameController>.
+WARNING:Xst:2677 - Node <counter_15> of sequential type is unconnected in block <gameController>.
+WARNING:Xst:2677 - Node <counter_16> of sequential type is unconnected in block <gameController>.
+WARNING:Xst:1293 - FF/Latch <idxp_12> has a constant value of 0 in block <board_to_string>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <idxp_13> has a constant value of 0 in block <board_to_string>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <char_out_7> (without init value) has a constant value of 0 in block <board_to_string>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <TwentyFortyEight> ...
+
+Optimizing unit <gameController> ...
+WARNING:Xst:1293 - FF/Latch <board_0> has a constant value of 0 in block <gameController>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <board_to_string> ...
+WARNING:Xst:1293 - FF/Latch <cl_2> has a constant value of 0 in block <board_to_string>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <cl_2> has a constant value of 0 in block <board_to_string>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <mod_7u_3u> ...
+
+Optimizing unit <uart_top> ...
+
+Optimizing unit <uart> ...
+
+Optimizing unit <uart_fifo> ...
+WARNING:Xst:1293 - FF/Latch <uart_top_/tx_data_7> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_top_/tfifo_in_7> (without init value) has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <dir_store_0> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <dir_store_1> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_20> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_19> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_18> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_17> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_16> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_15> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_14> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_13> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_12> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_11> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_10> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_9> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_8> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_7> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_6> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_5> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_4> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_3> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_2> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <gameController_/score_1> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_bits_remaining_3> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_bits_remaining_2> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_bits_remaining_1> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_bits_remaining_0> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_countdown_5> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_countdown_4> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_countdown_3> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_countdown_2> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_countdown_1> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_countdown_0> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_clk_divider_10> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_clk_divider_9> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_clk_divider_8> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_clk_divider_7> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_clk_divider_6> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_clk_divider_5> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_clk_divider_4> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_clk_divider_3> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_clk_divider_2> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_clk_divider_1> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_clk_divider_0> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/recv_state_2> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/recv_state_1> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/recv_state_0> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_data_7> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_data_6> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_data_5> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_data_4> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_data_3> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_data_2> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_data_1> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:2677 - Node <uart_top_/uart_/rx_data_0> of sequential type is unconnected in block <TwentyFortyEight>.
+WARNING:Xst:1293 - FF/Latch <gameController_/board_71> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_72> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_73> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_74> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_75> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_76> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_77> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_78> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_79> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_80> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_83> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_84> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_85> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_86> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_87> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_88> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_89> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_90> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_91> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_92> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_49> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_50> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_51> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_52> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_53> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_54> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_55> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_56> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_57> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_58> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_59> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_60> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_63> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_64> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_65> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_66> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_67> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_68> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_69> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_70> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_116> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_117> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_118> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_119> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_120> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_123> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_124> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_126> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_127> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_128> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_129> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_130> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_131> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_132> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_133> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_134> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_135> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_136> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_137> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_138> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_93> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_94> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_95> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_96> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_97> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_98> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_99> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_100> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_103> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_104> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_105> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_106> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_107> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_108> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_109> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_110> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_111> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_112> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_113> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_114> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_115> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_0> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_3> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_4> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_5> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_6> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_7> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_8> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_9> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_10> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_11> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_12> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_13> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_14> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_15> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_16> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_17> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_18> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/curnum_19> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/rw_2> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_3> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/uart_/tx_clk_divider_5> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/uart_/tx_clk_divider_6> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/uart_/tx_clk_divider_7> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/uart_/tx_clk_divider_8> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/uart_/tx_clk_divider_9> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/uart_/tx_clk_divider_10> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/state_2> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/state_1> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/state_5> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/state_3> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/state_4> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/state_8> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/state_6> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/state_7> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/state_11> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/state_9> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <uart_top_/state_10> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/idxp_9> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/idxp_10> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <board_to_string_/idxp_11> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_27> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_28> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_29> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_30> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_31> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_32> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_33> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_34> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_35> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_36> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_37> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_38> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_39> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_40> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_43> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_44> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_45> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_46> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_47> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_48> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_4> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_5> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_6> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_7> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_8> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_9> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_10> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_11> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_12> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_13> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_14> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_15> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_16> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_17> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_18> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_19> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_20> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_23> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_24> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_25> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_26> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_253> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_254> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_255> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_256> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_257> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_258> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_259> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_260> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_263> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_264> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_265> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_266> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_267> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_268> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_269> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_270> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_271> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_272> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_273> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_274> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_231> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_232> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_233> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_234> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_235> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_236> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_237> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_238> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_239> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_240> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_243> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_244> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_245> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_246> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_247> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_248> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_249> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_250> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_251> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_252> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_298> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_299> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_300> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_303> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_304> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_305> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_306> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_307> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_308> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_309> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_310> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_311> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_312> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_313> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_314> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_315> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_316> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_317> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_318> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_319> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_275> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_276> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_277> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_278> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_279> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_280> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_283> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_284> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_285> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_286> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_287> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_288> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_289> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_290> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_291> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_292> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_293> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_294> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_295> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_296> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_297> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_164> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_165> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_166> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_167> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_168> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_169> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_170> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_171> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_172> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_173> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_174> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_175> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_176> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_177> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_178> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_179> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_180> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_183> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_184> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_185> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_139> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_140> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_143> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_144> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_145> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_146> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_147> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_148> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_149> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_150> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_151> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_152> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_153> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_154> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_155> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_156> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_157> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_158> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_159> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_160> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_163> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_209> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_210> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_211> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_212> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_213> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_214> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_215> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_216> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_217> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_218> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_219> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_220> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_223> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_224> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_225> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_226> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_227> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_228> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_229> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_230> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_186> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_187> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_188> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_189> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_190> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_191> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_192> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_193> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_194> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_195> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_196> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_197> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_198> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_199> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_200> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_203> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_204> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_205> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_206> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_207> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gameController_/board_208> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TwentyFortyEight, actual ratio is 18.
+FlipFlop board_to_string_/cntr_10 has been replicated 1 time(s)
+FlipFlop board_to_string_/cntr_11 has been replicated 3 time(s)
+FlipFlop board_to_string_/cntr_12 has been replicated 2 time(s)
+FlipFlop board_to_string_/cntr_13 has been replicated 2 time(s)
+FlipFlop board_to_string_/cntr_15 has been replicated 2 time(s)
+FlipFlop board_to_string_/cntr_9 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 396
+ Flip-Flops                                            : 396
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TwentyFortyEight.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2553
+#      GND                         : 1
+#      INV                         : 32
+#      LUT1                        : 251
+#      LUT2                        : 74
+#      LUT3                        : 83
+#      LUT4                        : 160
+#      LUT5                        : 217
+#      LUT6                        : 854
+#      MUXCY                       : 442
+#      MUXF7                       : 38
+#      VCC                         : 1
+#      XORCY                       : 400
+# FlipFlops/Latches                : 396
+#      FD                          : 59
+#      FDE                         : 42
+#      FDR                         : 242
+#      FDRE                        : 50
+#      FDS                         : 1
+#      FDSE                        : 2
+# RAMS                             : 1
+#      RAMB8BWER                   : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 7
+#      IBUF                        : 6
+#      OBUF                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             396  out of  18224     2%  
+ Number of Slice LUTs:                 1671  out of   9112    18%  
+    Number used as Logic:              1671  out of   9112    18%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1719
+   Number with an unused Flip Flop:    1323  out of   1719    76%  
+   Number with an unused LUT:            48  out of   1719     2%  
+   Number of fully used LUT-FF pairs:   348  out of   1719    20%  
+   Number of unique control sets:        19
+
+IO Utilization: 
+ Number of IOs:                          12
+ Number of bonded IOBs:                   8  out of    232     3%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 397   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 23.117ns (Maximum Frequency: 43.257MHz)
+   Minimum input arrival time before clock: 6.593ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 23.117ns (frequency: 43.257MHz)
+  Total number of paths / destination ports: 414349703875 / 564
+-------------------------------------------------------------------------
+Delay:               23.117ns (Levels of Logic = 21)
+  Source:            board_to_string_/cntr_14 (FF)
+  Destination:       board_to_string_/colloc_4 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: board_to_string_/cntr_14 to board_to_string_/colloc_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            20   0.447   1.093  board_to_string_/cntr_14 (board_to_string_/cntr_14)
+     LUT5:I4->O            6   0.205   0.745  board_to_string_/cntr[15]_PWR_10_o_div_4/o<11>1 (board_to_string_/cntr[15]_PWR_10_o_div_4/o<11>)
+     LUT5:I4->O            2   0.205   0.617  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0008_INV_770_o_SW2 (N140)
+     LUT6:I5->O            7   0.205   0.774  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0008_INV_770_o (board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0008_INV_770_o1)
+     LUT6:I5->O            3   0.205   0.879  board_to_string_/cntr[15]_PWR_10_o_div_4/Madd_a[15]_GND_11_o_add_17_OUT_lut<12>1_1 (board_to_string_/cntr[15]_PWR_10_o_div_4/Madd_a[15]_GND_11_o_add_17_OUT_lut<12>1)
+     LUT4:I1->O            7   0.205   0.774  board_to_string_/cntr[15]_PWR_10_o_div_4/o<8>1 (board_to_string_/cntr[15]_PWR_10_o_div_4/o<8>)
+     LUT6:I5->O           12   0.205   0.909  board_to_string_/cntr[15]_PWR_10_o_div_4/Madd_a[15]_GND_11_o_add_19_OUT_cy<12>1 (board_to_string_/cntr[15]_PWR_10_o_div_4/Madd_a[15]_GND_11_o_add_19_OUT_cy<12>)
+     LUT6:I5->O           14   0.205   0.958  board_to_string_/cntr[15]_PWR_10_o_div_4/a[14]_a[15]_MUX_7186_o1 (board_to_string_/cntr[15]_PWR_10_o_div_4/a[14]_a[15]_MUX_7186_o)
+     LUT6:I5->O            2   0.205   0.617  board_to_string_/cntr[15]_PWR_10_o_div_4/o<6>1_SW3 (N189)
+     LUT6:I5->O           19   0.205   1.072  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0012_INV_838_o111 (board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0012_INV_838_o11)
+     LUT6:I5->O           16   0.205   1.005  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0012_INV_838_o1_SW0 (N83)
+     LUT6:I5->O            1   0.205   0.827  board_to_string_/cntr[15]_PWR_10_o_mod_5/Mmux_a[9]_a[15]_MUX_7510_o1_1 (board_to_string_/cntr[15]_PWR_10_o_mod_5/Mmux_a[9]_a[15]_MUX_7510_o1)
+     LUT5:I1->O           11   0.203   0.883  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0014_INV_872_o21_SW0 (N385)
+     LUT6:I5->O           16   0.205   1.109  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0014_INV_872_o24 (board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0014_INV_872_o23)
+     LUT5:I3->O           11   0.203   0.883  board_to_string_/cntr[15]_PWR_10_o_mod_5/Mmux_a[7]_a[15]_MUX_7544_o11_SW2 (N578)
+     LUT6:I5->O           10   0.205   0.857  board_to_string_/cntr[15]_PWR_10_o_mod_5/Mmux_a[0]_a[15]_MUX_7551_o141 (board_to_string_/cntr[15]_PWR_10_o_mod_5/a[4]_a[15]_MUX_7547_o)
+     LUT6:I5->O            4   0.205   0.684  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0015_INV_889_o22_1 (board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0015_INV_889_o22)
+     LUT6:I5->O           14   0.205   0.958  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0015_INV_889_o23 (board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0015_INV_889_o)
+     LUT6:I5->O           10   0.205   0.961  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0016_INV_906_o22 (board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0016_INV_906_o21)
+     LUT6:I4->O           10   0.203   0.857  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0016_INV_906_o23 (board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0016_INV_906_o)
+     LUT6:I5->O            1   0.205   0.808  board_to_string_/cntr[15]_PWR_10_o_mod_5/BUS_0017_INV_923_o27_SW1 (N370)
+     LUT6:I3->O            1   0.205   0.000  board_to_string_/cntr[15]_PWR_10_o_mod_5/Mmux_o41 (board_to_string_/cntr[15]_PWR_10_o_mod_5_OUT<3>)
+     FDE:D                     0.102          board_to_string_/colloc_3
+    ----------------------------------------
+    Total                     23.117ns (4.848ns logic, 18.269ns route)
+                                       (21.0% logic, 79.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 362 / 330
+-------------------------------------------------------------------------
+Offset:              6.593ns (Levels of Logic = 5)
+  Source:            rst (PAD)
+  Destination:       gameController_/board_242 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to gameController_/board_242
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           122   1.222   2.039  rst_IBUF (rst_IBUF)
+     LUT6:I4->O            1   0.203   0.684  gameController_/board[319]_board[319]_mux_1993_OUT<82>1 (gameController_/board[319]_board[319]_mux_1993_OUT<82>1)
+     LUT5:I3->O            1   0.203   0.924  gameController_/board[319]_board[319]_mux_1993_OUT<82>2 (gameController_/board[319]_board[319]_mux_1993_OUT<82>2)
+     LUT6:I1->O            1   0.203   0.808  gameController_/board[319]_board[319]_mux_1993_OUT<82>3 (gameController_/board[319]_board[319]_mux_1993_OUT<82>3)
+     LUT6:I3->O            1   0.205   0.000  gameController_/board[319]_board[319]_mux_1993_OUT<82>4 (gameController_/board[319]_board[319]_mux_1993_OUT<82>)
+     FD:D                      0.102          gameController_/board_82
+    ----------------------------------------
+    Total                      6.593ns (2.138ns logic, 4.455ns route)
+                                       (32.4% logic, 67.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            uart_top_/uart_/tx_out (FF)
+  Destination:       RsTx (PAD)
+  Source Clock:      clk rising
+
+  Data Path: uart_top_/uart_/tx_out to RsTx
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  uart_top_/uart_/tx_out (uart_top_/uart_/tx_out)
+     OBUF:I->O                 2.571          RsTx_OBUF (RsTx)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   23.117|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 199.00 secs
+Total CPU time to Xst completion: 198.64 secs
+ 
 --> 
 
+Total memory usage is 439240 kilobytes
 
-Total memory usage is 404968 kilobytes
-
-Number of errors   :    1 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  460 (   0 filtered)
+Number of infos    :   19 (   0 filtered)
 

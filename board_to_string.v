@@ -27,7 +27,7 @@ module board_to_string(board, start, clk, print_nxt, score, char_out, done);
   output reg [7:0] char_out;
   output reg done = 1;
   
-  reg [40:0] cntr = 0;
+  reg [15:0] cntr = 0;
   reg [2:0] rw = 0;
   reg [2:0] cl = 0;
   reg [15:0] idxp = 0;
@@ -58,11 +58,12 @@ module board_to_string(board, start, clk, print_nxt, score, char_out, done);
   
   always @(posedge clk) begin
     if (start == 1) begin
-	   $display("Starting...");
+	   // $display("Starting...");
 	   done <= 0;
     end
 	 else begin
 		 if (done == 1) begin
+				  // $display("ENDED...");
 				  rw <= 0;
 				  cl <= 0;
 				  cntr <= 0;
@@ -108,34 +109,31 @@ module board_to_string(board, start, clk, print_nxt, score, char_out, done);
 					end
 					else if (ln == 18) begin
 					  if (colloc == 0) char_out <= "\n";
-					  if (colloc == 1) char_out <= "\r";
-					  if (colloc == 2) char_out <= "\n";
-					  if (colloc == 3) char_out <= "\r";
-					  if (colloc == 4) char_out <= "s";
-					  if (colloc == 5) char_out <= "c";
-					  if (colloc == 6) char_out <= "o";
-					  if (colloc == 7) char_out <= "r";
-					  if (colloc == 8) char_out <= "e";
-					  if (colloc == 9) char_out <= ":";
-					  if (colloc == 10) char_out <= " ";
-					  if (colloc == 11) char_out <= numToChar((score/1000000)%10);
-					  if (colloc == 12) char_out <= numToChar((score/100000)%10);
-					  if (colloc == 13) char_out <= numToChar((score/10000)%10);
-					  if (colloc == 14) char_out <= numToChar((score/1000)%10);
-					  if (colloc == 15) char_out <= numToChar((score/100)%10);
-					  if (colloc == 16) char_out <= numToChar((score/10)%10);
-					  if (colloc == 17) char_out <= numToChar((score/1)%10);
-					  if (colloc == 18) char_out <= "\n";
-					  if (colloc == 19) char_out <= "\r";
-					  if (colloc == 20) char_out <= "\n";
-					  if (colloc == 21) char_out <= "\r";
-					  if (colloc > 21) done <= 1;
+					  else if (colloc == 1) char_out <= "\r";
+					  else if (colloc == 2) char_out <= "\n";
+					  else if (colloc == 3) char_out <= "\r";
+					  else if (colloc == 4) char_out <= "s";
+					  else if (colloc == 5) char_out <= "c";
+					  else if (colloc == 6) char_out <= "o";
+					  else if (colloc == 7) char_out <= "r";
+					  else if (colloc == 8) char_out <= "e";
+					  else if (colloc == 9) char_out <= ":";
+					  else if (colloc == 10) char_out <= " ";
+					  else if (colloc == 11) char_out <= numToChar((score/1000000)%10);
+					  else if (colloc == 12) char_out <= numToChar((score/100000)%10);
+					  else if (colloc == 13) char_out <= numToChar((score/10000)%10);
+					  else if (colloc == 14) char_out <= numToChar((score/1000)%10);
+					  else if (colloc == 15) char_out <= numToChar((score/100)%10);
+					  else if (colloc == 16) char_out <= numToChar((score/10)%10);
+					  else if (colloc == 17) char_out <= numToChar((score/1)%10);
+					  else if (colloc == 18) char_out <= "\n";
+					  else if (colloc == 19) char_out <= "\r";
+					  else if (colloc == 20) char_out <= "\n";
+					  else if (colloc == 21) char_out <= "\r";
+					  else done <= 1;
 					end
 				end
-				$write("%c", char_out);
-				if (done == 1) begin
-				  $display("ENDED...");
-				end
+				// $write("%c", char_out);
 				cntr <= cntr + 1;
 			 end
 		 end

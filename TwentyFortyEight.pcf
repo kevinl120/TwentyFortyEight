@@ -1,0 +1,207 @@
+//! **************************************************************************
+// Written by: Map P.68d on Tue Dec 03 19:11:18 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "RsRx" LOCATE = SITE "N17" LEVEL 1;
+COMP "RsTx" LOCATE = SITE "N18" LEVEL 1;
+COMP "btnd" LOCATE = SITE "C9" LEVEL 1;
+COMP "btnl" LOCATE = SITE "C4" LEVEL 1;
+COMP "btnr" LOCATE = SITE "D9" LEVEL 1;
+COMP "btns" LOCATE = SITE "B8" LEVEL 1;
+COMP "btnu" LOCATE = SITE "A8" LEVEL 1;
+PIN uart_top_/tfifo_/Mram_mem_pins<20> = BEL "uart_top_/tfifo_/Mram_mem"
+        PINNAME CLKAWRCLK;
+PIN uart_top_/tfifo_/Mram_mem_pins<21> = BEL "uart_top_/tfifo_/Mram_mem"
+        PINNAME CLKBRDCLK;
+TIMEGRP sys_clk_pin = BEL "debouncer5_/pressed" BEL "debouncer4_/pressed" BEL
+        "debouncer3_/pressed" BEL "debouncer2_/pressed" BEL
+        "debouncer1_/pressed" BEL "debouncer4_/counter_0" BEL
+        "debouncer4_/counter_1" BEL "debouncer4_/counter_2" BEL
+        "debouncer4_/counter_3" BEL "debouncer4_/counter_4" BEL
+        "debouncer4_/counter_5" BEL "debouncer4_/counter_6" BEL
+        "debouncer4_/counter_7" BEL "debouncer4_/counter_8" BEL
+        "debouncer4_/counter_9" BEL "debouncer4_/counter_10" BEL
+        "debouncer4_/counter_11" BEL "debouncer4_/counter_12" BEL
+        "debouncer4_/counter_13" BEL "debouncer4_/counter_14" BEL
+        "debouncer4_/counter_15" BEL "debouncer4_/counter_16" BEL
+        "debouncer4_/counter_17" BEL "debouncer4_/counter_18" BEL
+        "debouncer4_/counter_19" BEL "debouncer4_/counter_20" BEL
+        "debouncer4_/counter_21" BEL "debouncer4_/counter_22" BEL
+        "debouncer4_/counter_23" BEL "debouncer4_/counter_24" BEL
+        "debouncer4_/counter_25" BEL "debouncer4_/counter_26" BEL
+        "debouncer4_/counter_27" BEL "debouncer4_/counter_28" BEL
+        "debouncer4_/counter_29" BEL "debouncer4_/counter_30" BEL
+        "debouncer4_/counter_31" BEL "debouncer4_/counter_32" BEL
+        "debouncer4_/counter_33" BEL "debouncer4_/counter_34" BEL
+        "debouncer4_/counter_35" BEL "debouncer4_/counter_36" BEL
+        "debouncer4_/counter_37" BEL "debouncer4_/counter_38" BEL
+        "debouncer4_/counter_39" BEL "debouncer4_/counter_40" BEL
+        "debouncer5_/counter_0" BEL "debouncer5_/counter_1" BEL
+        "debouncer5_/counter_2" BEL "debouncer5_/counter_3" BEL
+        "debouncer5_/counter_4" BEL "debouncer5_/counter_5" BEL
+        "debouncer5_/counter_6" BEL "debouncer5_/counter_7" BEL
+        "debouncer5_/counter_8" BEL "debouncer5_/counter_9" BEL
+        "debouncer5_/counter_10" BEL "debouncer5_/counter_11" BEL
+        "debouncer5_/counter_12" BEL "debouncer5_/counter_13" BEL
+        "debouncer5_/counter_14" BEL "debouncer5_/counter_15" BEL
+        "debouncer5_/counter_16" BEL "debouncer5_/counter_17" BEL
+        "debouncer5_/counter_18" BEL "debouncer5_/counter_19" BEL
+        "debouncer5_/counter_20" BEL "debouncer5_/counter_21" BEL
+        "debouncer5_/counter_22" BEL "debouncer5_/counter_23" BEL
+        "debouncer5_/counter_24" BEL "debouncer5_/counter_25" BEL
+        "debouncer5_/counter_26" BEL "debouncer5_/counter_27" BEL
+        "debouncer5_/counter_28" BEL "debouncer5_/counter_29" BEL
+        "debouncer5_/counter_30" BEL "debouncer5_/counter_31" BEL
+        "debouncer5_/counter_32" BEL "debouncer5_/counter_33" BEL
+        "debouncer5_/counter_34" BEL "debouncer5_/counter_35" BEL
+        "debouncer5_/counter_36" BEL "debouncer5_/counter_37" BEL
+        "debouncer5_/counter_38" BEL "debouncer5_/counter_39" BEL
+        "debouncer5_/counter_40" BEL "debouncer1_/counter_0" BEL
+        "debouncer1_/counter_1" BEL "debouncer1_/counter_2" BEL
+        "debouncer1_/counter_3" BEL "debouncer1_/counter_4" BEL
+        "debouncer1_/counter_5" BEL "debouncer1_/counter_6" BEL
+        "debouncer1_/counter_7" BEL "debouncer1_/counter_8" BEL
+        "debouncer1_/counter_9" BEL "debouncer1_/counter_10" BEL
+        "debouncer1_/counter_11" BEL "debouncer1_/counter_12" BEL
+        "debouncer1_/counter_13" BEL "debouncer1_/counter_14" BEL
+        "debouncer1_/counter_15" BEL "debouncer1_/counter_16" BEL
+        "debouncer1_/counter_17" BEL "debouncer1_/counter_18" BEL
+        "debouncer1_/counter_19" BEL "debouncer1_/counter_20" BEL
+        "debouncer1_/counter_21" BEL "debouncer1_/counter_22" BEL
+        "debouncer1_/counter_23" BEL "debouncer1_/counter_24" BEL
+        "debouncer1_/counter_25" BEL "debouncer1_/counter_26" BEL
+        "debouncer1_/counter_27" BEL "debouncer1_/counter_28" BEL
+        "debouncer1_/counter_29" BEL "debouncer1_/counter_30" BEL
+        "debouncer1_/counter_31" BEL "debouncer1_/counter_32" BEL
+        "debouncer1_/counter_33" BEL "debouncer1_/counter_34" BEL
+        "debouncer1_/counter_35" BEL "debouncer1_/counter_36" BEL
+        "debouncer1_/counter_37" BEL "debouncer1_/counter_38" BEL
+        "debouncer1_/counter_39" BEL "debouncer1_/counter_40" BEL
+        "debouncer2_/counter_0" BEL "debouncer2_/counter_1" BEL
+        "debouncer2_/counter_2" BEL "debouncer2_/counter_3" BEL
+        "debouncer2_/counter_4" BEL "debouncer2_/counter_5" BEL
+        "debouncer2_/counter_6" BEL "debouncer2_/counter_7" BEL
+        "debouncer2_/counter_8" BEL "debouncer2_/counter_9" BEL
+        "debouncer2_/counter_10" BEL "debouncer2_/counter_11" BEL
+        "debouncer2_/counter_12" BEL "debouncer2_/counter_13" BEL
+        "debouncer2_/counter_14" BEL "debouncer2_/counter_15" BEL
+        "debouncer2_/counter_16" BEL "debouncer2_/counter_17" BEL
+        "debouncer2_/counter_18" BEL "debouncer2_/counter_19" BEL
+        "debouncer2_/counter_20" BEL "debouncer2_/counter_21" BEL
+        "debouncer2_/counter_22" BEL "debouncer2_/counter_23" BEL
+        "debouncer2_/counter_24" BEL "debouncer2_/counter_25" BEL
+        "debouncer2_/counter_26" BEL "debouncer2_/counter_27" BEL
+        "debouncer2_/counter_28" BEL "debouncer2_/counter_29" BEL
+        "debouncer2_/counter_30" BEL "debouncer2_/counter_31" BEL
+        "debouncer2_/counter_32" BEL "debouncer2_/counter_33" BEL
+        "debouncer2_/counter_34" BEL "debouncer2_/counter_35" BEL
+        "debouncer2_/counter_36" BEL "debouncer2_/counter_37" BEL
+        "debouncer2_/counter_38" BEL "debouncer2_/counter_39" BEL
+        "debouncer2_/counter_40" BEL "debouncer3_/counter_0" BEL
+        "debouncer3_/counter_1" BEL "debouncer3_/counter_2" BEL
+        "debouncer3_/counter_3" BEL "debouncer3_/counter_4" BEL
+        "debouncer3_/counter_5" BEL "debouncer3_/counter_6" BEL
+        "debouncer3_/counter_7" BEL "debouncer3_/counter_8" BEL
+        "debouncer3_/counter_9" BEL "debouncer3_/counter_10" BEL
+        "debouncer3_/counter_11" BEL "debouncer3_/counter_12" BEL
+        "debouncer3_/counter_13" BEL "debouncer3_/counter_14" BEL
+        "debouncer3_/counter_15" BEL "debouncer3_/counter_16" BEL
+        "debouncer3_/counter_17" BEL "debouncer3_/counter_18" BEL
+        "debouncer3_/counter_19" BEL "debouncer3_/counter_20" BEL
+        "debouncer3_/counter_21" BEL "debouncer3_/counter_22" BEL
+        "debouncer3_/counter_23" BEL "debouncer3_/counter_24" BEL
+        "debouncer3_/counter_25" BEL "debouncer3_/counter_26" BEL
+        "debouncer3_/counter_27" BEL "debouncer3_/counter_28" BEL
+        "debouncer3_/counter_29" BEL "debouncer3_/counter_30" BEL
+        "debouncer3_/counter_31" BEL "debouncer3_/counter_32" BEL
+        "debouncer3_/counter_33" BEL "debouncer3_/counter_34" BEL
+        "debouncer3_/counter_35" BEL "debouncer3_/counter_36" BEL
+        "debouncer3_/counter_37" BEL "debouncer3_/counter_38" BEL
+        "debouncer3_/counter_39" BEL "debouncer3_/counter_40" BEL
+        "board_to_string_/cntr_40" BEL "board_to_string_/cntr_39" BEL
+        "board_to_string_/cntr_38" BEL "board_to_string_/cntr_37" BEL
+        "board_to_string_/cntr_36" BEL "board_to_string_/cntr_35" BEL
+        "board_to_string_/cntr_34" BEL "board_to_string_/cntr_33" BEL
+        "board_to_string_/cntr_32" BEL "board_to_string_/cntr_31" BEL
+        "board_to_string_/cntr_30" BEL "board_to_string_/cntr_29" BEL
+        "board_to_string_/cntr_28" BEL "board_to_string_/cntr_27" BEL
+        "board_to_string_/cntr_26" BEL "board_to_string_/cntr_25" BEL
+        "board_to_string_/cntr_24" BEL "board_to_string_/cntr_23" BEL
+        "board_to_string_/cntr_22" BEL "board_to_string_/cntr_21" BEL
+        "board_to_string_/cntr_20" BEL "board_to_string_/cntr_19" BEL
+        "board_to_string_/cntr_18" BEL "board_to_string_/cntr_17" BEL
+        "board_to_string_/cntr_16" BEL "board_to_string_/cntr_15" BEL
+        "board_to_string_/cntr_14" BEL "board_to_string_/cntr_13" BEL
+        "board_to_string_/cntr_12" BEL "board_to_string_/cntr_11" BEL
+        "board_to_string_/cntr_10" BEL "board_to_string_/cntr_9" BEL
+        "board_to_string_/cntr_8" BEL "board_to_string_/cntr_7" BEL
+        "board_to_string_/cntr_6" BEL "board_to_string_/cntr_5" BEL
+        "board_to_string_/cntr_4" BEL "board_to_string_/cntr_3" BEL
+        "board_to_string_/cntr_2" BEL "board_to_string_/cntr_1" BEL
+        "board_to_string_/cntr_0" BEL "board_to_string_/rw_1" BEL
+        "board_to_string_/rw_0" BEL "board_to_string_/char_out_6" BEL
+        "board_to_string_/char_out_5" BEL "board_to_string_/char_out_4" BEL
+        "board_to_string_/char_out_3" BEL "board_to_string_/char_out_2" BEL
+        "board_to_string_/char_out_1" BEL "board_to_string_/char_out_0" BEL
+        "board_to_string_/idxp_8" BEL "board_to_string_/idxp_7" BEL
+        "board_to_string_/idxp_6" BEL "board_to_string_/idxp_5" BEL
+        "board_to_string_/idxp_4" BEL "board_to_string_/idxp_3" BEL
+        "board_to_string_/idxp_2" BEL "board_to_string_/idxp_1" BEL
+        "board_to_string_/idxp_0" BEL "board_to_string_/cl_1" BEL
+        "board_to_string_/cl_0" BEL "board_to_string_/ln_5" BEL
+        "board_to_string_/ln_4" BEL "board_to_string_/ln_3" BEL
+        "board_to_string_/ln_2" BEL "board_to_string_/ln_1" BEL
+        "board_to_string_/ln_0" BEL "board_to_string_/colloc_4" BEL
+        "board_to_string_/colloc_3" BEL "board_to_string_/colloc_2" BEL
+        "board_to_string_/colloc_1" BEL "board_to_string_/colloc_0" BEL
+        "uart_top_/state_0" BEL "uart_top_/tfifo_in_6" BEL
+        "uart_top_/tfifo_in_5" BEL "uart_top_/tfifo_in_4" BEL
+        "uart_top_/tfifo_in_3" BEL "uart_top_/tfifo_in_2" BEL
+        "uart_top_/tfifo_in_1" BEL "uart_top_/tfifo_in_0" BEL
+        "uart_top_/tx_data_6" BEL "uart_top_/tx_data_5" BEL
+        "uart_top_/tx_data_4" BEL "uart_top_/tx_data_3" BEL
+        "uart_top_/tx_data_2" BEL "uart_top_/tx_data_1" BEL
+        "uart_top_/tx_data_0" BEL "uart_top_/tfifo_rd_z" BEL
+        "uart_top_/uart_/tx_bits_remaining_3" BEL
+        "uart_top_/uart_/tx_bits_remaining_2" BEL
+        "uart_top_/uart_/tx_bits_remaining_1" BEL
+        "uart_top_/uart_/tx_bits_remaining_0" BEL "uart_top_/uart_/tx_out" BEL
+        "uart_top_/uart_/tx_countdown_5" BEL "uart_top_/uart_/tx_countdown_4"
+        BEL "uart_top_/uart_/tx_countdown_3" BEL
+        "uart_top_/uart_/tx_countdown_2" BEL "uart_top_/uart_/tx_countdown_1"
+        BEL "uart_top_/uart_/tx_countdown_0" BEL
+        "uart_top_/uart_/tx_clk_divider_4" BEL
+        "uart_top_/uart_/tx_clk_divider_3" BEL
+        "uart_top_/uart_/tx_clk_divider_2" BEL
+        "uart_top_/uart_/tx_clk_divider_1" BEL
+        "uart_top_/uart_/tx_clk_divider_0" BEL "uart_top_/uart_/tx_state_1"
+        BEL "uart_top_/uart_/tx_state_0" BEL "uart_top_/uart_/tx_data_7" BEL
+        "uart_top_/uart_/tx_data_6" BEL "uart_top_/uart_/tx_data_5" BEL
+        "uart_top_/uart_/tx_data_4" BEL "uart_top_/uart_/tx_data_3" BEL
+        "uart_top_/uart_/tx_data_2" BEL "uart_top_/uart_/tx_data_1" BEL
+        "uart_top_/uart_/tx_data_0" BEL "uart_top_/tfifo_/rp_9" BEL
+        "uart_top_/tfifo_/rp_8" BEL "uart_top_/tfifo_/rp_7" BEL
+        "uart_top_/tfifo_/rp_6" BEL "uart_top_/tfifo_/rp_5" BEL
+        "uart_top_/tfifo_/rp_4" BEL "uart_top_/tfifo_/rp_3" BEL
+        "uart_top_/tfifo_/rp_2" BEL "uart_top_/tfifo_/rp_1" BEL
+        "uart_top_/tfifo_/rp_0" BEL "uart_top_/tfifo_/wp_9" BEL
+        "uart_top_/tfifo_/wp_8" BEL "uart_top_/tfifo_/wp_7" BEL
+        "uart_top_/tfifo_/wp_6" BEL "uart_top_/tfifo_/wp_5" BEL
+        "uart_top_/tfifo_/wp_4" BEL "uart_top_/tfifo_/wp_3" BEL
+        "uart_top_/tfifo_/wp_2" BEL "uart_top_/tfifo_/wp_1" BEL
+        "uart_top_/tfifo_/wp_0" BEL "uart_top_/tfifo_/fifo_empty" BEL
+        "uart_top_/tfifo_/fifo_full" BEL "uart_top_/tfifo_/fifo_cnt_9" BEL
+        "uart_top_/tfifo_/fifo_cnt_8" BEL "uart_top_/tfifo_/fifo_cnt_7" BEL
+        "uart_top_/tfifo_/fifo_cnt_6" BEL "uart_top_/tfifo_/fifo_cnt_5" BEL
+        "uart_top_/tfifo_/fifo_cnt_4" BEL "uart_top_/tfifo_/fifo_cnt_3" BEL
+        "uart_top_/tfifo_/fifo_cnt_2" BEL "uart_top_/tfifo_/fifo_cnt_1" BEL
+        "uart_top_/tfifo_/fifo_cnt_0" BEL "board_to_string_/done" BEL
+        "board_to_string_/cntr_32_1" BEL "board_to_string_/cntr_33_1" BEL
+        "board_to_string_/cntr_31_1" BEL "board_to_string_/cntr_38_1" BEL
+        "clk_BUFGP/BUFG" PIN "uart_top_/tfifo_/Mram_mem_pins<20>" PIN
+        "uart_top_/tfifo_/Mram_mem_pins<21>";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

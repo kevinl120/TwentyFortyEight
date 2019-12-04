@@ -49,9 +49,9 @@ module board_to_string_test;
 		processing = 1;
 		clk = 0;
 		print_nxt = 0;
-		start = 1;
+		start = 0;
 		score = 102444;
-
+      done = 1;
 		// Wait 100 ns for global reset to finish
 		#1000;
         
@@ -65,7 +65,9 @@ module board_to_string_test;
 	  clk <= ~clk;
 	  print_nxt <= ~print_nxt;
 	  if(ctnr == 2000) $finish;
-	  if (ctnr >=1) start <= 0;
+	  if (ctnr == 3) start <= 1;
+	  if (ctnr == 4) start <= 1;
+	  if (ctnr > 4) start <= 0;
 	end
       
 endmodule
