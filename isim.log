@@ -106,4 +106,3 @@ reset
       0       0       0       0
 score:       0
 Stopped at time : 61370 ns : File "/home/ise/VirtualBox_Shared/TwentyFortyEight/tb.v" Line 100
-# exit 0
