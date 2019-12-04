@@ -30,19 +30,19 @@ Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH
 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 4045 paths analyzed, 832 endpoints analyzed, 0 failing endpoints
- 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   3.830ns.
+ 42326674375206762000000 paths analyzed, 3542 endpoints analyzed, 1394 failing endpoints
+ 1394 timing errors detected. (1394 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  46.054ns.
 --------------------------------------------------------------------------------
 
-Paths for end point PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_9 (SLICE_X20Y22.CIN), 94 paths
+Paths for end point board_to_string_/char_out_2 (SLICE_X31Y53.B5), 2564296958621004100000 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     6.170ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_4 (FF)
-  Destination:          PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_9 (FF)
+Slack (setup path):     -36.054ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               board_to_string_/rw_1 (FF)
+  Destination:          board_to_string_/char_out_2 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      3.784ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.011ns (0.145 - 0.156)
+  Data Path Delay:      46.035ns (Levels of Logic = 40)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.016ns (0.367 - 0.351)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -53,40 +53,152 @@ Slack (setup path):     6.170ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_4 to PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_9
+  Maximum Data Path at Slow Process Corner: board_to_string_/rw_1 to board_to_string_/char_out_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y21.AQ      Tcko                  0.408   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_4
-    SLICE_X21Y21.B3      net (fanout=2)        0.929   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<4>
-    SLICE_X21Y21.B       Tilo                  0.259   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o_inv
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o<9>_SW0
-    SLICE_X22Y22.C4      net (fanout=10)       0.510   N6
-    SLICE_X22Y22.C       Tilo                  0.204   PmodJSTK_Dir_/dir_2
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_lut<0>
-    SLICE_X20Y20.A3      net (fanout=1)        0.668   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_lut<0>
-    SLICE_X20Y20.COUT    Topcya                0.395   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<3>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_lut<0>_rt
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<3>
-    SLICE_X20Y21.CIN     net (fanout=1)        0.003   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<3>
-    SLICE_X20Y21.COUT    Tbyp                  0.076   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<7>
-    SLICE_X20Y22.CIN     net (fanout=1)        0.003   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<7>
-    SLICE_X20Y22.CLK     Tcinck                0.329   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<9>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_xor<9>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_9
+    SLICE_X20Y42.BQ      Tcko                  0.408   board_to_string_/rw<1>
+                                                       board_to_string_/rw_1
+    SLICE_X22Y38.D2      net (fanout=4)        0.889   board_to_string_/rw<1>
+    SLICE_X22Y38.DMUX    Topdd                 0.393   board_to_string_/cl_0_1
+                                                       board_to_string_/rw<1>_rt
+                                                       board_to_string_/Mmult_n01761_Madd1_cy<7>
+    SLICE_X11Y29.A6      net (fanout=143)      1.479   board_to_string_/n0176<7>1
+    SLICE_X11Y29.A       Tilo                  0.259   gameController_/board[319]_board[319]_mux_1993_OUT<316>7
+                                                       board_to_string_/Sh27951110
+    SLICE_X19Y36.D5      net (fanout=1)        1.183   board_to_string_/Sh27951110
+    SLICE_X19Y36.D       Tilo                  0.259   board_to_string_/Sh279511
+                                                       board_to_string_/Sh27951121
+    SLICE_X19Y36.C6      net (fanout=6)        0.148   board_to_string_/Sh279511
+    SLICE_X19Y36.C       Tilo                  0.259   board_to_string_/Sh279511
+                                                       board_to_string_/Sh27958_1
+    SLICE_X4Y39.C3       net (fanout=6)        1.374   board_to_string_/Sh27958
+    SLICE_X4Y39.C        Tilo                  0.205   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0009_INV_1679_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[14]_a[19]_MUX_23685_o11
+    SLICE_X3Y41.A4       net (fanout=14)       0.934   board_to_string_/board[319]_PWR_18_o_mod_37/a[14]_a[19]_MUX_23685_o
+    SLICE_X3Y41.A        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37/a[13]_a[19]_MUX_23706_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0009_INV_1679_o11_1
+    SLICE_X9Y37.C5       net (fanout=7)        0.960   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0009_INV_1679_o11
+    SLICE_X9Y37.C        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_div_36/a[14]_a[19]_MUX_24658_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[14]_a[19]_MUX_23705_o11
+    SLICE_X4Y42.DX       net (fanout=3)        0.898   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_lut<14>
+    SLICE_X4Y42.COUT     Tdxcy                 0.097   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+    SLICE_X4Y43.CIN      net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+    SLICE_X4Y43.CMUX     Tcinc                 0.272   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<18>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<18>
+    SLICE_X3Y39.A6       net (fanout=7)        0.695   board_to_string_/board[319]_PWR_18_o_mod_37/a[19]_GND_26_o_add_19_OUT<17>
+    SLICE_X3Y39.A        Tilo                  0.259   N4956
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[17]_a[19]_MUX_23722_o11
+    SLICE_X1Y58.D3       net (fanout=30)       1.687   board_to_string_/board[319]_PWR_18_o_mod_37/a[17]_a[19]_MUX_23722_o
+    SLICE_X1Y58.D        Tilo                  0.259   N4951
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0011_INV_1721_o2_SW3_SW1
+    SLICE_X2Y45.D6       net (fanout=1)        0.989   N4951
+    SLICE_X2Y45.COUT     Topcyd                0.261   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[12]_a[19]_MUX_23747_o111
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+    SLICE_X2Y46.CIN      net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+    SLICE_X2Y46.BMUX     Tcinb                 0.292   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<16>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<16>
+    SLICE_X3Y49.B5       net (fanout=6)        0.591   board_to_string_/board[319]_PWR_18_o_mod_37/a[19]_GND_26_o_add_23_OUT<14>
+    SLICE_X3Y49.B        Tilo                  0.259   N1443
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[14]_a[19]_MUX_23765_o11
+    SLICE_X4Y47.C4       net (fanout=12)       0.998   board_to_string_/board[319]_PWR_18_o_mod_37/a[14]_a[19]_MUX_23765_o
+    SLICE_X4Y47.C        Tilo                  0.205   N4207
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0013_INV_1763_o2_SW0_SW2
+    SLICE_X1Y39.A5       net (fanout=1)        1.095   N5261
+    SLICE_X1Y39.A        Tilo                  0.259   N4064
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0014_INV_1784_o21
+    SLICE_X5Y50.B5       net (fanout=6)        1.383   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0014_INV_1784_o2
+    SLICE_X5Y50.B        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0015_INV_1805_o2
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0014_INV_1784_o24_SW11_SW0
+    SLICE_X4Y49.D6       net (fanout=16)       0.330   N3021
+    SLICE_X4Y49.D        Tilo                  0.205   board_to_string_/board[319]_PWR_18_o_mod_37/a[8]_a[19]_MUX_23811_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[8]_a[19]_MUX_23811_o11
+    SLICE_X4Y50.CX       net (fanout=9)        0.563   board_to_string_/board[319]_PWR_18_o_mod_37/a[8]_a[19]_MUX_23811_o
+    SLICE_X4Y50.COUT     Tcxcy                 0.107   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<9>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<9>
+    SLICE_X4Y51.CIN      net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<9>
+    SLICE_X4Y51.BMUX     Tcinb                 0.260   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<13>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<13>
+    SLICE_X5Y54.A4       net (fanout=12)       0.690   board_to_string_/board[319]_PWR_18_o_mod_37/a[19]_GND_26_o_add_29_OUT<11>
+    SLICE_X5Y54.A        Tilo                  0.259   N3436
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[8]_a[19]_MUX_23851_o11_SW0_SW1_1
+    SLICE_X3Y28.D5       net (fanout=17)       2.200   board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[8]_a[19]_MUX_23851_o11_SW0_SW1
+    SLICE_X3Y28.D        Tilo                  0.259   N3462
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[15]_a[19]_MUX_23844_o11_SW0_SW2
+    SLICE_X3Y53.C5       net (fanout=1)        1.689   N3462
+    SLICE_X3Y53.C        Tilo                  0.259   N3463
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[15]_a[19]_MUX_23844_o11
+    SLICE_X8Y55.D5       net (fanout=4)        0.934   board_to_string_/board[319]_PWR_18_o_mod_37/a[15]_a[19]_MUX_23844_o
+    SLICE_X8Y55.COUT     Topcyd                0.281   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_lutdi3
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<3>
+    SLICE_X8Y56.CIN      net (fanout=1)        0.082   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<3>
+    SLICE_X8Y56.AMUX     Tcina                 0.194   gameController_/counter[3]_Decoder_1666_OUT<128>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<4>
+    SLICE_X19Y47.B4      net (fanout=62)       1.588   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0017_INV_1847_o
+    SLICE_X19Y47.B       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[10]_a[19]_MUX_23929_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[13]_a[19]_MUX_23866_o11
+    SLICE_X10Y50.D5      net (fanout=3)        0.974   board_to_string_/board[319]_PWR_18_o_mod_37/a[13]_a[19]_MUX_23866_o
+    SLICE_X10Y50.COUT    Topcyd                0.274   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_lutdi3
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<3>
+    SLICE_X10Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<3>
+    SLICE_X10Y51.AMUX    Tcina                 0.212   board_to_string_/board[319]_PWR_18_o_mod_37/a[18]_a[19]_MUX_23861_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<4>
+    SLICE_X22Y63.B4      net (fanout=64)       1.633   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0018_INV_1868_o
+    SLICE_X22Y63.B       Tilo                  0.203   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23892_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[7]_a[19]_MUX_23892_o11
+    SLICE_X12Y51.C3      net (fanout=2)        1.538   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23892_o
+    SLICE_X12Y51.COUT    Topcyc                0.295   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<3>
+    SLICE_X12Y52.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<3>
+    SLICE_X12Y52.AMUX    Tcina                 0.194   board_to_string_/board[319]_PWR_18_o_div_31/a[11]_a[19]_MUX_24271_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<4>
+    SLICE_X3Y54.A6       net (fanout=61)       1.036   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0019_INV_1889_o
+    SLICE_X3Y54.A        Tilo                  0.259   N4498
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[0]_a[19]_MUX_23919_o131
+    SLICE_X14Y50.B5      net (fanout=3)        1.354   board_to_string_/board[319]_PWR_18_o_mod_37/a[3]_a[19]_MUX_23916_o
+    SLICE_X14Y50.COUT    Topcyb                0.380   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_lut<1>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_cy<3>
+    SLICE_X14Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_cy<3>
+    SLICE_X14Y51.AMUX    Tcina                 0.212   N2455
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT13_SW4_SW2_SW0_cy
+    SLICE_X22Y63.A5      net (fanout=40)       1.540   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0020_INV_1910_o
+    SLICE_X22Y63.A       Tilo                  0.203   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23892_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[7]_a[19]_MUX_23932_o11
+    SLICE_X16Y50.C3      net (fanout=1)        1.556   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23932_o
+    SLICE_X16Y50.COUT    Topcyc                0.295   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<3>
+    SLICE_X16Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<3>
+    SLICE_X16Y51.AMUX    Tcina                 0.194   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23872_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<4>
+    SLICE_X21Y44.D6      net (fanout=13)       0.932   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0021_INV_1931_o
+    SLICE_X21Y44.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37_OUT<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_o31
+    SLICE_X20Y52.C6      net (fanout=1)        0.717   board_to_string_/board[319]_PWR_18_o_mod_37_OUT<2>
+    SLICE_X20Y52.CMUX    Tilo                  0.343   board_to_string_/board[319]_PWR_18_o_div_31/a[18]_a[19]_MUX_24304_o
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT95_SW0_SW0_G
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT95_SW0_SW0
+    SLICE_X31Y53.B5      net (fanout=1)        0.904   N4648
+    SLICE_X31Y53.CLK     Tas                   0.322   board_to_string_/char_out<3>
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT97
+                                                       board_to_string_/char_out_2
     -------------------------------------------------  ---------------------------
-    Total                                      3.784ns (1.671ns logic, 2.113ns route)
-                                                       (44.2% logic, 55.8% route)
+    Total                                     46.035ns (10.451ns logic, 35.584ns route)
+                                                       (22.7% logic, 77.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     6.352ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_4 (FF)
-  Destination:          PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_9 (FF)
+Slack (setup path):     -36.053ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               board_to_string_/rw_1 (FF)
+  Destination:          board_to_string_/char_out_2 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      3.602ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.011ns (0.145 - 0.156)
+  Data Path Delay:      46.034ns (Levels of Logic = 40)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.016ns (0.367 - 0.351)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -97,39 +209,152 @@ Slack (setup path):     6.352ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_4 to PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_9
+  Maximum Data Path at Slow Process Corner: board_to_string_/rw_1 to board_to_string_/char_out_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y21.AQ      Tcko                  0.408   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_4
-    SLICE_X21Y21.B3      net (fanout=2)        0.929   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<4>
-    SLICE_X21Y21.B       Tilo                  0.259   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o_inv
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o<9>_SW0
-    SLICE_X21Y21.D2      net (fanout=10)       0.456   N6
-    SLICE_X21Y21.D       Tilo                  0.259   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o_inv
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o_inv1
-    SLICE_X20Y20.AX      net (fanout=1)        0.621   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o_inv
-    SLICE_X20Y20.COUT    Taxcy                 0.259   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<3>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<3>
-    SLICE_X20Y21.CIN     net (fanout=1)        0.003   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<3>
-    SLICE_X20Y21.COUT    Tbyp                  0.076   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<7>
-    SLICE_X20Y22.CIN     net (fanout=1)        0.003   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<7>
-    SLICE_X20Y22.CLK     Tcinck                0.329   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<9>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_xor<9>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_9
+    SLICE_X20Y42.BQ      Tcko                  0.408   board_to_string_/rw<1>
+                                                       board_to_string_/rw_1
+    SLICE_X22Y38.D2      net (fanout=4)        0.889   board_to_string_/rw<1>
+    SLICE_X22Y38.DMUX    Topdd                 0.393   board_to_string_/cl_0_1
+                                                       board_to_string_/rw<1>_rt
+                                                       board_to_string_/Mmult_n01761_Madd1_cy<7>
+    SLICE_X23Y28.A1      net (fanout=143)      1.280   board_to_string_/n0176<7>1
+    SLICE_X23Y28.A       Tilo                  0.259   board_to_string_/Sh11611
+                                                       board_to_string_/Sh278122
+    SLICE_X19Y37.D4      net (fanout=2)        1.112   board_to_string_/Sh278122
+    SLICE_X19Y37.D       Tilo                  0.259   board_to_string_/Sh278126
+                                                       board_to_string_/Sh278126
+    SLICE_X15Y36.B3      net (fanout=6)        0.907   board_to_string_/Sh278126
+    SLICE_X15Y36.B       Tilo                  0.259   board_to_string_/Sh279582
+                                                       board_to_string_/Sh27973_3
+    SLICE_X11Y36.D4      net (fanout=4)        0.470   board_to_string_/Sh279732
+    SLICE_X11Y36.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_17_OUT_Madd_lut<15>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[15]_a[19]_MUX_23684_o112
+    SLICE_X3Y41.A3       net (fanout=13)       1.294   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_17_OUT_Madd_lut<15>
+    SLICE_X3Y41.A        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37/a[13]_a[19]_MUX_23706_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0009_INV_1679_o11_1
+    SLICE_X9Y37.C5       net (fanout=7)        0.960   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0009_INV_1679_o11
+    SLICE_X9Y37.C        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_div_36/a[14]_a[19]_MUX_24658_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[14]_a[19]_MUX_23705_o11
+    SLICE_X4Y42.DX       net (fanout=3)        0.898   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_lut<14>
+    SLICE_X4Y42.COUT     Tdxcy                 0.097   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+    SLICE_X4Y43.CIN      net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+    SLICE_X4Y43.CMUX     Tcinc                 0.272   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<18>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<18>
+    SLICE_X3Y39.A6       net (fanout=7)        0.695   board_to_string_/board[319]_PWR_18_o_mod_37/a[19]_GND_26_o_add_19_OUT<17>
+    SLICE_X3Y39.A        Tilo                  0.259   N4956
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[17]_a[19]_MUX_23722_o11
+    SLICE_X1Y58.D3       net (fanout=30)       1.687   board_to_string_/board[319]_PWR_18_o_mod_37/a[17]_a[19]_MUX_23722_o
+    SLICE_X1Y58.D        Tilo                  0.259   N4951
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0011_INV_1721_o2_SW3_SW1
+    SLICE_X2Y45.D6       net (fanout=1)        0.989   N4951
+    SLICE_X2Y45.COUT     Topcyd                0.261   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[12]_a[19]_MUX_23747_o111
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+    SLICE_X2Y46.CIN      net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+    SLICE_X2Y46.BMUX     Tcinb                 0.292   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<16>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<16>
+    SLICE_X3Y49.B5       net (fanout=6)        0.591   board_to_string_/board[319]_PWR_18_o_mod_37/a[19]_GND_26_o_add_23_OUT<14>
+    SLICE_X3Y49.B        Tilo                  0.259   N1443
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[14]_a[19]_MUX_23765_o11
+    SLICE_X4Y47.C4       net (fanout=12)       0.998   board_to_string_/board[319]_PWR_18_o_mod_37/a[14]_a[19]_MUX_23765_o
+    SLICE_X4Y47.C        Tilo                  0.205   N4207
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0013_INV_1763_o2_SW0_SW2
+    SLICE_X1Y39.A5       net (fanout=1)        1.095   N5261
+    SLICE_X1Y39.A        Tilo                  0.259   N4064
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0014_INV_1784_o21
+    SLICE_X5Y50.B5       net (fanout=6)        1.383   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0014_INV_1784_o2
+    SLICE_X5Y50.B        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0015_INV_1805_o2
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0014_INV_1784_o24_SW11_SW0
+    SLICE_X4Y49.D6       net (fanout=16)       0.330   N3021
+    SLICE_X4Y49.D        Tilo                  0.205   board_to_string_/board[319]_PWR_18_o_mod_37/a[8]_a[19]_MUX_23811_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[8]_a[19]_MUX_23811_o11
+    SLICE_X4Y50.CX       net (fanout=9)        0.563   board_to_string_/board[319]_PWR_18_o_mod_37/a[8]_a[19]_MUX_23811_o
+    SLICE_X4Y50.COUT     Tcxcy                 0.107   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<9>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<9>
+    SLICE_X4Y51.CIN      net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<9>
+    SLICE_X4Y51.BMUX     Tcinb                 0.260   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<13>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<13>
+    SLICE_X5Y54.A4       net (fanout=12)       0.690   board_to_string_/board[319]_PWR_18_o_mod_37/a[19]_GND_26_o_add_29_OUT<11>
+    SLICE_X5Y54.A        Tilo                  0.259   N3436
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[8]_a[19]_MUX_23851_o11_SW0_SW1_1
+    SLICE_X3Y28.D5       net (fanout=17)       2.200   board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[8]_a[19]_MUX_23851_o11_SW0_SW1
+    SLICE_X3Y28.D        Tilo                  0.259   N3462
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[15]_a[19]_MUX_23844_o11_SW0_SW2
+    SLICE_X3Y53.C5       net (fanout=1)        1.689   N3462
+    SLICE_X3Y53.C        Tilo                  0.259   N3463
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[15]_a[19]_MUX_23844_o11
+    SLICE_X8Y55.D5       net (fanout=4)        0.934   board_to_string_/board[319]_PWR_18_o_mod_37/a[15]_a[19]_MUX_23844_o
+    SLICE_X8Y55.COUT     Topcyd                0.281   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_lutdi3
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<3>
+    SLICE_X8Y56.CIN      net (fanout=1)        0.082   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<3>
+    SLICE_X8Y56.AMUX     Tcina                 0.194   gameController_/counter[3]_Decoder_1666_OUT<128>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<4>
+    SLICE_X19Y47.B4      net (fanout=62)       1.588   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0017_INV_1847_o
+    SLICE_X19Y47.B       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[10]_a[19]_MUX_23929_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[13]_a[19]_MUX_23866_o11
+    SLICE_X10Y50.D5      net (fanout=3)        0.974   board_to_string_/board[319]_PWR_18_o_mod_37/a[13]_a[19]_MUX_23866_o
+    SLICE_X10Y50.COUT    Topcyd                0.274   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_lutdi3
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<3>
+    SLICE_X10Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<3>
+    SLICE_X10Y51.AMUX    Tcina                 0.212   board_to_string_/board[319]_PWR_18_o_mod_37/a[18]_a[19]_MUX_23861_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<4>
+    SLICE_X22Y63.B4      net (fanout=64)       1.633   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0018_INV_1868_o
+    SLICE_X22Y63.B       Tilo                  0.203   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23892_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[7]_a[19]_MUX_23892_o11
+    SLICE_X12Y51.C3      net (fanout=2)        1.538   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23892_o
+    SLICE_X12Y51.COUT    Topcyc                0.295   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<3>
+    SLICE_X12Y52.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<3>
+    SLICE_X12Y52.AMUX    Tcina                 0.194   board_to_string_/board[319]_PWR_18_o_div_31/a[11]_a[19]_MUX_24271_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<4>
+    SLICE_X3Y54.A6       net (fanout=61)       1.036   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0019_INV_1889_o
+    SLICE_X3Y54.A        Tilo                  0.259   N4498
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[0]_a[19]_MUX_23919_o131
+    SLICE_X14Y50.B5      net (fanout=3)        1.354   board_to_string_/board[319]_PWR_18_o_mod_37/a[3]_a[19]_MUX_23916_o
+    SLICE_X14Y50.COUT    Topcyb                0.380   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_lut<1>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_cy<3>
+    SLICE_X14Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_cy<3>
+    SLICE_X14Y51.AMUX    Tcina                 0.212   N2455
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT13_SW4_SW2_SW0_cy
+    SLICE_X22Y63.A5      net (fanout=40)       1.540   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0020_INV_1910_o
+    SLICE_X22Y63.A       Tilo                  0.203   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23892_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[7]_a[19]_MUX_23932_o11
+    SLICE_X16Y50.C3      net (fanout=1)        1.556   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23932_o
+    SLICE_X16Y50.COUT    Topcyc                0.295   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<3>
+    SLICE_X16Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<3>
+    SLICE_X16Y51.AMUX    Tcina                 0.194   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23872_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<4>
+    SLICE_X21Y44.D6      net (fanout=13)       0.932   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0021_INV_1931_o
+    SLICE_X21Y44.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37_OUT<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_o31
+    SLICE_X20Y52.C6      net (fanout=1)        0.717   board_to_string_/board[319]_PWR_18_o_mod_37_OUT<2>
+    SLICE_X20Y52.CMUX    Tilo                  0.343   board_to_string_/board[319]_PWR_18_o_div_31/a[18]_a[19]_MUX_24304_o
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT95_SW0_SW0_G
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT95_SW0_SW0
+    SLICE_X31Y53.B5      net (fanout=1)        0.904   N4648
+    SLICE_X31Y53.CLK     Tas                   0.322   board_to_string_/char_out<3>
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT97
+                                                       board_to_string_/char_out_2
     -------------------------------------------------  ---------------------------
-    Total                                      3.602ns (1.590ns logic, 2.012ns route)
-                                                       (44.1% logic, 55.9% route)
+    Total                                     46.034ns (10.505ns logic, 35.529ns route)
+                                                       (22.8% logic, 77.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     6.523ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_8 (FF)
-  Destination:          PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_9 (FF)
+Slack (setup path):     -36.050ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               board_to_string_/rw_1 (FF)
+  Destination:          board_to_string_/char_out_2 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      3.442ns (Levels of Logic = 5)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      46.031ns (Levels of Logic = 40)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.016ns (0.367 - 0.351)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -140,43 +365,155 @@ Slack (setup path):     6.523ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_8 to PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_9
+  Maximum Data Path at Slow Process Corner: board_to_string_/rw_1 to board_to_string_/char_out_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y22.AQ      Tcko                  0.408   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<9>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_8
-    SLICE_X21Y21.B1      net (fanout=2)        0.587   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<8>
-    SLICE_X21Y21.B       Tilo                  0.259   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o_inv
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o<9>_SW0
-    SLICE_X22Y22.C4      net (fanout=10)       0.510   N6
-    SLICE_X22Y22.C       Tilo                  0.204   PmodJSTK_Dir_/dir_2
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_lut<0>
-    SLICE_X20Y20.A3      net (fanout=1)        0.668   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_lut<0>
-    SLICE_X20Y20.COUT    Topcya                0.395   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<3>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_lut<0>_rt
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<3>
-    SLICE_X20Y21.CIN     net (fanout=1)        0.003   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<3>
-    SLICE_X20Y21.COUT    Tbyp                  0.076   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<7>
-    SLICE_X20Y22.CIN     net (fanout=1)        0.003   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<7>
-    SLICE_X20Y22.CLK     Tcinck                0.329   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<9>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_xor<9>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_9
+    SLICE_X20Y42.BQ      Tcko                  0.408   board_to_string_/rw<1>
+                                                       board_to_string_/rw_1
+    SLICE_X22Y38.D2      net (fanout=4)        0.889   board_to_string_/rw<1>
+    SLICE_X22Y38.DMUX    Topdd                 0.393   board_to_string_/cl_0_1
+                                                       board_to_string_/rw<1>_rt
+                                                       board_to_string_/Mmult_n01761_Madd1_cy<7>
+    SLICE_X11Y29.A6      net (fanout=143)      1.479   board_to_string_/n0176<7>1
+    SLICE_X11Y29.A       Tilo                  0.259   gameController_/board[319]_board[319]_mux_1993_OUT<316>7
+                                                       board_to_string_/Sh27951110
+    SLICE_X19Y36.D5      net (fanout=1)        1.183   board_to_string_/Sh27951110
+    SLICE_X19Y36.D       Tilo                  0.259   board_to_string_/Sh279511
+                                                       board_to_string_/Sh27951121
+    SLICE_X19Y36.C6      net (fanout=6)        0.148   board_to_string_/Sh279511
+    SLICE_X19Y36.C       Tilo                  0.259   board_to_string_/Sh279511
+                                                       board_to_string_/Sh27958_1
+    SLICE_X4Y39.C3       net (fanout=6)        1.374   board_to_string_/Sh27958
+    SLICE_X4Y39.C        Tilo                  0.205   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0009_INV_1679_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[14]_a[19]_MUX_23685_o11
+    SLICE_X3Y41.A4       net (fanout=14)       0.934   board_to_string_/board[319]_PWR_18_o_mod_37/a[14]_a[19]_MUX_23685_o
+    SLICE_X3Y41.A        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37/a[13]_a[19]_MUX_23706_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0009_INV_1679_o11_1
+    SLICE_X9Y37.C5       net (fanout=7)        0.960   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0009_INV_1679_o11
+    SLICE_X9Y37.C        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_div_36/a[14]_a[19]_MUX_24658_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[14]_a[19]_MUX_23705_o11
+    SLICE_X4Y42.DX       net (fanout=3)        0.898   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_lut<14>
+    SLICE_X4Y42.COUT     Tdxcy                 0.097   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+    SLICE_X4Y43.CIN      net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+    SLICE_X4Y43.CMUX     Tcinc                 0.272   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<18>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<18>
+    SLICE_X3Y39.A6       net (fanout=7)        0.695   board_to_string_/board[319]_PWR_18_o_mod_37/a[19]_GND_26_o_add_19_OUT<17>
+    SLICE_X3Y39.A        Tilo                  0.259   N4956
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[17]_a[19]_MUX_23722_o11
+    SLICE_X1Y58.D3       net (fanout=30)       1.687   board_to_string_/board[319]_PWR_18_o_mod_37/a[17]_a[19]_MUX_23722_o
+    SLICE_X1Y58.D        Tilo                  0.259   N4951
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0011_INV_1721_o2_SW3_SW1
+    SLICE_X2Y45.D6       net (fanout=1)        0.989   N4951
+    SLICE_X2Y45.COUT     Topcyd                0.261   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[12]_a[19]_MUX_23747_o111
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+    SLICE_X2Y46.CIN      net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+    SLICE_X2Y46.BMUX     Tcinb                 0.292   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<16>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<16>
+    SLICE_X3Y49.B5       net (fanout=6)        0.591   board_to_string_/board[319]_PWR_18_o_mod_37/a[19]_GND_26_o_add_23_OUT<14>
+    SLICE_X3Y49.B        Tilo                  0.259   N1443
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[14]_a[19]_MUX_23765_o11
+    SLICE_X4Y47.C4       net (fanout=12)       0.998   board_to_string_/board[319]_PWR_18_o_mod_37/a[14]_a[19]_MUX_23765_o
+    SLICE_X4Y47.C        Tilo                  0.205   N4207
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0013_INV_1763_o2_SW0_SW2
+    SLICE_X1Y39.A5       net (fanout=1)        1.095   N5261
+    SLICE_X1Y39.A        Tilo                  0.259   N4064
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0014_INV_1784_o21
+    SLICE_X5Y50.B5       net (fanout=6)        1.383   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0014_INV_1784_o2
+    SLICE_X5Y50.B        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0015_INV_1805_o2
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0014_INV_1784_o24_SW11_SW0
+    SLICE_X5Y50.C4       net (fanout=16)       0.346   N3021
+    SLICE_X5Y50.C        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0015_INV_1805_o2
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[9]_a[19]_MUX_23810_o11
+    SLICE_X4Y50.DX       net (fanout=12)       0.499   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_lut<9>
+    SLICE_X4Y50.COUT     Tdxcy                 0.097   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<9>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<9>
+    SLICE_X4Y51.CIN      net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<9>
+    SLICE_X4Y51.BMUX     Tcinb                 0.260   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<13>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<13>
+    SLICE_X5Y54.A4       net (fanout=12)       0.690   board_to_string_/board[319]_PWR_18_o_mod_37/a[19]_GND_26_o_add_29_OUT<11>
+    SLICE_X5Y54.A        Tilo                  0.259   N3436
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[8]_a[19]_MUX_23851_o11_SW0_SW1_1
+    SLICE_X3Y28.D5       net (fanout=17)       2.200   board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[8]_a[19]_MUX_23851_o11_SW0_SW1
+    SLICE_X3Y28.D        Tilo                  0.259   N3462
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[15]_a[19]_MUX_23844_o11_SW0_SW2
+    SLICE_X3Y53.C5       net (fanout=1)        1.689   N3462
+    SLICE_X3Y53.C        Tilo                  0.259   N3463
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[15]_a[19]_MUX_23844_o11
+    SLICE_X8Y55.D5       net (fanout=4)        0.934   board_to_string_/board[319]_PWR_18_o_mod_37/a[15]_a[19]_MUX_23844_o
+    SLICE_X8Y55.COUT     Topcyd                0.281   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_lutdi3
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<3>
+    SLICE_X8Y56.CIN      net (fanout=1)        0.082   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<3>
+    SLICE_X8Y56.AMUX     Tcina                 0.194   gameController_/counter[3]_Decoder_1666_OUT<128>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<4>
+    SLICE_X19Y47.B4      net (fanout=62)       1.588   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0017_INV_1847_o
+    SLICE_X19Y47.B       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[10]_a[19]_MUX_23929_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[13]_a[19]_MUX_23866_o11
+    SLICE_X10Y50.D5      net (fanout=3)        0.974   board_to_string_/board[319]_PWR_18_o_mod_37/a[13]_a[19]_MUX_23866_o
+    SLICE_X10Y50.COUT    Topcyd                0.274   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_lutdi3
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<3>
+    SLICE_X10Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<3>
+    SLICE_X10Y51.AMUX    Tcina                 0.212   board_to_string_/board[319]_PWR_18_o_mod_37/a[18]_a[19]_MUX_23861_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<4>
+    SLICE_X22Y63.B4      net (fanout=64)       1.633   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0018_INV_1868_o
+    SLICE_X22Y63.B       Tilo                  0.203   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23892_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[7]_a[19]_MUX_23892_o11
+    SLICE_X12Y51.C3      net (fanout=2)        1.538   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23892_o
+    SLICE_X12Y51.COUT    Topcyc                0.295   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<3>
+    SLICE_X12Y52.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<3>
+    SLICE_X12Y52.AMUX    Tcina                 0.194   board_to_string_/board[319]_PWR_18_o_div_31/a[11]_a[19]_MUX_24271_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<4>
+    SLICE_X3Y54.A6       net (fanout=61)       1.036   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0019_INV_1889_o
+    SLICE_X3Y54.A        Tilo                  0.259   N4498
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[0]_a[19]_MUX_23919_o131
+    SLICE_X14Y50.B5      net (fanout=3)        1.354   board_to_string_/board[319]_PWR_18_o_mod_37/a[3]_a[19]_MUX_23916_o
+    SLICE_X14Y50.COUT    Topcyb                0.380   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_lut<1>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_cy<3>
+    SLICE_X14Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_cy<3>
+    SLICE_X14Y51.AMUX    Tcina                 0.212   N2455
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT13_SW4_SW2_SW0_cy
+    SLICE_X22Y63.A5      net (fanout=40)       1.540   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0020_INV_1910_o
+    SLICE_X22Y63.A       Tilo                  0.203   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23892_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[7]_a[19]_MUX_23932_o11
+    SLICE_X16Y50.C3      net (fanout=1)        1.556   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23932_o
+    SLICE_X16Y50.COUT    Topcyc                0.295   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<3>
+    SLICE_X16Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<3>
+    SLICE_X16Y51.AMUX    Tcina                 0.194   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23872_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<4>
+    SLICE_X21Y44.D6      net (fanout=13)       0.932   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0021_INV_1931_o
+    SLICE_X21Y44.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37_OUT<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_o31
+    SLICE_X20Y52.C6      net (fanout=1)        0.717   board_to_string_/board[319]_PWR_18_o_mod_37_OUT<2>
+    SLICE_X20Y52.CMUX    Tilo                  0.343   board_to_string_/board[319]_PWR_18_o_div_31/a[18]_a[19]_MUX_24304_o
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT95_SW0_SW0_G
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT95_SW0_SW0
+    SLICE_X31Y53.B5      net (fanout=1)        0.904   N4648
+    SLICE_X31Y53.CLK     Tas                   0.322   board_to_string_/char_out<3>
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT97
+                                                       board_to_string_/char_out_2
     -------------------------------------------------  ---------------------------
-    Total                                      3.442ns (1.671ns logic, 1.771ns route)
-                                                       (48.5% logic, 51.5% route)
+    Total                                     46.031ns (10.495ns logic, 35.536ns route)
+                                                       (22.8% logic, 77.2% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_6 (SLICE_X20Y21.CIN), 53 paths
+Paths for end point board_to_string_/char_out_4 (SLICE_X25Y52.B6), 2648817923777761400000 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     6.248ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_4 (FF)
-  Destination:          PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_6 (FF)
+Slack (setup path):     -35.698ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               board_to_string_/rw_1 (FF)
+  Destination:          board_to_string_/char_out_4 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      3.717ns (Levels of Logic = 4)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      45.656ns (Levels of Logic = 40)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.007ns (0.344 - 0.351)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -187,37 +524,151 @@ Slack (setup path):     6.248ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_4 to PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_6
+  Maximum Data Path at Slow Process Corner: board_to_string_/rw_1 to board_to_string_/char_out_4
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y21.AQ      Tcko                  0.408   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_4
-    SLICE_X21Y21.B3      net (fanout=2)        0.929   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<4>
-    SLICE_X21Y21.B       Tilo                  0.259   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o_inv
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o<9>_SW0
-    SLICE_X22Y22.C4      net (fanout=10)       0.510   N6
-    SLICE_X22Y22.C       Tilo                  0.204   PmodJSTK_Dir_/dir_2
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_lut<0>
-    SLICE_X20Y20.A3      net (fanout=1)        0.668   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_lut<0>
-    SLICE_X20Y20.COUT    Topcya                0.395   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<3>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_lut<0>_rt
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<3>
-    SLICE_X20Y21.CIN     net (fanout=1)        0.003   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<3>
-    SLICE_X20Y21.CLK     Tcinck                0.341   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_6
+    SLICE_X20Y42.BQ      Tcko                  0.408   board_to_string_/rw<1>
+                                                       board_to_string_/rw_1
+    SLICE_X22Y38.D2      net (fanout=4)        0.889   board_to_string_/rw<1>
+    SLICE_X22Y38.DMUX    Topdd                 0.393   board_to_string_/cl_0_1
+                                                       board_to_string_/rw<1>_rt
+                                                       board_to_string_/Mmult_n01761_Madd1_cy<7>
+    SLICE_X11Y29.A6      net (fanout=143)      1.479   board_to_string_/n0176<7>1
+    SLICE_X11Y29.A       Tilo                  0.259   gameController_/board[319]_board[319]_mux_1993_OUT<316>7
+                                                       board_to_string_/Sh27951110
+    SLICE_X19Y36.D5      net (fanout=1)        1.183   board_to_string_/Sh27951110
+    SLICE_X19Y36.D       Tilo                  0.259   board_to_string_/Sh279511
+                                                       board_to_string_/Sh27951121
+    SLICE_X19Y36.C6      net (fanout=6)        0.148   board_to_string_/Sh279511
+    SLICE_X19Y36.C       Tilo                  0.259   board_to_string_/Sh279511
+                                                       board_to_string_/Sh27958_1
+    SLICE_X4Y39.C3       net (fanout=6)        1.374   board_to_string_/Sh27958
+    SLICE_X4Y39.C        Tilo                  0.205   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0009_INV_1679_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[14]_a[19]_MUX_23685_o11
+    SLICE_X3Y41.A4       net (fanout=14)       0.934   board_to_string_/board[319]_PWR_18_o_mod_37/a[14]_a[19]_MUX_23685_o
+    SLICE_X3Y41.A        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37/a[13]_a[19]_MUX_23706_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0009_INV_1679_o11_1
+    SLICE_X9Y37.C5       net (fanout=7)        0.960   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0009_INV_1679_o11
+    SLICE_X9Y37.C        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_div_36/a[14]_a[19]_MUX_24658_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[14]_a[19]_MUX_23705_o11
+    SLICE_X4Y42.DX       net (fanout=3)        0.898   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_lut<14>
+    SLICE_X4Y42.COUT     Tdxcy                 0.097   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+    SLICE_X4Y43.CIN      net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+    SLICE_X4Y43.CMUX     Tcinc                 0.272   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<18>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<18>
+    SLICE_X3Y39.A6       net (fanout=7)        0.695   board_to_string_/board[319]_PWR_18_o_mod_37/a[19]_GND_26_o_add_19_OUT<17>
+    SLICE_X3Y39.A        Tilo                  0.259   N4956
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[17]_a[19]_MUX_23722_o11
+    SLICE_X1Y58.D3       net (fanout=30)       1.687   board_to_string_/board[319]_PWR_18_o_mod_37/a[17]_a[19]_MUX_23722_o
+    SLICE_X1Y58.D        Tilo                  0.259   N4951
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0011_INV_1721_o2_SW3_SW1
+    SLICE_X2Y45.D6       net (fanout=1)        0.989   N4951
+    SLICE_X2Y45.COUT     Topcyd                0.261   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[12]_a[19]_MUX_23747_o111
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+    SLICE_X2Y46.CIN      net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+    SLICE_X2Y46.BMUX     Tcinb                 0.292   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<16>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<16>
+    SLICE_X3Y49.B5       net (fanout=6)        0.591   board_to_string_/board[319]_PWR_18_o_mod_37/a[19]_GND_26_o_add_23_OUT<14>
+    SLICE_X3Y49.B        Tilo                  0.259   N1443
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[14]_a[19]_MUX_23765_o11
+    SLICE_X4Y47.C4       net (fanout=12)       0.998   board_to_string_/board[319]_PWR_18_o_mod_37/a[14]_a[19]_MUX_23765_o
+    SLICE_X4Y47.C        Tilo                  0.205   N4207
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0013_INV_1763_o2_SW0_SW2
+    SLICE_X1Y39.A5       net (fanout=1)        1.095   N5261
+    SLICE_X1Y39.A        Tilo                  0.259   N4064
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0014_INV_1784_o21
+    SLICE_X5Y50.B5       net (fanout=6)        1.383   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0014_INV_1784_o2
+    SLICE_X5Y50.B        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0015_INV_1805_o2
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0014_INV_1784_o24_SW11_SW0
+    SLICE_X4Y49.D6       net (fanout=16)       0.330   N3021
+    SLICE_X4Y49.D        Tilo                  0.205   board_to_string_/board[319]_PWR_18_o_mod_37/a[8]_a[19]_MUX_23811_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[8]_a[19]_MUX_23811_o11
+    SLICE_X4Y50.CX       net (fanout=9)        0.563   board_to_string_/board[319]_PWR_18_o_mod_37/a[8]_a[19]_MUX_23811_o
+    SLICE_X4Y50.COUT     Tcxcy                 0.107   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<9>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<9>
+    SLICE_X4Y51.CIN      net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<9>
+    SLICE_X4Y51.BMUX     Tcinb                 0.260   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<13>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<13>
+    SLICE_X5Y54.A4       net (fanout=12)       0.690   board_to_string_/board[319]_PWR_18_o_mod_37/a[19]_GND_26_o_add_29_OUT<11>
+    SLICE_X5Y54.A        Tilo                  0.259   N3436
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[8]_a[19]_MUX_23851_o11_SW0_SW1_1
+    SLICE_X3Y28.D5       net (fanout=17)       2.200   board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[8]_a[19]_MUX_23851_o11_SW0_SW1
+    SLICE_X3Y28.D        Tilo                  0.259   N3462
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[15]_a[19]_MUX_23844_o11_SW0_SW2
+    SLICE_X3Y53.C5       net (fanout=1)        1.689   N3462
+    SLICE_X3Y53.C        Tilo                  0.259   N3463
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[15]_a[19]_MUX_23844_o11
+    SLICE_X8Y55.D5       net (fanout=4)        0.934   board_to_string_/board[319]_PWR_18_o_mod_37/a[15]_a[19]_MUX_23844_o
+    SLICE_X8Y55.COUT     Topcyd                0.281   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_lutdi3
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<3>
+    SLICE_X8Y56.CIN      net (fanout=1)        0.082   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<3>
+    SLICE_X8Y56.AMUX     Tcina                 0.194   gameController_/counter[3]_Decoder_1666_OUT<128>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<4>
+    SLICE_X19Y47.B4      net (fanout=62)       1.588   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0017_INV_1847_o
+    SLICE_X19Y47.B       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[10]_a[19]_MUX_23929_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[13]_a[19]_MUX_23866_o11
+    SLICE_X10Y50.D5      net (fanout=3)        0.974   board_to_string_/board[319]_PWR_18_o_mod_37/a[13]_a[19]_MUX_23866_o
+    SLICE_X10Y50.COUT    Topcyd                0.274   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_lutdi3
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<3>
+    SLICE_X10Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<3>
+    SLICE_X10Y51.AMUX    Tcina                 0.212   board_to_string_/board[319]_PWR_18_o_mod_37/a[18]_a[19]_MUX_23861_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<4>
+    SLICE_X22Y63.B4      net (fanout=64)       1.633   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0018_INV_1868_o
+    SLICE_X22Y63.B       Tilo                  0.203   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23892_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[7]_a[19]_MUX_23892_o11
+    SLICE_X12Y51.C3      net (fanout=2)        1.538   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23892_o
+    SLICE_X12Y51.COUT    Topcyc                0.295   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<3>
+    SLICE_X12Y52.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<3>
+    SLICE_X12Y52.AMUX    Tcina                 0.194   board_to_string_/board[319]_PWR_18_o_div_31/a[11]_a[19]_MUX_24271_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<4>
+    SLICE_X3Y54.A6       net (fanout=61)       1.036   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0019_INV_1889_o
+    SLICE_X3Y54.A        Tilo                  0.259   N4498
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[0]_a[19]_MUX_23919_o131
+    SLICE_X14Y50.B5      net (fanout=3)        1.354   board_to_string_/board[319]_PWR_18_o_mod_37/a[3]_a[19]_MUX_23916_o
+    SLICE_X14Y50.COUT    Topcyb                0.380   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_lut<1>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_cy<3>
+    SLICE_X14Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_cy<3>
+    SLICE_X14Y51.AMUX    Tcina                 0.212   N2455
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT13_SW4_SW2_SW0_cy
+    SLICE_X22Y63.A5      net (fanout=40)       1.540   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0020_INV_1910_o
+    SLICE_X22Y63.A       Tilo                  0.203   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23892_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[7]_a[19]_MUX_23932_o11
+    SLICE_X16Y50.C3      net (fanout=1)        1.556   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23932_o
+    SLICE_X16Y50.COUT    Topcyc                0.295   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<3>
+    SLICE_X16Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<3>
+    SLICE_X16Y51.AMUX    Tcina                 0.194   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23872_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<4>
+    SLICE_X33Y55.D6      net (fanout=13)       1.266   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0021_INV_1931_o
+    SLICE_X33Y55.D       Tilo                  0.259   N4154
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT13_SW4_SW1_SW1
+    SLICE_X25Y52.A5      net (fanout=1)        0.874   N4154
+    SLICE_X25Y52.A       Tilo                  0.259   board_to_string_/char_out<5>
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT13_SW4
+    SLICE_X25Y52.B6      net (fanout=1)        0.118   N1714
+    SLICE_X25Y52.CLK     Tas                   0.322   board_to_string_/char_out<5>
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT153
+                                                       board_to_string_/char_out_4
     -------------------------------------------------  ---------------------------
-    Total                                      3.717ns (1.607ns logic, 2.110ns route)
-                                                       (43.2% logic, 56.8% route)
+    Total                                     45.656ns (10.367ns logic, 35.289ns route)
+                                                       (22.7% logic, 77.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     6.430ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_4 (FF)
-  Destination:          PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_6 (FF)
+Slack (setup path):     -35.697ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               board_to_string_/rw_1 (FF)
+  Destination:          board_to_string_/char_out_4 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      3.535ns (Levels of Logic = 4)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      45.655ns (Levels of Logic = 40)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.007ns (0.344 - 0.351)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -228,36 +679,151 @@ Slack (setup path):     6.430ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_4 to PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_6
+  Maximum Data Path at Slow Process Corner: board_to_string_/rw_1 to board_to_string_/char_out_4
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y21.AQ      Tcko                  0.408   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_4
-    SLICE_X21Y21.B3      net (fanout=2)        0.929   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<4>
-    SLICE_X21Y21.B       Tilo                  0.259   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o_inv
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o<9>_SW0
-    SLICE_X21Y21.D2      net (fanout=10)       0.456   N6
-    SLICE_X21Y21.D       Tilo                  0.259   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o_inv
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o_inv1
-    SLICE_X20Y20.AX      net (fanout=1)        0.621   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o_inv
-    SLICE_X20Y20.COUT    Taxcy                 0.259   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<3>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<3>
-    SLICE_X20Y21.CIN     net (fanout=1)        0.003   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<3>
-    SLICE_X20Y21.CLK     Tcinck                0.341   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_6
+    SLICE_X20Y42.BQ      Tcko                  0.408   board_to_string_/rw<1>
+                                                       board_to_string_/rw_1
+    SLICE_X22Y38.D2      net (fanout=4)        0.889   board_to_string_/rw<1>
+    SLICE_X22Y38.DMUX    Topdd                 0.393   board_to_string_/cl_0_1
+                                                       board_to_string_/rw<1>_rt
+                                                       board_to_string_/Mmult_n01761_Madd1_cy<7>
+    SLICE_X23Y28.A1      net (fanout=143)      1.280   board_to_string_/n0176<7>1
+    SLICE_X23Y28.A       Tilo                  0.259   board_to_string_/Sh11611
+                                                       board_to_string_/Sh278122
+    SLICE_X19Y37.D4      net (fanout=2)        1.112   board_to_string_/Sh278122
+    SLICE_X19Y37.D       Tilo                  0.259   board_to_string_/Sh278126
+                                                       board_to_string_/Sh278126
+    SLICE_X15Y36.B3      net (fanout=6)        0.907   board_to_string_/Sh278126
+    SLICE_X15Y36.B       Tilo                  0.259   board_to_string_/Sh279582
+                                                       board_to_string_/Sh27973_3
+    SLICE_X11Y36.D4      net (fanout=4)        0.470   board_to_string_/Sh279732
+    SLICE_X11Y36.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_17_OUT_Madd_lut<15>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[15]_a[19]_MUX_23684_o112
+    SLICE_X3Y41.A3       net (fanout=13)       1.294   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_17_OUT_Madd_lut<15>
+    SLICE_X3Y41.A        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37/a[13]_a[19]_MUX_23706_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0009_INV_1679_o11_1
+    SLICE_X9Y37.C5       net (fanout=7)        0.960   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0009_INV_1679_o11
+    SLICE_X9Y37.C        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_div_36/a[14]_a[19]_MUX_24658_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[14]_a[19]_MUX_23705_o11
+    SLICE_X4Y42.DX       net (fanout=3)        0.898   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_lut<14>
+    SLICE_X4Y42.COUT     Tdxcy                 0.097   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+    SLICE_X4Y43.CIN      net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+    SLICE_X4Y43.CMUX     Tcinc                 0.272   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<18>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<18>
+    SLICE_X3Y39.A6       net (fanout=7)        0.695   board_to_string_/board[319]_PWR_18_o_mod_37/a[19]_GND_26_o_add_19_OUT<17>
+    SLICE_X3Y39.A        Tilo                  0.259   N4956
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[17]_a[19]_MUX_23722_o11
+    SLICE_X1Y58.D3       net (fanout=30)       1.687   board_to_string_/board[319]_PWR_18_o_mod_37/a[17]_a[19]_MUX_23722_o
+    SLICE_X1Y58.D        Tilo                  0.259   N4951
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0011_INV_1721_o2_SW3_SW1
+    SLICE_X2Y45.D6       net (fanout=1)        0.989   N4951
+    SLICE_X2Y45.COUT     Topcyd                0.261   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[12]_a[19]_MUX_23747_o111
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+    SLICE_X2Y46.CIN      net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+    SLICE_X2Y46.BMUX     Tcinb                 0.292   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<16>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<16>
+    SLICE_X3Y49.B5       net (fanout=6)        0.591   board_to_string_/board[319]_PWR_18_o_mod_37/a[19]_GND_26_o_add_23_OUT<14>
+    SLICE_X3Y49.B        Tilo                  0.259   N1443
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[14]_a[19]_MUX_23765_o11
+    SLICE_X4Y47.C4       net (fanout=12)       0.998   board_to_string_/board[319]_PWR_18_o_mod_37/a[14]_a[19]_MUX_23765_o
+    SLICE_X4Y47.C        Tilo                  0.205   N4207
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0013_INV_1763_o2_SW0_SW2
+    SLICE_X1Y39.A5       net (fanout=1)        1.095   N5261
+    SLICE_X1Y39.A        Tilo                  0.259   N4064
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0014_INV_1784_o21
+    SLICE_X5Y50.B5       net (fanout=6)        1.383   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0014_INV_1784_o2
+    SLICE_X5Y50.B        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0015_INV_1805_o2
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0014_INV_1784_o24_SW11_SW0
+    SLICE_X4Y49.D6       net (fanout=16)       0.330   N3021
+    SLICE_X4Y49.D        Tilo                  0.205   board_to_string_/board[319]_PWR_18_o_mod_37/a[8]_a[19]_MUX_23811_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[8]_a[19]_MUX_23811_o11
+    SLICE_X4Y50.CX       net (fanout=9)        0.563   board_to_string_/board[319]_PWR_18_o_mod_37/a[8]_a[19]_MUX_23811_o
+    SLICE_X4Y50.COUT     Tcxcy                 0.107   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<9>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<9>
+    SLICE_X4Y51.CIN      net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<9>
+    SLICE_X4Y51.BMUX     Tcinb                 0.260   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<13>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<13>
+    SLICE_X5Y54.A4       net (fanout=12)       0.690   board_to_string_/board[319]_PWR_18_o_mod_37/a[19]_GND_26_o_add_29_OUT<11>
+    SLICE_X5Y54.A        Tilo                  0.259   N3436
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[8]_a[19]_MUX_23851_o11_SW0_SW1_1
+    SLICE_X3Y28.D5       net (fanout=17)       2.200   board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[8]_a[19]_MUX_23851_o11_SW0_SW1
+    SLICE_X3Y28.D        Tilo                  0.259   N3462
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[15]_a[19]_MUX_23844_o11_SW0_SW2
+    SLICE_X3Y53.C5       net (fanout=1)        1.689   N3462
+    SLICE_X3Y53.C        Tilo                  0.259   N3463
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[15]_a[19]_MUX_23844_o11
+    SLICE_X8Y55.D5       net (fanout=4)        0.934   board_to_string_/board[319]_PWR_18_o_mod_37/a[15]_a[19]_MUX_23844_o
+    SLICE_X8Y55.COUT     Topcyd                0.281   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_lutdi3
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<3>
+    SLICE_X8Y56.CIN      net (fanout=1)        0.082   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<3>
+    SLICE_X8Y56.AMUX     Tcina                 0.194   gameController_/counter[3]_Decoder_1666_OUT<128>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<4>
+    SLICE_X19Y47.B4      net (fanout=62)       1.588   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0017_INV_1847_o
+    SLICE_X19Y47.B       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[10]_a[19]_MUX_23929_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[13]_a[19]_MUX_23866_o11
+    SLICE_X10Y50.D5      net (fanout=3)        0.974   board_to_string_/board[319]_PWR_18_o_mod_37/a[13]_a[19]_MUX_23866_o
+    SLICE_X10Y50.COUT    Topcyd                0.274   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_lutdi3
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<3>
+    SLICE_X10Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<3>
+    SLICE_X10Y51.AMUX    Tcina                 0.212   board_to_string_/board[319]_PWR_18_o_mod_37/a[18]_a[19]_MUX_23861_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<4>
+    SLICE_X22Y63.B4      net (fanout=64)       1.633   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0018_INV_1868_o
+    SLICE_X22Y63.B       Tilo                  0.203   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23892_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[7]_a[19]_MUX_23892_o11
+    SLICE_X12Y51.C3      net (fanout=2)        1.538   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23892_o
+    SLICE_X12Y51.COUT    Topcyc                0.295   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<3>
+    SLICE_X12Y52.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<3>
+    SLICE_X12Y52.AMUX    Tcina                 0.194   board_to_string_/board[319]_PWR_18_o_div_31/a[11]_a[19]_MUX_24271_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<4>
+    SLICE_X3Y54.A6       net (fanout=61)       1.036   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0019_INV_1889_o
+    SLICE_X3Y54.A        Tilo                  0.259   N4498
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[0]_a[19]_MUX_23919_o131
+    SLICE_X14Y50.B5      net (fanout=3)        1.354   board_to_string_/board[319]_PWR_18_o_mod_37/a[3]_a[19]_MUX_23916_o
+    SLICE_X14Y50.COUT    Topcyb                0.380   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_lut<1>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_cy<3>
+    SLICE_X14Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_cy<3>
+    SLICE_X14Y51.AMUX    Tcina                 0.212   N2455
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT13_SW4_SW2_SW0_cy
+    SLICE_X22Y63.A5      net (fanout=40)       1.540   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0020_INV_1910_o
+    SLICE_X22Y63.A       Tilo                  0.203   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23892_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[7]_a[19]_MUX_23932_o11
+    SLICE_X16Y50.C3      net (fanout=1)        1.556   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23932_o
+    SLICE_X16Y50.COUT    Topcyc                0.295   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<3>
+    SLICE_X16Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<3>
+    SLICE_X16Y51.AMUX    Tcina                 0.194   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23872_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<4>
+    SLICE_X33Y55.D6      net (fanout=13)       1.266   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0021_INV_1931_o
+    SLICE_X33Y55.D       Tilo                  0.259   N4154
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT13_SW4_SW1_SW1
+    SLICE_X25Y52.A5      net (fanout=1)        0.874   N4154
+    SLICE_X25Y52.A       Tilo                  0.259   board_to_string_/char_out<5>
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT13_SW4
+    SLICE_X25Y52.B6      net (fanout=1)        0.118   N1714
+    SLICE_X25Y52.CLK     Tas                   0.322   board_to_string_/char_out<5>
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT153
+                                                       board_to_string_/char_out_4
     -------------------------------------------------  ---------------------------
-    Total                                      3.535ns (1.526ns logic, 2.009ns route)
-                                                       (43.2% logic, 56.8% route)
+    Total                                     45.655ns (10.421ns logic, 35.234ns route)
+                                                       (22.8% logic, 77.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     6.583ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_8 (FF)
-  Destination:          PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_6 (FF)
+Slack (setup path):     -35.694ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               board_to_string_/rw_1 (FF)
+  Destination:          board_to_string_/char_out_4 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      3.375ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.007ns (0.147 - 0.154)
+  Data Path Delay:      45.652ns (Levels of Logic = 40)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.007ns (0.344 - 0.351)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -268,40 +834,154 @@ Slack (setup path):     6.583ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_8 to PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_6
+  Maximum Data Path at Slow Process Corner: board_to_string_/rw_1 to board_to_string_/char_out_4
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y22.AQ      Tcko                  0.408   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<9>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_8
-    SLICE_X21Y21.B1      net (fanout=2)        0.587   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<8>
-    SLICE_X21Y21.B       Tilo                  0.259   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o_inv
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o<9>_SW0
-    SLICE_X22Y22.C4      net (fanout=10)       0.510   N6
-    SLICE_X22Y22.C       Tilo                  0.204   PmodJSTK_Dir_/dir_2
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_lut<0>
-    SLICE_X20Y20.A3      net (fanout=1)        0.668   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_lut<0>
-    SLICE_X20Y20.COUT    Topcya                0.395   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<3>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_lut<0>_rt
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<3>
-    SLICE_X20Y21.CIN     net (fanout=1)        0.003   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<3>
-    SLICE_X20Y21.CLK     Tcinck                0.341   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_6
+    SLICE_X20Y42.BQ      Tcko                  0.408   board_to_string_/rw<1>
+                                                       board_to_string_/rw_1
+    SLICE_X22Y38.D2      net (fanout=4)        0.889   board_to_string_/rw<1>
+    SLICE_X22Y38.DMUX    Topdd                 0.393   board_to_string_/cl_0_1
+                                                       board_to_string_/rw<1>_rt
+                                                       board_to_string_/Mmult_n01761_Madd1_cy<7>
+    SLICE_X11Y29.A6      net (fanout=143)      1.479   board_to_string_/n0176<7>1
+    SLICE_X11Y29.A       Tilo                  0.259   gameController_/board[319]_board[319]_mux_1993_OUT<316>7
+                                                       board_to_string_/Sh27951110
+    SLICE_X19Y36.D5      net (fanout=1)        1.183   board_to_string_/Sh27951110
+    SLICE_X19Y36.D       Tilo                  0.259   board_to_string_/Sh279511
+                                                       board_to_string_/Sh27951121
+    SLICE_X19Y36.C6      net (fanout=6)        0.148   board_to_string_/Sh279511
+    SLICE_X19Y36.C       Tilo                  0.259   board_to_string_/Sh279511
+                                                       board_to_string_/Sh27958_1
+    SLICE_X4Y39.C3       net (fanout=6)        1.374   board_to_string_/Sh27958
+    SLICE_X4Y39.C        Tilo                  0.205   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0009_INV_1679_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[14]_a[19]_MUX_23685_o11
+    SLICE_X3Y41.A4       net (fanout=14)       0.934   board_to_string_/board[319]_PWR_18_o_mod_37/a[14]_a[19]_MUX_23685_o
+    SLICE_X3Y41.A        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37/a[13]_a[19]_MUX_23706_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0009_INV_1679_o11_1
+    SLICE_X9Y37.C5       net (fanout=7)        0.960   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0009_INV_1679_o11
+    SLICE_X9Y37.C        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_div_36/a[14]_a[19]_MUX_24658_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[14]_a[19]_MUX_23705_o11
+    SLICE_X4Y42.DX       net (fanout=3)        0.898   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_lut<14>
+    SLICE_X4Y42.COUT     Tdxcy                 0.097   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+    SLICE_X4Y43.CIN      net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+    SLICE_X4Y43.CMUX     Tcinc                 0.272   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<18>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<18>
+    SLICE_X3Y39.A6       net (fanout=7)        0.695   board_to_string_/board[319]_PWR_18_o_mod_37/a[19]_GND_26_o_add_19_OUT<17>
+    SLICE_X3Y39.A        Tilo                  0.259   N4956
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[17]_a[19]_MUX_23722_o11
+    SLICE_X1Y58.D3       net (fanout=30)       1.687   board_to_string_/board[319]_PWR_18_o_mod_37/a[17]_a[19]_MUX_23722_o
+    SLICE_X1Y58.D        Tilo                  0.259   N4951
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0011_INV_1721_o2_SW3_SW1
+    SLICE_X2Y45.D6       net (fanout=1)        0.989   N4951
+    SLICE_X2Y45.COUT     Topcyd                0.261   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[12]_a[19]_MUX_23747_o111
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+    SLICE_X2Y46.CIN      net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+    SLICE_X2Y46.BMUX     Tcinb                 0.292   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<16>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<16>
+    SLICE_X3Y49.B5       net (fanout=6)        0.591   board_to_string_/board[319]_PWR_18_o_mod_37/a[19]_GND_26_o_add_23_OUT<14>
+    SLICE_X3Y49.B        Tilo                  0.259   N1443
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[14]_a[19]_MUX_23765_o11
+    SLICE_X4Y47.C4       net (fanout=12)       0.998   board_to_string_/board[319]_PWR_18_o_mod_37/a[14]_a[19]_MUX_23765_o
+    SLICE_X4Y47.C        Tilo                  0.205   N4207
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0013_INV_1763_o2_SW0_SW2
+    SLICE_X1Y39.A5       net (fanout=1)        1.095   N5261
+    SLICE_X1Y39.A        Tilo                  0.259   N4064
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0014_INV_1784_o21
+    SLICE_X5Y50.B5       net (fanout=6)        1.383   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0014_INV_1784_o2
+    SLICE_X5Y50.B        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0015_INV_1805_o2
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0014_INV_1784_o24_SW11_SW0
+    SLICE_X5Y50.C4       net (fanout=16)       0.346   N3021
+    SLICE_X5Y50.C        Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0015_INV_1805_o2
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[9]_a[19]_MUX_23810_o11
+    SLICE_X4Y50.DX       net (fanout=12)       0.499   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_lut<9>
+    SLICE_X4Y50.COUT     Tdxcy                 0.097   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<9>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<9>
+    SLICE_X4Y51.CIN      net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<9>
+    SLICE_X4Y51.BMUX     Tcinb                 0.260   board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<13>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Madd_a[19]_GND_26_o_add_29_OUT_Madd_cy<13>
+    SLICE_X5Y54.A4       net (fanout=12)       0.690   board_to_string_/board[319]_PWR_18_o_mod_37/a[19]_GND_26_o_add_29_OUT<11>
+    SLICE_X5Y54.A        Tilo                  0.259   N3436
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[8]_a[19]_MUX_23851_o11_SW0_SW1_1
+    SLICE_X3Y28.D5       net (fanout=17)       2.200   board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[8]_a[19]_MUX_23851_o11_SW0_SW1
+    SLICE_X3Y28.D        Tilo                  0.259   N3462
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[15]_a[19]_MUX_23844_o11_SW0_SW2
+    SLICE_X3Y53.C5       net (fanout=1)        1.689   N3462
+    SLICE_X3Y53.C        Tilo                  0.259   N3463
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[15]_a[19]_MUX_23844_o11
+    SLICE_X8Y55.D5       net (fanout=4)        0.934   board_to_string_/board[319]_PWR_18_o_mod_37/a[15]_a[19]_MUX_23844_o
+    SLICE_X8Y55.COUT     Topcyd                0.281   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_lutdi3
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<3>
+    SLICE_X8Y56.CIN      net (fanout=1)        0.082   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<3>
+    SLICE_X8Y56.AMUX     Tcina                 0.194   gameController_/counter[3]_Decoder_1666_OUT<128>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0017_INV_1847_o_cy<4>
+    SLICE_X19Y47.B4      net (fanout=62)       1.588   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0017_INV_1847_o
+    SLICE_X19Y47.B       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[10]_a[19]_MUX_23929_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[13]_a[19]_MUX_23866_o11
+    SLICE_X10Y50.D5      net (fanout=3)        0.974   board_to_string_/board[319]_PWR_18_o_mod_37/a[13]_a[19]_MUX_23866_o
+    SLICE_X10Y50.COUT    Topcyd                0.274   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_lutdi3
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<3>
+    SLICE_X10Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<3>
+    SLICE_X10Y51.AMUX    Tcina                 0.212   board_to_string_/board[319]_PWR_18_o_mod_37/a[18]_a[19]_MUX_23861_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0018_INV_1868_o_cy<4>
+    SLICE_X22Y63.B4      net (fanout=64)       1.633   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0018_INV_1868_o
+    SLICE_X22Y63.B       Tilo                  0.203   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23892_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[7]_a[19]_MUX_23892_o11
+    SLICE_X12Y51.C3      net (fanout=2)        1.538   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23892_o
+    SLICE_X12Y51.COUT    Topcyc                0.295   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<3>
+    SLICE_X12Y52.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<3>
+    SLICE_X12Y52.AMUX    Tcina                 0.194   board_to_string_/board[319]_PWR_18_o_div_31/a[11]_a[19]_MUX_24271_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0019_INV_1889_o_cy<4>
+    SLICE_X3Y54.A6       net (fanout=61)       1.036   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0019_INV_1889_o
+    SLICE_X3Y54.A        Tilo                  0.259   N4498
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[0]_a[19]_MUX_23919_o131
+    SLICE_X14Y50.B5      net (fanout=3)        1.354   board_to_string_/board[319]_PWR_18_o_mod_37/a[3]_a[19]_MUX_23916_o
+    SLICE_X14Y50.COUT    Topcyb                0.380   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_lut<1>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_cy<3>
+    SLICE_X14Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0020_INV_1910_o_cy<3>
+    SLICE_X14Y51.AMUX    Tcina                 0.212   N2455
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT13_SW4_SW2_SW0_cy
+    SLICE_X22Y63.A5      net (fanout=40)       1.540   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0020_INV_1910_o
+    SLICE_X22Y63.A       Tilo                  0.203   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23892_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mmux_a[7]_a[19]_MUX_23932_o11
+    SLICE_X16Y50.C3      net (fanout=1)        1.556   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23932_o
+    SLICE_X16Y50.COUT    Topcyc                0.295   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<3>
+    SLICE_X16Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<3>
+    SLICE_X16Y51.AMUX    Tcina                 0.194   board_to_string_/board[319]_PWR_18_o_mod_37/a[7]_a[19]_MUX_23872_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_37/Mcompar_BUS_0021_INV_1931_o_cy<4>
+    SLICE_X33Y55.D6      net (fanout=13)       1.266   board_to_string_/board[319]_PWR_18_o_mod_37/BUS_0021_INV_1931_o
+    SLICE_X33Y55.D       Tilo                  0.259   N4154
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT13_SW4_SW1_SW1
+    SLICE_X25Y52.A5      net (fanout=1)        0.874   N4154
+    SLICE_X25Y52.A       Tilo                  0.259   board_to_string_/char_out<5>
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT13_SW4
+    SLICE_X25Y52.B6      net (fanout=1)        0.118   N1714
+    SLICE_X25Y52.CLK     Tas                   0.322   board_to_string_/char_out<5>
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT153
+                                                       board_to_string_/char_out_4
     -------------------------------------------------  ---------------------------
-    Total                                      3.375ns (1.607ns logic, 1.768ns route)
-                                                       (47.6% logic, 52.4% route)
+    Total                                     45.652ns (10.411ns logic, 35.241ns route)
+                                                       (22.8% logic, 77.2% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_7 (SLICE_X20Y21.CIN), 53 paths
+Paths for end point board_to_string_/char_out_2 (SLICE_X31Y53.B4), 2577917763815980100000 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     6.248ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_4 (FF)
-  Destination:          PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_7 (FF)
+Slack (setup path):     -35.630ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               board_to_string_/rw_1 (FF)
+  Destination:          board_to_string_/char_out_2 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      3.717ns (Levels of Logic = 4)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      45.611ns (Levels of Logic = 42)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.016ns (0.367 - 0.351)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -312,37 +992,157 @@ Slack (setup path):     6.248ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_4 to PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_7
+  Maximum Data Path at Slow Process Corner: board_to_string_/rw_1 to board_to_string_/char_out_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y21.AQ      Tcko                  0.408   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_4
-    SLICE_X21Y21.B3      net (fanout=2)        0.929   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<4>
-    SLICE_X21Y21.B       Tilo                  0.259   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o_inv
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o<9>_SW0
-    SLICE_X22Y22.C4      net (fanout=10)       0.510   N6
-    SLICE_X22Y22.C       Tilo                  0.204   PmodJSTK_Dir_/dir_2
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_lut<0>
-    SLICE_X20Y20.A3      net (fanout=1)        0.668   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_lut<0>
-    SLICE_X20Y20.COUT    Topcya                0.395   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<3>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_lut<0>_rt
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<3>
-    SLICE_X20Y21.CIN     net (fanout=1)        0.003   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<3>
-    SLICE_X20Y21.CLK     Tcinck                0.341   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_7
+    SLICE_X20Y42.BQ      Tcko                  0.408   board_to_string_/rw<1>
+                                                       board_to_string_/rw_1
+    SLICE_X22Y38.D2      net (fanout=4)        0.889   board_to_string_/rw<1>
+    SLICE_X22Y38.DMUX    Topdd                 0.393   board_to_string_/cl_0_1
+                                                       board_to_string_/rw<1>_rt
+                                                       board_to_string_/Mmult_n01761_Madd1_cy<7>
+    SLICE_X21Y31.A1      net (fanout=143)      1.217   board_to_string_/n0176<7>1
+    SLICE_X21Y31.A       Tilo                  0.259   board_to_string_/Sh11631
+                                                       board_to_string_/Sh278322
+    SLICE_X15Y41.D4      net (fanout=2)        1.258   board_to_string_/Sh278322
+    SLICE_X15Y41.D       Tilo                  0.259   board_to_string_/Sh278326
+                                                       board_to_string_/Sh278326
+    SLICE_X21Y38.C6      net (fanout=6)        0.716   board_to_string_/Sh278326
+    SLICE_X21Y38.C       Tilo                  0.259   board_to_string_/cl_1_1
+                                                       board_to_string_/Sh27993_2
+    SLICE_X23Y37.B3      net (fanout=4)        0.723   board_to_string_/Sh279931
+    SLICE_X23Y37.B       Tilo                  0.259   board_to_string_/Sh279831
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_13_OUT_Madd_cy<16>11
+    SLICE_X25Y39.D4      net (fanout=7)        0.636   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_13_OUT_Madd_cy<16>
+    SLICE_X25Y39.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[17]_a[19]_MUX_23662_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[17]_a[19]_MUX_23662_o11
+    SLICE_X22Y37.D3      net (fanout=16)       0.762   board_to_string_/board[319]_PWR_18_o_mod_39/a[17]_a[19]_MUX_23662_o
+    SLICE_X22Y37.CMUX    Topdc                 0.368   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0008_INV_1658_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0009_INV_1679_o1_1_F
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0009_INV_1679_o1_1
+    SLICE_X18Y38.D4      net (fanout=14)       0.712   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0009_INV_1679_o1
+    SLICE_X18Y38.D       Tilo                  0.203   board_to_string_/board[319]_PWR_18_o_mod_39/a[13]_a[19]_MUX_23706_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[13]_a[19]_MUX_23706_o11
+    SLICE_X26Y37.CX      net (fanout=3)        0.841   board_to_string_/board[319]_PWR_18_o_mod_39/a[13]_a[19]_MUX_23706_o
+    SLICE_X26Y37.COUT    Tcxcy                 0.093   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+    SLICE_X26Y38.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+    SLICE_X26Y38.AMUX    Tcina                 0.202   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<18>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<18>
+    SLICE_X31Y40.D4      net (fanout=10)       0.747   board_to_string_/board[319]_PWR_18_o_mod_39/a[19]_GND_26_o_add_19_OUT<15>
+    SLICE_X31Y40.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[15]_a[19]_MUX_23724_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[15]_a[19]_MUX_23724_o11
+    SLICE_X29Y40.C1      net (fanout=10)       0.691   board_to_string_/board[319]_PWR_18_o_mod_39/a[15]_a[19]_MUX_23724_o
+    SLICE_X29Y40.C       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[14]_a[19]_MUX_23745_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0011_INV_1721_o2_1
+    SLICE_X26Y33.B6      net (fanout=6)        0.921   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0011_INV_1721_o2
+    SLICE_X26Y33.B       Tilo                  0.203   uart_top_/tfifo_in<6>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[10]_a[19]_MUX_23749_o11
+    SLICE_X30Y39.BX      net (fanout=3)        1.108   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_23_OUT_Madd_lut<10>
+    SLICE_X30Y39.COUT    Tbxcy                 0.125   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+    SLICE_X30Y40.CIN     net (fanout=1)        0.082   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+    SLICE_X30Y40.DMUX    Tcind                 0.302   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<16>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<16>
+    SLICE_X25Y41.D5      net (fanout=4)        0.896   board_to_string_/board[319]_PWR_18_o_mod_39/a[19]_GND_26_o_add_23_OUT<16>
+    SLICE_X25Y41.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[16]_a[19]_MUX_23763_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[16]_a[19]_MUX_23763_o11
+    SLICE_X27Y41.A2      net (fanout=3)        0.637   board_to_string_/board[319]_PWR_18_o_mod_39/a[16]_a[19]_MUX_23763_o
+    SLICE_X27Y41.A       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[19]_a[19]_MUX_23760_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0013_INV_1763_o2_SW0_1
+    SLICE_X22Y45.C3      net (fanout=6)        0.755   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0013_INV_1763_o2_SW0
+    SLICE_X22Y45.C       Tilo                  0.204   board_to_string_/cntr[15]_PWR_18_o_mod_5/a[3]_a[15]_MUX_22749_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[9]_a[19]_MUX_23790_o11
+    SLICE_X28Y41.CX      net (fanout=12)       0.842   board_to_string_/board[319]_PWR_18_o_mod_39/a[9]_a[19]_MUX_23790_o
+    SLICE_X28Y41.COUT    Tcxcy                 0.107   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<10>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<10>
+    SLICE_X28Y42.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<10>
+    SLICE_X28Y42.COUT    Tbyp                  0.076   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<14>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<14>
+    SLICE_X28Y43.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<14>
+    SLICE_X28Y43.CMUX    Tcinc                 0.272   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<18>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<18>
+    SLICE_X35Y31.B5      net (fanout=7)        1.533   board_to_string_/board[319]_PWR_18_o_mod_39/a[19]_GND_26_o_add_27_OUT<17>
+    SLICE_X35Y31.B       Tilo                  0.259   gameController_/board[319]_board[319]_mux_1993_OUT<280>4
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0015_INV_1805_o23_SW1_SW1_SW2
+    SLICE_X29Y44.A5      net (fanout=1)        1.442   N4276
+    SLICE_X29Y44.A       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_31_OUT_Madd_lut<8>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0015_INV_1805_o23_SW1
+    SLICE_X23Y46.D4      net (fanout=13)       0.687   N1410
+    SLICE_X23Y46.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[15]_a[19]_MUX_23824_o11
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[15]_a[19]_MUX_23824_o11_1
+    SLICE_X25Y32.D6      net (fanout=14)       1.214   board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[15]_a[19]_MUX_23824_o11
+    SLICE_X25Y32.D       Tilo                  0.259   N2082
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[12]_a[19]_MUX_23847_o11_SW0_SW0
+    SLICE_X6Y44.A4       net (fanout=2)        1.801   N2082
+    SLICE_X6Y44.A        Tilo                  0.203   N2083
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[12]_a[19]_MUX_23847_o11
+    SLICE_X22Y44.C4      net (fanout=5)        1.112   board_to_string_/board[319]_PWR_18_o_mod_39/a[12]_a[19]_MUX_23847_o
+    SLICE_X22Y44.COUT    Topcyc                0.280   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0017_INV_1847_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0017_INV_1847_o_lutdi2
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0017_INV_1847_o_cy<3>
+    SLICE_X22Y45.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0017_INV_1847_o_cy<3>
+    SLICE_X22Y45.AMUX    Tcina                 0.212   board_to_string_/cntr[15]_PWR_18_o_mod_5/a[3]_a[15]_MUX_22749_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0017_INV_1847_o_cy<4>
+    SLICE_X32Y46.D6      net (fanout=62)       0.918   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0017_INV_1847_o
+    SLICE_X32Y46.D       Tilo                  0.205   board_to_string_/board[319]_PWR_18_o_mod_39/a[17]_a[19]_MUX_23862_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[17]_a[19]_MUX_23862_o11
+    SLICE_X20Y46.D1      net (fanout=3)        1.196   board_to_string_/board[319]_PWR_18_o_mod_39/a[17]_a[19]_MUX_23862_o
+    SLICE_X20Y46.COUT    Topcyd                0.281   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0018_INV_1868_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0018_INV_1868_o_lutdi3
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0018_INV_1868_o_cy<3>
+    SLICE_X20Y47.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0018_INV_1868_o_cy<3>
+    SLICE_X20Y47.AMUX    Tcina                 0.194   N2277
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0018_INV_1868_o_cy<4>
+    SLICE_X27Y37.C5      net (fanout=64)       1.290   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0018_INV_1868_o
+    SLICE_X27Y37.C       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[5]_a[19]_MUX_23914_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[5]_a[19]_MUX_23894_o11
+    SLICE_X20Y48.B4      net (fanout=5)        1.185   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_37_OUT_Madd_lut<5>
+    SLICE_X20Y48.COUT    Topcyb                0.375   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0019_INV_1889_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0019_INV_1889_o_lut<1>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0019_INV_1889_o_cy<3>
+    SLICE_X20Y49.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0019_INV_1889_o_cy<3>
+    SLICE_X20Y49.AMUX    Tcina                 0.194   board_to_string_/board[319]_PWR_18_o_mod_39/a[12]_a[19]_MUX_23927_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0019_INV_1889_o_cy<4>
+    SLICE_X23Y33.C5      net (fanout=62)       1.548   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0019_INV_1889_o
+    SLICE_X23Y33.C       Tilo                  0.259   board_to_string_/Sh27931119
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[6]_a[19]_MUX_23913_o11
+    SLICE_X18Y47.C4      net (fanout=1)        1.379   board_to_string_/board[319]_PWR_18_o_mod_39/a[6]_a[19]_MUX_23913_o
+    SLICE_X18Y47.COUT    Topcyc                0.280   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0020_INV_1910_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0020_INV_1910_o_lutdi2
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0020_INV_1910_o_cy<3>
+    SLICE_X18Y48.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0020_INV_1910_o_cy<3>
+    SLICE_X18Y48.AMUX    Tcina                 0.212   board_to_string_/board[319]_PWR_18_o_div_31/a[13]_a[19]_MUX_24329_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0020_INV_1910_o_cy<4>
+    SLICE_X23Y36.D5      net (fanout=32)       1.193   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0020_INV_1910_o
+    SLICE_X23Y36.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[5]_a[19]_MUX_23934_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[5]_a[19]_MUX_23934_o11
+    SLICE_X20Y50.C5      net (fanout=1)        1.271   board_to_string_/board[319]_PWR_18_o_mod_39/a[5]_a[19]_MUX_23934_o
+    SLICE_X20Y50.COUT    Topcyc                0.295   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0021_INV_1931_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0021_INV_1931_o_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0021_INV_1931_o_cy<3>
+    SLICE_X20Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0021_INV_1931_o_cy<3>
+    SLICE_X20Y51.AMUX    Tcina                 0.194   board_to_string_/board[319]_PWR_18_o_mod_27/Madd_a[19]_GND_26_o_add_39_OUT_Madd_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0021_INV_1931_o_cy<4>
+    SLICE_X29Y39.D5      net (fanout=7)        1.359   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0021_INV_1931_o
+    SLICE_X29Y39.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39_OUT<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_o31
+    SLICE_X31Y53.B4      net (fanout=2)        1.420   board_to_string_/board[319]_PWR_18_o_mod_39_OUT<2>
+    SLICE_X31Y53.CLK     Tas                   0.322   board_to_string_/char_out<3>
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT97
+                                                       board_to_string_/char_out_2
     -------------------------------------------------  ---------------------------
-    Total                                      3.717ns (1.607ns logic, 2.110ns route)
-                                                       (43.2% logic, 56.8% route)
+    Total                                     45.611ns (10.606ns logic, 35.005ns route)
+                                                       (23.3% logic, 76.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     6.430ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_4 (FF)
-  Destination:          PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_7 (FF)
+Slack (setup path):     -35.627ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               board_to_string_/rw_1 (FF)
+  Destination:          board_to_string_/char_out_2 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      3.535ns (Levels of Logic = 4)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      45.608ns (Levels of Logic = 42)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.016ns (0.367 - 0.351)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -353,36 +1153,157 @@ Slack (setup path):     6.430ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_4 to PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_7
+  Maximum Data Path at Slow Process Corner: board_to_string_/rw_1 to board_to_string_/char_out_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y21.AQ      Tcko                  0.408   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_4
-    SLICE_X21Y21.B3      net (fanout=2)        0.929   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<4>
-    SLICE_X21Y21.B       Tilo                  0.259   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o_inv
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o<9>_SW0
-    SLICE_X21Y21.D2      net (fanout=10)       0.456   N6
-    SLICE_X21Y21.D       Tilo                  0.259   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o_inv
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o_inv1
-    SLICE_X20Y20.AX      net (fanout=1)        0.621   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o_inv
-    SLICE_X20Y20.COUT    Taxcy                 0.259   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<3>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<3>
-    SLICE_X20Y21.CIN     net (fanout=1)        0.003   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<3>
-    SLICE_X20Y21.CLK     Tcinck                0.341   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_7
+    SLICE_X20Y42.BQ      Tcko                  0.408   board_to_string_/rw<1>
+                                                       board_to_string_/rw_1
+    SLICE_X22Y38.D2      net (fanout=4)        0.889   board_to_string_/rw<1>
+    SLICE_X22Y38.DMUX    Topdd                 0.393   board_to_string_/cl_0_1
+                                                       board_to_string_/rw<1>_rt
+                                                       board_to_string_/Mmult_n01761_Madd1_cy<7>
+    SLICE_X21Y31.A1      net (fanout=143)      1.217   board_to_string_/n0176<7>1
+    SLICE_X21Y31.A       Tilo                  0.259   board_to_string_/Sh11631
+                                                       board_to_string_/Sh278322
+    SLICE_X15Y41.D4      net (fanout=2)        1.258   board_to_string_/Sh278322
+    SLICE_X15Y41.D       Tilo                  0.259   board_to_string_/Sh278326
+                                                       board_to_string_/Sh278326
+    SLICE_X21Y38.C6      net (fanout=6)        0.716   board_to_string_/Sh278326
+    SLICE_X21Y38.C       Tilo                  0.259   board_to_string_/cl_1_1
+                                                       board_to_string_/Sh27993_2
+    SLICE_X23Y37.B3      net (fanout=4)        0.723   board_to_string_/Sh279931
+    SLICE_X23Y37.B       Tilo                  0.259   board_to_string_/Sh279831
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_13_OUT_Madd_cy<16>11
+    SLICE_X25Y39.D4      net (fanout=7)        0.636   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_13_OUT_Madd_cy<16>
+    SLICE_X25Y39.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[17]_a[19]_MUX_23662_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[17]_a[19]_MUX_23662_o11
+    SLICE_X22Y37.D3      net (fanout=16)       0.762   board_to_string_/board[319]_PWR_18_o_mod_39/a[17]_a[19]_MUX_23662_o
+    SLICE_X22Y37.CMUX    Topdc                 0.368   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0008_INV_1658_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0009_INV_1679_o1_1_F
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0009_INV_1679_o1_1
+    SLICE_X18Y38.D4      net (fanout=14)       0.712   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0009_INV_1679_o1
+    SLICE_X18Y38.D       Tilo                  0.203   board_to_string_/board[319]_PWR_18_o_mod_39/a[13]_a[19]_MUX_23706_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[13]_a[19]_MUX_23706_o11
+    SLICE_X26Y37.CX      net (fanout=3)        0.841   board_to_string_/board[319]_PWR_18_o_mod_39/a[13]_a[19]_MUX_23706_o
+    SLICE_X26Y37.COUT    Tcxcy                 0.093   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+    SLICE_X26Y38.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+    SLICE_X26Y38.AMUX    Tcina                 0.202   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<18>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<18>
+    SLICE_X31Y40.D4      net (fanout=10)       0.747   board_to_string_/board[319]_PWR_18_o_mod_39/a[19]_GND_26_o_add_19_OUT<15>
+    SLICE_X31Y40.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[15]_a[19]_MUX_23724_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[15]_a[19]_MUX_23724_o11
+    SLICE_X29Y40.C1      net (fanout=10)       0.691   board_to_string_/board[319]_PWR_18_o_mod_39/a[15]_a[19]_MUX_23724_o
+    SLICE_X29Y40.C       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[14]_a[19]_MUX_23745_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0011_INV_1721_o2_1
+    SLICE_X26Y33.B6      net (fanout=6)        0.921   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0011_INV_1721_o2
+    SLICE_X26Y33.B       Tilo                  0.203   uart_top_/tfifo_in<6>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[10]_a[19]_MUX_23749_o11
+    SLICE_X30Y39.BX      net (fanout=3)        1.108   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_23_OUT_Madd_lut<10>
+    SLICE_X30Y39.COUT    Tbxcy                 0.125   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+    SLICE_X30Y40.CIN     net (fanout=1)        0.082   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+    SLICE_X30Y40.DMUX    Tcind                 0.302   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<16>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<16>
+    SLICE_X25Y41.D5      net (fanout=4)        0.896   board_to_string_/board[319]_PWR_18_o_mod_39/a[19]_GND_26_o_add_23_OUT<16>
+    SLICE_X25Y41.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[16]_a[19]_MUX_23763_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[16]_a[19]_MUX_23763_o11
+    SLICE_X27Y41.A2      net (fanout=3)        0.637   board_to_string_/board[319]_PWR_18_o_mod_39/a[16]_a[19]_MUX_23763_o
+    SLICE_X27Y41.A       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[19]_a[19]_MUX_23760_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0013_INV_1763_o2_SW0_1
+    SLICE_X22Y45.C3      net (fanout=6)        0.755   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0013_INV_1763_o2_SW0
+    SLICE_X22Y45.C       Tilo                  0.204   board_to_string_/cntr[15]_PWR_18_o_mod_5/a[3]_a[15]_MUX_22749_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[9]_a[19]_MUX_23790_o11
+    SLICE_X28Y41.CX      net (fanout=12)       0.842   board_to_string_/board[319]_PWR_18_o_mod_39/a[9]_a[19]_MUX_23790_o
+    SLICE_X28Y41.COUT    Tcxcy                 0.107   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<10>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<10>
+    SLICE_X28Y42.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<10>
+    SLICE_X28Y42.COUT    Tbyp                  0.076   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<14>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<14>
+    SLICE_X28Y43.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<14>
+    SLICE_X28Y43.CMUX    Tcinc                 0.272   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<18>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<18>
+    SLICE_X35Y31.B5      net (fanout=7)        1.533   board_to_string_/board[319]_PWR_18_o_mod_39/a[19]_GND_26_o_add_27_OUT<17>
+    SLICE_X35Y31.B       Tilo                  0.259   gameController_/board[319]_board[319]_mux_1993_OUT<280>4
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0015_INV_1805_o23_SW1_SW1_SW2
+    SLICE_X29Y44.A5      net (fanout=1)        1.442   N4276
+    SLICE_X29Y44.A       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_31_OUT_Madd_lut<8>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0015_INV_1805_o23_SW1
+    SLICE_X23Y46.D4      net (fanout=13)       0.687   N1410
+    SLICE_X23Y46.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[15]_a[19]_MUX_23824_o11
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[15]_a[19]_MUX_23824_o11_1
+    SLICE_X25Y32.D6      net (fanout=14)       1.214   board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[15]_a[19]_MUX_23824_o11
+    SLICE_X25Y32.D       Tilo                  0.259   N2082
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[12]_a[19]_MUX_23847_o11_SW0_SW0
+    SLICE_X6Y44.A4       net (fanout=2)        1.801   N2082
+    SLICE_X6Y44.A        Tilo                  0.203   N2083
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[12]_a[19]_MUX_23847_o11
+    SLICE_X22Y44.C4      net (fanout=5)        1.112   board_to_string_/board[319]_PWR_18_o_mod_39/a[12]_a[19]_MUX_23847_o
+    SLICE_X22Y44.COUT    Topcyc                0.280   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0017_INV_1847_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0017_INV_1847_o_lutdi2
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0017_INV_1847_o_cy<3>
+    SLICE_X22Y45.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0017_INV_1847_o_cy<3>
+    SLICE_X22Y45.AMUX    Tcina                 0.212   board_to_string_/cntr[15]_PWR_18_o_mod_5/a[3]_a[15]_MUX_22749_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0017_INV_1847_o_cy<4>
+    SLICE_X32Y46.D6      net (fanout=62)       0.918   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0017_INV_1847_o
+    SLICE_X32Y46.D       Tilo                  0.205   board_to_string_/board[319]_PWR_18_o_mod_39/a[17]_a[19]_MUX_23862_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[17]_a[19]_MUX_23862_o11
+    SLICE_X20Y46.D1      net (fanout=3)        1.196   board_to_string_/board[319]_PWR_18_o_mod_39/a[17]_a[19]_MUX_23862_o
+    SLICE_X20Y46.COUT    Topcyd                0.281   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0018_INV_1868_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0018_INV_1868_o_lutdi3
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0018_INV_1868_o_cy<3>
+    SLICE_X20Y47.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0018_INV_1868_o_cy<3>
+    SLICE_X20Y47.AMUX    Tcina                 0.194   N2277
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0018_INV_1868_o_cy<4>
+    SLICE_X27Y37.C5      net (fanout=64)       1.290   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0018_INV_1868_o
+    SLICE_X27Y37.C       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[5]_a[19]_MUX_23914_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[5]_a[19]_MUX_23894_o11
+    SLICE_X20Y48.B4      net (fanout=5)        1.185   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_37_OUT_Madd_lut<5>
+    SLICE_X20Y48.COUT    Topcyb                0.375   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0019_INV_1889_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0019_INV_1889_o_lut<1>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0019_INV_1889_o_cy<3>
+    SLICE_X20Y49.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0019_INV_1889_o_cy<3>
+    SLICE_X20Y49.AMUX    Tcina                 0.194   board_to_string_/board[319]_PWR_18_o_mod_39/a[12]_a[19]_MUX_23927_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0019_INV_1889_o_cy<4>
+    SLICE_X23Y33.C5      net (fanout=62)       1.548   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0019_INV_1889_o
+    SLICE_X23Y33.C       Tilo                  0.259   board_to_string_/Sh27931119
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[6]_a[19]_MUX_23913_o11
+    SLICE_X18Y47.C4      net (fanout=1)        1.379   board_to_string_/board[319]_PWR_18_o_mod_39/a[6]_a[19]_MUX_23913_o
+    SLICE_X18Y47.COUT    Topcyc                0.277   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0020_INV_1910_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0020_INV_1910_o_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0020_INV_1910_o_cy<3>
+    SLICE_X18Y48.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0020_INV_1910_o_cy<3>
+    SLICE_X18Y48.AMUX    Tcina                 0.212   board_to_string_/board[319]_PWR_18_o_div_31/a[13]_a[19]_MUX_24329_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0020_INV_1910_o_cy<4>
+    SLICE_X23Y36.D5      net (fanout=32)       1.193   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0020_INV_1910_o
+    SLICE_X23Y36.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[5]_a[19]_MUX_23934_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[5]_a[19]_MUX_23934_o11
+    SLICE_X20Y50.C5      net (fanout=1)        1.271   board_to_string_/board[319]_PWR_18_o_mod_39/a[5]_a[19]_MUX_23934_o
+    SLICE_X20Y50.COUT    Topcyc                0.295   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0021_INV_1931_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0021_INV_1931_o_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0021_INV_1931_o_cy<3>
+    SLICE_X20Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0021_INV_1931_o_cy<3>
+    SLICE_X20Y51.AMUX    Tcina                 0.194   board_to_string_/board[319]_PWR_18_o_mod_27/Madd_a[19]_GND_26_o_add_39_OUT_Madd_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0021_INV_1931_o_cy<4>
+    SLICE_X29Y39.D5      net (fanout=7)        1.359   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0021_INV_1931_o
+    SLICE_X29Y39.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39_OUT<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_o31
+    SLICE_X31Y53.B4      net (fanout=2)        1.420   board_to_string_/board[319]_PWR_18_o_mod_39_OUT<2>
+    SLICE_X31Y53.CLK     Tas                   0.322   board_to_string_/char_out<3>
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT97
+                                                       board_to_string_/char_out_2
     -------------------------------------------------  ---------------------------
-    Total                                      3.535ns (1.526ns logic, 2.009ns route)
-                                                       (43.2% logic, 56.8% route)
+    Total                                     45.608ns (10.603ns logic, 35.005ns route)
+                                                       (23.2% logic, 76.8% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     6.583ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_8 (FF)
-  Destination:          PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_7 (FF)
+Slack (setup path):     -35.627ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               board_to_string_/rw_1 (FF)
+  Destination:          board_to_string_/char_out_2 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      3.375ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.007ns (0.147 - 0.154)
+  Data Path Delay:      45.608ns (Levels of Logic = 42)(Component delays alone exceeds constraint)
+  Clock Path Skew:      0.016ns (0.367 - 0.351)
   Source Clock:         clk_BUFGP rising at 0.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -393,120 +1314,256 @@ Slack (setup path):     6.583ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_8 to PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_7
+  Maximum Data Path at Slow Process Corner: board_to_string_/rw_1 to board_to_string_/char_out_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y22.AQ      Tcko                  0.408   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<9>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_8
-    SLICE_X21Y21.B1      net (fanout=2)        0.587   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<8>
-    SLICE_X21Y21.B       Tilo                  0.259   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o_inv
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount[9]_PWR_6_o_equal_3_o<9>_SW0
-    SLICE_X22Y22.C4      net (fanout=10)       0.510   N6
-    SLICE_X22Y22.C       Tilo                  0.204   PmodJSTK_Dir_/dir_2
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_lut<0>
-    SLICE_X20Y20.A3      net (fanout=1)        0.668   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_lut<0>
-    SLICE_X20Y20.COUT    Topcya                0.395   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<3>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_lut<0>_rt
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<3>
-    SLICE_X20Y21.CIN     net (fanout=1)        0.003   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<3>
-    SLICE_X20Y21.CLK     Tcinck                0.341   PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/Mcount_clkCount_cy<7>
-                                                       PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_7
+    SLICE_X20Y42.BQ      Tcko                  0.408   board_to_string_/rw<1>
+                                                       board_to_string_/rw_1
+    SLICE_X22Y38.D2      net (fanout=4)        0.889   board_to_string_/rw<1>
+    SLICE_X22Y38.DMUX    Topdd                 0.393   board_to_string_/cl_0_1
+                                                       board_to_string_/rw<1>_rt
+                                                       board_to_string_/Mmult_n01761_Madd1_cy<7>
+    SLICE_X21Y31.A1      net (fanout=143)      1.217   board_to_string_/n0176<7>1
+    SLICE_X21Y31.A       Tilo                  0.259   board_to_string_/Sh11631
+                                                       board_to_string_/Sh278322
+    SLICE_X15Y41.D4      net (fanout=2)        1.258   board_to_string_/Sh278322
+    SLICE_X15Y41.D       Tilo                  0.259   board_to_string_/Sh278326
+                                                       board_to_string_/Sh278326
+    SLICE_X21Y38.C6      net (fanout=6)        0.716   board_to_string_/Sh278326
+    SLICE_X21Y38.C       Tilo                  0.259   board_to_string_/cl_1_1
+                                                       board_to_string_/Sh27993_2
+    SLICE_X23Y37.B3      net (fanout=4)        0.723   board_to_string_/Sh279931
+    SLICE_X23Y37.B       Tilo                  0.259   board_to_string_/Sh279831
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_13_OUT_Madd_cy<16>11
+    SLICE_X25Y39.D4      net (fanout=7)        0.636   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_13_OUT_Madd_cy<16>
+    SLICE_X25Y39.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[17]_a[19]_MUX_23662_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[17]_a[19]_MUX_23662_o11
+    SLICE_X22Y37.D3      net (fanout=16)       0.762   board_to_string_/board[319]_PWR_18_o_mod_39/a[17]_a[19]_MUX_23662_o
+    SLICE_X22Y37.CMUX    Topdc                 0.368   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0008_INV_1658_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0009_INV_1679_o1_1_F
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0009_INV_1679_o1_1
+    SLICE_X18Y38.D4      net (fanout=14)       0.712   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0009_INV_1679_o1
+    SLICE_X18Y38.D       Tilo                  0.203   board_to_string_/board[319]_PWR_18_o_mod_39/a[13]_a[19]_MUX_23706_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[13]_a[19]_MUX_23706_o11
+    SLICE_X26Y37.CX      net (fanout=3)        0.841   board_to_string_/board[319]_PWR_18_o_mod_39/a[13]_a[19]_MUX_23706_o
+    SLICE_X26Y37.COUT    Tcxcy                 0.093   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+    SLICE_X26Y38.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<14>
+    SLICE_X26Y38.AMUX    Tcina                 0.202   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<18>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_19_OUT_Madd_cy<18>
+    SLICE_X31Y40.D4      net (fanout=10)       0.747   board_to_string_/board[319]_PWR_18_o_mod_39/a[19]_GND_26_o_add_19_OUT<15>
+    SLICE_X31Y40.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[15]_a[19]_MUX_23724_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[15]_a[19]_MUX_23724_o11
+    SLICE_X29Y40.C1      net (fanout=10)       0.691   board_to_string_/board[319]_PWR_18_o_mod_39/a[15]_a[19]_MUX_23724_o
+    SLICE_X29Y40.C       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[14]_a[19]_MUX_23745_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0011_INV_1721_o2_1
+    SLICE_X26Y33.B6      net (fanout=6)        0.921   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0011_INV_1721_o2
+    SLICE_X26Y33.B       Tilo                  0.203   uart_top_/tfifo_in<6>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[10]_a[19]_MUX_23749_o11
+    SLICE_X30Y39.BX      net (fanout=3)        1.108   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_23_OUT_Madd_lut<10>
+    SLICE_X30Y39.COUT    Tbxcy                 0.125   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+    SLICE_X30Y40.CIN     net (fanout=1)        0.082   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<12>
+    SLICE_X30Y40.DMUX    Tcind                 0.302   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<16>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_23_OUT_Madd_cy<16>
+    SLICE_X25Y41.D5      net (fanout=4)        0.896   board_to_string_/board[319]_PWR_18_o_mod_39/a[19]_GND_26_o_add_23_OUT<16>
+    SLICE_X25Y41.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[16]_a[19]_MUX_23763_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[16]_a[19]_MUX_23763_o11
+    SLICE_X27Y41.A2      net (fanout=3)        0.637   board_to_string_/board[319]_PWR_18_o_mod_39/a[16]_a[19]_MUX_23763_o
+    SLICE_X27Y41.A       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[19]_a[19]_MUX_23760_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0013_INV_1763_o2_SW0_1
+    SLICE_X22Y45.C3      net (fanout=6)        0.755   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0013_INV_1763_o2_SW0
+    SLICE_X22Y45.C       Tilo                  0.204   board_to_string_/cntr[15]_PWR_18_o_mod_5/a[3]_a[15]_MUX_22749_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[9]_a[19]_MUX_23790_o11
+    SLICE_X28Y41.CX      net (fanout=12)       0.842   board_to_string_/board[319]_PWR_18_o_mod_39/a[9]_a[19]_MUX_23790_o
+    SLICE_X28Y41.COUT    Tcxcy                 0.107   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<10>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<10>
+    SLICE_X28Y42.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<10>
+    SLICE_X28Y42.COUT    Tbyp                  0.076   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<14>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<14>
+    SLICE_X28Y43.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<14>
+    SLICE_X28Y43.CMUX    Tcinc                 0.272   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<18>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_27_OUT_Madd_cy<18>
+    SLICE_X35Y31.B5      net (fanout=7)        1.533   board_to_string_/board[319]_PWR_18_o_mod_39/a[19]_GND_26_o_add_27_OUT<17>
+    SLICE_X35Y31.B       Tilo                  0.259   gameController_/board[319]_board[319]_mux_1993_OUT<280>4
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0015_INV_1805_o23_SW1_SW1_SW2
+    SLICE_X29Y44.A5      net (fanout=1)        1.442   N4276
+    SLICE_X29Y44.A       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_31_OUT_Madd_lut<8>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0015_INV_1805_o23_SW1
+    SLICE_X23Y46.D4      net (fanout=13)       0.687   N1410
+    SLICE_X23Y46.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[15]_a[19]_MUX_23824_o11
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[15]_a[19]_MUX_23824_o11_1
+    SLICE_X25Y32.D6      net (fanout=14)       1.214   board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[15]_a[19]_MUX_23824_o11
+    SLICE_X25Y32.D       Tilo                  0.259   N2082
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[12]_a[19]_MUX_23847_o11_SW0_SW0
+    SLICE_X6Y44.A4       net (fanout=2)        1.801   N2082
+    SLICE_X6Y44.A        Tilo                  0.203   N2083
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[12]_a[19]_MUX_23847_o11
+    SLICE_X22Y44.C4      net (fanout=5)        1.112   board_to_string_/board[319]_PWR_18_o_mod_39/a[12]_a[19]_MUX_23847_o
+    SLICE_X22Y44.COUT    Topcyc                0.277   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0017_INV_1847_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0017_INV_1847_o_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0017_INV_1847_o_cy<3>
+    SLICE_X22Y45.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0017_INV_1847_o_cy<3>
+    SLICE_X22Y45.AMUX    Tcina                 0.212   board_to_string_/cntr[15]_PWR_18_o_mod_5/a[3]_a[15]_MUX_22749_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0017_INV_1847_o_cy<4>
+    SLICE_X32Y46.D6      net (fanout=62)       0.918   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0017_INV_1847_o
+    SLICE_X32Y46.D       Tilo                  0.205   board_to_string_/board[319]_PWR_18_o_mod_39/a[17]_a[19]_MUX_23862_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[17]_a[19]_MUX_23862_o11
+    SLICE_X20Y46.D1      net (fanout=3)        1.196   board_to_string_/board[319]_PWR_18_o_mod_39/a[17]_a[19]_MUX_23862_o
+    SLICE_X20Y46.COUT    Topcyd                0.281   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0018_INV_1868_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0018_INV_1868_o_lutdi3
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0018_INV_1868_o_cy<3>
+    SLICE_X20Y47.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0018_INV_1868_o_cy<3>
+    SLICE_X20Y47.AMUX    Tcina                 0.194   N2277
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0018_INV_1868_o_cy<4>
+    SLICE_X27Y37.C5      net (fanout=64)       1.290   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0018_INV_1868_o
+    SLICE_X27Y37.C       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[5]_a[19]_MUX_23914_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[5]_a[19]_MUX_23894_o11
+    SLICE_X20Y48.B4      net (fanout=5)        1.185   board_to_string_/board[319]_PWR_18_o_mod_39/Madd_a[19]_GND_26_o_add_37_OUT_Madd_lut<5>
+    SLICE_X20Y48.COUT    Topcyb                0.375   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0019_INV_1889_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0019_INV_1889_o_lut<1>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0019_INV_1889_o_cy<3>
+    SLICE_X20Y49.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0019_INV_1889_o_cy<3>
+    SLICE_X20Y49.AMUX    Tcina                 0.194   board_to_string_/board[319]_PWR_18_o_mod_39/a[12]_a[19]_MUX_23927_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0019_INV_1889_o_cy<4>
+    SLICE_X23Y33.C5      net (fanout=62)       1.548   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0019_INV_1889_o
+    SLICE_X23Y33.C       Tilo                  0.259   board_to_string_/Sh27931119
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[6]_a[19]_MUX_23913_o11
+    SLICE_X18Y47.C4      net (fanout=1)        1.379   board_to_string_/board[319]_PWR_18_o_mod_39/a[6]_a[19]_MUX_23913_o
+    SLICE_X18Y47.COUT    Topcyc                0.280   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0020_INV_1910_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0020_INV_1910_o_lutdi2
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0020_INV_1910_o_cy<3>
+    SLICE_X18Y48.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0020_INV_1910_o_cy<3>
+    SLICE_X18Y48.AMUX    Tcina                 0.212   board_to_string_/board[319]_PWR_18_o_div_31/a[13]_a[19]_MUX_24329_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0020_INV_1910_o_cy<4>
+    SLICE_X23Y36.D5      net (fanout=32)       1.193   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0020_INV_1910_o
+    SLICE_X23Y36.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39/a[5]_a[19]_MUX_23934_o
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_a[5]_a[19]_MUX_23934_o11
+    SLICE_X20Y50.C5      net (fanout=1)        1.271   board_to_string_/board[319]_PWR_18_o_mod_39/a[5]_a[19]_MUX_23934_o
+    SLICE_X20Y50.COUT    Topcyc                0.295   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0021_INV_1931_o_cy<3>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0021_INV_1931_o_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0021_INV_1931_o_cy<3>
+    SLICE_X20Y51.CIN     net (fanout=1)        0.003   board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0021_INV_1931_o_cy<3>
+    SLICE_X20Y51.AMUX    Tcina                 0.194   board_to_string_/board[319]_PWR_18_o_mod_27/Madd_a[19]_GND_26_o_add_39_OUT_Madd_lut<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mcompar_BUS_0021_INV_1931_o_cy<4>
+    SLICE_X29Y39.D5      net (fanout=7)        1.359   board_to_string_/board[319]_PWR_18_o_mod_39/BUS_0021_INV_1931_o
+    SLICE_X29Y39.D       Tilo                  0.259   board_to_string_/board[319]_PWR_18_o_mod_39_OUT<2>
+                                                       board_to_string_/board[319]_PWR_18_o_mod_39/Mmux_o31
+    SLICE_X31Y53.B4      net (fanout=2)        1.420   board_to_string_/board[319]_PWR_18_o_mod_39_OUT<2>
+    SLICE_X31Y53.CLK     Tas                   0.322   board_to_string_/char_out<3>
+                                                       board_to_string_/Mmux_char_out[7]_GND_21_o_mux_143_OUT97
+                                                       board_to_string_/char_out_2
     -------------------------------------------------  ---------------------------
-    Total                                      3.375ns (1.607ns logic, 1.768ns route)
-                                                       (47.6% logic, 52.4% route)
+    Total                                     45.608ns (10.603ns logic, 35.005ns route)
+                                                       (23.2% logic, 76.8% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point PmodJSTK_Dir_/genDecimalPosY/tmpSR_11 (SLICE_X16Y28.B5), 1 path
+Paths for end point uart_top_/uart_/tx_countdown_5 (SLICE_X36Y32.C5), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.391ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               PmodJSTK_Dir_/genDecimalPosY/tmpSR_10 (FF)
-  Destination:          PmodJSTK_Dir_/genDecimalPosY/tmpSR_11 (FF)
+Slack (hold path):      0.389ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               uart_top_/uart_/tx_countdown_4 (FF)
+  Destination:          uart_top_/uart_/tx_countdown_5 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.391ns (Levels of Logic = 1)
+  Data Path Delay:      0.389ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 10.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: PmodJSTK_Dir_/genDecimalPosY/tmpSR_10 to PmodJSTK_Dir_/genDecimalPosY/tmpSR_11
+  Minimum Data Path at Fast Process Corner: uart_top_/uart_/tx_countdown_4 to uart_top_/uart_/tx_countdown_5
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X16Y28.BQ      Tcko                  0.200   PmodJSTK_Dir_/genDecimalPosY/tmpSR_10
-                                                       PmodJSTK_Dir_/genDecimalPosY/tmpSR_10
-    SLICE_X16Y28.B5      net (fanout=1)        0.070   PmodJSTK_Dir_/genDecimalPosY/tmpSR_10
-    SLICE_X16Y28.CLK     Tah         (-Th)    -0.121   PmodJSTK_Dir_/genDecimalPosY/tmpSR_10
-                                                       PmodJSTK_Dir_/genDecimalPosY/Mmux_STATE[2]_tmpSR[27]_wide_mux_16_OUT[11]11
-                                                       PmodJSTK_Dir_/genDecimalPosY/tmpSR_11
+    SLICE_X36Y32.CQ      Tcko                  0.200   uart_top_/uart_/tx_countdown<4>
+                                                       uart_top_/uart_/tx_countdown_4
+    SLICE_X36Y32.C5      net (fanout=2)        0.068   uart_top_/uart_/tx_countdown<4>
+    SLICE_X36Y32.CLK     Tah         (-Th)    -0.121   uart_top_/uart_/tx_countdown<4>
+                                                       uart_top_/uart_/Mmux__n02321141
+                                                       uart_top_/uart_/tx_countdown_5
     -------------------------------------------------  ---------------------------
-    Total                                      0.391ns (0.321ns logic, 0.070ns route)
-                                                       (82.1% logic, 17.9% route)
+    Total                                      0.389ns (0.321ns logic, 0.068ns route)
+                                                       (82.5% logic, 17.5% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point PmodJSTK_Dir_/genDecimalPosX/tmpSR_24 (SLICE_X20Y27.A6), 1 path
+Paths for end point uart_top_/tfifo_/rp_6 (SLICE_X32Y42.D6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.433ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               PmodJSTK_Dir_/genDecimalPosX/tmpSR_24 (FF)
-  Destination:          PmodJSTK_Dir_/genDecimalPosX/tmpSR_24 (FF)
+Slack (hold path):      0.416ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               uart_top_/tfifo_/rp_6 (FF)
+  Destination:          uart_top_/tfifo_/rp_6 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.433ns (Levels of Logic = 1)
+  Data Path Delay:      0.416ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 10.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: PmodJSTK_Dir_/genDecimalPosX/tmpSR_24 to PmodJSTK_Dir_/genDecimalPosX/tmpSR_24
+  Minimum Data Path at Fast Process Corner: uart_top_/tfifo_/rp_6 to uart_top_/tfifo_/rp_6
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y27.AQ      Tcko                  0.200   PmodJSTK_Dir_/genDecimalPosX/tmpSR_26
-                                                       PmodJSTK_Dir_/genDecimalPosX/tmpSR_24
-    SLICE_X20Y27.A6      net (fanout=6)        0.043   PmodJSTK_Dir_/genDecimalPosX/tmpSR_24
-    SLICE_X20Y27.CLK     Tah         (-Th)    -0.190   PmodJSTK_Dir_/genDecimalPosX/tmpSR_26
-                                                       PmodJSTK_Dir_/genDecimalPosX/Mmux_STATE[2]_tmpSR[27]_wide_mux_16_OUT[24]11
-                                                       PmodJSTK_Dir_/genDecimalPosX/tmpSR_24
+    SLICE_X32Y42.DQ      Tcko                  0.200   uart_top_/tfifo_/rp<6>
+                                                       uart_top_/tfifo_/rp_6
+    SLICE_X32Y42.D6      net (fanout=3)        0.026   uart_top_/tfifo_/rp<6>
+    SLICE_X32Y42.CLK     Tah         (-Th)    -0.190   uart_top_/tfifo_/rp<6>
+                                                       uart_top_/tfifo_/Maccum_rp_xor<6>11
+                                                       uart_top_/tfifo_/rp_6
     -------------------------------------------------  ---------------------------
-    Total                                      0.433ns (0.390ns logic, 0.043ns route)
-                                                       (90.1% logic, 9.9% route)
+    Total                                      0.416ns (0.390ns logic, 0.026ns route)
+                                                       (93.8% logic, 6.3% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point PmodJSTK_Dir_/genDecimalPosY/shiftCount_4 (SLICE_X21Y27.D6), 1 path
+Paths for end point board_to_string_/rw_0 (SLICE_X20Y42.A6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.435ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               PmodJSTK_Dir_/genDecimalPosY/shiftCount_4 (FF)
-  Destination:          PmodJSTK_Dir_/genDecimalPosY/shiftCount_4 (FF)
+Slack (hold path):      0.421ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               board_to_string_/rw_0 (FF)
+  Destination:          board_to_string_/rw_0 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.435ns (Levels of Logic = 1)
+  Data Path Delay:      0.421ns (Levels of Logic = 1)
   Clock Path Skew:      0.000ns
   Source Clock:         clk_BUFGP rising at 10.000ns
   Destination Clock:    clk_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: PmodJSTK_Dir_/genDecimalPosY/shiftCount_4 to PmodJSTK_Dir_/genDecimalPosY/shiftCount_4
+  Minimum Data Path at Fast Process Corner: board_to_string_/rw_0 to board_to_string_/rw_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X21Y27.DQ      Tcko                  0.198   PmodJSTK_Dir_/genDecimalPosY/shiftCount<4>
-                                                       PmodJSTK_Dir_/genDecimalPosY/shiftCount_4
-    SLICE_X21Y27.D6      net (fanout=2)        0.022   PmodJSTK_Dir_/genDecimalPosY/shiftCount<4>
-    SLICE_X21Y27.CLK     Tah         (-Th)    -0.215   PmodJSTK_Dir_/genDecimalPosY/shiftCount<4>
-                                                       PmodJSTK_Dir_/genDecimalPosY/Mcount_shiftCount_xor<4>12
-                                                       PmodJSTK_Dir_/genDecimalPosY/shiftCount_4
+    SLICE_X20Y42.AQ      Tcko                  0.200   board_to_string_/rw<1>
+                                                       board_to_string_/rw_0
+    SLICE_X20Y42.A6      net (fanout=5)        0.031   board_to_string_/rw<0>
+    SLICE_X20Y42.CLK     Tah         (-Th)    -0.190   board_to_string_/rw<1>
+                                                       board_to_string_/Mmux_rw[2]_rw[2]_mux_57_OUT11_INV_0
+                                                       board_to_string_/rw_0
     -------------------------------------------------  ---------------------------
-    Total                                      0.435ns (0.413ns logic, 0.022ns route)
-                                                       (94.9% logic, 5.1% route)
+    Total                                      0.421ns (0.390ns logic, 0.031ns route)
+                                                       (92.6% logic, 7.4% route)
 
 --------------------------------------------------------------------------------
 
 Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.876ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: uart_top_/tfifo_/Mram_mem/CLKAWRCLK
+  Logical resource: uart_top_/tfifo_/Mram_mem/CLKAWRCLK
+  Location pin: RAMB8_X1Y16.CLKAWRCLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 6.876ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKB(Fmax))
+  Physical resource: uart_top_/tfifo_/Mram_mem/CLKBRDCLK
+  Logical resource: uart_top_/tfifo_/Mram_mem/CLKBRDCLK
+  Location pin: RAMB8_X1Y16.CLKBRDCLK
+  Clock network: clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 8.270ns (period - min period limit)
   Period: 10.000ns
@@ -516,25 +1573,9 @@ Slack: 8.270ns (period - min period limit)
   Location pin: BUFGMUX_X3Y13.I0
   Clock network: clk_BUFGP/IBUFG
 --------------------------------------------------------------------------------
-Slack: 9.570ns (period - min period limit)
-  Period: 10.000ns
-  Min period limit: 0.430ns (2325.581MHz) (Tcp)
-  Physical resource: PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<3>/CLK
-  Logical resource: PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_0/CK
-  Location pin: SLICE_X20Y20.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
-Slack: 9.570ns (period - min period limit)
-  Period: 10.000ns
-  Min period limit: 0.430ns (2325.581MHz) (Tcp)
-  Physical resource: PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount<3>/CLK
-  Logical resource: PmodJSTK_Dir_/PmodJSTK_Int/SerialClock/clkCount_1/CK
-  Location pin: SLICE_X20Y20.CLK
-  Clock network: clk_BUFGP
---------------------------------------------------------------------------------
 
 
-All constraints were met.
+1 constraint not met.
 
 
 Data Sheet report:
@@ -546,32 +1587,32 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    3.830|         |         |         |
+clk            |   46.054|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
 Timing summary:
 ---------------
 
-Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+Timing errors: 1394  Score: 27238249  (Setup/Max: 27238249, Hold: 0)
 
-Constraints cover 4045 paths, 0 nets, and 799 connections
+Constraints cover 42326674375206762000000 paths, 0 nets, and 46172 connections
 
 Design statistics:
-   Minimum period:   3.830ns{1}   (Maximum frequency: 261.097MHz)
+   Minimum period:  46.054ns{1}   (Maximum frequency:  21.714MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Tue Dec 03 20:27:03 2019 
+Analysis completed Tue Dec 03 22:02:02 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 170 MB
+Peak Memory Usage: 242 MB
 
 
 
