@@ -42,6 +42,8 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="TwentyFortyEight.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="TwentyFortyEight.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="TwentyFortyEight.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TwentyFortyEightTest_beh.prj"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="TwentyFortyEight_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="TwentyFortyEight_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TwentyFortyEight_isim_beh.exe"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="TwentyFortyEight_map.map" xil_pn:subbranch="Map"/>
@@ -53,6 +55,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="TwentyFortyEight_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="TwentyFortyEight_pad.txt" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="TwentyFortyEight_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="TwentyFortyEight_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="TwentyFortyEight_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="TwentyFortyEight_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="TwentyFortyEight_xst.xrpt"/>
@@ -66,9 +69,10 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="board_to_string.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="board_to_string.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="board_to_string.xst"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="board_to_string_test_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="board_to_string_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="board_to_string_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="board_to_string_isim_beh.wdb"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="board_to_string_test_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="board_to_string_test_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
@@ -93,22 +97,21 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1575413745" xil_pn:in_ck="4041568452299170500" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1575413745">
+    <transform xil_pn:end_ts="1575419091" xil_pn:in_ck="-52579482666191184" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1575419091">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="TwentyFortyEight.v"/>
-      <outfile xil_pn:name="TwentyFortyEightTest.v"/>
       <outfile xil_pn:name="board_to_string.v"/>
       <outfile xil_pn:name="board_to_string_test.v"/>
       <outfile xil_pn:name="uart.v"/>
       <outfile xil_pn:name="uart_fifo.v"/>
       <outfile xil_pn:name="uart_top.v"/>
     </transform>
-    <transform xil_pn:end_ts="1575413702" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7330611827234475306" xil_pn:start_ts="1575413702">
+    <transform xil_pn:end_ts="1575419091" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7414730873055949737" xil_pn:start_ts="1575419091">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1575413702" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="6660999888331503252" xil_pn:start_ts="1575413702">
+    <transform xil_pn:end_ts="1575419091" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2039151101206416875" xil_pn:start_ts="1575419091">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -116,33 +119,32 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1575413745" xil_pn:in_ck="4041568452299170500" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1575413745">
+    <transform xil_pn:end_ts="1575419091" xil_pn:in_ck="-52579482666191184" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1575419091">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="TwentyFortyEight.v"/>
-      <outfile xil_pn:name="TwentyFortyEightTest.v"/>
       <outfile xil_pn:name="board_to_string.v"/>
       <outfile xil_pn:name="board_to_string_test.v"/>
       <outfile xil_pn:name="uart.v"/>
       <outfile xil_pn:name="uart_fifo.v"/>
       <outfile xil_pn:name="uart_top.v"/>
     </transform>
-    <transform xil_pn:end_ts="1575413748" xil_pn:in_ck="4041568452299170500" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7322834264955792779" xil_pn:start_ts="1575413745">
+    <transform xil_pn:end_ts="1575419094" xil_pn:in_ck="-52579482666191184" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="2361354104307563053" xil_pn:start_ts="1575419091">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="board_to_string_test_beh.prj"/>
-      <outfile xil_pn:name="board_to_string_test_isim_beh.exe"/>
+      <outfile xil_pn:name="board_to_string_beh.prj"/>
+      <outfile xil_pn:name="board_to_string_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1575413748" xil_pn:in_ck="2242835595758472013" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7088566604303916361" xil_pn:start_ts="1575413748">
+    <transform xil_pn:end_ts="1575419094" xil_pn:in_ck="2866780201828550396" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8772968918598444775" xil_pn:start_ts="1575419094">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="board_to_string_test_isim_beh.wdb"/>
+      <outfile xil_pn:name="board_to_string_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>
@@ -174,21 +176,18 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1575411655" xil_pn:in_ck="-5340260505117157779" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-7950483805142112157" xil_pn:start_ts="1575411581">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
+    <transform xil_pn:end_ts="1575418765" xil_pn:in_ck="-5340260505117157779" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-7950483805142112157" xil_pn:start_ts="1575418758">
+      <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TwentyFortyEight.lso"/>
       <outfile xil_pn:name="TwentyFortyEight.ngc"/>
       <outfile xil_pn:name="TwentyFortyEight.ngr"/>
       <outfile xil_pn:name="TwentyFortyEight.prj"/>
-      <outfile xil_pn:name="TwentyFortyEight.stx"/>
       <outfile xil_pn:name="TwentyFortyEight.syr"/>
       <outfile xil_pn:name="TwentyFortyEight.xst"/>
+      <outfile xil_pn:name="TwentyFortyEightTest_beh.prj"/>
       <outfile xil_pn:name="TwentyFortyEight_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>

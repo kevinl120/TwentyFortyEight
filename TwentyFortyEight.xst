@@ -1,6 +1,9 @@
-set -tmpdir "/home/ise/xilinx/TwentyFortyEight/xst/projnav.tmp"
-set -xsthdpdir "/home/ise/xilinx/TwentyFortyEight/xst"
-run -compileonly yes
+set -tmpdir "xst/projnav.tmp"
+set -xsthdpdir "xst"
+run
+-ifn TwentyFortyEight.prj
+-ofn TwentyFortyEight
+-ofmt NGC
 -p xc6slx16-3-csg324
 -top TwentyFortyEight
 -opt_mode Speed
@@ -47,4 +50,3 @@ run -compileonly yes
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
--ifn TwentyFortyEight.prj

@@ -29,25 +29,28 @@ module board_to_string_test;
 	reg processing;
 	reg clk;
 	reg print_nxt;
-
+	reg [10:0] ctnr;
+	reg done;
+	reg start;
+	
 	// Outputs
 	wire [7:0] char_out;
+	reg [20:0] score;
 
 	// Instantiate the Unit Under Test (UUT)
 	board_to_string uut (
-		.board(board), 
-		.processing(processing), 
-		.clk(clk), 
-		.print_nxt(print_nxt), 
-		.char_out(char_out)
+		.board(board), .start(start), .clk(clk), .print_nxt(print_nxt), .score(score), .char_out(char_out), .done(done)
 	);
 
 	initial begin
 		// Initialize Inputs
+		ctnr = 0;
 		board = 0;
 		processing = 1;
 		clk = 0;
 		print_nxt = 0;
+		start = 1;
+		score = 102444;
 
 		// Wait 100 ns for global reset to finish
 		#1000;
@@ -55,9 +58,14 @@ module board_to_string_test;
 		// Add stimulus here
 
 	end
-	always #5 begin
+	
+	always begin
+	  #1000
+	  ctnr <= ctnr + 1;
 	  clk <= ~clk;
 	  print_nxt <= ~print_nxt;
+	  if(ctnr == 2000) $finish;
+	  if (ctnr >=1) start <= 0;
 	end
       
 endmodule

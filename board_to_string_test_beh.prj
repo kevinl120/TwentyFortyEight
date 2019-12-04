@@ -1,3 +1,0 @@
-verilog work "board_to_string.v"
-verilog work "board_to_string_test.v"
-verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
