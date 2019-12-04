@@ -69,7 +69,7 @@ module board_to_string(board, start, clk, print_nxt, score, char_out, done);
 					  rw = 0;
 					  cl = 0;
 					  cntr = 0;
-					  outcntr = 0;
+					  outcntr <= 0;
 			 end
 			 else begin
 				if (print_nxt == 1) begin

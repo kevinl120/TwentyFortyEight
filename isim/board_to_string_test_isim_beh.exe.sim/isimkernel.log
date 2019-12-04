@@ -2,14 +2,14 @@ Command line:
    board_to_string_test_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  61721
+     -socket  49452
 
-Tue Dec 03 21:46:39 2019
+Wed Dec 04 10:33:40 2019
 
 
  Elaboration Time: 0.0468 sec
 
- Current Memory Usage: 828.17 Meg
+ Current Memory Usage: 828.289 Meg
 
  Total Signals          : 19
  Total Nets             : 366
@@ -17,12 +17,12 @@ Tue Dec 03 21:46:39 2019
  Total Blocks           : 4
  Total Primitive Blocks : 2
  Total Processes        : 17
- Total Traceable Variables  : 36
- Total Scalar Nets and Variables : 882
+ Total Traceable Variables  : 37
+ Total Scalar Nets and Variables : 903
 
- Total Simulation Time: 0.0936 sec
+ Total Simulation Time: 0.0624 sec
 
- Current Memory Usage: 828.17 Meg
+ Current Memory Usage: 828.289 Meg
 
-Tue Dec 03 21:46:46 2019
+Wed Dec 04 10:33:45 2019
 

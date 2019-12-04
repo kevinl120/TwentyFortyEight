@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">RsRx_IBUF</arg> has no load.
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">RsRx_IBUF</arg> has no load.
 </msg>
 
 <msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
@@ -31,10 +31,16 @@ For more information about the Timing Analyzer, consult the Xilinx Timing Analyz
 <msg type="info" file="Map" num="215" delta="old" >The Interim Design Summary has been generated in the MAP Report (.mrp).
 </msg>
 
-<msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.
+<msg type="error" file="Place" num="375" delta="new" >The design does not fit in device.
+<arg fmt="%s" index="1"> Total LUT Utilization      : 18246 out of 18224
+ LUTs used as Logic         : 18246
+ LUTs used as Memory        : 0
+ FF Utilization             : 793 out of 18224
+
+</arg>
 </msg>
 
-<msg type="warning" file="PhysDesignRules" num="2410" delta="old" >This design is using one or more 9K Block RAMs (RAMB8BWER).  9K Block RAM initialization data, both user defined and default, may be incorrect and should not be used.  For more information, please reference Xilinx Answer Record 39999.
+<msg type="error" file="Pack" num="1654" delta="old" >The timing-driven placement phase encountered an error.
 </msg>
 
 </messages>

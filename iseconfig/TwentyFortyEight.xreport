@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-12-04T06:57:54</DateModified>
+  <DateModified>2019-12-04T10:15:50</DateModified>
   <ModuleName>TwentyFortyEight</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/ise/xilinx/TwentyFortyEight/iseconfig/TwentyFortyEight.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/ise/xilinx/TwentyFortyEight</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/152/Desktop/test/TwentyFortyEight/iseconfig/TwentyFortyEight.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/152/Desktop/test/TwentyFortyEight\</ImplementationReportsDirectory>
   <DateInitialized>2019-12-04T06:57:54</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

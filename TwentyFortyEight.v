@@ -57,7 +57,7 @@ module TwentyFortyEight(clk, RsRx, RsTx, MISO, SS, MOSI, SCLK, led, btns);
 
   wire [2:0] dir; // 0: up, 1: right, 2: down, 3: left, 4: no input
   wire [2:0] dir_store;
-  wire rst_btn;
+  // wire rst_btn;
   
   PmodJSTK_Dir PmodJSTK_Dir_(
     .clk(clk),
@@ -70,13 +70,9 @@ module TwentyFortyEight(clk, RsRx, RsTx, MISO, SS, MOSI, SCLK, led, btns);
   );
 
   wire [319:0] board;
-  wire [20:0] score = 0; 
+  wire [20:0] score; 
   wire [767:0] precompute = 768'b110111001110110111011100111111101110110111011100100110001010100110011000101110101010100110011000010101000110010101010100011101100110010101010100000100000010000100010000001100100010000100010000100011000100100010001100000001000100100010001100100111010101100110011101000101010101100110011101101011100110101010101110001001100110101010101110101111110111101110111111001101110111101110111111111011111101111011101111110011011101111011101111101010111001101010101011100010011001101010101011011001110101011001100111010001010101011001100111001000110001001000100011000000010001001000100011011100111011011101110011111110111011011101110011011000101010011001100010111010101010011001100010010100011001010101010001110110011001010101010001010000001000010001000000110010001000010001000000;
-  
-  reg [20:0] score_out = 0;
 
-  
-  
   wire [7:0]           uart_rx_data;           // From uart_top_ of uart_top.v
   wire                 uart_rx_valid;          // From uart_top_ of uart_top.v
   wire                 uart_tx_busy;           // From uart_top_ of uart_top.v
@@ -95,8 +91,8 @@ module TwentyFortyEight(clk, RsRx, RsTx, MISO, SS, MOSI, SCLK, led, btns);
   end
   
   debouncer debouncer1_(.clk(clk), .dir(dir), .debounced(dir_store));
-  btn_debouncer btn_debouncer1(.clk(clk), .btn(btns), .pressed(rst_btn));
-  gameController gameController_(.clk(clk), .dir(dir_store), .rst(rst_btn), .board(board), .score(score), .precompute(precompute));
+  // btn_debouncer btn_debouncer1(.clk(clk), .btn(btns), .pressed(rst_btn));
+  gameController gameController_(.clk(clk), .dir(dir_store), .rst(btns), .board(board), .score(score), .precompute(precompute));
   
   //debouncer debouncer1_(.clk(clk), .btn(btns), .pressed(rst_btn));
   //debouncer debouncer2_(.clk(clk), .btn(btnu), .pressed(up_btn));
@@ -116,9 +112,9 @@ module TwentyFortyEight(clk, RsRx, RsTx, MISO, SS, MOSI, SCLK, led, btns);
   //end
   
   board_to_string board_to_string_(
-    .board(board), .start(start),
+    .board(0), .start(start),
 	.clk(clk), .print_nxt(~uart_tx_busy),
-	.score(1024), .char_out(tx_string), .done(done)
+	.score(score), .char_out(tx_string), .done(done)
   );
   
   

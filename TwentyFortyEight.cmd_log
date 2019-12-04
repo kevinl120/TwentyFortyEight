@@ -48,3 +48,13 @@ map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off TwentyFortyEight_map.ncd TwentyFortyEight.ncd TwentyFortyEight.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TwentyFortyEight.twx TwentyFortyEight.ncd -o TwentyFortyEight.twr TwentyFortyEight.pcf -ucf Nexys3_Master.ucf 
 bitgen -intstyle ise -f TwentyFortyEight.ut TwentyFortyEight.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Desktop/test/TwentyFortyEight/TwentyFortyEight.xst" -ofn "C:/Users/152/Desktop/test/TwentyFortyEight/TwentyFortyEight.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 TwentyFortyEight.ngc TwentyFortyEight.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TwentyFortyEight_map.ncd TwentyFortyEight.ngd TwentyFortyEight.pcf 
+xst -intstyle ise -ifn "C:/Users/152/Desktop/test/TwentyFortyEight/TwentyFortyEight.xst" -ofn "C:/Users/152/Desktop/test/TwentyFortyEight/TwentyFortyEight.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 TwentyFortyEight.ngc TwentyFortyEight.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TwentyFortyEight_map.ncd TwentyFortyEight.ngd TwentyFortyEight.pcf 
+xst -intstyle ise -ifn "C:/Users/152/Desktop/test/TwentyFortyEight/TwentyFortyEight.xst" -ofn "C:/Users/152/Desktop/test/TwentyFortyEight/TwentyFortyEight.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Desktop/test/TwentyFortyEight/TwentyFortyEight.xst" -ofn "C:/Users/152/Desktop/test/TwentyFortyEight/TwentyFortyEight.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 TwentyFortyEight.ngc TwentyFortyEight.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TwentyFortyEight_map.ncd TwentyFortyEight.ngd TwentyFortyEight.pcf 
