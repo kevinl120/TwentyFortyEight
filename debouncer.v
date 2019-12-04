@@ -18,28 +18,51 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module debouncer(clk, dir, debounced);
 
-input clk;
-input [2:0] dir;
-output reg [2:0] debounced;
 
-reg [40:0] counter;
+// // JOYSTICK DEBOUNCER
+// module debouncer(clk, dir, debounced);
+//   input clk;
+//   input [2:0] dir;
+//   output reg [2:0] debounced;
 
-always @(posedge clk) begin
-  if (dir >= 4) begin
-    counter <= 0;
-    debounced <= 4;
-  end else begin
-    if (counter == (1 << 20)) begin
-      debounced <= dir;
-      counter <= counter + 1;
+//   reg [40:0] counter;
+
+//   always @(posedge clk) begin
+//     if (dir >= 4) begin
+//       counter <= 0;
+//       debounced <= 4;
+//     end else begin
+//       if (counter == (1 << 20)) begin
+//         debounced <= dir;
+//         counter <= counter + 1;
+//       end else begin
+//         counter <= counter + 1;
+//         debounced <= 4;
+//       end
+//     end
+//   end
+// endmodule
+
+// BUTTON DEBOUNCER
+module debouncer(clk, btn, pressed);
+  input clk, btn;
+  output reg pressed;
+
+  reg [40:0] counter;
+
+  always @(posedge clk) begin
+    if (btn == 0) begin
+      counter <= 0;
+      pressed <= 0;
     end else begin
-      counter <= counter + 1;
-      debounced <= 4;
+      if (counter == (1 << 2)) begin
+        pressed <= 1;
+        counter <= counter + 1;
+      end else begin
+        counter <= counter + 1;
+        pressed <= 0;
+      end
     end
   end
-end
-
-
 endmodule

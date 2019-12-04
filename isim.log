@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/ise/VirtualBox_Shared/TwentyFortyEight/tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/VirtualBox_Shared/TwentyFortyEight/tb_isim_beh.wdb 
+Running: /home/ise/VirtualBox_Shared/TwentyFortyEight/top_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/VirtualBox_Shared/TwentyFortyEight/top_tb_isim_beh.wdb 
 ISim P.20160913 (signature 0xfbc00daa)
 ----------------------------------------------------------------------
 INFO:Security:61 - The XILINXD_LICENSE_FILE environment variable is not set.
@@ -31,78 +31,5 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # run all
-starting board
-      2       0       0       0
-      0       0       0       0
-      0       0       0       0
-      0       0       0       0
-move           0
-      2       0       0       0
-      0       0       0       0
-      0       0       0       0
-      0       0       0       0
-score:       0
-------------------------------
-move           1
-      0       0       0       2
-      0       0       0       0
-      0       0       2       0
-      0       0       0       0
-score:       0
-------------------------------
-move           2
-      0       0       0       0
-      0       0       0       0
-      0       0       0       0
-      2       0       2       2
-score:       0
-------------------------------
-move           3
-      0       0       0       0
-      0       2       0       0
-      0       0       0       0
-      4       2       0       0
-score:       4
-------------------------------
-move           0
-      4       4       0       0
-      0       2       0       0
-      0       0       0       0
-      0       0       0       0
-score:       8
-------------------------------
-move           1
-      0       0       0       8
-      0       0       0       2
-      0       0       0       0
-      4       0       0       0
-score:      16
-------------------------------
-move           2
-      0       0       0       0
-      0       0       0       0
-      0       0       2       8
-      4       0       0       2
-score:      16
-------------------------------
-move           3
-      0       0       0       0
-      0       0       0       0
-      2       8       0       0
-      4       2       0       2
-score:      16
-------------------------------
-move           0
-      2       8       0       2
-      4       2       0       0
-      0       0       0       2
-      0       0       0       0
-score:      16
-------------------------------
-reset
-      2       0       0       0
-      0       0       0       0
-      0       0       0       0
-      0       0       0       0
-score:       0
-Stopped at time : 61370 ns : File "/home/ise/VirtualBox_Shared/TwentyFortyEight/tb.v" Line 100
+Stopped at time : 72070 ns : File "/home/ise/VirtualBox_Shared/TwentyFortyEight/top_tb.v" Line 101
+# exit 0

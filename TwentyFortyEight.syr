@@ -110,6 +110,8 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Analyzing Verilog file "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" into library work
 Parsing module <gameController>.
+Analyzing Verilog file "/home/ise/VirtualBox_Shared/TwentyFortyEight/debouncer.v" into library work
+Parsing module <debouncer>.
 Analyzing Verilog file "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" into library work
 Parsing module <TwentyFortyEight>.
 
@@ -119,18 +121,29 @@ Parsing module <TwentyFortyEight>.
 
 Elaborating module <TwentyFortyEight>.
 
+Elaborating module <debouncer>.
+WARNING:HDLCompiler:1127 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" Line 35: Assignment to rst_btn ignored, since the identifier is never used
+
 Elaborating module <gameController>.
-WARNING:HDLCompiler:872 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 35: Using initial value of precompute since it is never assigned
-WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 132: Result of 18-bit expression is truncated to fit in 17-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 138: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 108: Result of 22-bit expression is truncated to fit in 20-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 109: Result of 22-bit expression is truncated to fit in 21-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 115: Result of 7-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 120: Result of 32-bit expression is truncated to fit in 20-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 122: Result of 7-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 125: Result of 7-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:1127 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" Line 29: Assignment to board ignored, since the identifier is never used
-WARNING:Xst:2972 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" line 29. All outputs of instance <gameController_> of block <gameController> are unconnected in block <TwentyFortyEight>. Underlying logic will be removed.
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 133: Result of 18-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 139: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 109: Result of 22-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 110: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 116: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 121: Result of 32-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 123: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/gameController.v" Line 126: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:1127 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" Line 40: Assignment to board ignored, since the identifier is never used
+WARNING:HDLCompiler:91 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" Line 45: Signal <up_btn> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" Line 46: Signal <right_btn> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" Line 47: Signal <down_btn> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" Line 48: Signal <left_btn> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:Xst:2972 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" line 35. All outputs of instance <debouncer1_> of block <debouncer> are unconnected in block <TwentyFortyEight>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" line 36. All outputs of instance <debouncer2_> of block <debouncer> are unconnected in block <TwentyFortyEight>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" line 37. All outputs of instance <debouncer3_> of block <debouncer> are unconnected in block <TwentyFortyEight>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" line 38. All outputs of instance <debouncer4_> of block <debouncer> are unconnected in block <TwentyFortyEight>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" line 39. All outputs of instance <debouncer5_> of block <debouncer> are unconnected in block <TwentyFortyEight>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" line 40. All outputs of instance <gameController_> of block <gameController> are unconnected in block <TwentyFortyEight>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -138,8 +151,10 @@ WARNING:Xst:2972 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEigh
 
 Synthesizing Unit <TwentyFortyEight>.
     Related source file is "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v".
-INFO:Xst:3210 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" line 29: Output port <board> of the instance <gameController_> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" line 29: Output port <score> of the instance <gameController_> is unconnected or connected to loadless signal.
+WARNING:Xst:647 - Input <dir> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" line 35: Output port <pressed> of the instance <debouncer1_> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" line 40: Output port <board> of the instance <gameController_> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/VirtualBox_Shared/TwentyFortyEight/TwentyFortyEight.v" line 40: Output port <score> of the instance <gameController_> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <TwentyFortyEight> synthesized.
@@ -233,7 +248,7 @@ Slice Logic Distribution:
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                           5
+ Number of IOs:                          10
  Number of bonded IOBs:                   0  out of    232     0%  
 
 Specific Feature Utilization:
@@ -283,15 +298,15 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 41.00 secs
-Total CPU time to Xst completion: 34.37 secs
+Total REAL time to Xst completion: 33.00 secs
+Total CPU time to Xst completion: 31.50 secs
  
 --> 
 
 
-Total memory usage is 1050980 kilobytes
+Total memory usage is 1051800 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   11 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :   21 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

@@ -1,3 +1,5 @@
 verilog work "gameController.v"
 verilog work "debouncer.v"
 verilog work "TwentyFortyEight.v"
+verilog work "top_tb.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
