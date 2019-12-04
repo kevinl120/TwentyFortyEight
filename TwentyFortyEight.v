@@ -41,15 +41,32 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 // module TwentyFortyEight(clk, rst, dir);
-module TwentyFortyEight(clk, rst, dir, btns, btnu, btnd, btnl, btnr, RsRx, RsTx);
+module TwentyFortyEight(clk, rst, RsRx, RsTx, MISO, SS, MOSI, SCLK, led);
+//module TwentyFortyEight(clk, rst, btns, btnu, btnd, btnl, btnr, MISO, SS, MOSI, SCLK, led);
 
-input btns,btnu,btnd,btnr,btnl;
+// input btns,btnu,btnd,btnr,btnl;
 
   input clk, rst;
-  input [2:0] dir; // 0: up, 1: right, 2: down, 3: left, 4: no input
   input        RsRx;
   output       RsTx;
-  reg [2:0] dir_store = 4;
+  input MISO;
+  output wire SS;
+  output wire MOSI;
+  output wire SCLK;
+  output reg [2:0] led;
+
+  wire [2:0] dir; // 0: up, 1: right, 2: down, 3: left, 4: no input
+  wire [2:0] dir_store;
+  
+  PmodJSTK_Dir PmodJSTK_Dir_(
+    .clk(clk),
+    .rst(rst),
+    .miso(MISO),
+    .ss(SS),
+    .mosi(MOSI),
+    .sclk(SCLK),
+    .dir(dir)
+  );
 
   wire [319:0] board;
   wire [20:0] score = 0; 
@@ -67,32 +84,41 @@ input btns,btnu,btnd,btnr,btnl;
 
   wire [7:0]tx_string; 
   wire done;
+  reg start;
   
+  always @(posedge clk) begin
+    led[0] = dir[0];
+    led[1] = dir[1];
+    led[2] = dir[2];
+    if (dir_store != 4) start <= 1;
+    else start <= 0;
+  end
   
-  debouncer debouncer1_(.clk(clk), .btn(btns), .pressed(rst_btn));
-  debouncer debouncer2_(.clk(clk), .btn(btnu), .pressed(up_btn));
-  debouncer debouncer3_(.clk(clk), .btn(btnd), .pressed(down_btn));
-  debouncer debouncer4_(.clk(clk), .btn(btnl), .pressed(left_btn));
-  debouncer debouncer5_(.clk(clk), .btn(btnr), .pressed(right_btn));
+  debouncer debouncer1_(.clk(clk), .dir(dir), .debounced(dir_store));
   
   gameController gameController_(.clk(clk), .dir(dir_store), .rst(rst), .board(board), .score(score), .precompute(precompute));
   
+  //debouncer debouncer1_(.clk(clk), .btn(btns), .pressed(rst_btn));
+  //debouncer debouncer2_(.clk(clk), .btn(btnu), .pressed(up_btn));
+  //debouncer debouncer3_(.clk(clk), .btn(btnd), .pressed(down_btn));
+  //debouncer debouncer4_(.clk(clk), .btn(btnl), .pressed(left_btn));
+  //debouncer debouncer5_(.clk(clk), .btn(btnr), .pressed(right_btn));  
+  
   // gameController gameController_(.clk(clk), .dir(dir), .rst(rst), .board(board), .score(score));
-
-  always @(posedge clk) begin
-    if (up_btn == 1) dir_store <= 0;
-    else if (right_btn == 1) dir_store <= 1;
-    else if (down_btn == 1) dir_store <= 2;
-    else if (left_btn == 1) dir_store <= 3;
-    else dir_store <= 4;
-	score_out <= score;
-  end
   
+  //always @(posedge clk) begin
+  //  if (up_btn == 1) dir_store <= 0;
+  //  else if (right_btn == 1) dir_store <= 1;
+  //  else if (down_btn == 1) dir_store <= 2;
+  //  else if (left_btn == 1) dir_store <= 3;
+  //  else dir_store <= 4;
+  //	score_out <= score;
+  //end
   
   board_to_string board_to_string_(
-    .board(board), .start(rst_btn || up_btn || down_btn || left_btn || right_btn),
+    .board(board), .start(start),
 	.clk(clk), .print_nxt(~uart_tx_busy),
-	.score(0), .char_out(tx_string), .done(done)
+	.score(1024), .char_out(tx_string), .done(done)
   );
   
   
@@ -110,43 +136,5 @@ input btns,btnu,btnd,btnr,btnl;
                        .i_tx_stb (~done)
                        );
 
-  
 
 endmodule
-/*
-module TwentyFortyEight(RsRx, clk, rst, RsTx, btns);
-  input wire clk;
-  input wire rst;
-  input        RsRx;
-  output       RsTx;
-  input btns;
-  
-  reg [3:0] rc = 0;
-
-  
-  reg [320-1:0] board;
-  wire board_updated;
-  wire done;
-
-  board_to_string board_to_string_(
-    .board(board), .start(1), .clk(clk), .print_nxt(~o_tx_busy),
-	 .score(10244), .char_out(tx_string), .done(done)
-  );
-  
-  uart_top uart_top_ (// Outputs
-                       .o_tx            (RsTx),
-                       .o_tx_busy       (uart_tx_busy),
-                       .o_rx_data       (uart_rx_data[7:0]),
-                       .o_rx_valid      (uart_rx_valid),
-                       // Inputs
-                       .i_rx            (RsRx),
-                       .i_tx_data       (tx_string),
-
-                       // Inputs
-                       .clk             (clk),
-                       .rst             (rst),
-                       .i_tx_stb (~done)
-                       );
-
-endmodule
-*/

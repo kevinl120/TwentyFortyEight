@@ -61,7 +61,7 @@ module board_to_string(board, start, clk, print_nxt, score, char_out, done);
 	   // $display("Starting...");
 	   done <= 0;
     end
-	 else begin
+	else begin
 		 if (done == 1) begin
 				  // $display("ENDED...");
 				  rw <= 0;
