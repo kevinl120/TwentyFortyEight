@@ -1,7 +1,7 @@
 #Release 14.6 - par P.68d (nt64)
 #Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-#Tue Dec 03 19:13:01 2019
+#Tue Dec 03 19:23:12 2019
 
 #
 ## NOTE: This file is designed to be imported into a spreadsheet program
@@ -61,7 +61,7 @@ C3,,,GND,,,,,,,,,,,,
 C4,btnl,IOB,IO_L1N_VREF_0,INPUT,LVCMOS33,0,,,,NONE,,LOCATED,NO,NONE,
 C5,,IOBM,IO_L6P_0,UNUSED,,0,,,,,,,,,
 C6,,IOBS,IO_L3N_0,UNUSED,,0,,,,,,,,,
-C7,rst,IOB,IO_L10P_0,INPUT,LVCMOS25*,0,,,,NONE,,UNLOCATED,NO,NONE,
+C7,,IOBM,IO_L10P_0,UNUSED,,0,,,,,,,,,
 C8,,IOBS,IO_L11N_0,UNUSED,,0,,,,,,,,,
 C9,btnd,IOB,IO_L34N_GCLK18_0,INPUT,LVCMOS33,0,,,,NONE,,LOCATED,NO,NONE,
 C10,,IOBM,IO_L37P_GCLK13_0,UNUSED,,0,,,,,,,,,
@@ -76,7 +76,7 @@ C18,,IOBS,IO_L29N_A22_M1A14_1,UNUSED,,1,,,,,,,,,
 D1,,IOBS,IO_L52N_M3A9_3,UNUSED,,3,,,,,,,,,
 D2,,IOBM,IO_L52P_M3A8_3,UNUSED,,3,,,,,,,,,
 D3,,IOBS,IO_L54N_M3A11_3,UNUSED,,3,,,,,,,,,
-D4,,IOBM,IO_L1P_HSWAPEN_0,UNUSED,,0,,,,,,,,,
+D4,rst,IOB,IO_L1P_HSWAPEN_0,INPUT,LVCMOS25*,0,,,,NONE,,UNLOCATED,NO,NONE,
 D5,,,GND,,,,,,,,,,,,
 D6,,IOBM,IO_L3P_0,UNUSED,,0,,,,,,,,,
 D7,,,VCCO_0,,,0,,,,,any******,,,,

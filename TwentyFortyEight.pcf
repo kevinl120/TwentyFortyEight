@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.68d on Tue Dec 03 19:11:18 2019
+// Written by: Map P.68d on Tue Dec 03 19:22:29 2019
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -58,48 +58,7 @@ TIMEGRP sys_clk_pin = BEL "debouncer5_/pressed" BEL "debouncer4_/pressed" BEL
         "debouncer5_/counter_34" BEL "debouncer5_/counter_35" BEL
         "debouncer5_/counter_36" BEL "debouncer5_/counter_37" BEL
         "debouncer5_/counter_38" BEL "debouncer5_/counter_39" BEL
-        "debouncer5_/counter_40" BEL "debouncer1_/counter_0" BEL
-        "debouncer1_/counter_1" BEL "debouncer1_/counter_2" BEL
-        "debouncer1_/counter_3" BEL "debouncer1_/counter_4" BEL
-        "debouncer1_/counter_5" BEL "debouncer1_/counter_6" BEL
-        "debouncer1_/counter_7" BEL "debouncer1_/counter_8" BEL
-        "debouncer1_/counter_9" BEL "debouncer1_/counter_10" BEL
-        "debouncer1_/counter_11" BEL "debouncer1_/counter_12" BEL
-        "debouncer1_/counter_13" BEL "debouncer1_/counter_14" BEL
-        "debouncer1_/counter_15" BEL "debouncer1_/counter_16" BEL
-        "debouncer1_/counter_17" BEL "debouncer1_/counter_18" BEL
-        "debouncer1_/counter_19" BEL "debouncer1_/counter_20" BEL
-        "debouncer1_/counter_21" BEL "debouncer1_/counter_22" BEL
-        "debouncer1_/counter_23" BEL "debouncer1_/counter_24" BEL
-        "debouncer1_/counter_25" BEL "debouncer1_/counter_26" BEL
-        "debouncer1_/counter_27" BEL "debouncer1_/counter_28" BEL
-        "debouncer1_/counter_29" BEL "debouncer1_/counter_30" BEL
-        "debouncer1_/counter_31" BEL "debouncer1_/counter_32" BEL
-        "debouncer1_/counter_33" BEL "debouncer1_/counter_34" BEL
-        "debouncer1_/counter_35" BEL "debouncer1_/counter_36" BEL
-        "debouncer1_/counter_37" BEL "debouncer1_/counter_38" BEL
-        "debouncer1_/counter_39" BEL "debouncer1_/counter_40" BEL
-        "debouncer2_/counter_0" BEL "debouncer2_/counter_1" BEL
-        "debouncer2_/counter_2" BEL "debouncer2_/counter_3" BEL
-        "debouncer2_/counter_4" BEL "debouncer2_/counter_5" BEL
-        "debouncer2_/counter_6" BEL "debouncer2_/counter_7" BEL
-        "debouncer2_/counter_8" BEL "debouncer2_/counter_9" BEL
-        "debouncer2_/counter_10" BEL "debouncer2_/counter_11" BEL
-        "debouncer2_/counter_12" BEL "debouncer2_/counter_13" BEL
-        "debouncer2_/counter_14" BEL "debouncer2_/counter_15" BEL
-        "debouncer2_/counter_16" BEL "debouncer2_/counter_17" BEL
-        "debouncer2_/counter_18" BEL "debouncer2_/counter_19" BEL
-        "debouncer2_/counter_20" BEL "debouncer2_/counter_21" BEL
-        "debouncer2_/counter_22" BEL "debouncer2_/counter_23" BEL
-        "debouncer2_/counter_24" BEL "debouncer2_/counter_25" BEL
-        "debouncer2_/counter_26" BEL "debouncer2_/counter_27" BEL
-        "debouncer2_/counter_28" BEL "debouncer2_/counter_29" BEL
-        "debouncer2_/counter_30" BEL "debouncer2_/counter_31" BEL
-        "debouncer2_/counter_32" BEL "debouncer2_/counter_33" BEL
-        "debouncer2_/counter_34" BEL "debouncer2_/counter_35" BEL
-        "debouncer2_/counter_36" BEL "debouncer2_/counter_37" BEL
-        "debouncer2_/counter_38" BEL "debouncer2_/counter_39" BEL
-        "debouncer2_/counter_40" BEL "debouncer3_/counter_0" BEL
+        "debouncer5_/counter_40" BEL "debouncer3_/counter_0" BEL
         "debouncer3_/counter_1" BEL "debouncer3_/counter_2" BEL
         "debouncer3_/counter_3" BEL "debouncer3_/counter_4" BEL
         "debouncer3_/counter_5" BEL "debouncer3_/counter_6" BEL
@@ -120,19 +79,71 @@ TIMEGRP sys_clk_pin = BEL "debouncer5_/pressed" BEL "debouncer4_/pressed" BEL
         "debouncer3_/counter_35" BEL "debouncer3_/counter_36" BEL
         "debouncer3_/counter_37" BEL "debouncer3_/counter_38" BEL
         "debouncer3_/counter_39" BEL "debouncer3_/counter_40" BEL
-        "board_to_string_/cntr_40" BEL "board_to_string_/cntr_39" BEL
-        "board_to_string_/cntr_38" BEL "board_to_string_/cntr_37" BEL
-        "board_to_string_/cntr_36" BEL "board_to_string_/cntr_35" BEL
-        "board_to_string_/cntr_34" BEL "board_to_string_/cntr_33" BEL
-        "board_to_string_/cntr_32" BEL "board_to_string_/cntr_31" BEL
-        "board_to_string_/cntr_30" BEL "board_to_string_/cntr_29" BEL
-        "board_to_string_/cntr_28" BEL "board_to_string_/cntr_27" BEL
-        "board_to_string_/cntr_26" BEL "board_to_string_/cntr_25" BEL
-        "board_to_string_/cntr_24" BEL "board_to_string_/cntr_23" BEL
-        "board_to_string_/cntr_22" BEL "board_to_string_/cntr_21" BEL
-        "board_to_string_/cntr_20" BEL "board_to_string_/cntr_19" BEL
-        "board_to_string_/cntr_18" BEL "board_to_string_/cntr_17" BEL
-        "board_to_string_/cntr_16" BEL "board_to_string_/cntr_15" BEL
+        "debouncer1_/counter_0" BEL "debouncer1_/counter_1" BEL
+        "debouncer1_/counter_2" BEL "debouncer1_/counter_3" BEL
+        "debouncer1_/counter_4" BEL "debouncer1_/counter_5" BEL
+        "debouncer1_/counter_6" BEL "debouncer1_/counter_7" BEL
+        "debouncer1_/counter_8" BEL "debouncer1_/counter_9" BEL
+        "debouncer1_/counter_10" BEL "debouncer1_/counter_11" BEL
+        "debouncer1_/counter_12" BEL "debouncer1_/counter_13" BEL
+        "debouncer1_/counter_14" BEL "debouncer1_/counter_15" BEL
+        "debouncer1_/counter_16" BEL "debouncer1_/counter_17" BEL
+        "debouncer1_/counter_18" BEL "debouncer1_/counter_19" BEL
+        "debouncer1_/counter_20" BEL "debouncer1_/counter_21" BEL
+        "debouncer1_/counter_22" BEL "debouncer1_/counter_23" BEL
+        "debouncer1_/counter_24" BEL "debouncer1_/counter_25" BEL
+        "debouncer1_/counter_26" BEL "debouncer1_/counter_27" BEL
+        "debouncer1_/counter_28" BEL "debouncer1_/counter_29" BEL
+        "debouncer1_/counter_30" BEL "debouncer1_/counter_31" BEL
+        "debouncer1_/counter_32" BEL "debouncer1_/counter_33" BEL
+        "debouncer1_/counter_34" BEL "debouncer1_/counter_35" BEL
+        "debouncer1_/counter_36" BEL "debouncer1_/counter_37" BEL
+        "debouncer1_/counter_38" BEL "debouncer1_/counter_39" BEL
+        "debouncer1_/counter_40" BEL "debouncer2_/counter_0" BEL
+        "debouncer2_/counter_1" BEL "debouncer2_/counter_2" BEL
+        "debouncer2_/counter_3" BEL "debouncer2_/counter_4" BEL
+        "debouncer2_/counter_5" BEL "debouncer2_/counter_6" BEL
+        "debouncer2_/counter_7" BEL "debouncer2_/counter_8" BEL
+        "debouncer2_/counter_9" BEL "debouncer2_/counter_10" BEL
+        "debouncer2_/counter_11" BEL "debouncer2_/counter_12" BEL
+        "debouncer2_/counter_13" BEL "debouncer2_/counter_14" BEL
+        "debouncer2_/counter_15" BEL "debouncer2_/counter_16" BEL
+        "debouncer2_/counter_17" BEL "debouncer2_/counter_18" BEL
+        "debouncer2_/counter_19" BEL "debouncer2_/counter_20" BEL
+        "debouncer2_/counter_21" BEL "debouncer2_/counter_22" BEL
+        "debouncer2_/counter_23" BEL "debouncer2_/counter_24" BEL
+        "debouncer2_/counter_25" BEL "debouncer2_/counter_26" BEL
+        "debouncer2_/counter_27" BEL "debouncer2_/counter_28" BEL
+        "debouncer2_/counter_29" BEL "debouncer2_/counter_30" BEL
+        "debouncer2_/counter_31" BEL "debouncer2_/counter_32" BEL
+        "debouncer2_/counter_33" BEL "debouncer2_/counter_34" BEL
+        "debouncer2_/counter_35" BEL "debouncer2_/counter_36" BEL
+        "debouncer2_/counter_37" BEL "debouncer2_/counter_38" BEL
+        "debouncer2_/counter_39" BEL "debouncer2_/counter_40" BEL
+        "gameController_/counter_8" BEL "gameController_/counter_7" BEL
+        "gameController_/counter_6" BEL "gameController_/counter_5" BEL
+        "gameController_/counter_4" BEL "gameController_/counter_3" BEL
+        "gameController_/counter_2" BEL "gameController_/counter_1" BEL
+        "gameController_/counter_0" BEL "gameController_/editMode_5" BEL
+        "gameController_/editMode_4" BEL "gameController_/editMode_3" BEL
+        "gameController_/editMode_2" BEL "gameController_/editMode_1" BEL
+        "gameController_/board_302" BEL "gameController_/board_301" BEL
+        "gameController_/board_282" BEL "gameController_/board_281" BEL
+        "gameController_/board_262" BEL "gameController_/board_261" BEL
+        "gameController_/board_242" BEL "gameController_/board_241" BEL
+        "gameController_/board_222" BEL "gameController_/board_221" BEL
+        "gameController_/board_202" BEL "gameController_/board_201" BEL
+        "gameController_/board_182" BEL "gameController_/board_181" BEL
+        "gameController_/board_162" BEL "gameController_/board_161" BEL
+        "gameController_/board_142" BEL "gameController_/board_141" BEL
+        "gameController_/board_125" BEL "gameController_/board_122" BEL
+        "gameController_/board_121" BEL "gameController_/board_102" BEL
+        "gameController_/board_101" BEL "gameController_/board_82" BEL
+        "gameController_/board_81" BEL "gameController_/board_62" BEL
+        "gameController_/board_61" BEL "gameController_/board_42" BEL
+        "gameController_/board_41" BEL "gameController_/board_22" BEL
+        "gameController_/board_21" BEL "gameController_/board_2" BEL
+        "gameController_/board_1" BEL "board_to_string_/cntr_15" BEL
         "board_to_string_/cntr_14" BEL "board_to_string_/cntr_13" BEL
         "board_to_string_/cntr_12" BEL "board_to_string_/cntr_11" BEL
         "board_to_string_/cntr_10" BEL "board_to_string_/cntr_9" BEL
@@ -145,6 +156,7 @@ TIMEGRP sys_clk_pin = BEL "debouncer5_/pressed" BEL "debouncer4_/pressed" BEL
         "board_to_string_/char_out_5" BEL "board_to_string_/char_out_4" BEL
         "board_to_string_/char_out_3" BEL "board_to_string_/char_out_2" BEL
         "board_to_string_/char_out_1" BEL "board_to_string_/char_out_0" BEL
+        "board_to_string_/curnum_2" BEL "board_to_string_/curnum_1" BEL
         "board_to_string_/idxp_8" BEL "board_to_string_/idxp_7" BEL
         "board_to_string_/idxp_6" BEL "board_to_string_/idxp_5" BEL
         "board_to_string_/idxp_4" BEL "board_to_string_/idxp_3" BEL
@@ -197,10 +209,16 @@ TIMEGRP sys_clk_pin = BEL "debouncer5_/pressed" BEL "debouncer4_/pressed" BEL
         "uart_top_/tfifo_/fifo_cnt_6" BEL "uart_top_/tfifo_/fifo_cnt_5" BEL
         "uart_top_/tfifo_/fifo_cnt_4" BEL "uart_top_/tfifo_/fifo_cnt_3" BEL
         "uart_top_/tfifo_/fifo_cnt_2" BEL "uart_top_/tfifo_/fifo_cnt_1" BEL
-        "uart_top_/tfifo_/fifo_cnt_0" BEL "board_to_string_/done" BEL
-        "board_to_string_/cntr_32_1" BEL "board_to_string_/cntr_33_1" BEL
-        "board_to_string_/cntr_31_1" BEL "board_to_string_/cntr_38_1" BEL
-        "clk_BUFGP/BUFG" PIN "uart_top_/tfifo_/Mram_mem_pins<20>" PIN
+        "uart_top_/tfifo_/fifo_cnt_0" BEL "dir_store_2" BEL
+        "gameController_/editMode_0" BEL "gameController_/lastMoveValid" BEL
+        "board_to_string_/done" BEL "board_to_string_/cntr_9_1" BEL
+        "board_to_string_/cntr_11_1" BEL "board_to_string_/cntr_12_1" BEL
+        "board_to_string_/cntr_13_1" BEL "board_to_string_/cntr_15_1" BEL
+        "board_to_string_/cntr_10_1" BEL "board_to_string_/cntr_11_2" BEL
+        "board_to_string_/cntr_12_2" BEL "board_to_string_/cntr_13_2" BEL
+        "board_to_string_/cntr_15_2" BEL "board_to_string_/cntr_9_2" BEL
+        "board_to_string_/cntr_11_3" BEL "clk_BUFGP/BUFG" PIN
+        "uart_top_/tfifo_/Mram_mem_pins<20>" PIN
         "uart_top_/tfifo_/Mram_mem_pins<21>";
 TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
 SCHEMATIC END;
