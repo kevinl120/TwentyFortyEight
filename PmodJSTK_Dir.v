@@ -73,7 +73,6 @@ module PmodJSTK_Dir(
         .RST(rst),
         .CLKOUT(sndRec)
     );
-    // What is the purpose, especially in connection with sndRec
 
     // ---------------------------------------
     //        Get X Position - Decimal
@@ -81,7 +80,7 @@ module PmodJSTK_Dir(
     Binary_To_BCD genDecimalPosX(
         .CLK(clk),
         .RST(rst),
-        .START(dclk), // DCLK -> need?
+        .START(dclk), 
         .BIN(posXDataRaw),
         .BCDOUT(posXData)
     );
@@ -92,7 +91,7 @@ module PmodJSTK_Dir(
     Binary_To_BCD genDecimalPosY(
         .CLK(clk),
         .RST(rst),
-        .START(dclk), // DCLK -> need?
+        .START(dclk), 
         .BIN(posYDataRaw),
         .BCDOUT(posYData)
     );
@@ -109,35 +108,35 @@ module PmodJSTK_Dir(
       if (rst == 1'b1) begin
       end
       else begin
-          if (posXData >= 384 && posXData <= 640) begin
-              posX = 2'b0;
+          if (posXData >= 104 && posXData <= 2106) begin
+              posX = 0;
           end
-          else if (posXData > 640) begin
-              posX = 2'b1;
+          else if (posXData > 2106) begin
+              posX = 1;
           end
           else begin
-              posX = 2'b10;
+              posX = 2;
           end
 
-          if (posYData >= 384 && posYData <= 640) begin
+          if (posYData >= 454 && posYData <= 2106) begin
               posY = 0;
           end
-          else if (posYData > 640) begin
-              posY = 1;
+          else if (posYData > 2106) begin
+              posY = 2; // initially was 1
           end
           else begin
-              posY = 2;
+              posY = 1; // initially was 2
           end
-
+          
           if (((posX == 1 || posX == 2) && posY == 0) || ((posY == 1 || posY == 2) && posX == 0)) begin
               if (posX == 0 && posY == 1) begin         // up
-                  dir = 3'b000;
+                  dir = 3'b000; 
               end
               else if (posX == 0 && posY == 2) begin    // down
-                  dir = 3'b010;
+                  dir = 3'b010; 
               end
               else if (posX == 1 && posY == 0) begin   // right
-                  dir = 3'b001;
+                  dir = 3'b001; 
               end
               else if (posX == 2 && posY == 0) begin  // left
                   dir = 3'b011;
@@ -146,6 +145,7 @@ module PmodJSTK_Dir(
           else begin
               dir = 3'b100;                           // everything else
           end
+          
       end
     end
 
@@ -154,7 +154,6 @@ module PmodJSTK_Dir(
     // ---------------------------------------
 
     always @(posedge clk) begin
-      //led[3] = 1;
       if (clkCount == cntEndVal) begin
         dclk = 1'b1;
         clkCount = 16'h0000;
@@ -168,9 +167,3 @@ module PmodJSTK_Dir(
 
 
 endmodule
-
-
-
-
-
-    // space

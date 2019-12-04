@@ -1,9 +1,13 @@
 //! **************************************************************************
-// Written by: Map P.68d on Mon Dec 02 11:28:47 2019
+// Written by: Map P.68d on Tue Dec 03 19:28:47 2019
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "SS" LOCATE = SITE "T12" LEVEL 1;
 COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "MISO" LOCATE = SITE "N10" LEVEL 1;
+COMP "SCLK" LOCATE = SITE "P11" LEVEL 1;
+COMP "MOSI" LOCATE = SITE "V12" LEVEL 1;
 COMP "led<0>" LOCATE = SITE "U16" LEVEL 1;
 COMP "led<1>" LOCATE = SITE "V16" LEVEL 1;
 COMP "led<2>" LOCATE = SITE "U15" LEVEL 1;
@@ -12,7 +16,7 @@ COMP "led<4>" LOCATE = SITE "M11" LEVEL 1;
 COMP "led<5>" LOCATE = SITE "N11" LEVEL 1;
 COMP "led<6>" LOCATE = SITE "R11" LEVEL 1;
 COMP "led<7>" LOCATE = SITE "T11" LEVEL 1;
-TIMEGRP sys_clk_pin = BEL "led_5" BEL
+TIMEGRP sys_clk_pin = BEL "led_1" BEL "led_0" BEL "led_2" BEL
         "givedir/PmodJSTK_Int/SerialClock/clkCount_9" BEL
         "givedir/PmodJSTK_Int/SerialClock/clkCount_8" BEL
         "givedir/PmodJSTK_Int/SerialClock/clkCount_7" BEL

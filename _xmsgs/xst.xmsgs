@@ -29,13 +29,7 @@
 <msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\152\Desktop\TwentyFortyEight\PmodJSTK_Dir.v" Line 31: Net &lt;<arg fmt="%s" index="1">sndData[7]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">led&lt;7:6&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">TwentyFortyEight</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00</arg>).
-</msg>
-
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">led&lt;4&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">TwentyFortyEight</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
-</msg>
-
-<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">led&lt;2&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">TwentyFortyEight</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0</arg>).
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">led&lt;7:3&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">TwentyFortyEight</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000</arg>).
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">sndData</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -48,14 +42,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">dir&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">led_5</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">TwentyFortyEight</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">led_3</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">TwentyFortyEight</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">DOUT_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SPI_Ctrl</arg>&gt;.
@@ -118,14 +104,6 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">DOUT_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">SPI_Ctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">led_5</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">TwentyFortyEight</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">led_3</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">TwentyFortyEight</arg>.
-You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
-</msg>
-
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">givedir/PmodJSTK_Int/SPI_Int/wSR_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">TwentyFortyEight</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
@@ -148,9 +126,6 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 </msg>
 
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">givedir/PmodJSTK_Int/SPI_Int/wSR_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">TwentyFortyEight</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">givedir/dir_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TwentyFortyEight</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TwentyFortyEight</arg>&gt;.
@@ -235,9 +210,6 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">givedir/genDecimalPosY/shiftCount_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">TwentyFortyEight</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;givedir/genDecimalPosX/shiftCount_4&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>

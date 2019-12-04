@@ -40,26 +40,11 @@ module TwentyFortyEight(clk, rst, MISO, SS, MOSI, SCLK, led);
     .sclk(SCLK),
     .dir(dir)
   );
-
+  
   always @(posedge clk) begin
     led[0] = dir[0];
     led[1] = dir[1];
-    led[5] = 1;
-    // led[2] = dir[2];    // <- need to get this working
-    // led[2:0] = dir;
+    led[2] = dir[2];
   end
-
-
-  //always @(dir) begin
-    //led[0] = dir[0];
-    //led[1] = dir[1];
-    //led[5] = 1;
-    // led[2] = dir[2];
-  //end
-  /*
-  always @(posedge MISO) begin
-    led[3] = 1;
-  end
-  */
 
 endmodule

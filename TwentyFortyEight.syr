@@ -156,13 +156,12 @@ WARNING:HDLCompiler:634 - "C:\Users\152\Desktop\TwentyFortyEight\PmodJSTK_Dir.v"
 
 Synthesizing Unit <TwentyFortyEight>.
     Related source file is "C:\Users\152\Desktop\TwentyFortyEight\TwentyFortyEight.v".
-WARNING:Xst:2935 - Signal 'led<7:6>', unconnected in block 'TwentyFortyEight', is tied to its initial value (00).
-WARNING:Xst:2935 - Signal 'led<4>', unconnected in block 'TwentyFortyEight', is tied to its initial value (0).
-WARNING:Xst:2935 - Signal 'led<2>', unconnected in block 'TwentyFortyEight', is tied to its initial value (0).
-    Found 1-bit register for signal <led<3>>.
-    Found 1-bit register for signal <led<5>>.
+WARNING:Xst:2935 - Signal 'led<7:3>', unconnected in block 'TwentyFortyEight', is tied to its initial value (00000).
+    Found 1-bit register for signal <led<1>>.
+    Found 1-bit register for signal <led<0>>.
+    Found 1-bit register for signal <led<2>>.
     Summary:
-	inferred   2 D-type flip-flop(s).
+	inferred   3 D-type flip-flop(s).
 Unit <TwentyFortyEight> synthesized.
 
 Synthesizing Unit <PmodJSTK_Dir>.
@@ -171,7 +170,7 @@ Synthesizing Unit <PmodJSTK_Dir>.
 WARNING:Xst:653 - Signal <sndData> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 1-bit register for signal <dclk>.
     Found 16-bit register for signal <clkCount>.
-    Found 16-bit adder for signal <clkCount[15]_GND_2_o_add_35_OUT> created at line 164.
+    Found 16-bit adder for signal <clkCount[15]_GND_2_o_add_35_OUT> created at line 179.
 WARNING:Xst:737 - Found 1-bit latch for signal <dir<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <dir<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <dir<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -370,8 +369,8 @@ Macro Statistics
  3-bit adder                                           : 1
  4-bit adder                                           : 8
  5-bit adder                                           : 3
-# Registers                                            : 78
- 1-bit register                                        : 65
+# Registers                                            : 79
+ 1-bit register                                        : 66
  10-bit register                                       : 1
  16-bit register                                       : 3
  24-bit register                                       : 1
@@ -403,10 +402,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1426 - The value init of the FF/Latch led_5 hinder the constant cleaning in the block TwentyFortyEight.
-   You should achieve better results by setting this init to 1.
-WARNING:Xst:1426 - The value init of the FF/Latch led_3 hinder the constant cleaning in the block TwentyFortyEight.
-   You should achieve better results by setting this init to 1.
 WARNING:Xst:2677 - Node <DOUT_0> of sequential type is unconnected in block <SPI_Ctrl>.
 WARNING:Xst:2677 - Node <DOUT_1> of sequential type is unconnected in block <SPI_Ctrl>.
 WARNING:Xst:2677 - Node <DOUT_2> of sequential type is unconnected in block <SPI_Ctrl>.
@@ -464,8 +459,8 @@ Macro Statistics
  24-bit up counter                                     : 1
  3-bit up counter                                      : 1
  5-bit up counter                                      : 3
-# Registers                                            : 193
- Flip-Flops                                            : 193
+# Registers                                            : 194
+ Flip-Flops                                            : 194
 # Comparators                                          : 13
  16-bit comparator greater                             : 2
  16-bit comparator lessequal                           : 2
@@ -483,10 +478,6 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1426 - The value init of the FF/Latch led_5 hinder the constant cleaning in the block TwentyFortyEight.
-   You should achieve better results by setting this init to 1.
-WARNING:Xst:1426 - The value init of the FF/Latch led_3 hinder the constant cleaning in the block TwentyFortyEight.
-   You should achieve better results by setting this init to 1.
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <givedir/PmodJSTK_Int/SPI_Ctrl/FSM_0> on signal <pState[1:3]> with user encoding.
 -------------------
@@ -538,7 +529,6 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <givedir/PmodJSTK_In
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <givedir/PmodJSTK_Int/SPI_Int/wSR_2> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <givedir/PmodJSTK_Int/SPI_Int/wSR_1> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <givedir/PmodJSTK_Int/SPI_Int/wSR_0> has a constant value of 0 in block <TwentyFortyEight>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <givedir/dir_2> of sequential type is unconnected in block <TwentyFortyEight>.
 WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_31> of sequential type is unconnected in block <TwentyFortyEight>.
 WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_30> of sequential type is unconnected in block <TwentyFortyEight>.
 WARNING:Xst:2677 - Node <givedir/PmodJSTK_Int/SPI_Ctrl/DOUT_29> of sequential type is unconnected in block <TwentyFortyEight>.
@@ -581,8 +571,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 242
- Flip-Flops                                            : 242
+# Registers                                            : 243
+ Flip-Flops                                            : 243
 
 =========================================================================
 
@@ -605,20 +595,20 @@ Top Level Output File Name         : TwentyFortyEight.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 395
+# BELS                             : 399
 #      GND                         : 1
 #      INV                         : 5
 #      LUT1                        : 38
 #      LUT2                        : 34
-#      LUT3                        : 14
-#      LUT4                        : 72
-#      LUT5                        : 51
+#      LUT3                        : 15
+#      LUT4                        : 73
+#      LUT5                        : 53
 #      LUT6                        : 82
 #      MUXCY                       : 47
 #      VCC                         : 1
 #      XORCY                       : 50
-# FlipFlops/Latches                : 244
-#      FD                          : 47
+# FlipFlops/Latches                : 246
+#      FD                          : 48
 #      FD_1                        : 2
 #      FDE                         : 5
 #      FDR                         : 30
@@ -626,7 +616,7 @@ Primitive and Black Box Usage:
 #      FDRE                        : 91
 #      FDRE_1                      : 61
 #      FDSE_1                      : 1
-#      LDE_1                       : 2
+#      LDE_1                       : 3
 # Clock Buffers                    : 3
 #      BUFG                        : 2
 #      BUFGP                       : 1
@@ -641,21 +631,21 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             240  out of  18224     1%  
- Number of Slice LUTs:                  296  out of   9112     3%  
-    Number used as Logic:               296  out of   9112     3%  
+ Number of Slice Registers:             243  out of  18224     1%  
+ Number of Slice LUTs:                  300  out of   9112     3%  
+    Number used as Logic:               300  out of   9112     3%  
 
 Slice Logic Distribution: 
  Number of LUT Flip Flop pairs used:    320
-   Number with an unused Flip Flop:      80  out of    320    25%  
-   Number with an unused LUT:            24  out of    320     7%  
-   Number of fully used LUT-FF pairs:   216  out of    320    67%  
-   Number of unique control sets:        22
+   Number with an unused Flip Flop:      77  out of    320    24%  
+   Number with an unused LUT:            20  out of    320     6%  
+   Number of fully used LUT-FF pairs:   223  out of    320    69%  
+   Number of unique control sets:        21
 
 IO Utilization: 
  Number of IOs:                          14
  Number of bonded IOBs:                  14  out of    232     6%  
-    IOB Flip Flops/Latches:               4
+    IOB Flip Flops/Latches:               3
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
@@ -681,12 +671,10 @@ Clock Information:
 ---------------------------------------+------------------------+-------+
 Clock Signal                           | Clock buffer(FF name)  | Load  |
 ---------------------------------------+------------------------+-------+
-clk                                    | BUFGP                  | 156   |
-givedir/PmodJSTK_Int/SPI_Ctrl/SS       | NONE(led_3)            | 1     |
-rst                                    | IBUF+BUFG              | 2     |
+clk                                    | BUFGP                  | 158   |
+rst                                    | IBUF+BUFG              | 3     |
 givedir/PmodJSTK_Int/SerialClock/CLKOUT| BUFG                   | 85    |
 ---------------------------------------+------------------------+-------+
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -793,7 +781,7 @@ Offset:              3.929ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 2 / 2
+  Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
 Offset:              4.419ns (Levels of Logic = 2)
   Source:            givedir/PmodJSTK_Int/SerialClock/CLKOUT (FF)
@@ -810,44 +798,6 @@ Offset:              4.419ns (Levels of Logic = 2)
     ----------------------------------------
     Total                      4.419ns (3.223ns logic, 1.196ns route)
                                        (72.9% logic, 27.1% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'givedir/PmodJSTK_Int/SPI_Ctrl/SS'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              3.597ns (Levels of Logic = 1)
-  Source:            led_3 (FF)
-  Destination:       led<3> (PAD)
-  Source Clock:      givedir/PmodJSTK_Int/SPI_Ctrl/SS rising
-
-  Data Path: led_3 to led<3>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FD:C->Q               1   0.447   0.579  led_3 (led_3)
-     OBUF:I->O                 2.571          led_3_OBUF (led<3>)
-    ----------------------------------------
-    Total                      3.597ns (3.018ns logic, 0.579ns route)
-                                       (83.9% logic, 16.1% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'rst'
-  Total number of paths / destination ports: 2 / 2
--------------------------------------------------------------------------
-Offset:              3.648ns (Levels of Logic = 1)
-  Source:            givedir/dir_1 (LATCH)
-  Destination:       led<1> (PAD)
-  Source Clock:      rst rising
-
-  Data Path: givedir/dir_1 to led<1>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LDE_1:G->Q            1   0.498   0.579  givedir/dir_1 (givedir/dir_1)
-     OBUF:I->O                 2.571          led_1_OBUF (led<1>)
-    ----------------------------------------
-    Total                      3.648ns (3.069ns logic, 0.579ns route)
-                                       (84.1% logic, 15.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'givedir/PmodJSTK_Int/SerialClock/CLKOUT'
@@ -881,6 +831,7 @@ Source Clock                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------------------------+---------+---------+---------+---------+
 clk                                    |    3.853|         |         |         |
 givedir/PmodJSTK_Int/SerialClock/CLKOUT|         |    1.599|         |         |
+rst                                    |    1.179|         |         |         |
 ---------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock givedir/PmodJSTK_Int/SerialClock/CLKOUT
@@ -897,20 +848,20 @@ Clock to Setup on destination clock rst
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.496|         |         |         |
+clk            |    4.964|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.11 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.17 secs
  
 --> 
 
 Total memory usage is 259488 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   68 (   0 filtered)
-Number of infos    :    9 (   0 filtered)
+Number of warnings :   61 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
 
