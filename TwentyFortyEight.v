@@ -57,7 +57,7 @@ module TwentyFortyEight(clk, rst, MISO, SS, MOSI, SCLK, led);
     // led[2] = dir[2];
   //end
   /*
-  always @(posedge SS) begin
+  always @(posedge MISO) begin
     led[3] = 1;
   end
   */

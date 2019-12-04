@@ -130,21 +130,21 @@ module PmodJSTK_Dir(
           end
 
           if (((posX == 1 || posX == 2) && posY == 0) || ((posY == 1 || posY == 2) && posX == 0)) begin
-              if (posX == 0 && posY == 1) begin
+              if (posX == 0 && posY == 1) begin         // up
                   dir = 3'b000;
               end
-              else if (posX == 0 && posY == 2) begin
-                  dir = 3'b001;
-              end
-              else if (posX == 1 && posY == 0) begin
+              else if (posX == 0 && posY == 2) begin    // down
                   dir = 3'b010;
               end
-              else if (posX == 2 && posY == 0) begin
+              else if (posX == 1 && posY == 0) begin   // right
+                  dir = 3'b001;
+              end
+              else if (posX == 2 && posY == 0) begin  // left
                   dir = 3'b011;
               end
           end
           else begin
-              dir = 3'b100;
+              dir = 3'b100;                           // everything else
           end
       end
     end
