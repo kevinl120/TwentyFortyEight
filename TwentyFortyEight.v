@@ -41,12 +41,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 // module TwentyFortyEight(clk, rst, dir);
-module TwentyFortyEight(clk, rst, RsRx, RsTx, MISO, SS, MOSI, SCLK, led);
+module TwentyFortyEight(clk, RsRx, RsTx, MISO, SS, MOSI, SCLK, led, btns);
 //module TwentyFortyEight(clk, rst, btns, btnu, btnd, btnl, btnr, MISO, SS, MOSI, SCLK, led);
 
 // input btns,btnu,btnd,btnr,btnl;
-
-  input clk, rst;
+  input btns;
+  input clk;
   input        RsRx;
   output       RsTx;
   input MISO;
@@ -57,10 +57,11 @@ module TwentyFortyEight(clk, rst, RsRx, RsTx, MISO, SS, MOSI, SCLK, led);
 
   wire [2:0] dir; // 0: up, 1: right, 2: down, 3: left, 4: no input
   wire [2:0] dir_store;
+  wire rst_btn;
   
   PmodJSTK_Dir PmodJSTK_Dir_(
     .clk(clk),
-    .rst(rst),
+    .rst(rst_btn),
     .miso(MISO),
     .ss(SS),
     .mosi(MOSI),
@@ -74,7 +75,6 @@ module TwentyFortyEight(clk, rst, RsRx, RsTx, MISO, SS, MOSI, SCLK, led);
   
   reg [20:0] score_out = 0;
 
-  wire rst_btn, up_btn, down_btn, left_btn, right_btn;
   
   
   wire [7:0]           uart_rx_data;           // From uart_top_ of uart_top.v
@@ -95,8 +95,8 @@ module TwentyFortyEight(clk, rst, RsRx, RsTx, MISO, SS, MOSI, SCLK, led);
   end
   
   debouncer debouncer1_(.clk(clk), .dir(dir), .debounced(dir_store));
-  
-  gameController gameController_(.clk(clk), .dir(dir_store), .rst(rst), .board(board), .score(score), .precompute(precompute));
+  btn_debouncer btn_debouncer1(.clk(clk), .btn(btns), .pressed(rst_btn));
+  gameController gameController_(.clk(clk), .dir(dir_store), .rst(rst_btn), .board(board), .score(score), .precompute(precompute));
   
   //debouncer debouncer1_(.clk(clk), .btn(btns), .pressed(rst_btn));
   //debouncer debouncer2_(.clk(clk), .btn(btnu), .pressed(up_btn));
@@ -132,7 +132,7 @@ module TwentyFortyEight(clk, rst, RsRx, RsTx, MISO, SS, MOSI, SCLK, led);
                        .i_tx_data       (tx_string),
                        // Inputs
                        .clk             (clk),
-                       .rst             (rst),
+                       .rst             (rst_btn),
                        .i_tx_stb (~done)
                        );
 

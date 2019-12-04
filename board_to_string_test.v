@@ -36,7 +36,7 @@ module board_to_string_test;
 	// Outputs
 	wire [7:0] char_out;
 	reg [20:0] score;
-
+ 
 	// Instantiate the Unit Under Test (UUT)
 	board_to_string uut (
 		.board(board), .start(start), .clk(clk), .print_nxt(print_nxt), .score(score), .char_out(char_out), .done(done)
@@ -45,19 +45,21 @@ module board_to_string_test;
 	initial begin
 		// Initialize Inputs
 		ctnr = 0;
-		board = 0;
+		board = 0; 
 		processing = 1;
 		clk = 0;
 		print_nxt = 0;
-		start = 0;
+		start = 0; 
 		score = 102444;
-      done = 1;
+        done = 1;
 		// Wait 100 ns for global reset to finish
-		#1000;
+		#1000; 
         
-		board[80 +: 20] = 4;
-		board[200 +: 20] = 256;
-		board[0 +: 20] = 2;
+		board[80 +: 20] = 1234;
+		board[200 +: 20] = 5678;
+        board[220 +: 20] = 2345;
+		board[0 +: 20] = 4321;
+        board[300 +: 20] = 3456;
 		
 		// Add stimulus here
 
